@@ -196,6 +196,56 @@
       .doc td { overflow-wrap: anywhere; }
       .doc img { max-width: 100%; height: auto; }
 
+      /* ---------- 下拉選單 ---------- */
+      .dd { position: relative; }
+      .dd-btn {
+        font: inherit; font-size: 13.5px; letter-spacing: .08em;
+        background: none; border: none; padding: 4px 0; cursor: pointer;
+        color: var(--muted); white-space: nowrap;
+      }
+      .dd-btn:hover { color: var(--tea); }
+      .dd-btn .car {
+        display: inline-block; margin-left: 5px; font-size: 11px; color: var(--tea);
+        transition: transform .18s ease;
+      }
+      .dd.open .dd-btn .car { transform: rotate(180deg); }
+      .dd-panel {
+        display: none; position: absolute; top: calc(100% + 8px); left: 0;
+        width: min(340px, calc(100vw - 40px)); z-index: 40;
+        background: var(--surface); border: 1px solid var(--line);
+        padding: 6px 0; text-align: left;
+      }
+      .dd.open .dd-panel { display: block; }
+      .dd-panel a {
+        display: flex; gap: 12px; align-items: baseline;
+        padding: 9px 16px; border-bottom: none; border-top: 1px solid var(--line-soft);
+        color: var(--ink); font-size: 14.5px; line-height: 1.55;
+      }
+      .dd-panel > :first-child { border-top: none; }
+      .dd-panel a:hover { background: var(--tint); color: var(--ink); }
+      .dd-panel .d-date { font-size: 12px; color: var(--muted); letter-spacing: .06em; white-space: nowrap; }
+      .dd-panel .d-note { display: block; padding: 9px 16px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line-soft); }
+      .dd-panel > .d-note:first-child { border-top: none; }
+      .dd-panel a.d-cat {
+        font-family: "Noto Serif TC", "Songti TC", serif;
+        color: var(--tea); letter-spacing: .14em; font-size: 14px;
+      }
+      .dd-panel a.d-cat b { color: var(--terra); font-weight: 500; margin-right: 2px; }
+
+      /* 頂欄「找文章」總選單 */
+      .topbar .dd-panel {
+        left: auto; right: 0; top: calc(100% + 10px);
+        width: min(380px, calc(100vw - 32px));
+        max-height: min(72vh, 600px); overflow-y: auto;
+      }
+      @media (max-width: 640px) {
+        .topbar .dd-top { order: 2; margin-left: auto; }
+        .topbar nav { order: 3; flex-basis: 100%; }
+      }
+      @media print {
+        .dd-btn, .dd-panel { display: none !important; }
+      }
+
       /* ---------- 固定導覽列 ---------- */
       .topbar {
         position: fixed; top: 0; left: 0; right: 0; z-index: 60;
@@ -250,9 +300,7 @@
         background: var(--paper); color: var(--tea);
         border: 1px solid var(--tea); cursor: pointer;
         font-family: inherit; font-size: 20px; line-height: 1;
-        opacity: 0; pointer-events: none; transition: opacity .25s ease;
       }
-      .to-top.show { opacity: 1; pointer-events: auto; }
       .to-top:hover { color: var(--terra); border-color: var(--terra); }
       .to-top .lab { display: block; font-size: 10px; letter-spacing: .18em; margin-top: 3px; }
 
@@ -330,6 +378,29 @@
           <a href="#cat-platform"><b>05</b>平台研究</a>
           <a href="#toc">目錄</a>
         </nav>
+        <div class="dd dd-top">
+          <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">找文章<span class="car" aria-hidden="true">▾</span></button>
+          <div class="dd-panel" role="menu" aria-label="全部文章選單">
+            <a class="d-cat" href="#cat-market"><b>01</b>市場調查</a>
+            <a role="menuitem" href="#r-cn-media-imagination"><span class="d-date">2026-10-22</span><span>中國媒體跨界創新想像報告：以中國為主，參考全世界</span></a>
+            <a role="menuitem" href="#r-tv-transformation"><span class="d-date">2026-10-22</span><span>全球傳統電視台面對網路自媒體競爭：業務縮減與成功轉型案例</span></a>
+            <a role="menuitem" href="#r-tao"><span class="d-date">2026-10-21</span><span>道德經英文電子書市場調查報告</span></a>
+            <a role="menuitem" href="#r-tao-notes"><span class="d-date">2026-10-21</span><span>道德經英文電子書市場調查・研究底稿</span></a>
+            <a role="menuitem" href="#r-tw-publishing"><span class="d-date">2026-10-05</span><span>台灣出版趨勢研究報告 2024–2026</span></a>
+            <a class="d-cat" href="#cat-traffic"><b>02</b>流量情報</a>
+            <a role="menuitem" href="#r-daily-top10"><span class="d-date">每日更新</span><span>每日社群流量 Top10</span></a>
+            <a role="menuitem" href="#r-w42"><span class="d-date">2026-10-18</span><span>每週流量模式摘要 2026-W42</span></a>
+            <a role="menuitem" href="#r-traffic-brief"><span class="d-date">2026-10-15</span><span>流量情報簡報</span></a>
+            <a class="d-cat" href="#cat-people"><b>03</b>人物研究</a>
+            <span class="d-note">尚無歸檔報告，待累積</span>
+            <a class="d-cat" href="#cat-events"><b>04</b>事件追蹤</a>
+            <span class="d-note">尚無歸檔報告，待累積</span>
+            <a class="d-cat" href="#cat-platform"><b>05</b>平台研究</a>
+            <a role="menuitem" href="#r-wechat-accounts"><span class="d-date">2026-10-06</span><span>微信公眾號調研・同業帳號研究</span></a>
+            <a role="menuitem" href="#r-wechat-reverse"><span class="d-date">2026-10-06</span><span>微信公眾號調研・逆向研究</span></a>
+            <a role="menuitem" href="#r-wechat-decision"><span class="d-date">2026-10-06</span><span>微信公眾號調研・上線決策</span></a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="wrap">
@@ -338,7 +409,7 @@
         <p class="kicker">大道至簡 ・ 研究檔案</p>
         <h1>研究報告儀表板</h1>
         <p class="lede">市場、流量、人物、事件——做過的研究都收在這裡，持續累積。</p>
-        <p class="lede">全部報告的全文直接攤在這一頁，<strong>往下捲就全部看完</strong>；雲端硬碟的<strong>「研究報告庫」</strong>留存原檔，按五個分類歸檔。</p>
+        <p class="lede">全部報告的全文直接攤在這一頁；想直接看某篇，用頂欄的<strong>「找文章」</strong>選單，或各分類標題旁的<strong>「本分類文章」</strong>選單，點了就跳過去，不必一路往下捲。雲端硬碟的<strong>「研究報告庫」</strong>留存原檔，按五個分類歸檔。</p>
 
         <div class="stats">
           <div class="stat"><div class="num">5</div><div class="lab">分類</div></div>
@@ -394,6 +465,16 @@
         <div class="cat-head">
           <span class="no">01</span>
           <h2>市場調查</h2>
+          <div class="dd">
+            <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">本分類文章<span class="car" aria-hidden="true">▾</span></button>
+            <div class="dd-panel" role="menu" aria-label="市場調查文章選單">
+              <a role="menuitem" href="#r-cn-media-imagination"><span class="d-date">2026-10-22</span><span>中國媒體跨界創新想像報告：以中國為主，參考全世界</span></a>
+              <a role="menuitem" href="#r-tv-transformation"><span class="d-date">2026-10-22</span><span>全球傳統電視台面對網路自媒體競爭：業務縮減與成功轉型案例</span></a>
+              <a role="menuitem" href="#r-tao"><span class="d-date">2026-10-21</span><span>道德經英文電子書市場調查報告</span></a>
+              <a role="menuitem" href="#r-tao-notes"><span class="d-date">2026-10-21</span><span>道德經英文電子書市場調查・研究底稿</span></a>
+              <a role="menuitem" href="#r-tw-publishing"><span class="d-date">2026-10-05</span><span>台灣出版趨勢研究報告 2024–2026</span></a>
+            </div>
+          </div>
           <a class="folder" href="https://drive.google.com/drive/folders/1TX-DgK-FvIUK3bMsOlHrwrIDJRsdNtL7" target="_blank" rel="noopener">開啟資料夾 →</a>
         </div>
         <article class="report" id="r-tao" data-search-block data-search="道德經 英文 電子書 市場調查報告 kindle tao te ching kdp">
@@ -1240,9 +1321,17 @@
         <div class="cat-head">
           <span class="no">02</span>
           <h2>流量情報</h2>
+          <div class="dd">
+            <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">本分類文章<span class="car" aria-hidden="true">▾</span></button>
+            <div class="dd-panel" role="menu" aria-label="流量情報文章選單">
+              <a role="menuitem" href="#r-daily-top10"><span class="d-date">每日更新</span><span>每日社群流量 Top10</span></a>
+              <a role="menuitem" href="#r-w42"><span class="d-date">2026-10-18</span><span>每週流量模式摘要 2026-W42</span></a>
+              <a role="menuitem" href="#r-traffic-brief"><span class="d-date">2026-10-15</span><span>流量情報簡報</span></a>
+            </div>
+          </div>
           <a class="folder" href="https://drive.google.com/drive/folders/1u3FoolLkG7uCUekMXx9AC84Lj0W4Dk6e" target="_blank" rel="noopener">開啟資料夾 →</a>
         </div>
-<div class="report series" data-search-block data-search="每日 社群 流量 top10 台灣 中國 日本 韓國 美國 事件">
+<div class="report series" id="r-daily-top10" data-search-block data-search="每日 社群 流量 top10 台灣 中國 日本 韓國 美國 事件">
         <header class="report-head">
           <p class="rmeta"><span class="daily">每日更新</span></p>
           <h3 class="rtitle plain">每日社群流量 Top10</h3>
@@ -1358,6 +1447,12 @@
         <div class="cat-head">
           <span class="no">03</span>
           <h2>人物研究</h2>
+          <div class="dd">
+            <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">本分類文章<span class="car" aria-hidden="true">▾</span></button>
+            <div class="dd-panel" role="menu" aria-label="人物研究文章選單">
+              <span class="d-note">尚無歸檔報告，待累積</span>
+            </div>
+          </div>
           <a class="folder" href="https://drive.google.com/drive/folders/10YmyOky6zqTUcPCdSyPw5r9zqFLtCuQ" target="_blank" rel="noopener">開啟資料夾 →</a>
         </div>
         <div class="empty">
@@ -1371,6 +1466,12 @@
         <div class="cat-head">
           <span class="no">04</span>
           <h2>事件追蹤</h2>
+          <div class="dd">
+            <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">本分類文章<span class="car" aria-hidden="true">▾</span></button>
+            <div class="dd-panel" role="menu" aria-label="事件追蹤文章選單">
+              <span class="d-note">尚無歸檔報告，待累積</span>
+            </div>
+          </div>
           <a class="folder" href="https://drive.google.com/drive/folders/1yt5RjbdupxjNlzVIaEJHKNv55kLk6Dhl" target="_blank" rel="noopener">開啟資料夾 →</a>
         </div>
         <div class="empty">
@@ -1385,6 +1486,14 @@
         <div class="cat-head">
           <span class="no">05</span>
           <h2>平台研究</h2>
+          <div class="dd">
+            <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">本分類文章<span class="car" aria-hidden="true">▾</span></button>
+            <div class="dd-panel" role="menu" aria-label="平台研究文章選單">
+              <a role="menuitem" href="#r-wechat-accounts"><span class="d-date">2026-10-06</span><span>微信公眾號調研・同業帳號研究</span></a>
+              <a role="menuitem" href="#r-wechat-reverse"><span class="d-date">2026-10-06</span><span>微信公眾號調研・逆向研究</span></a>
+              <a role="menuitem" href="#r-wechat-decision"><span class="d-date">2026-10-06</span><span>微信公眾號調研・上線決策</span></a>
+            </div>
+          </div>
           <a class="folder" href="https://drive.google.com/drive/folders/1Xijg_Hx4V3gXeG79dRs8A3SEDe64LS6p" target="_blank" rel="noopener">開啟資料夾 →</a>
         </div>
 <article class="report" id="r-wechat-accounts" data-search-block data-search="微信 公眾號 調研 同業 帳號 研究">
@@ -2236,6 +2345,36 @@
         }
         window.addEventListener('hashchange', flashFromHash);
         flashFromHash();
+
+        /* ---------- 下拉選單 ---------- */
+        var dds = Array.prototype.slice.call(document.querySelectorAll('.dd'));
+        function closeDropdowns() {
+          dds.forEach(function (d) {
+            d.classList.remove('open');
+            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+          });
+        }
+        dds.forEach(function (d) {
+          var btn = d.querySelector('.dd-btn');
+          var panel = d.querySelector('.dd-panel');
+          btn.addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            var willOpen = !d.classList.contains('open');
+            closeDropdowns();
+            if (willOpen) {
+              d.classList.add('open');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          });
+          panel.addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            if (ev.target.closest('a')) { closeDropdowns(); }
+          });
+        });
+        document.addEventListener('click', closeDropdowns);
+        document.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Escape') { closeDropdowns(); }
+        });
       })();
     </script>
   </body>
