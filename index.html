@@ -23,7 +23,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FAF6EF'/><rect x='2' y='2' width='28' height='28' fill='none' stroke='%2382663F' stroke-width='1.5'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%2382663F' font-family='serif' font-weight='600'>研</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
         --paper: #FAF6EF;
@@ -33,7 +33,7 @@
         --seal: #A8543A;
         --line: #DCD1BE;
         --line-soft: #E7DFCE;
-        --muted: #6E6353;
+        --muted: #574D3F;
         --surface: #FFFDF7;
         --tint: #F0E7D2;
       }
@@ -59,12 +59,13 @@
         background: var(--paper);
         color: var(--ink);
         font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
         line-height: 1.9;
         letter-spacing: .02em;
         -webkit-font-smoothing: antialiased;
       }
+      strong, b { font-weight: 600; }
       .serif { font-family: "Noto Serif TC", "Songti TC", serif; }
       .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 72px; }
 
@@ -90,11 +91,11 @@
       }
       h1 {
         font-family: "Noto Serif TC", "Songti TC", serif;
-        font-weight: 300; font-size: 40px; letter-spacing: .18em;
+        font-weight: 500; font-size: 40px; letter-spacing: .18em;
         margin: 0 0 18px; line-height: 1.3;
       }
       .lede { color: var(--muted); margin: 0 0 6px; max-width: 34em; }
-      .lede strong { color: var(--ink); font-weight: 500; }
+      .lede strong { color: var(--ink); font-weight: 600; }
 
       .stats {
         display: flex; flex-wrap: wrap; gap: 0;
@@ -104,7 +105,7 @@
       .stat { padding: 16px 28px 16px 0; margin-right: 28px; }
       .stat:last-child { margin-right: 0; }
       .stat .num {
-        font-family: "Noto Serif TC", serif; font-weight: 400;
+        font-family: "Noto Serif TC", serif; font-weight: 500;
         font-size: 26px; line-height: 1.2; color: var(--tea);
       }
       .stat .lab { font-size: 12.5px; color: var(--muted); letter-spacing: .12em; }
@@ -165,7 +166,7 @@
         color: var(--muted); font-size: 13.5px; padding: 18px 0; margin: 0; font-style: italic;
       }
       .accum { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
-      .accum strong { color: var(--tea); font-weight: 500; }
+      .accum strong { color: var(--tea); font-weight: 600; }
 
       /* ---------- 分類導覽 ---------- */
       nav.cats { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 30px 0 0; }
@@ -187,7 +188,7 @@
       }
       .cat-head h2 {
         font-family: "Noto Serif TC", "Songti TC", serif;
-        font-weight: 400; font-size: 28px; letter-spacing: .22em; margin: 0; color: var(--tea);
+        font-weight: 500; font-size: 28px; letter-spacing: .22em; margin: 0; color: var(--tea);
       }
       .cat-head .folder { margin-left: auto; font-size: 13.5px; white-space: nowrap; }
       .cat-note { color: var(--muted); font-size: 14px; margin: 14px 0 0; }
@@ -226,13 +227,13 @@
       .rmeta { font-size: 13px; color: var(--muted); letter-spacing: .14em; margin: 0 0 10px; }
       .rmeta .daily { color: var(--terra); font-weight: 500; }
       .rtitle {
-        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 500;
+        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 600;
         font-size: 26px; letter-spacing: .06em; color: var(--ink);
         margin: 0 0 10px; line-height: 1.45;
       }
       .rtitle.plain { color: var(--ink); }
-      .rpoint { margin: 0; color: var(--muted); font-size: 14.5px; }
-      .rpoint em { font-style: normal; color: var(--ink); }
+      .rpoint { margin: 0; color: var(--muted); font-size: 15px; font-weight: 400; }
+      .rpoint em { font-style: normal; color: var(--ink); font-weight: 500; }
       .rfoot { max-width: 760px; margin: 32px auto 0; font-size: 13px; }
       .drive-link { font-size: 12.5px; color: var(--muted); border-bottom-color: var(--line); white-space: nowrap; }
       .drive-link:hover { color: var(--tea); border-bottom-color: var(--tea); }
@@ -254,24 +255,24 @@
       }
 
       /* ---------- 報告內文 ---------- */
-      .doc { max-width: 760px; margin: 28px auto 0; font-size: 17.5px; line-height: 1.9; letter-spacing: .02em; overflow-wrap: break-word; }
+      .doc { max-width: 760px; margin: 28px auto 0; font-size: 17.5px; font-weight: 400; line-height: 1.9; letter-spacing: .02em; overflow-wrap: break-word; }
       .doc h1 {
-        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 400;
+        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 500;
         font-size: 25px; letter-spacing: .05em; line-height: 1.5; margin: 1.4em 0 .7em;
       }
       .doc h2 {
-        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 500;
+        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 600;
         font-size: 21px; letter-spacing: .08em; color: var(--tea);
         margin: 1.9em 0 .6em; padding-bottom: 8px; border-bottom: 1px solid var(--line-soft);
       }
-      .doc h3 { font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 500; font-size: 18px; margin: 1.6em 0 .5em; }
-      .doc h4 { font-weight: 500; font-size: 16px; margin: 1.4em 0 .4em; }
+      .doc h3 { font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 600; font-size: 18px; margin: 1.6em 0 .5em; }
+      .doc h4 { font-weight: 600; font-size: 16px; margin: 1.4em 0 .4em; }
       .doc p { margin: 1em 0; }
       .doc ul, .doc ol { margin: 1em 0; padding-left: 1.7em; }
       .doc li { margin: .45em 0; }
       .doc li > ul, .doc li > ol { margin: .3em 0; }
       .doc a { overflow-wrap: anywhere; }
-      .doc strong { font-weight: 500; }
+      .doc strong { font-weight: 600; }
       .doc blockquote { margin: 1.2em 0; padding: 10px 20px; border-left: 2px solid var(--tea); background: var(--surface); color: var(--muted); }
       .doc blockquote p { margin: .4em 0; }
       .doc hr { border: none; border-top: 1px solid var(--line); margin: 2.2em 0; }
@@ -371,7 +372,7 @@
       }
       .toc-head h2 {
         font-family: "Noto Serif TC", "Songti TC", serif;
-        font-weight: 400; font-size: 25px; letter-spacing: .22em; margin: 0;
+        font-weight: 500; font-size: 25px; letter-spacing: .22em; margin: 0;
       }
       .toc-head .hint { color: var(--muted); font-size: 13.5px; }
       .toc ol { list-style: none; margin: 6px 0 0; padding: 0; }
@@ -381,8 +382,8 @@
         padding: 13px 4px; border-bottom: none; color: var(--ink);
       }
       .toc li a:hover { color: var(--tea); }
-      .toc .tdate { font-size: 13px; color: var(--muted); letter-spacing: .1em; min-width: 86px; }
-      .toc .ttitle { font-family: "Noto Serif TC", "Songti TC", serif; font-size: 16.5px; letter-spacing: .04em; }
+      .toc .tdate { font-size: 13px; color: var(--muted); letter-spacing: .1em; min-width: 86px; font-weight: 500; }
+      .toc .ttitle { font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 500; font-size: 16.5px; letter-spacing: .04em; }
       .toc .tcat { margin-left: auto; font-size: 12.5px; color: var(--terra); letter-spacing: .14em; white-space: nowrap; }
 
       /* ---------- 回到頂部 ---------- */
