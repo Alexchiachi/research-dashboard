@@ -4,8 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
-    <title>研究報告儀表板</title>
+    <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#211C16" media="(prefers-color-scheme: dark)" />
+    <title>研究報告儀表板 · 大道至簡</title>
+    <meta name="description" content="市場調查、流量情報、人物研究、事件追蹤、平台研究——全文平鋪、持續累積的開放研究檔案庫。" />
+    
+    <!-- OpenGraph & Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="大道至簡 · 研究報告庫" />
+    <meta property="og:title" content="研究報告儀表板 · 大道至簡" />
+    <meta property="og:description" content="市場調查、流量情報、人物研究、事件追蹤、平台研究——全文平鋪、持續累積的開放研究檔案庫。" />
+    <meta property="og:url" content="https://alexchiachi.github.io/research-dashboard/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="研究報告儀表板 · 大道至簡" />
+    <meta name="twitter:description" content="市場調查、流量情報、人物研究、事件追蹤、平台研究——全文平鋪、持續累積的開放研究檔案庫。" />
+
+    <!-- 典雅朱印墨色「研」字 Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FAF6EF'/><rect x='2' y='2' width='28' height='28' fill='none' stroke='%2382663F' stroke-width='1.5'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%2382663F' font-family='serif' font-weight='600'>研</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -15,6 +30,7 @@
         --ink: #2A2520;
         --tea: #82663F;
         --terra: #c08552;
+        --seal: #A8543A;
         --line: #DCD1BE;
         --line-soft: #E7DFCE;
         --muted: #6E6353;
@@ -27,6 +43,7 @@
           --ink: #EDE4D3;
           --tea: #C6A26C;
           --terra: #D29E6E;
+          --seal: #C97258;
           --line: #4A3F30;
           --line-soft: #393023;
           --muted: #AB9C83;
@@ -50,6 +67,20 @@
       }
       .serif { font-family: "Noto Serif TC", "Songti TC", serif; }
       .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 72px; }
+
+      /* ---------- 靜構無孤字與標題平衡標準 ---------- */
+      h1, h2, h3, h4, .rtitle, .kicker, .cat-head h2, .toc-head h2, .brand {
+        text-wrap: balance;
+      }
+      p, li, blockquote, .lede, .rpoint, .cat-note, .accum, .empty {
+        text-wrap: pretty;
+      }
+      .stat .num, .tdate, .d-date, .tag, table td, .num {
+        font-variant-numeric: tabular-nums;
+      }
+      button:active, .ctl-btn:active, .fold-btn:active {
+        transform: scale(0.97);
+      }
 
       /* ---------- 頁首 ---------- */
       header { padding: 122px 0 0; }
@@ -85,16 +116,54 @@
       a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--tea); }
       a:hover { color: var(--terra); border-bottom-color: var(--terra); }
 
-      /* ---------- 搜尋 ---------- */
+      /* ---------- 搜尋與過濾控制 ---------- */
       .searchbar { margin: 40px 0 4px; }
-      .searchbar label { display: block; font-size: 12.5px; letter-spacing: .2em; color: var(--muted); margin-bottom: 8px; }
-      .searchbar input {
-        width: 100%; padding: 11px 2px; font: inherit; font-size: 15.5px;
+      .search-title-row {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px;
+        margin-bottom: 8px;
+      }
+      .search-title-row label {
+        display: block; font-size: 12.5px; letter-spacing: .2em; color: var(--muted);
+      }
+      .view-controls {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+        font-size: 13px; color: var(--muted);
+      }
+      .view-controls .sep { color: var(--line); user-select: none; }
+      .filter-toggle {
+        display: inline-flex; align-items: center; gap: 6px;
+        cursor: pointer; user-select: none; font-size: 12.5px; color: var(--muted);
+      }
+      .filter-toggle input[type="checkbox"] {
+        accent-color: var(--tea); cursor: pointer;
+      }
+      .ctl-btn {
+        font: inherit; font-size: 12.5px; letter-spacing: .06em;
+        background: transparent; color: var(--muted); border: 1px solid var(--line);
+        padding: 3px 10px; cursor: pointer; transition: all .16s ease;
+      }
+      .ctl-btn:hover {
+        color: var(--tea); border-color: var(--tea); background: var(--surface);
+      }
+      .search-input-wrap {
+        position: relative; width: 100%;
+      }
+      .search-input-wrap input {
+        width: 100%; padding: 11px 32px 11px 2px; font: inherit; font-size: 15.5px;
         background: transparent; color: var(--ink);
         border: none; border-bottom: 1px solid var(--line); outline: none;
       }
-      .searchbar input:focus { border-bottom-color: var(--tea); }
+      .search-input-wrap input:focus { border-bottom-color: var(--tea); }
+      .search-clear {
+        position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+        background: transparent; border: none; color: var(--muted);
+        font-size: 15px; cursor: pointer; padding: 4px 8px; line-height: 1;
+      }
+      .search-clear:hover { color: var(--terra); }
       .search-status { display: none; color: var(--terra); padding: 12px 0 0; margin: 0; font-size: 14px; }
+      .cat-no-match {
+        color: var(--muted); font-size: 13.5px; padding: 18px 0; margin: 0; font-style: italic;
+      }
       .accum { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
       .accum strong { color: var(--tea); font-weight: 500; }
 
@@ -123,14 +192,37 @@
       .cat-head .folder { margin-left: auto; font-size: 13.5px; white-space: nowrap; }
       .cat-note { color: var(--muted); font-size: 14px; margin: 14px 0 0; }
 
-      /* ---------- 報告（全文平鋪） ---------- */
+      /* ---------- 報告（全文平鋪與折疊） ---------- */
       .report {
         border-top: 1px solid var(--line);
         padding: 60px 10px 10px; margin-top: 68px;
+        transition: background-color .2s ease;
       }
       section.cat .report:first-of-type { border-top: none; margin-top: 18px; padding-top: 10px; }
       .report.found { background: var(--surface); }
-      .report-head { max-width: 760px; margin: 0 auto; padding-bottom: 16px; border-bottom: 1px solid var(--tea); }
+      .report.collapsed { padding-bottom: 24px; }
+      .report.collapsed .doc,
+      .report.collapsed .rfoot {
+        display: none !important;
+      }
+      .report-head {
+        max-width: 760px; margin: 0 auto; padding-bottom: 16px; border-bottom: 1px solid var(--tea);
+        display: flex; flex-direction: column;
+      }
+      .fold-btn {
+        align-self: flex-start;
+        font: inherit; font-size: 12.5px; letter-spacing: .08em;
+        background: var(--surface); color: var(--muted);
+        border: 1px solid var(--line); padding: 4px 12px; cursor: pointer;
+        margin-top: 14px; transition: all .15s ease;
+        display: inline-flex; align-items: center; gap: 4px;
+      }
+      .fold-btn:hover {
+        border-color: var(--tea); color: var(--tea);
+      }
+      .report.collapsed .fold-btn {
+        background: var(--tint); color: var(--ink); border-color: var(--tea);
+      }
       .rmeta { font-size: 13px; color: var(--muted); letter-spacing: .14em; margin: 0 0 10px; }
       .rmeta .daily { color: var(--terra); font-weight: 500; }
       .rtitle {
@@ -322,7 +414,8 @@
 
       /* ---------- 列印 ---------- */
       @media print {
-        .topbar, .to-top, .progress, .searchbar, .search-status, nav.cats { display: none !important; }
+        .topbar, .to-top, .progress, .searchbar, .search-status, nav.cats, .view-controls, .fold-btn { display: none !important; }
+        .report.collapsed .doc, .report.collapsed .rfoot { display: block !important; }
         body { background: #fff; color: #000; }
         header { padding-top: 0; }
         .wrap { max-width: none; }
@@ -330,13 +423,22 @@
         .doc h1, .doc h2, .doc h3, .doc h4, .rtitle, .cat-head h2, .toc-head h2, footer .motto { color: #000; }
         .doc blockquote, .rpoint, .rmeta, .lede, .cat-note, .accum, footer .small { color: #000; }
         .doc table, .doc th, .doc blockquote { background: #fff; }
-        .report { break-inside: auto; }
+        .report { break-inside: auto; page-break-after: always; }
       }
 
-      /* ---------- 頁尾 ---------- */
+      /* ---------- 頁尾與朱印落款 ---------- */
       footer {
         margin-top: 84px; border-top: 1px solid var(--line); padding-top: 30px;
         text-align: center;
+      }
+      .seal-mark {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 88px; height: 88px;
+        border: 2px solid var(--seal); color: var(--seal);
+        font-family: "Noto Serif TC", "Songti TC", serif;
+        font-size: 14px; letter-spacing: 0.25em;
+        writing-mode: vertical-rl; text-orientation: upright;
+        user-select: none; margin: 32px auto 22px;
       }
       footer .motto {
         font-family: "Noto Serif TC", serif; font-weight: 400;
@@ -426,8 +528,22 @@
         </p>
 
         <div class="searchbar">
-          <label for="q">搜尋報告（只標示與跳轉，不隱藏內容）</label>
-          <input id="q" type="search" placeholder="輸入關鍵字，如：道德經、流量、微信……" autocomplete="off" />
+          <div class="search-title-row">
+            <label for="q">搜尋與過濾報告</label>
+            <div class="view-controls">
+              <label class="filter-toggle" title="開啟時僅顯示符合關鍵字的報告">
+                <input type="checkbox" id="chkFilterOnly" checked />
+                <span>僅顯示符合報告</span>
+              </label>
+              <span class="sep">｜</span>
+              <button type="button" id="btnExpandAll" class="ctl-btn">全部展開</button>
+              <button type="button" id="btnCollapseAll" class="ctl-btn">全部收合</button>
+            </div>
+          </div>
+          <div class="search-input-wrap">
+            <input id="q" type="search" placeholder="輸入關鍵字，如：道德經、流量、微信、電視台、出版……" autocomplete="off" />
+            <button type="button" id="searchClear" class="search-clear" aria-label="清除搜尋" style="display:none;">✕</button>
+          </div>
         </div>
         <p class="search-status" id="searchStatus"></p>
 
@@ -2278,6 +2394,7 @@
       </article>
 
       <footer>
+        <div class="seal-mark">大道至簡</div>
         <p class="motto">做幸福的事，把幸福做成有價值</p>
         <p class="small">研究報告庫 ・ 雲端硬碟歸檔 ・ 最近歸檔 2026-10-22</p>
       </footer>
@@ -2290,28 +2407,149 @@
       (function () {
         var input = document.getElementById('q');
         var status = document.getElementById('searchStatus');
+        var clearBtn = document.getElementById('searchClear');
+        var chkFilterOnly = document.getElementById('chkFilterOnly');
+        var btnExpandAll = document.getElementById('btnExpandAll');
+        var btnCollapseAll = document.getElementById('btnCollapseAll');
         var blocks = Array.prototype.slice.call(document.querySelectorAll('[data-search-block]'));
+        var reports = Array.prototype.slice.call(document.querySelectorAll('.report'));
+        var catSections = Array.prototype.slice.call(document.querySelectorAll('section.cat'));
         var matches = [], idx = -1;
-        input.addEventListener('input', function () {
+
+        // 1. 初始化每篇報告的「收合／展開」按鈕
+        reports.forEach(function (rep) {
+          var doc = rep.querySelector('.doc');
+          if (!doc) return;
+          var head = rep.querySelector('.report-head');
+          if (!head) return;
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'fold-btn';
+          btn.setAttribute('aria-expanded', 'true');
+          btn.innerHTML = '收合全文 ▴';
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleFold(rep, btn);
+          });
+          head.appendChild(btn);
+        });
+
+        function toggleFold(rep, btn, forceExpand) {
+          var willCollapse = (forceExpand === true) ? false : (forceExpand === false ? true : !rep.classList.contains('collapsed'));
+          if (willCollapse) {
+            rep.classList.add('collapsed');
+            if (btn) {
+              btn.innerHTML = '展開全文 ▾';
+              btn.setAttribute('aria-expanded', 'false');
+            }
+          } else {
+            rep.classList.remove('collapsed');
+            if (btn) {
+              btn.innerHTML = '收合全文 ▴';
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          }
+        }
+
+        // 全部展開 / 全部收合
+        if (btnExpandAll) {
+          btnExpandAll.addEventListener('click', function () {
+            reports.forEach(function (rep) {
+              var btn = rep.querySelector('.fold-btn');
+              toggleFold(rep, btn, true);
+            });
+          });
+        }
+        if (btnCollapseAll) {
+          btnCollapseAll.addEventListener('click', function () {
+            reports.forEach(function (rep) {
+              var btn = rep.querySelector('.fold-btn');
+              toggleFold(rep, btn, false);
+            });
+          });
+        }
+
+        // 2. 搜尋過濾與標示跳轉
+        function performSearch() {
           var q = input.value.trim().toLowerCase();
           matches = []; idx = -1;
-          blocks.forEach(function (b) { b.classList.remove('found'); });
-          if (!q) { status.style.display = 'none'; status.textContent = ''; return; }
+          clearBtn.style.display = q ? 'block' : 'none';
+
+          // 清除先前的 no-match 提示
+          document.querySelectorAll('.cat-no-match').forEach(function (el) { el.remove(); });
+
+          if (!q) {
+            status.style.display = 'none';
+            status.textContent = '';
+            blocks.forEach(function (b) {
+              b.classList.remove('found');
+              b.style.display = '';
+            });
+            return;
+          }
+
+          var filterOnly = chkFilterOnly ? chkFilterOnly.checked : true;
+
           blocks.forEach(function (b) {
             var text = (b.textContent + ' ' + (b.getAttribute('data-search') || '')).toLowerCase();
-            if (text.indexOf(q) !== -1) { b.classList.add('found'); matches.push(b); }
+            var isMatch = text.indexOf(q) !== -1;
+            if (isMatch) {
+              b.classList.add('found');
+              b.style.display = '';
+              matches.push(b);
+              // 若搜尋符合，自動展開以便閱讀
+              var foldBtn = b.querySelector('.fold-btn');
+              if (foldBtn && b.classList.contains('collapsed')) {
+                toggleFold(b, foldBtn, true);
+              }
+            } else {
+              b.classList.remove('found');
+              if (filterOnly) {
+                b.style.display = 'none';
+              } else {
+                b.style.display = '';
+              }
+            }
           });
+
+          // 若開啟過濾模式，檢查分類是否有結果
+          if (filterOnly) {
+            catSections.forEach(function (sec) {
+              var visibleReports = sec.querySelectorAll('.report:not([style*="display: none"])');
+              if (visibleReports.length === 0) {
+                var p = document.createElement('p');
+                p.className = 'cat-no-match';
+                p.textContent = '此分類在關鍵字「' + q + '」中無符合報告';
+                sec.appendChild(p);
+              }
+            });
+          }
+
           status.style.display = 'block';
-          status.textContent = matches.length
-            ? ('找到 ' + matches.length + ' 處符合的內容（已標示），按 Enter 跳到下一處。')
-            : '沒有符合的內容。';
+          if (matches.length > 0) {
+            status.textContent = '找到 ' + matches.length + ' 份符合的報告' + (filterOnly ? '（其餘已自動隱藏）' : '') + '，按 Enter 跳至下一處。';
+          } else {
+            status.textContent = '查無符合「' + q + '」的內容，可嘗試更簡短關鍵字或清除搜尋。';
+          }
+        }
+
+        input.addEventListener('input', performSearch);
+        if (chkFilterOnly) {
+          chkFilterOnly.addEventListener('change', performSearch);
+        }
+        clearBtn.addEventListener('click', function () {
+          input.value = '';
+          input.focus();
+          performSearch();
         });
+
         function flash(el) {
           if (!el) return;
           el.classList.remove('flash');
           void el.offsetWidth;
           el.classList.add('flash');
         }
+
         input.addEventListener('keydown', function (ev) {
           if (ev.key === 'Enter') {
             ev.preventDefault();
@@ -2323,6 +2561,7 @@
           }
         });
 
+        // 3. 回頂部與進度條
         var toTop = document.getElementById('toTop');
         var progress = document.getElementById('progress');
         function syncToTop() {
@@ -2337,14 +2576,33 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        // 4. 錨點點擊自動展開目標報告
+        function ensureExpanded(id) {
+          if (!id) return;
+          var el = document.getElementById(id);
+          if (!el) return;
+          var report = el.classList.contains('report') ? el : el.closest('.report');
+          if (report && report.classList.contains('collapsed')) {
+            var btn = report.querySelector('.fold-btn');
+            toggleFold(report, btn, true);
+          }
+          if (report) { flash(report); }
+        }
+
         function flashFromHash() {
           var id = location.hash.slice(1);
           if (!id) return;
-          var el = document.getElementById(id);
-          if (el && el.classList.contains('report')) { flash(el); }
+          ensureExpanded(id);
         }
         window.addEventListener('hashchange', flashFromHash);
         flashFromHash();
+
+        document.addEventListener('click', function (ev) {
+          var a = ev.target.closest('a[href^="#"]');
+          if (!a) return;
+          var id = a.getAttribute('href').slice(1);
+          ensureExpanded(id);
+        });
 
         /* ---------- 下拉選單 ---------- */
         var dds = Array.prototype.slice.call(document.querySelectorAll('.dd'));
