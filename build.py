@@ -133,8 +133,19 @@ def render_content(body):
             clean_lines.append(line)
     clean_body = "\n".join(clean_lines).strip()
     if HAS_MARKDOWN:
-        return markdown.markdown(clean_body, extensions=['tables', 'fenced_code'])
-    return clean_body
+        html = markdown.markdown(clean_body, extensions=['tables', 'fenced_code'])
+    else:
+        html = clean_body
+
+    def wrap_table_match(m):
+        prefix = m.group(1) or ""
+        table = m.group(2)
+        if prefix:
+            return prefix + table
+        return f'<div class="tablewrap">{table}</div>'
+
+    html = re.sub(r'(<div class="tablewrap">[\s\n]*)?(<table\b[^>]*>.*?</table>)', wrap_table_match, html, flags=re.DOTALL)
+    return html
 
 def clean_title_for_menu(title):
     """去除標題末尾的（2026-10-22）等贅字，保持目錄精煉"""

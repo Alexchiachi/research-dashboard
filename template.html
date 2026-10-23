@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#211C16" media="(prefers-color-scheme: dark)" />
     <title>研究報告儀表板 · 大道至簡</title>
+    <meta name="author" content="大道至簡 · 簡家旗" />
+    <meta name="copyright" content="大道至簡 · 簡家旗" />
     <link rel="canonical" href="{{CANONICAL_URL}}" />
     <link rel="alternate" hreflang="zh-Hant" href="https://alexchiachi.github.io/research-dashboard/" />
     <link rel="alternate" hreflang="zh-Hans" href="https://alexchiachi.github.io/research-dashboard/zh-cn/" />
@@ -72,6 +74,9 @@
       strong, b { font-weight: 600; }
       .serif { font-family: "Noto Serif TC", "Songti TC", serif; }
       .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 72px; }
+
+      .ph { display: inline-block; }
+      mark { background: var(--tint); color: var(--ink); padding: 0 2px; }
 
       /* ---------- 靜構無孤字與標題平衡標準 ---------- */
       h1, h2, h3, h4, .rtitle, .kicker, .cat-head h2, .toc-head h2, .brand {
@@ -162,7 +167,10 @@
       .search-clear {
         position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
         background: transparent; border: none; color: var(--muted);
-        font-size: 15px; cursor: pointer; padding: 4px 8px; line-height: 1;
+        font-size: 16px; cursor: pointer; padding: 0; line-height: 1;
+        min-width: 44px; min-height: 44px;
+        display: flex; align-items: center; justify-content: center;
+        touch-action: manipulation;
       }
       .search-clear:hover { color: var(--terra); }
       .search-status { display: none; color: var(--terra); padding: 12px 0 0; margin: 0; font-size: 14px; }
@@ -172,12 +180,20 @@
       .accum { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
       .accum strong { color: var(--tea); font-weight: 600; }
 
-      /* ---------- 分類導覽 ---------- */
-      nav.cats { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 30px 0 0; }
+      /* ---------- 分類導覽與即時過濾切換 ---------- */
+      nav.cats { display: flex; flex-wrap: wrap; gap: 8px 12px; margin: 30px 0 0; }
       nav.cats a {
-        border-bottom: none; color: var(--muted); font-size: 14px; letter-spacing: .06em;
+        border: 1px solid var(--line); color: var(--muted); font-size: 13.5px;
+        letter-spacing: .06em; padding: 4px 12px; transition: all .16s ease;
+        background: transparent; text-decoration: none; border-bottom: 1px solid var(--line);
       }
-      nav.cats a:hover { color: var(--tea); }
+      nav.cats a:hover {
+        color: var(--tea); border-color: var(--tea); background: var(--surface);
+      }
+      nav.cats a.active {
+        color: var(--paper); background: var(--tea); border-color: var(--tea);
+      }
+      nav.cats a.active b { color: var(--tint); }
       nav.cats a b { color: var(--tea); font-weight: 500; margin-right: 6px; font-family: "Noto Serif TC", serif; }
 
       /* ---------- 分類區塊 ---------- */
@@ -218,9 +234,10 @@
         align-self: flex-start;
         font: inherit; font-size: 12.5px; letter-spacing: .08em;
         background: var(--surface); color: var(--muted);
-        border: 1px solid var(--line); padding: 4px 12px; cursor: pointer;
+        border: 1px solid var(--line); padding: 6px 14px; cursor: pointer;
         margin-top: 14px; transition: all .15s ease;
         display: inline-flex; align-items: center; gap: 4px;
+        min-height: 38px; touch-action: manipulation;
       }
       .fold-btn:hover {
         border-color: var(--tea); color: var(--tea);
@@ -239,7 +256,11 @@
       .rpoint { margin: 0; color: var(--muted); font-size: 15px; font-weight: 400; }
       .rpoint em { font-style: normal; color: var(--ink); font-weight: 500; }
       .rfoot { max-width: 760px; margin: 32px auto 0; font-size: 13px; }
-      .drive-link { font-size: 12.5px; color: var(--muted); border-bottom-color: var(--line); white-space: nowrap; }
+      .drive-link {
+        font-size: 12.5px; color: var(--muted); border-bottom-color: var(--line); white-space: nowrap;
+        display: inline-flex; align-items: center; min-height: 38px; padding: 4px 8px;
+        touch-action: manipulation;
+      }
       .drive-link:hover { color: var(--tea); border-bottom-color: var(--tea); }
 
       .tag {
@@ -286,7 +307,24 @@
       }
       .doc pre { background: var(--surface); border: 1px solid var(--line-soft); padding: 14px 16px; overflow-x: auto; }
       .doc pre code { background: none; border: none; padding: 0; }
-      .doc .tablewrap { overflow-x: auto; margin: 1.2em 0; border: 1px solid var(--line-soft); border-right: 3px solid var(--line); }
+      .doc .tablewrap {
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1.4em 0;
+        border: 1px solid var(--line-soft);
+        border-right: 3px solid var(--line);
+        background:
+          linear-gradient(to right, var(--surface) 30%, rgba(250, 246, 239, 0)),
+          linear-gradient(to right, rgba(250, 246, 239, 0), var(--surface) 70%) 100% 0,
+          radial-gradient(farthest-side at 0% 50%, rgba(42, 37, 32, 0.12), rgba(0,0,0,0)),
+          radial-gradient(farthest-side at 100% 50%, rgba(42, 37, 32, 0.12), rgba(0,0,0,0)) 100% 0;
+        background-repeat: no-repeat;
+        background-color: var(--surface);
+        background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+        background-position: 0 0, 100% 0, 0 0, 100% 0;
+        background-attachment: local, local, scroll, scroll;
+      }
       .doc table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.7; background: var(--surface); }
       .doc th, .doc td { border: 1px solid var(--line-soft); padding: 10px 14px; text-align: left; vertical-align: top; }
       .doc th { font-weight: 500; color: var(--tea); white-space: nowrap; background: var(--tint); }
@@ -333,7 +371,7 @@
       .topbar .dd-panel {
         left: auto; right: 0; top: calc(100% + 10px);
         width: min(380px, calc(100vw - 32px));
-        max-height: min(72vh, 600px); overflow-y: auto;
+        max-height: min(72dvh, 600px); overflow-y: auto;
       }
       @media (max-width: 640px) {
         .topbar .dd-top { order: 2; margin-left: auto; }
@@ -347,6 +385,11 @@
       .topbar {
         position: fixed; top: 0; left: 0; right: 0; z-index: 60;
         background: var(--paper); border-bottom: 1px solid var(--line);
+        transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform;
+      }
+      .topbar.topbar-hidden {
+        transform: translateY(-100%);
       }
       .topbar-inner {
         max-width: 920px; margin: 0 auto; padding: 10px 24px;
@@ -401,11 +444,16 @@
 
       /* ---------- 回到頂部 ---------- */
       .to-top {
-        position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom));
-        z-index: 60; width: 54px; height: 54px; padding: 0;
+        position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        z-index: 60; width: 52px; height: 52px; padding: 0;
         background: var(--paper); color: var(--tea);
         border: 1px solid var(--tea); cursor: pointer;
         font-family: inherit; font-size: 20px; line-height: 1;
+        opacity: 0; pointer-events: none; transform: translateY(12px);
+        transition: opacity .24s ease, transform .24s ease, background-color .18s ease;
+      }
+      .to-top.show {
+        opacity: 1; pointer-events: auto; transform: translateY(0);
       }
       .to-top:hover { color: var(--terra); border-color: var(--terra); }
       .to-top .lab { display: block; font-size: 10px; letter-spacing: .18em; margin-top: 3px; }
@@ -458,26 +506,144 @@
         font-family: "Noto Serif TC", serif; font-weight: 400;
         font-size: 17px; letter-spacing: .3em; color: var(--tea); margin: 0 0 8px;
       }
+      footer .copyright {
+        font-size: 13.5px; letter-spacing: .12em; color: var(--ink);
+        margin: 10px 0 6px; font-weight: 500;
+      }
       footer .small { color: var(--muted); font-size: 13px; margin: 0; }
 
       @media (max-width: 640px) {
-        .wrap { padding: 0 20px 56px; }
-        header { padding-top: 128px; }
-        h1 { font-size: 31px; letter-spacing: .12em; }
-        .report { padding-left: 0; padding-right: 0; margin-top: 52px; padding-top: 48px; }
+        .wrap { padding: 0 18px 56px; }
+        header { padding-top: 122px; }
+        h1 { font-size: 29px; letter-spacing: .1em; }
+        .report { padding-left: 0; padding-right: 0; margin-top: 48px; padding-top: 44px; }
         .cat-head .folder { margin-left: 0; }
-        .stat { padding-right: 18px; margin-right: 18px; }
-        .rtitle { font-size: 22px; }
+        .rtitle { font-size: 21px; }
         .doc { font-size: 16.5px; }
-        .topbar-inner { padding: 8px 20px; gap: 2px 18px; }
+
+        /* 頂欄行動端緊湊佈局 */
+        .topbar-inner { padding: 8px 16px; gap: 2px 14px; }
         .topbar nav {
-          margin-left: 0; gap: 2px 16px; flex-wrap: nowrap; overflow-x: auto;
+          margin-left: 0; gap: 2px 14px; flex-wrap: nowrap; overflow-x: auto;
           max-width: 100%; scrollbar-width: none; -webkit-overflow-scrolling: touch;
         }
         .topbar nav::-webkit-scrollbar { display: none; }
-        section.cat, .report, .toc { scroll-margin-top: 118px; }
+        section.cat, .report, .toc { scroll-margin-top: 108px; }
         .toc .tcat { margin-left: 0; }
-        .to-top { right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
+
+        /* 2x2 雙欄數據卡片矩陣 */
+        .stats {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          margin: 24px 0 14px;
+          padding: 12px;
+          background: var(--surface);
+          border: 1px solid var(--line-soft);
+        }
+        .stat {
+          padding: 10px 12px;
+          margin: 0;
+          border-right: none;
+          border-left: 3px solid var(--tea);
+          background: var(--tint);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .stat:last-child { border-right: none; }
+        .stat .num { font-size: 24px; line-height: 1.15; }
+        .stat .lab { font-size: 12px; margin-top: 3px; }
+
+        /* 搜尋列與控制項觸控強化 */
+        .search-title-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+        .view-controls {
+          width: 100%;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          gap: 8px 12px;
+        }
+        .filter-toggle {
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          touch-action: manipulation;
+        }
+        .ctl-btn {
+          padding: 6px 12px;
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          touch-action: manipulation;
+        }
+
+        /* 分類頁籤單行橫向慣性滑動 Pills Bar */
+        nav.cats {
+          margin: 20px 0 0;
+          padding: 10px 0 4px;
+          display: flex;
+          gap: 8px;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          margin-left: -18px;
+          margin-right: -18px;
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        nav.cats::-webkit-scrollbar { display: none; }
+        nav.cats a {
+          flex-shrink: 0;
+          white-space: nowrap;
+          padding: 7px 15px;
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* 表格微提示 */
+        .doc .tablewrap::before {
+          content: "← 可左右滑動查看完整數據 →";
+          display: block;
+          text-align: right;
+          font-size: 11px;
+          letter-spacing: .08em;
+          color: var(--muted);
+          padding: 5px 10px;
+          background: var(--tint);
+          border-bottom: 1px solid var(--line-soft);
+          font-family: inherit;
+        }
+
+        /* 展開按鈕觸控優化 */
+        .fold-btn {
+          min-height: 42px;
+          padding: 8px 16px;
+          font-size: 13px;
+        }
+
+        /* 回頂部行動端防遮擋與半透明微透 */
+        .to-top {
+          right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+          width: 44px; height: 44px; font-size: 17px;
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          background: rgba(250, 246, 239, 0.88);
+        }
+        .to-top.show { opacity: 0.76; }
+        .to-top.show:hover, .to-top.show:active {
+          opacity: 1; background: var(--tint);
+        }
+        .to-top .lab { font-size: 9px; letter-spacing: .06em; margin-top: 1px; }
       }
     </style>
   </head>
@@ -545,12 +711,13 @@
         </div>
         <p class="search-status" id="searchStatus"></p>
 
-        <nav class="cats">
-          <a href="#cat-market"><b>01</b>市場調查</a>
-          <a href="#cat-traffic"><b>02</b>流量情報</a>
-          <a href="#cat-people"><b>03</b>人物研究</a>
-          <a href="#cat-events"><b>04</b>事件追蹤</a>
-          <a href="#cat-platform"><b>05</b>平台研究</a>
+        <nav class="cats" id="catNav" aria-label="分類導航與過濾">
+          <a href="javascript:void(0)" class="active" data-filter="all">全部報告</a>
+          <a href="#cat-market" data-filter="cat-market"><b>01</b>市場調查</a>
+          <a href="#cat-traffic" data-filter="cat-traffic"><b>02</b>流量情報</a>
+          <a href="#cat-people" data-filter="cat-people"><b>03</b>人物研究</a>
+          <a href="#cat-events" data-filter="cat-events"><b>04</b>事件追蹤</a>
+          <a href="#cat-platform" data-filter="cat-platform"><b>05</b>平台研究</a>
         </nav>
       </header>
 
@@ -571,6 +738,7 @@
       <footer>
         <div class="seal-mark">大道至簡</div>
         <p class="motto">做幸福的事，把幸福做成有價值</p>
+        <p class="copyright">版權所有 © 2026 大道至簡 · 簡家旗 · 保留所有權利</p>
         <p class="small">研究報告庫 ・ 雲端硬碟歸檔 ・ 最近歸檔 {{LATEST_DATE}}</p>
       </footer>
 
@@ -590,6 +758,35 @@
         var reports = Array.prototype.slice.call(document.querySelectorAll('.report'));
         var catSections = Array.prototype.slice.call(document.querySelectorAll('section.cat'));
         var matches = [], idx = -1;
+
+        // 0. 分類標籤即時切換
+        var catNav = document.getElementById('catNav');
+        function setCategoryFilter(filterId) {
+          if (!catNav) return;
+          catNav.querySelectorAll('a').forEach(function (el) { el.classList.remove('active'); });
+          var activePill = catNav.querySelector('a[data-filter="' + filterId + '"]');
+          if (activePill) activePill.classList.add('active');
+          if (filterId === 'all') {
+            catSections.forEach(function (sec) { sec.style.display = ''; });
+          } else {
+            catSections.forEach(function (sec) {
+              sec.style.display = (sec.id === filterId) ? '' : 'none';
+            });
+          }
+        }
+
+        if (catNav) {
+          catNav.addEventListener('click', function (ev) {
+            var a = ev.target.closest('a[data-filter]');
+            if (!a) return;
+            var filter = a.getAttribute('data-filter');
+            setCategoryFilter(filter);
+            if (filter !== 'all') {
+              var targetSec = document.getElementById(filter);
+              if (targetSec) targetSec.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        }
 
         // 1. 初始化每篇報告的「收合／展開」按鈕
         reports.forEach(function (rep) {
@@ -661,6 +858,13 @@
               b.style.display = '';
             });
             return;
+          }
+          // 搜尋時自動切換至「全部」檢視以涵蓋全站
+          if (catNav) {
+            catNav.querySelectorAll('a').forEach(function (el) { el.classList.remove('active'); });
+            var allPill = catNav.querySelector('a[data-filter="all"]');
+            if (allPill) allPill.classList.add('active');
+            catSections.forEach(function (sec) { sec.style.display = ''; });
           }
 
           var filterOnly = chkFilterOnly ? chkFilterOnly.checked : true;
@@ -736,17 +940,52 @@
           }
         });
 
-        // 3. 回頂部與進度條
+        // 3. 智慧頂欄、回頂部與閱讀進度線同步
         var toTop = document.getElementById('toTop');
         var progress = document.getElementById('progress');
-        function syncToTop() {
-          if (window.scrollY > window.innerHeight) { toTop.classList.add('show'); }
-          else { toTop.classList.remove('show'); }
+        var topbar = document.querySelector('.topbar');
+        var lastScrollY = window.scrollY || 0;
+        var scrollThreshold = 140;
+
+        function handleScroll() {
+          var currentY = window.scrollY || 0;
+
+          // 回頂部顯示判定 (滾動超過 360px 即平滑顯示)
+          if (currentY > 360) {
+            toTop.classList.add('show');
+          } else {
+            toTop.classList.remove('show');
+          }
+
+          // 進度條寬度
           var max = document.documentElement.scrollHeight - window.innerHeight;
-          progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+          progress.style.width = (max > 0 ? (currentY / max) * 100 : 0) + '%';
+
+          // 智慧頂欄：若有任何下拉選單處於開啟狀態，保持頂欄展開以防干擾操作
+          var hasOpenDropdown = document.querySelector('.dd.open');
+          if (hasOpenDropdown) {
+            if (topbar) topbar.classList.remove('topbar-hidden');
+            lastScrollY = currentY;
+            return;
+          }
+
+          // 向下捲動超過門檻時隱藏，向上滑動即刻浮現
+          if (topbar && currentY > scrollThreshold) {
+            var delta = currentY - lastScrollY;
+            if (delta > 8 && currentY > 200) {
+              topbar.classList.add('topbar-hidden');
+            } else if (delta < -8) {
+              topbar.classList.remove('topbar-hidden');
+            }
+          } else if (topbar) {
+            topbar.classList.remove('topbar-hidden');
+          }
+
+          lastScrollY = currentY;
         }
-        window.addEventListener('scroll', syncToTop, { passive: true });
-        syncToTop();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
         toTop.addEventListener('click', function () {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
