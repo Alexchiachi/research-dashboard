@@ -63,5 +63,12 @@ research-dashboard/
 
 ---
 
+## ⚖️ 版權聲明 (Copyright Notice)
+
+版權所有 © 2026 大道至簡 · 簡家旗 (Alex Chiachi Jian)  
+保留所有權利。歡迎非商業分享引用，轉載請註明出處與原始連結。詳見 [LICENSE](LICENSE)。
+
+---
+
 大道至簡・簡家旗  
 做幸福的事，把幸福做成有價值。

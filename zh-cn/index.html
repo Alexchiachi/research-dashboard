@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#211C16" media="(prefers-color-scheme: dark)" />
     <title>研究报告仪表板 · 大道至简</title>
+    <meta name="author" content="大道至简 · 简家旗" />
+    <meta name="copyright" content="大道至简 · 简家旗" />
     <link rel="canonical" href="https://alexchiachi.github.io/research-dashboard/zh-cn/" />
     <link rel="alternate" hreflang="zh-Hant" href="https://alexchiachi.github.io/research-dashboard/" />
     <link rel="alternate" hreflang="zh-Hans" href="https://alexchiachi.github.io/research-dashboard/zh-cn/" />
@@ -72,6 +74,9 @@
       strong, b { font-weight: 600; }
       .serif { font-family: "Noto Serif SC", "Songti SC", serif; }
       .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 72px; }
+
+      .ph { display: inline-block; }
+      mark { background: var(--tint); color: var(--ink); padding: 0 2px; }
 
       /* ---------- 静构无孤字与标题平衡标准 ---------- */
       h1, h2, h3, h4, .rtitle, .kicker, .cat-head h2, .toc-head h2, .brand {
@@ -172,12 +177,20 @@
       .accum { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
       .accum strong { color: var(--tea); font-weight: 600; }
 
-      /* ---------- 分类导览 ---------- */
-      nav.cats { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 30px 0 0; }
+      /* ---------- 分类导览与即时过滤切换 ---------- */
+      nav.cats { display: flex; flex-wrap: wrap; gap: 8px 12px; margin: 30px 0 0; }
       nav.cats a {
-        border-bottom: none; color: var(--muted); font-size: 14px; letter-spacing: .06em;
+        border: 1px solid var(--line); color: var(--muted); font-size: 13.5px;
+        letter-spacing: .06em; padding: 4px 12px; transition: all .16s ease;
+        background: transparent; text-decoration: none; border-bottom: 1px solid var(--line);
       }
-      nav.cats a:hover { color: var(--tea); }
+      nav.cats a:hover {
+        color: var(--tea); border-color: var(--tea); background: var(--surface);
+      }
+      nav.cats a.active {
+        color: var(--paper); background: var(--tea); border-color: var(--tea);
+      }
+      nav.cats a.active b { color: var(--tint); }
       nav.cats a b { color: var(--tea); font-weight: 500; margin-right: 6px; font-family: "Noto Serif TC", serif; }
 
       /* ---------- 分类区块 ---------- */
@@ -458,6 +471,10 @@
         font-family: "Noto Serif TC", serif; font-weight: 400;
         font-size: 17px; letter-spacing: .3em; color: var(--tea); margin: 0 0 8px;
       }
+      footer .copyright {
+        font-size: 13.5px; letter-spacing: .12em; color: var(--ink);
+        margin: 10px 0 6px; font-weight: 500;
+      }
       footer .small { color: var(--muted); font-size: 13px; margin: 0; }
 
       @media (max-width: 640px) {
@@ -562,12 +579,13 @@
         </div>
         <p class="search-status" id="searchStatus"></p>
 
-        <nav class="cats">
-          <a href="#cat-market"><b>01</b>市场调查</a>
-          <a href="#cat-traffic"><b>02</b>流量情报</a>
-          <a href="#cat-people"><b>03</b>人物研究</a>
-          <a href="#cat-events"><b>04</b>事件追踪</a>
-          <a href="#cat-platform"><b>05</b>平台研究</a>
+        <nav class="cats" id="catNav" aria-label="分类导航与过滤">
+          <a href="javascript:void(0)" class="active" data-filter="all">全部报告</a>
+          <a href="#cat-market" data-filter="cat-market"><b>01</b>市场调查</a>
+          <a href="#cat-traffic" data-filter="cat-traffic"><b>02</b>流量情报</a>
+          <a href="#cat-people" data-filter="cat-people"><b>03</b>人物研究</a>
+          <a href="#cat-events" data-filter="cat-events"><b>04</b>事件追踪</a>
+          <a href="#cat-platform" data-filter="cat-platform"><b>05</b>平台研究</a>
         </nav>
       </header>
 
@@ -2409,6 +2427,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
       <footer>
         <div class="seal-mark">大道至简</div>
         <p class="motto">做幸福的事，把幸福做成有价值</p>
+        <p class="copyright">版权所有 © 2026 大道至简 · 简家旗 · 保留所有权利</p>
         <p class="small">研究报告库 ・ 云端硬盘归档 ・ 最近归档 2026-10-22</p>
       </footer>
 
@@ -2428,6 +2447,35 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         var reports = Array.prototype.slice.call(document.querySelectorAll('.report'));
         var catSections = Array.prototype.slice.call(document.querySelectorAll('section.cat'));
         var matches = [], idx = -1;
+
+        // 0. 分类标签即时切换
+        var catNav = document.getElementById('catNav');
+        function setCategoryFilter(filterId) {
+          if (!catNav) return;
+          catNav.querySelectorAll('a').forEach(function (el) { el.classList.remove('active'); });
+          var activePill = catNav.querySelector('a[data-filter="' + filterId + '"]');
+          if (activePill) activePill.classList.add('active');
+          if (filterId === 'all') {
+            catSections.forEach(function (sec) { sec.style.display = ''; });
+          } else {
+            catSections.forEach(function (sec) {
+              sec.style.display = (sec.id === filterId) ? '' : 'none';
+            });
+          }
+        }
+
+        if (catNav) {
+          catNav.addEventListener('click', function (ev) {
+            var a = ev.target.closest('a[data-filter]');
+            if (!a) return;
+            var filter = a.getAttribute('data-filter');
+            setCategoryFilter(filter);
+            if (filter !== 'all') {
+              var targetSec = document.getElementById(filter);
+              if (targetSec) targetSec.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        }
 
         // 1. 初始化每篇报告的「收合／展开」按钮
         reports.forEach(function (rep) {
@@ -2499,6 +2547,13 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
               b.style.display = '';
             });
             return;
+          }
+          // 搜索时自动切换至「全部」查看以涵盖全站
+          if (catNav) {
+            catNav.querySelectorAll('a').forEach(function (el) { el.classList.remove('active'); });
+            var allPill = catNav.querySelector('a[data-filter="all"]');
+            if (allPill) allPill.classList.add('active');
+            catSections.forEach(function (sec) { sec.style.display = ''; });
           }
 
           var filterOnly = chkFilterOnly ? chkFilterOnly.checked : true;
