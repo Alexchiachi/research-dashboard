@@ -230,6 +230,30 @@
         max-width: 760px; margin: 0 auto; padding-bottom: 16px; border-bottom: 1px solid var(--tea);
         display: flex; flex-direction: column;
       }
+      .report-meta-row {
+        display: flex; justify-content: space-between; align-items: baseline;
+        flex-wrap: wrap; gap: 8px 14px; margin-bottom: 10px;
+      }
+      .rmeta {
+        font-size: 13px; color: var(--muted); letter-spacing: .12em; margin: 0;
+        display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+      }
+      .rmeta .rdate { font-weight: 500; }
+      .rmeta .rstats {
+        color: var(--muted); font-size: 12px; letter-spacing: .04em; font-weight: 400;
+        margin-left: 6px;
+      }
+      .rmeta .daily { color: var(--terra); font-weight: 500; }
+      .cite-btn {
+        font-family: inherit; font-size: 12px; letter-spacing: .06em;
+        background: var(--surface); color: var(--muted);
+        border: 1px solid var(--line); padding: 3px 10px; cursor: pointer;
+        transition: all .16s ease; display: inline-flex; align-items: center; gap: 4px;
+        min-height: 30px; touch-action: manipulation; margin-left: auto;
+      }
+      .cite-btn:hover { color: var(--tea); border-color: var(--tea); background: var(--tint); }
+      .cite-btn.copied { color: var(--terra); border-color: var(--terra); background: var(--tint); }
+      .cite-btn .icon { font-size: 11px; }
       .fold-btn {
         align-self: flex-start;
         font: inherit; font-size: 12.5px; letter-spacing: .08em;
@@ -245,8 +269,6 @@
       .report.collapsed .fold-btn {
         background: var(--tint); color: var(--ink); border-color: var(--tea);
       }
-      .rmeta { font-size: 13px; color: var(--muted); letter-spacing: .14em; margin: 0 0 10px; }
-      .rmeta .daily { color: var(--terra); font-weight: 500; }
       .rtitle {
         font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 600;
         font-size: 26px; letter-spacing: .06em; color: var(--ink);
@@ -330,6 +352,44 @@
       .doc th { font-weight: 500; color: var(--tea); white-space: nowrap; background: var(--tint); }
       .doc td { overflow-wrap: anywhere; }
       .doc img { max-width: 100%; height: auto; }
+
+      /* ---------- 篇內極簡目錄 (Mini-TOC) ---------- */
+      .mini-toc {
+        margin: 1.4em 0 2.2em; background: var(--surface); border: 1px solid var(--line);
+        padding: 12px 18px; font-size: 14px;
+      }
+      .mini-toc-summary {
+        cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+        user-select: none; font-family: inherit; color: var(--tea); list-style: none;
+      }
+      .mini-toc-summary::-webkit-details-marker { display: none; }
+      .mini-toc-title {
+        font-family: "Noto Serif TC", "Songti TC", serif; font-weight: 600;
+        letter-spacing: .08em; font-size: 14.5px;
+      }
+      .mini-toc-count { color: var(--muted); font-size: 12.5px; margin-left: 6px; font-weight: 400; }
+      .mini-toc-arrow { color: var(--tea); font-size: 12px; transition: transform .18s ease; margin-left: auto; }
+      .mini-toc[open] .mini-toc-arrow { transform: rotate(180deg); }
+      .mini-toc-list {
+        margin: 12px 0 4px; padding-left: 20px;
+        column-count: 2; column-gap: 28px; line-height: 1.75;
+      }
+      @media (max-width: 640px) {
+        .mini-toc-list { column-count: 1; padding-left: 18px; }
+      }
+      .mini-toc-list li { margin: 4px 0; break-inside: avoid; }
+      .mini-toc-list li.sub { padding-left: 14px; font-size: 13px; }
+      .mini-toc-list a {
+        color: var(--ink); border-bottom: 1px solid transparent; transition: all .15s ease;
+        display: inline-block; overflow-wrap: anywhere;
+      }
+      .mini-toc-list a:hover { color: var(--tea); border-bottom-color: var(--tea); }
+
+      /* ---------- 搜尋關鍵字高亮 ---------- */
+      mark.search-hl {
+        background: #f7e49a; color: var(--ink); padding: 0 2px;
+        font-weight: 500; border-radius: 0;
+      }
 
       /* ---------- 下拉選單 ---------- */
       .dd { position: relative; }
@@ -418,7 +478,7 @@
       }
       .topbar nav a b { color: var(--tea); font-weight: 500; margin-right: 5px; font-family: "Noto Serif TC", serif; }
 
-      section.cat, .report, .toc { scroll-margin-top: 92px; }
+      section.cat, .report, .toc, .doc h2, .doc h3 { scroll-margin-top: 92px; }
 
       /* ---------- 目錄 ---------- */
       .toc { margin-top: 56px; }
@@ -528,7 +588,7 @@
           max-width: 100%; scrollbar-width: none; -webkit-overflow-scrolling: touch;
         }
         .topbar nav::-webkit-scrollbar { display: none; }
-        section.cat, .report, .toc { scroll-margin-top: 108px; }
+        section.cat, .report, .toc, .doc h2, .doc h3 { scroll-margin-top: 108px; }
         .toc .tcat { margin-left: 0; }
 
         /* 2x2 雙欄數據卡片矩陣 */
@@ -842,10 +902,57 @@
         }
 
         // 2. 搜尋過濾與標示跳轉
+        function clearSearchHighlights() {
+          var marks = Array.prototype.slice.call(document.querySelectorAll('mark.search-hl'));
+          marks.forEach(function (m) {
+            var parent = m.parentNode;
+            if (parent) {
+              parent.replaceChild(document.createTextNode(m.textContent), m);
+              parent.normalize();
+            }
+          });
+        }
+
+        function highlightInElement(root, query) {
+          if (!query || query.length < 2) return;
+          var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (node) {
+              if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+              var parent = node.parentElement;
+              if (!parent) return NodeFilter.FILTER_REJECT;
+              var tag = parent.tagName;
+              if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'MARK' || tag === 'CODE' || tag === 'PRE' || parent.classList.contains('search-clear') || parent.classList.contains('cite-btn') || parent.classList.contains('fold-btn')) {
+                return NodeFilter.FILTER_REJECT;
+              }
+              return NodeFilter.FILTER_ACCEPT;
+            }
+          });
+
+          var textNodes = [];
+          while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+          }
+
+          var escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          var regex = new RegExp('(' + escaped + ')', 'gi');
+
+          textNodes.forEach(function (node) {
+            var val = node.nodeValue;
+            if (regex.test(val)) {
+              var span = document.createElement('span');
+              span.innerHTML = val.replace(regex, '<mark class="search-hl">$1</mark>');
+              if (node.parentNode) {
+                node.parentNode.replaceChild(span, node);
+              }
+            }
+          });
+        }
+
         function performSearch() {
           var q = input.value.trim().toLowerCase();
           matches = []; idx = -1;
           clearBtn.style.display = q ? 'block' : 'none';
+          clearSearchHighlights();
 
           // 清除先前的 no-match 提示
           document.querySelectorAll('.cat-no-match').forEach(function (el) { el.remove(); });
@@ -891,6 +998,13 @@
             }
           });
 
+          // 套用關鍵字即時高亮（搜尋詞 >= 2 字元時）
+          if (q.length >= 2) {
+            matches.forEach(function (b) {
+              highlightInElement(b, q);
+            });
+          }
+
           // 若開啟過濾模式，檢查分類是否有結果
           if (filterOnly) {
             catSections.forEach(function (sec) {
@@ -918,6 +1032,7 @@
         }
         clearBtn.addEventListener('click', function () {
           input.value = '';
+          clearSearchHighlights();
           input.focus();
           performSearch();
         });
@@ -1047,6 +1162,55 @@
         document.addEventListener('keydown', function (ev) {
           if (ev.key === 'Escape') { closeDropdowns(); }
         });
+
+        // 5. 複製引用按鈕
+        document.addEventListener('click', function (ev) {
+          var btn = ev.target.closest('.cite-btn');
+          if (!btn) return;
+          var reportId = btn.getAttribute('data-id');
+          var title = btn.getAttribute('data-title');
+          var date = btn.getAttribute('data-date');
+          var year = date ? date.slice(0, 4) : '2026';
+          var isZhCn = document.documentElement.lang === 'zh-Hans';
+          var baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/';
+          var currentUrl = baseUrl + '#' + reportId;
+
+          var authorName = isZhCn ? '简家旗' : '簡家旗';
+          var libName = isZhCn ? '大道至简研究报告库' : '大道至簡研究報告庫';
+          var citationText = authorName + '（' + year + '）.《' + title + '》. ' + libName + '. ' + currentUrl;
+
+          function setCopiedState() {
+            var originalHTML = btn.innerHTML;
+            btn.innerHTML = (isZhCn ? '已复制引用 ✓' : '已複製引用 ✓');
+            btn.classList.add('copied');
+            setTimeout(function () {
+              btn.innerHTML = originalHTML;
+              btn.classList.remove('copied');
+            }, 2200);
+            if (history.replaceState) {
+              history.replaceState(null, '', '#' + reportId);
+            }
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(citationText).then(setCopiedState).catch(function () {
+              fallbackCopy(citationText, setCopiedState);
+            });
+          } else {
+            fallbackCopy(citationText, setCopiedState);
+          }
+        });
+
+        function fallbackCopy(text, callback) {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); callback(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
       })();
     </script>
   </body>

@@ -230,6 +230,30 @@
         max-width: 760px; margin: 0 auto; padding-bottom: 16px; border-bottom: 1px solid var(--tea);
         display: flex; flex-direction: column;
       }
+      .report-meta-row {
+        display: flex; justify-content: space-between; align-items: baseline;
+        flex-wrap: wrap; gap: 8px 14px; margin-bottom: 10px;
+      }
+      .rmeta {
+        font-size: 13px; color: var(--muted); letter-spacing: .12em; margin: 0;
+        display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+      }
+      .rmeta .rdate { font-weight: 500; }
+      .rmeta .rstats {
+        color: var(--muted); font-size: 12px; letter-spacing: .04em; font-weight: 400;
+        margin-left: 6px;
+      }
+      .rmeta .daily { color: var(--terra); font-weight: 500; }
+      .cite-btn {
+        font-family: inherit; font-size: 12px; letter-spacing: .06em;
+        background: var(--surface); color: var(--muted);
+        border: 1px solid var(--line); padding: 3px 10px; cursor: pointer;
+        transition: all .16s ease; display: inline-flex; align-items: center; gap: 4px;
+        min-height: 30px; touch-action: manipulation; margin-left: auto;
+      }
+      .cite-btn:hover { color: var(--tea); border-color: var(--tea); background: var(--tint); }
+      .cite-btn.copied { color: var(--terra); border-color: var(--terra); background: var(--tint); }
+      .cite-btn .icon { font-size: 11px; }
       .fold-btn {
         align-self: flex-start;
         font: inherit; font-size: 12.5px; letter-spacing: .08em;
@@ -245,8 +269,6 @@
       .report.collapsed .fold-btn {
         background: var(--tint); color: var(--ink); border-color: var(--tea);
       }
-      .rmeta { font-size: 13px; color: var(--muted); letter-spacing: .14em; margin: 0 0 10px; }
-      .rmeta .daily { color: var(--terra); font-weight: 500; }
       .rtitle {
         font-family: "Noto Serif SC", "Songti SC", serif; font-weight: 600;
         font-size: 26px; letter-spacing: .06em; color: var(--ink);
@@ -330,6 +352,44 @@
       .doc th { font-weight: 500; color: var(--tea); white-space: nowrap; background: var(--tint); }
       .doc td { overflow-wrap: anywhere; }
       .doc img { max-width: 100%; height: auto; }
+
+      /* ---------- 篇内极简目录 (Mini-TOC) ---------- */
+      .mini-toc {
+        margin: 1.4em 0 2.2em; background: var(--surface); border: 1px solid var(--line);
+        padding: 12px 18px; font-size: 14px;
+      }
+      .mini-toc-summary {
+        cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+        user-select: none; font-family: inherit; color: var(--tea); list-style: none;
+      }
+      .mini-toc-summary::-webkit-details-marker { display: none; }
+      .mini-toc-title {
+        font-family: "Noto Serif SC", "Songti SC", serif; font-weight: 600;
+        letter-spacing: .08em; font-size: 14.5px;
+      }
+      .mini-toc-count { color: var(--muted); font-size: 12.5px; margin-left: 6px; font-weight: 400; }
+      .mini-toc-arrow { color: var(--tea); font-size: 12px; transition: transform .18s ease; margin-left: auto; }
+      .mini-toc[open] .mini-toc-arrow { transform: rotate(180deg); }
+      .mini-toc-list {
+        margin: 12px 0 4px; padding-left: 20px;
+        column-count: 2; column-gap: 28px; line-height: 1.75;
+      }
+      @media (max-width: 640px) {
+        .mini-toc-list { column-count: 1; padding-left: 18px; }
+      }
+      .mini-toc-list li { margin: 4px 0; break-inside: avoid; }
+      .mini-toc-list li.sub { padding-left: 14px; font-size: 13px; }
+      .mini-toc-list a {
+        color: var(--ink); border-bottom: 1px solid transparent; transition: all .15s ease;
+        display: inline-block; overflow-wrap: anywhere;
+      }
+      .mini-toc-list a:hover { color: var(--tea); border-bottom-color: var(--tea); }
+
+      /* ---------- 搜索关键字高亮 ---------- */
+      mark.search-hl {
+        background: #f7e49a; color: var(--ink); padding: 0 2px;
+        font-weight: 500; border-radius: 0;
+      }
 
       /* ---------- 下拉列表 ---------- */
       .dd { position: relative; }
@@ -418,7 +478,7 @@
       }
       .topbar nav a b { color: var(--tea); font-weight: 500; margin-right: 5px; font-family: "Noto Serif TC", serif; }
 
-      section.cat, .report, .toc { scroll-margin-top: 92px; }
+      section.cat, .report, .toc, .doc h2, .doc h3 { scroll-margin-top: 92px; }
 
       /* ---------- 目录 ---------- */
       .toc { margin-top: 56px; }
@@ -528,7 +588,7 @@
           max-width: 100%; scrollbar-width: none; -webkit-overflow-scrolling: touch;
         }
         .topbar nav::-webkit-scrollbar { display: none; }
-        section.cat, .report, .toc { scroll-margin-top: 108px; }
+        section.cat, .report, .toc, .doc h2, .doc h3 { scroll-margin-top: 108px; }
         .toc .tcat { margin-left: 0; }
 
         /* 2x2 双栏数据卡片矩阵 */
@@ -778,16 +838,33 @@
         </div>
         <article class="report" id="r-cn-media-imagination" data-search-block data-search="中国 媒体 跨界 创新 想像 村超 村ba 县级 融媒体 东方甄选 芒果 纽约时报 组合包 bbc studios 韩国 格式 艺术祭 texas tribune 信任 制作 现场 文件">
           <header class="report-head">
-            <p class="rmeta">2026-10-22</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-22</span>
+                <span class="rstats" title="全文约 976 字，预估阅读时间 3 分钟">约 976 字 · 阅读约 3 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-cn-media-imagination" data-title="中国媒体跨界创新想像报告：以中国为主，参考全世界" data-date="2026-10-22" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">中国媒体跨界创新想像报告：以中国为主，参考全世界（2026-10-22）</h3>
             <p class="rpoint">中国本土与全球跑通的跨界创新实证，与 16 条天马行空想像——内核不是媒体直接卖东西，而是媒体做流量与信任的基础设施，钱在体外变现。</p>
           </header>
           <div class="doc">
-<h2>内核结论</h2>
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 4 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-cn-media-imagination-sec-1">内核结论</a></li>
+            <li><a href="#r-cn-media-imagination-sec-2">关键数字</a></li>
+            <li><a href="#r-cn-media-imagination-sec-3">案例浓缩</a></li>
+            <li><a href="#r-cn-media-imagination-sec-4">天马行空 16 条想像</a></li>
+          </ol>
+        </details>
+<h2 id="r-cn-media-imagination-sec-1">内核结论</h2>
 <p>中国本土跑通的不是「媒体直接卖东西」，而是「媒体做流量与信任的基础设施 → 流量在体外（文旅、电商、政务、园区）变现 → 媒体以服务费、授权费、股权／集团化方式分一杯羹」；全球跑通的则是把单一内容产品改造成可反复收费的生活服务组合（纽时）、把公共内容资产装进独立商业公司（BBC Studios）、把节目拆成可本地化重制的格式权利（韩国）。</p>
 <p>两本帐必须分开：媒体赚到的钱与媒体带动别人赚到的钱是两本帐，不以曝光量冒充收入、不以旅游总收入冒充媒体收入；数字分四级标注（财报／年报、官方统计、官方宣传口径、第三方估算），查不到就明说查不到。电视广告流失的本质是结算方式从按曝光转向按交易与服务。</p>
 
-<h2>关键数字</h2>
+<h2 id="r-cn-media-imagination-sec-2">关键数字</h2>
 <ul>
 <li><strong>县级融媒体中心</strong>：2022 年营收过亿元共 10 家，安吉 4.87 亿元、诸暨 4.65 亿元、长兴 3.50 亿元【学术期刊统计，《全媒体探索》2023 年 9 月号汇总，非审计财报；全国约 2,500 多家县融，过亿者仅 10 家，属头部样本】</li>
 <li><strong>村超榕江</strong>：自 2023 年至 2024 年末累计接待游客 1,691 万人次、旅游综合收入 190.8 亿元【官方宣传口径，地方自报，未经第三方审计，且为县域旅游总收入，非媒体收入】</li>
@@ -795,12 +872,12 @@
 <li><strong>《纽约时报》</strong>：2025 年第 3 季数字订户 1,176 万、组合包订户 627 万【财报】</li>
 </ul>
 
-<h2>案例浓缩</h2>
+<h2 id="r-cn-media-imagination-sec-3">案例浓缩</h2>
 <p><strong>中国八案</strong>：河南卫视「中国节日」系列、村超／村 BA、县级融媒体中心、东方甄选、湖南广电／芒果生态、城市爆红淄博／哈尔滨／天水、央视总台与地方台、乡村与县域新模式。</p>
 <p><strong>全球六案</strong>：纽时组合包、大英博物馆／故宫／teamLab、BBC Studios、韩国格式出海、日本濑户内与越后妻有艺术祭、Texas Tribune 活动模式等野模式。</p>
 <p><strong>可移植机制总表重点</strong>：节日／赛事日历产品化、票根经济／流量体外变现、政务服务即入口、自营品＋去头部化、资产装进资本平台、生活服务组合包、格式权利输出、事件＋常设资产、活动养新闻、儿童／教育 IP 授权。</p>
 
-<h2>天马行空 16 条想像</h2>
+<h2 id="r-cn-media-imagination-sec-4">天马行空 16 条想像</h2>
 <p>想像部分为推演，非既成事实。</p>
 <ol>
 <li>创作者工厂：电视台当房东兼经纪</li>
@@ -829,12 +906,30 @@
         </article>
         <article class="report" id="r-tv-transformation" data-search-block data-search="传统 电视台 网络 自媒体 竞争 业务缩减 转型 串流 bbc iplayer itv itvx nrk skam paramount 芒果 tv tver nhk one 公视 cnn+ jtbc quibi">
           <header class="report-head">
-            <p class="rmeta">2026-10-22</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-22</span>
+                <span class="rstats" title="全文约 878 字，预估阅读时间 3 分钟">约 878 字 · 阅读约 3 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-tv-transformation" data-title="全球传统电视台面对网络自媒体竞争：业务缩减与成功转型案例" data-date="2026-10-22" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">全球传统电视台面对网络自媒体竞争：业务缩减与成功转型案例（2026-10-22）</h3>
             <p class="rpoint">全球传统电视台在网络自媒体竞争下的业务缩减规模，与七个转型案例的成功原因拆解。</p>
           </header>
           <div class="doc">
-<h2>六点结论</h2>
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 5 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-tv-transformation-sec-1">六点结论</a></li>
+            <li><a href="#r-tv-transformation-sec-2">关键数字</a></li>
+            <li><a href="#r-tv-transformation-sec-3">七个案例：成功原因浓缩</a></li>
+            <li><a href="#r-tv-transformation-sec-4">失败教训</a></li>
+            <li class="sub"><a href="#r-tv-transformation-sec-5">共同条件七条</a></li>
+          </ol>
+        </details>
+<h2 id="r-tv-transformation-sec-1">六点结论</h2>
 <ol>
 <li>这不是景气循环，是结构性迁移——美国串流 2025 年 5 月首次超过无线＋有线合计份额；英国 16–24 岁每周看传统电视者 2018 年 76% → 2023 年 48%。</li>
 <li>钱走得比注意力更快——线性电视广告全球份额 2013 年 41.3% → 2024 年 14.3%（WARC）；美国创作者广告 2021 年 139 亿 → 2025 年 370 亿美元（IAB）。</li>
@@ -844,7 +939,7 @@
 <li>台湾查无公认成功转型范例——公视+ 会员破 111 万属公共价值成功，无公开付费收入可证成商业转型。</li>
 </ol>
 
-<h2>关键数字</h2>
+<h2 id="r-tv-transformation-sec-2">关键数字</h2>
 <ul>
 <li>串流占美国电视时间 44.8%（2025/5）→ 48%（2025/12）</li>
 <li>台湾有线订户高峰约 521 万 → 429 万户（2025 Q3）</li>
@@ -852,7 +947,7 @@
 <li>日本网络广告占比首破 50.2%（2025）、电视媒体数字广告 807 亿日圆（+23.4%）</li>
 </ul>
 
-<h2>七个案例：成功原因浓缩</h2>
+<h2 id="r-tv-transformation-sec-3">七个案例：成功原因浓缩</h2>
 <div class="tablewrap">
 <table>
 <thead>
@@ -898,14 +993,14 @@
 </table>
 </div>
 
-<h2>失败教训</h2>
+<h2 id="r-tv-transformation-sec-4">失败教训</h2>
 <ul>
 <li>CNN+ 卖「没有 CNN 的 CNN」、新闻单独订阅无先例</li>
 <li>JTBC 收入是萎缩广告、成本是串流天价</li>
 <li>Quibi 与自建小平台是规模不足的资源陷阱</li>
 </ul>
 
-<h3>共同条件七条</h3>
+<h3 id="r-tv-transformation-sec-5">共同条件七条</h3>
 <ol>
 <li>自有／共用用户关系与数据</li>
 <li>共用一本帐</li>
@@ -923,16 +1018,40 @@
         </article>
         <article class="report" id="r-tao-notes" data-search-block data-search="道德经 英文 电子书 研究底稿 来源 出处 tao te ching">
           <header class="report-head">
-            <p class="rmeta">2026-10-21</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-21</span>
+                <span class="rstats" title="全文约 7,101 字，预估阅读时间 39 分钟">约 7,101 字 · 阅读约 39 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-tao-notes" data-title="道德经英文电子书市场调查・研究底稿" data-date="2026-10-21" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">道德经英文电子书市场调查・研究底稿</h3>
             <p class="rpoint">英文全文，含完整来源出处，是上面那份报告的底稿。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 11 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-tao-notes-sec-1">Summary — the answer in one page</a></li>
+            <li><a href="#r-tao-notes-sec-2">Findings</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-3">1. Market Size &amp; Demand</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-4">2. Top Competitors</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-5">3. The Public-Domain Flood</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-6">4. I Ching Adjacency</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-7">5. Reader Segments &amp; Use Cases</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-8">6. KDP Publishing Economics</a></li>
+            <li class="sub"><a href="#r-tao-notes-sec-9">7. Gaps &amp; Opportunities</a></li>
+            <li><a href="#r-tao-notes-sec-10">Could not verify</a></li>
+            <li><a href="#r-tao-notes-sec-11">Sources</a></li>
+          </ol>
+        </details>
 <p><strong>Observation date:</strong> 21 October 2026 (Asia/Shanghai). All Amazon prices, ratings and ranks below are Amazon.com (US storefront) unless stated otherwise.
 <strong>How to read the flags:</strong> <strong>[verified live]</strong> = read directly on the live page in a browser on 2026-10-21. <strong>[index]</strong> = read via web search index / secondary page on 2026-10-21; directionally reliable but not a live storefront read. Amazon rating counts are rounded by Amazon itself (e.g. "5,200").
 <strong>Purpose:</strong> To inform an author planning a new English ebook combining the Tao Te Ching and the I Ching with modern-life commentary.</p>
 <hr />
-<h2>Summary — the answer in one page</h2>
+<h2 id="r-tao-notes-sec-1">Summary — the answer in one page</h2>
 <ol>
 <li><strong>This is a small, evergreen, fiercely crowded niche — not a growing mass market you can ride, but a durable backlist market you can carve a defensible corner out of.</strong> Amazon.com's Kindle Store returned <strong>757 results for "Tao Te Ching"</strong> on 2026-10-21 [verified live], and the text has been translated into Western languages <strong>over 250 times, with well over 100 renditions into English alone</strong> [index]. No title in the niche is a runaway bestseller by trade standards: the single strongest Kindle edition sits at <strong>#8,855 in the Kindle Store</strong> [verified live].</li>
 <li><strong>The current Kindle leader is not a scholarly translation and not a famous name — it is a modernised public-domain text.</strong> Sam Torode's edition (Ancient Renewal, 2020), a contemporary re-rendering of Dwight Goddard's 1919 translation, is <strong>$3.99 / free in Kindle Unlimited, 4.7 stars, 5,200 ratings, #1 in Taoism, Tao Te Ching and Eastern Philosophy (Kindle Store)</strong> [verified live]. Readability and price beat philology in this market.</li>
@@ -941,8 +1060,8 @@
 <li><strong>Economics have just improved for exactly this kind of book.</strong> On <strong>7 July 2026 Amazon raised the KDP 70% royalty ceiling from $9.99 to $12.99</strong> (Authors Guild, [index]) — the first change since 2007. A long combined volume can now be priced <strong>$9.99–$12.99 at 70%</strong> instead of being squeezed under $9.99 or dropped to 35%. Kindle Unlimited also rewards length: at the estimated <strong>~$0.0045–$0.005 per page read</strong>, a 400–600-page combined volume earns materially more per full read than a 90-page Tao alone.</li>
 </ol>
 <hr />
-<h2>Findings</h2>
-<h3>1. Market Size &amp; Demand</h3>
+<h2 id="r-tao-notes-sec-2">Findings</h2>
+<h3 id="r-tao-notes-sec-3">1. Market Size &amp; Demand</h3>
 <p><strong>There is no published, Taoism-specific market-size figure.</strong> No source found in this research reports sales or revenue for "Taoism books" or "Tao Te Ching ebooks" as a category (see <em>Could not verify</em>). What can be established is a stack of proxies, from the specific to the general:</p>
 <p><strong>Title-level demand (most specific evidence)</strong></p>
 <div class="tablewrap"><table>
@@ -997,7 +1116,7 @@
 </ul>
 <p><strong>Conflicting / low-quality data — flagged, not relied on:</strong> Syndicated market-research releases put the global "Spiritual Products and Services Market" at <strong>$186.17B in 2025 rising to $193.69B in 2026 (CAGR 4.04% to 2035)</strong> [index — https://markets.financialcontent.com/wral/article/marketersmedia-2026-9-8-why-is-the-spiritual-products-and-services-market-gaining-momentum-worldwide-growth-trends-and-forecast-to-2035], while another firm puts the same-named market at <strong>$73.7B in 2025 (CAGR 5.0%)</strong> [index — https://www.wiseguyreports.com/reports/spiritual-product-and-service-market]. The two definitions are irreconcilable; both are paywalled-report marketing copy. <strong>Do not quote either as the size of the book market.</strong> The defensible statement is directional only: spirituality/mindfulness publishing grew through 2020–2025, religion and self-help print both grew in 2024–2025, and no source found shows the Tao niche itself expanding or contracting.</p>
 <p><strong>Amazon category landscape [verified live, 2026-10-21]:</strong> The live category badges observed were <strong>Taoism (Kindle Store), Tao Te Ching (Kindle Store), Eastern Philosophy (Kindle Store), Taoist Philosophy, and I Ching</strong>. Torode holds "#1 Best Seller in Eastern Philosophy"; the De Marque reissue holds "Best Seller in Taoist Philosophy"; in the I Ching, the "#1 Top Rated"/Best Seller badges sit on Alfred Huang's <em>Complete I Ching</em> and, in the broader I Ching browse, on Richard Rudd's adjacent <em>The Gene Keys</em> ($24.06, 2,778 ratings) — evidence that the I Ching shelf is partly colonised by Human Design / gene-keys derivatives. A guessed "Best Sellers in Taoism (Books)" browse URL returned Amazon's "no Best Sellers available in this category" message; the node ID could not be verified, so <strong>no conclusion is drawn from it</strong> (see <em>Could not verify</em>).</p>
-<h3>2. Top Competitors</h3>
+<h3 id="r-tao-notes-sec-4">2. Top Competitors</h3>
 <p>All rows: Amazon.com Kindle Edition, observed <strong>2026-10-21 [verified live]</strong> via Amazon search results (https://www.amazon.com/s?k=Tao+Te+Ching&amp;i=digital-text and translator-specific searches on the same storefront), except where flagged [index]. "KU" = also readable free with Kindle Unlimited.</p>
 <div class="tablewrap"><table>
 <thead>
@@ -1106,7 +1225,7 @@
 <li><strong>Hamill:</strong> <em>Publishers Weekly</em>: "achingly poetic… unlikely to displace Stephen Mitchell's popular rendering… will delight spiritual seekers and devotees of Taoism, while also making a lovely gift." [index — http://www.publishersweekly.com/9781590300114]</li>
 <li><strong>Recent self-published / indie entrants that rank:</strong> <em>Tao Te Ching 101</em> by Matthew Barnes (Zennish Series) — <strong>$9.83/KU, 4.5, 186 ratings</strong>, "a modern, practical guide, plain and simple", with sequels (<em>201</em>, and Zen-master spin-offs) showing a series strategy [verified live]; <em>Tao Te Ching: Finding Peace in a Chaotic World</em> (Feb 2025) — <strong>$2.99, 4.4, 137 ratings</strong> after ~20 months, showing realistic indie accumulation speed [verified live]; <em>365 Days of Tao</em> by Dae Lee — <strong>$9.99/KU, 4.7, 223 ratings</strong> [verified live]. At the prestige end, David Bentley Hart's April 2026 <em>New Translation</em> has only <strong>23 ratings at $15.26 (4.2 stars)</strong> — even a famous translator cannot buy review velocity [verified live].</li>
 </ul>
-<h3>3. The Public-Domain Flood</h3>
+<h3 id="r-tao-notes-sec-5">3. The Public-Domain Flood</h3>
 <p><strong>The flood is real and quantified.</strong> The underlying text (c. 4th century BCE) and the early English translations — John Chalmers (1868), James Legge (1891, <em>Sacred Books of the East</em>), Paul Carus (1898), Dwight Goddard (1919) — are public domain. Live evidence of the resulting price floor [all verified live, 2026-10-21]:</p>
 <div class="tablewrap"><table>
 <thead>
@@ -1158,7 +1277,7 @@
 </ol>
 <p><strong>Price points that work [verified live]:</strong> successful <em>paid</em> Kindle editions cluster in two bands — <strong>$3.99 (indie volume leader)</strong> and <strong>$7.96–$14.99 (traditional/apparatus)</strong> — with indie commentary/guides at <strong>$9.83–$9.99</strong>. Nothing at $0.99 builds a business on sales alone ($0.99 earns 35% = $0.35/copy); the $0.99 players are using price as a visibility/anchor device against a $16.99 print list.</p>
 <p><strong>Kindle Unlimited / KDP Select — common, but split by publisher type [verified live]:</strong> In KU: Torode, Mitchell (notably, a HarperCollins title), Coterie Classics, Barnes's <em>101</em>, Dae Lee's <em>365 Days</em>, Derek Lin's <em>Tao of Wisdom</em> ($9.95 to buy). <strong>Not</strong> shown as KU: Le Guin, Feng/English, Lau, Star, Hackett, Red Pine. Pattern: <strong>indies and at least some major-publisher titles use KU as the discovery engine; the prestige traditional backlist mostly does not.</strong> A new entrant without a name should assume KU enrolment is close to mandatory for discovery in this niche (see §6 for the trade-off).</p>
-<h3>4. I Ching Adjacency</h3>
+<h3 id="r-tao-notes-sec-6">4. I Ching Adjacency</h3>
 <p>The I Ching Kindle market is roughly <strong>half the Tao's listing volume (375 vs 757 search results)</strong> and behaves differently: it is a <em>reference/consultation</em> purchase, prices run higher, and the leaders are traditional-publisher reference works [all verified live, 2026-10-21, https://www.amazon.com/s?k=I+Ching+Book+of+Changes&amp;i=digital-text&amp;s=review-rank and https://www.amazon.com/s?k=The+I+Ching+or+Book+of+Changes+Wilhelm+Baynes&amp;i=digital-text]:</p>
 <div class="tablewrap"><table>
 <thead>
@@ -1236,7 +1355,7 @@
 <li>Richard John Lynn likewise translated both (Columbia UP Tao with Wang Bi commentary; Princeton I Ching) as separate scholarly volumes [index].</li>
 </ul>
 <p>Conclusion: the combination exists as an <em>author brand</em> and as a <em>reading path</em>, but not as a single, positioned, combined practice volume. That is the gap in §7 — and the research cannot rule out that the gap persists because Tao buyers (daily wisdom, gift) and I Ching buyers (consultation, divination) overlap only partially.</p>
-<h3>5. Reader Segments &amp; Use Cases</h3>
+<h3 id="r-tao-notes-sec-7">5. Reader Segments &amp; Use Cases</h3>
 <p>Evidence is drawn from the review themes, spin-off editions and formats actually selling above; Amazon does not publish buyer demographics, so segment sizes cannot be quantified (see <em>Could not verify</em>).</p>
 <div class="tablewrap"><table>
 <thead>
@@ -1290,7 +1409,7 @@
 </tbody>
 </table></div>
 <p><strong>Formats that demonstrably sell:</strong> (1) <strong>verse-only pocket text</strong> (Torode, 90 pp); (2) <strong>verse + facing commentary/annotation</strong> (Lin, Red Pine, Star); (3) <strong>daily-reading</strong> — <em>365 Tao</em> (1,797 reviews) is the format's proof, <em>Practicing the Tao Te Ching: 81 Steps on the Way</em> ($12.99, 4.8, 114 ratings) maps the 81 chapters to a practice sequence, and the indie <em>365 Days of Tao</em> ($9.99/KU, 223 ratings) shows the format is replicable by independents [all verified live]; (4) <strong>illustrated/calligraphy gift editions</strong> (mostly print-led); (5) <strong>audiobook as a bundle/companion</strong> — Torode's audiobook is $0.99 with Audible membership and Mitchell's version circulates widely as audio [verified live/index]. No evidence was found of a successful <strong>Tao + I Ching combined daily system</strong> in any format — see §4/§7.</p>
-<h3>6. KDP Publishing Economics</h3>
+<h3 id="r-tao-notes-sec-8">6. KDP Publishing Economics</h3>
 <p><strong>Royalty options (current as of October 2026):</strong></p>
 <div class="tablewrap"><table>
 <thead>
@@ -1333,7 +1452,7 @@
         2. <strong>June 2025 — print royalty tiering</strong> (60%/50% split at $9.99, above).
         3. <strong>AI-content disclosure (in force since late 2023, actively enforced 2024–2026):</strong> authors must tell Amazon if a book contains <strong>AI-generated</strong> text, images <strong>or translations</strong> — even if heavily edited; <strong>AI-assisted</strong> work (author's own text, AI used for editing/brainstorming) need not be disclosed. The disclosure is internal and not shown to buyers, but non-disclosure is a content-guideline violation [index — http://www.amazonsellers.attorney/blog/when-amazon-flags-your-book-as-ai-generated]. Directly relevant if AI is used anywhere in drafting, translating or illustrating this book.
         4. No spiritual-category-specific policy change was found; the category's practical headwind is instead the flood of low-effort PD reissues and AI-generated classics clogging the same search results (534–757 results per query), which raises the premium on cover, sample quality and early reviews.</p>
-<h3>7. Gaps &amp; Opportunities</h3>
+<h3 id="r-tao-notes-sec-9">7. Gaps &amp; Opportunities</h3>
 <p><strong>Gaps supported by the evidence above:</strong></p>
 <ol>
 <li><strong>The combined practice system (the author's core idea) is unoccupied.</strong> No combined Tao Te Ching + I Ching volume was found (§4). The natural product architecture writes itself from the two texts' structures: <strong>81 Tao chapters for <em>being</em> (daily reading) + 64 hexagrams for <em>deciding</em> (consultation)</strong> — e.g., a Tao chapter a day on a 81-day or 365-day cycle, with the week's hexagram as the decision/reflection layer. Nobody owns "Tao for living, I Ching for choosing" as a single system, and the I Ching audience has already shown it buys <em>systems</em> (Gene Keys, 2,778 ratings at $24.06).</li>
@@ -1353,7 +1472,7 @@
 <li><strong>Gift/seasonal revenue requires print.</strong> An ebook-only launch misses the illustrated/gift segment entirely (§5); a paperback at ≥$9.99 (60% tier) and ideally a hardcover should follow quickly.</li>
 </ul>
 <hr />
-<h2>Could not verify</h2>
+<h2 id="r-tao-notes-sec-10">Could not verify</h2>
 <ul>
 <li><strong>No Taoism / Tao Te Ching category market size or unit sales exist in any source found.</strong> All size statements above are proxies (search counts, rating counts, BSR of one title, adjacent Circana/AAP category data). Amazon does not publish category revenue, and no BookScan Tao-specific figure was found.</li>
 <li><strong>Individual Best Sellers Rank for Mitchell, Le Guin, Lau, Lin and the I Ching leaders</strong> — only Torode's BSR (#8,855 Kindle Store) was read on a product page. Other titles' ranks were not opened, to stay within research limits; their rating counts and prices <em>were</em> verified live in search results.</li>
@@ -1364,7 +1483,7 @@
 <li><strong>Reader-segment sizes/demographics</strong> — Amazon and publishers do not publish buyer demographics for this niche; §5 segments are inferred from editions, review themes and formats that sell, not from survey data.</li>
 <li><strong>Whether any combined Tao + I Ching volume exists anywhere in the catalogue</strong> — none was found in the combined search's results or in this research, but a 534-result catalogue cannot be exhaustively read; the claim is "no leading/prominent combined product found", not "none exists".</li>
 </ul>
-<h2>Sources</h2>
+<h2 id="r-tao-notes-sec-11">Sources</h2>
 <p><strong>Verified live on Amazon.com, 2026-10-21 (research browser):</strong>
         - Tao Te Ching Kindle search (757 results; prices/ratings for Torode, Mitchell, Le Guin, Lau, Feng/English, Hackett, Star, Lin, Walker, Coterie, DigiCat, Legge, Mair, Hart, Pepper &amp; Wang, Barnes, Martin, Towler, Dae Lee) — https://www.amazon.com/s?k=Tao+Te+Ching&amp;i=digital-text&amp;s=review-rank
         - Sam Torode product page (BSR #8,855; #1 Taoism/Tao Te Ching/Eastern Philosophy; ASIN B085KZZYMG; review-aspect counts; PewDiePie editorial quote) — https://www.amazon.com/Tao-Te-Ching-Lao-Tzu-ebook/dp/B085KZZYMG/
@@ -1398,11 +1517,33 @@
         </article>
         <article class="report" id="r-tao" data-search-block data-search="道德经 英文 电子书 市场调查报告 kindle tao te ching kdp">
           <header class="report-head">
-            <p class="rmeta">2026-10-21<span class="tag">美感版 HTML</span></p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-21</span><span class="tag">美感版 HTML</span>
+                <span class="rstats" title="全文约 3,528 字，预估阅读时间 11 分钟">约 3,528 字 · 阅读约 11 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-tao" data-title="道德经英文电子书市场调查报告" data-date="2026-10-21" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">道德经英文电子书市场调查报告</h3>
             <p class="rpoint">Kindle「Tao Te Ching」在架 <em>757 本</em>；道德经＋易经合辑是市场空白。建议定价 <em>$11.99–$12.99</em>、进 KU、纸本随后。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 9 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-tao-sec-1">一页摘要</a></li>
+            <li><a href="#r-tao-sec-2">一、市场规模与需求</a></li>
+            <li><a href="#r-tao-sec-3">二、主要竞品（Kindle 版，2026-10-21 实查）</a></li>
+            <li><a href="#r-tao-sec-4">三、公版洪流：免费书在旁边，付费版靠什么活</a></li>
+            <li><a href="#r-tao-sec-5">四、易经市场，与那块空白</a></li>
+            <li><a href="#r-tao-sec-6">五、读者是谁，什么格式在卖</a></li>
+            <li><a href="#r-tao-sec-7">六、KDP 出版经济（2026 年现行规则）</a></li>
+            <li><a href="#r-tao-sec-8">七、说明与建议</a></li>
+            <li><a href="#r-tao-sec-9">八、查证限制（诚实标明）</a></li>
+          </ol>
+        </details>
 <div style="max-width:640px;margin:0 auto;background:#FAF6EF;padding:36px 28px 28px 28px;font-family:Georgia,'Noto Serif TC','Songti TC',serif;color:#2A2520;line-height:1.85;font-size:15px;">
 
 <div style="text-align:center;margin-bottom:6px;">
@@ -1415,7 +1556,7 @@
 <div style="border-top:1px solid #d8cbb2;margin:18px 0;"></div>
 
 <div style="background:#fffdf7;border-left:3px solid #c08552;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">一页摘要</div>
+<h2 id="r-tao-sec-1">一页摘要</h2>
 <p style="margin:6px 0;">1. 这是一个<b>小而长青、且高度拥挤</b>的利基市场。Amazon Kindle 商店「Tao Te Ching」有 757 本在架，《道德经》英文译本超过 100 种；卖得最好的 Kindle 版全店排名也只到 #8,855。没有爆款，只有长尾。</p>
 <p style="margin:6px 0;">2. 目前 Kindle 销售第一名<b>不是名家译本，而是一本把 1919 年公版译文改写成现代英语的书</b>：Sam Torode 版，$3.99（Kindle Unlimited 免费读），4.7 星、5,200 个评分，三个类别第一。可读性与价格，赢过学术正确。</p>
 <p style="margin:6px 0;">3. 名家版仍能卖高价：Mitchell、Le Guin 都是 $14.99（各 1,589／1,757 个评分）。读者愿意为<b>名字、声音、注解</b>付费；不愿为无差异的公版重印付费——公版重印版只剩 $0.49–$1.99。</p>
@@ -1424,7 +1565,7 @@
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">一、市场规模与需求</div>
+<h2 id="r-tao-sec-2">一、市场规模与需求</h2>
 <p style="margin:6px 0;">先说实话：<b>没有任何公开来源给出「道德经书籍」这个品类的销售额或销量</b>，Amazon 也不公布类别营收。能确立的只有一组代理指针：</p>
 <div class="tablewrap"><table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0;">
 <tr><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;">Kindle 商店「Tao Te Ching」在架数</td><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;text-align:right;"><b>757 本</b></td></tr>
@@ -1437,7 +1578,7 @@
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">二、主要竞品（Kindle 版，2026-10-21 实查）</div>
+<h2 id="r-tao-sec-3">二、主要竞品（Kindle 版，2026-10-21 实查）</h2>
 <div class="tablewrap"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;">
 <tr style="color:#82663F;"><th style="text-align:left;padding:5px 6px;border-bottom:2px solid #d8cbb2;">版本</th><th style="text-align:left;padding:5px 6px;border-bottom:2px solid #d8cbb2;">出版社</th><th style="text-align:right;padding:5px 6px;border-bottom:2px solid #d8cbb2;">售价</th><th style="text-align:right;padding:5px 6px;border-bottom:2px solid #d8cbb2;">星等／评分数</th></tr>
 <tr><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;">Sam Torode（改写 Goddard 1919 公版）</td><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;">独立出版</td><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;text-align:right;">$3.99／KU</td><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;text-align:right;">4.7／5,200</td></tr>
@@ -1455,14 +1596,14 @@
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">三、公版洪流：免费书在旁边，付费版靠什么活</div>
+<h2 id="r-tao-sec-4">三、公版洪流：免费书在旁边，付费版靠什么活</h2>
 <p style="margin:6px 0;">原文与早期译本（Legge 1891、Carus 1898、Goddard 1919）都是公版，价格地板实查为 <b>$0.49–$0.52</b>；De Marque 重印版 $0.99（用 $16.99 纸本定价当锚）有 1,788 个评分、还挂着类别畅销标签；DigiCat「丰富版」$1.99、1,054 个评分。$0.99 只能拿 35% 版税（每本 $0.35），那些书是拿价格换曝光，不是靠卖书赚钱。</p>
 <p style="margin:6px 0;">付费版活下来的四种方法：<b>（1）把公版文本现代化</b>——第一名 Torode 本身就是公版改写，证明「免费原文是原料，不是对手」；<b>（2）卖配备</b>——注解、中文原文、逐字对照，守在 $7.96–$11.95；<b>（3）卖名字与声音</b>——$10.99–$14.99；<b>（4）卖用途</b>——《The Parent's Tao Te Ching》$10.14、733 个评分；照护者版 $9.59——应用版按自我成长书定价，不按经典定价。</p>
 <p style="margin:6px 0;">Kindle Unlimited 的分布是「独立出版进、传统名家多半不进」：Torode、Mitchell（少数进 KU 的大出版社书）在 KU 内；Le Guin、冯家福、刘殿爵、Star、Red Pine 都不在。没有名气的新进者，应视 KU 为近乎必选的被看见管道。</p>
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">四、易经市场，与那块空白</div>
+<h2 id="r-tao-sec-5">四、易经市场，与那块空白</h2>
 <div class="tablewrap"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;">
 <tr style="color:#82663F;"><th style="text-align:left;padding:5px 6px;border-bottom:2px solid #d8cbb2;">易经版本</th><th style="text-align:right;padding:5px 6px;border-bottom:2px solid #d8cbb2;">售价</th><th style="text-align:right;padding:5px 6px;border-bottom:2px solid #d8cbb2;">星等／评分数</th></tr>
 <tr><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;">Wilhelm／Baynes（卫礼贤，荣格作序）</td><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;text-align:right;">$14.72</td><td style="padding:5px 6px;border-bottom:1px solid #e5dcc8;text-align:right;">4.7／1,442</td></tr>
@@ -1475,14 +1616,14 @@
 <p style="margin:6px 0;"><b>合辑查证结果：</b>「Tao Te Ching + I Ching」合辑搜索 534 笔，第一页无合辑，本次调查范围内未发现任何以「道德经＋易经合辑」定位的产品。最接近的是 Hinton《四书五经选》类合集（有道德经、无易经）、Cleary《道家易经》（观点融合，非合辑），以及邓明道把《365 Tao》与《Living I Ching》分成两本卖。<b>合辑作为「品牌」存在，作为「一本书」不存在。</b></p>
 </div>
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">五、读者是谁，什么格式在卖</div>
+<h2 id="r-tao-sec-6">五、读者是谁，什么格式在卖</h2>
 <p style="margin:6px 0;"><b>每日实践者是内核读者。</b>「每日读经」格式是全场最被验证的形态：《365 Tao》（邓明道）$10.49、1,797 个评分；独立出版的《365 Days of Tao》$9.99／KU、223 个评分；《Practicing the Tao: 81 Steps》$12.99，把 81 章做成修炼次第。Mitchell 版的评论也反复出现「我每日晨读的一部分」。</p>
 <p style="margin:6px 0;"><b>把经典用在某个生活领域的人</b>：父母（733 个评分）、照护者、领导者；这条线的源头是《The Tao of Pooh》——英文世界卖得最大的「道德经应用书」，累计超过一百万册。<b>太极／气功圈</b>买注解版、实践者版；<b>学术圈</b>买 Hackett、刘殿爵、Red Pine；<b>双语学习者</b>是真实但小的利基（Pepper &amp; Wang 逐字对照版 $16.99、293 个评分）。</p>
 <p style="margin:6px 0;">一个必须知道的结构事实：<b>礼品市场是纸本市场</b>。Torode 同时卖精装 $16.99、平装 $9.99；书法插图版都靠纸本。只出电子书，等于放弃送礼这一块。</p>
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">六、KDP 出版经济（2026 年现行规则）</div>
+<h2 id="r-tao-sec-7">六、KDP 出版经济（2026 年现行规则）</h2>
 <div class="tablewrap"><table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0;">
 <tr><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;">70% 版税价格带</td><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;text-align:right;"><b>$2.99–$12.99</b>（2026-07-07 起，上限自 $9.99 提高）</td></tr>
 <tr><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;">传输费（70% 方案）</td><td style="padding:5px 8px;border-bottom:1px solid #e5dcc8;text-align:right;">$0.15／MB，先扣费再算版税</td></tr>
@@ -1496,7 +1637,7 @@
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #c08552;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">七、说明与建议</div>
+<h2 id="r-tao-sec-8">七、说明与建议</h2>
 <p style="margin:6px 0;"><b>先把定位说清楚：不要卖「新译本」，要卖「一个实践系统」。</b>757 本里再多一个译本没有意义；市场空白的是把两经接成一套用法——道德经管「如何安顿自己」（being），易经管「如何面对抉择」（deciding）。一句话的产品主张可以是：Tao for living, I Ching for choosing。81 章对 64 卦，结构本身就是现成的产品架构：每日一章道德经修身，每周一卦易经照事，或做成 365 天的年度修炼历——而「每日」正是这个市场唯一被大规模验证过的格式。</p>
 <p style="margin:6px 0;"><b>译本诚信，照 Mitchell 与 Le Guin 的路走。</b>明讲这不是学术新译：选定一至两个底本（例如公版 Goddard 或 Legge，省去授权问题），你的角色是「实践者注解」——以你自己的生命经验逐章讲现代生活。这条路有最高的先例背书（两个最受喜爱的版本作者都不读中文），且躲开了 Torode 版唯一被诟病的点：读者讨厌的是「假装是翻译的改写」，不是改写本身。若能再找一位中文底子深的审订者挂名，诚信就完整了。</p>
 <p style="margin:6px 0;"><b>定价：Kindle 定 $11.99–$12.99。</b>这是 2026 年 7 月新上限刚打开的甜蜜带，拿 70%；传统出版社的两经分册本来就卖 $9.99–$14.99，合辑定这个价不突兀。纸本随后跟上，定 $16.99 以上（守住 60% 级距），把礼品市场接回来。文件务必瘦身：中文与拼音做「轻双语」——原文与拼音当版面元素，不要学 Pepper &amp; Wang 一章四页的重型课本（它只有 293 个评分）。</p>
@@ -1508,7 +1649,7 @@
 </div>
 
 <div style="background:#fffdf7;border-left:3px solid #82663F;padding:16px 20px;margin-bottom:18px;">
-<div style="font-size:16px;color:#82663F;margin-bottom:8px;">八、查证限制（诚实标明）</div>
+<h2 id="r-tao-sec-9">八、查证限制（诚实标明）</h2>
 <p style="margin:6px 0;">・没有任何来源提供道德经品类的市场规模或销量，本报告的规模判断全部来自代理指针（在架数、评分数、单一书排名与 Circana／AAP 相邻类别数据）。</p>
 <p style="margin:6px 0;">・除 Torode 版外，各竞品的即时销售排名未逐一打开商品页查证；其价格与评分数为 2026-10-21 于 Amazon 搜索结果页实查。</p>
 <p style="margin:6px 0;">・Sam Hamill、John Minford 的道德经 Kindle 售价与评分数，本次搜索未浮现，未猜测填入。</p>
@@ -1529,20 +1670,42 @@
         </article>
         <article class="report" id="r-tw-publishing" data-search-block data-search="台湾 出版 趋势 研究报告 2024 2025 2026">
           <header class="report-head">
-            <p class="rmeta">2026-10-05</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-05</span>
+                <span class="rstats" title="全文约 6,871 字，预估阅读时间 20 分钟">约 6,871 字 · 阅读约 20 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-tw-publishing" data-title="台湾出版趋势研究报告 2024–2026" data-date="2026-10-05" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">台湾出版趋势研究报告 2024–2026</h3>
             <p class="rpoint">台湾出版市场近三年的趋势整理。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 9 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-tw-publishing-sec-1">摘要</a></li>
+            <li><a href="#r-tw-publishing-sec-2">一、畅销类型变化</a></li>
+            <li><a href="#r-tw-publishing-sec-3">二、新兴主题</a></li>
+            <li><a href="#r-tw-publishing-sec-4">三、本土原创 vs 翻译书</a></li>
+            <li><a href="#r-tw-publishing-sec-5">四、通路与载体变化</a></li>
+            <li><a href="#r-tw-publishing-sec-6">五、产品形态趋势</a></li>
+            <li><a href="#r-tw-publishing-sec-7">六、出版社策略</a></li>
+            <li><a href="#r-tw-publishing-sec-8">未能确认事项</a></li>
+            <li><a href="#r-tw-publishing-sec-9">主要数据源</a></li>
+          </ol>
+        </details>
 <blockquote>
 <p>研究范围：台湾市场｜数据期间：2024年10月至2026年10月｜报告撰写：2026年10月5日
 主要数据基础：文策院《台湾出版市场动态》（2024年第四季暨年度报告）、文策院《2024年台湾文化内容产业调查报告》、
 诚品《2025年度阅读报告》、博客来年度／月畅销榜（民间长期追踪「书市春秋」整理）、Readmoo 2025电子书年度榜、相关媒体报导。</p>
 </blockquote>
-<h2>摘要</h2>
+<h2 id="r-tw-publishing-sec-1">摘要</h2>
 <p>2024年10月至2026年10月，台湾出版市场呈现「总量回稳、结构分化」的格局。文策院调查显示，2024年纸本图书出版端营业额138.18亿元（年增3.84%）、市场端200.12亿元（年增2.05%），终止2019–2023年连年下滑；但ISBN申请种数连年减少（2024年54,767种，年减4.48%），出版趋向精致化与集中化。畅销榜由商业理财与心理励志长期主导（《原子习惯》连霸博客来榜79个月），漫画／图文书是网络通路最大宗（金石堂月榜漫画占72%），翻译书占比持续攀升（2024年店销书翻译占比53.65%，已过半）。Gen Z读者成为成长动能（诚品新进会员近五成为Gen Z），纸电共存、AI制作有声书爆发（年增289%）、台漫与华文作家国际授权发光，是本期最显著的结构变化。</p>
 <hr />
-<h2>一、畅销类型变化</h2>
+<h2 id="r-tw-publishing-sec-2">一、畅销类型变化</h2>
 <h3>1.1 商业理财、心理励志：长期霸榜的基本盘</h3>
 <ul>
 <li>五个网络通路（博客来、金石堂、诚品、三民、MOMO）2024年第四季月畅销榜中，「商业理财」皆为前五大类型；八个通路季销售Top 50中，商业理财为各通路共同畅销类型，其次为心理励志（文策院，2024年第四季暨年度报告）。</li>
@@ -1583,7 +1746,7 @@
 </ul>
 <p><strong>结论：</strong> 商业理财与心理励志是横跨实虚通路、长达数年的畅销基本盘；漫画／图文书主导网络通路且受动画化驱动成长；文学小说「出版量大、畅销集中」；童书稳定；考试／参考书类供给收缩；自然科普与宗教命理逆势成长。</p>
 <hr />
-<h2>二、新兴主题</h2>
+<h2 id="r-tw-publishing-sec-3">二、新兴主题</h2>
 <h3>2.1 AI：从出版技术走向阅读主题</h3>
 <ul>
 <li>产业面：文策院2024年产业调查首度专章调查AI应用，出版业者多用于「提升内容产制效率」与「数字教材生成」，部分出版社开始实验AI生成图书内容；AI制作有声书是2024年有声书种数暴增289%的主因之一。</li>
@@ -1610,7 +1773,7 @@
 </ul>
 <p><strong>结论：</strong> 真正「冒出来」的新兴动能是AI（技术应用先于主题书）、身心疗愈的细分化（焦虑世代、高敏感、脑疲劳）与自然科普出版热；熟龄、永续、地方创生多属个别佳作或专业刚需，尚未形成可与心理励志比肩的书系规模。</p>
 <hr />
-<h2>三、本土原创 vs 翻译书</h2>
+<h2 id="r-tw-publishing-sec-4">三、本土原创 vs 翻译书</h2>
 <h3>3.1 翻译书占比连年攀升，店销书已过半</h3>
 <ul>
 <li>文策院产业调查报告（图23）：整体图书翻译占比自2021年34.92%逐年升至2024年43.68%；若排除考试／教科书等非店销书，店销书翻译占比自2021年48.25%升至2024年53.65%，已超过一半，本土原创仅46.35%。</li>
@@ -1634,7 +1797,7 @@
 </ul>
 <p><strong>结论：</strong> 翻译书占比连年上升、店销书已过半，日本来源近半且持续扩大，是这两年最明确的结构趋势；但本土原创在文学（杨双子、李佳颖）、理财（周冠男）、轻小说、台漫等领域出现具国际版权实力的突破案例，呈现「量上翻译扩张、质上本土发光」的并存格局。</p>
 <hr />
-<h2>四、通路与载体变化</h2>
+<h2 id="r-tw-publishing-sec-5">四、通路与载体变化</h2>
 <h3>4.1 实体书店：连锁收缩、独立书店转向复合经营</h3>
 <ul>
 <li><strong>金石堂</strong>：全盛时期102间门市，目前仅剩19间（维基百科）；2025年10月至2026年8月间关闭中坜、台南南新、彰化光复、板桥文化、台南中山、高雄三多、屏东潮州、新店（33年）、中和环球（21年）等店，仅2026年8月于桃园大江购物中心开出新店。</li>
@@ -1664,7 +1827,7 @@
 </ul>
 <p><strong>结论：</strong> 连锁实体书店持续收缩（金石堂剩19间），但诚品以体验与展店逆势成长、独立书店转向文创餐饮复合经营；网络仍是主力通路，惟实体营收占比回升；电子书稳定成长且与纸本互补，有声书则因AI产制而爆发性成长，惟内容品质参差。</p>
 <hr />
-<h2>五、产品形态趋势</h2>
+<h2 id="r-tw-publishing-sec-6">五、产品形态趋势</h2>
 <h3>5.1 定价：平均定价持平，类型分化</h3>
 <ul>
 <li>图书平均定价2024年为425元，与2023年（424元）大抵持平（CPI年增2.18%）；2021年曾达448元高点后回落（文策院产业调查报告）。</li>
@@ -1690,7 +1853,7 @@
 </ul>
 <p><strong>结论：</strong> 定价整体持平但类型分化；纸本书以体验式装帧（排版即推理）、限定珍藏版与特殊版本应对电子化；套书／珍藏版支撑客单价；IP经营重心在影视改编（政策与资金加持）与童书角色授权，漫画改编则因市场规模受限而断链。</p>
 <hr />
-<h2>六、出版社策略</h2>
+<h2 id="r-tw-publishing-sec-7">六、出版社策略</h2>
 <h3>6.1 行销全面转向在线与社群</h3>
 <ul>
 <li>2024年出版社行销资源投放前三名皆为网络管道：自家网站／社群媒体（23.36%）、网络书店与数字平台首页广告（15.41%）、网络通路图书策展（11.97%），且占比皆较上年增加（文策院产业调查报告）。</li>
@@ -1719,7 +1882,7 @@
 </ul>
 <p><strong>结论：</strong> 出版社策略可归纳为四轴：行销在线化（社群＋通路策展）、AI提效（有声书、内容产制）、纸电同步＋订阅制延续长尾、版权输出与IP多元授权；在人力与资金普遍受限下，资源集中投向具改编潜力与社群话题的书种。</p>
 <hr />
-<h2>未能确认事项</h2>
+<h2 id="r-tw-publishing-sec-8">未能确认事项</h2>
 <ol>
 <li><strong>2025年全年产业数据</strong>：文策院《台湾出版市场动态》2025年各季报告与《2025年台湾文化内容产业调查报告》至本报告撰写时尚未发布，2025年营业额、ISBN、新书种数等全年统计数据付之阙如；本报告2025年部分主要依赖各通路畅销榜与诚品年度报告。</li>
 <li><strong>博客来／金石堂官方年度榜单全文</strong>：博客来官网年度百大榜单页面在公开索引中未能完整读取书目，2025年榜单分析仰赖民间长期追踪「书市春秋」的整理（数据源自博客来公开榜单，具参考价值但非官方发布）。</li>
@@ -1728,7 +1891,7 @@
 <li><strong>出版社个别财务与策略</strong>：文策院调查为整体问卷统计，个别出版社（如城邦、远流、天下文化）的具体策略多来自公开报导整理，缺乏第一手专访。</li>
 </ol>
 <hr />
-<h2>主要数据源</h2>
+<h2 id="r-tw-publishing-sec-9">主要数据源</h2>
 <ol>
 <li>文策院《台湾出版市场动态—2024年第四季暨年度报告》（2025年发布）
 https://taicca.tw/files/book/1743994852889.pdf</li>
@@ -1785,15 +1948,32 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
       </div>
         <article class="report" id="r-w42" data-search-block data-search="每周 流量 模式 摘要 w42">
           <header class="report-head">
-            <p class="rmeta">2026-10-18</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-18</span>
+                <span class="rstats" title="全文约 1,432 字，预估阅读时间 4 分钟">约 1,432 字 · 阅读约 4 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-w42" data-title="每周流量模式摘要 2026-W42" data-date="2026-10-18" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">每周流量模式摘要 2026-W42</h3>
             <p class="rpoint">一周流量的主线与模式回顾。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 4 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-w42-sec-1">本周三大主线</a></li>
+            <li><a href="#r-w42-sec-2">各地本周关键词</a></li>
+            <li><a href="#r-w42-sec-3">值得注意的变化</a></li>
+            <li><a href="#r-w42-sec-4">下周选题参考</a></li>
+          </ol>
+        </details>
 <blockquote>
 <p>覆盖说明：每日流量收集自 10/15 起跑，本周实际覆盖 10/15（四）–10/18（日），共 20 份文档（4 天 × 5 地：台湾、中国、日本、韩国、美国）；10/12–10/14 无数据，不臆测补齐。本周为首个收集周，无上周数据可对比。</p>
 </blockquote>
-<h2>本周三大主线</h2>
+<h2 id="r-w42-sec-1">本周三大主线</h2>
 <ol>
 <li>
 <p><strong>AI 信用疑虑引爆全球股灾，全周最大主线。</strong> 10/15 美国 9 月 CPI 年增 3.7% 超预期点火，CoreWeave 债券殖利率飙破 15% 引爆 AI 信用疑虑：台股暴跌 1655 点（外资史上最大卖超 3025 亿）、日经重挫 3318 点（历代第三大跌幅）、韩股盘中触发熔断暴跌逾 8%。10/16 亚洲出现反弹企图，但 10/17 美股周五再跌（费半连 8 黑）引爆第二波；10/18 对冲基金连五日净卖出 AI 股票、全球 AI 股市值蒸发超 1 兆美元，全周以「忧心 10/19 周一开盘」收尾。</p>
@@ -1805,7 +1985,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <p><strong>美国政府停摆与地缘多线升温。</strong> 停摆从第 15 天拖到第 18 天（联邦法院资金耗尽、运作降到最低）；中东战火升级（伊朗攻击霍尔木兹海峡船只、胡塞袭击沙乌地设施）、北韩本周密集试射飞弹；10/18 川普援引「国家利益」暂停国会新通过的对俄制裁，连共和党议员都批「奖励普京」，国际油价逼近 110 美元，韩国冻结油品上限 4 周。</p>
 </li>
 </ol>
-<h2>各地本周关键词</h2>
+<h2 id="r-w42-sec-2">各地本周关键词</h2>
 <ul>
 <li>
 <p><strong>台湾：</strong> 股灾（10/15 暴跌 1655 点，全周忧心 10/19 开盘再崩）／选战白热化（洋流外溢、老人健保费、陆生驱逐，多线齐爆）／蔷琵直扑（今年第 9 个强台，光复节连假恐泡汤）／K 型落差（GDP 上修 12.16% 创 39 年新高，庶民却无感）／小确幸照常（旅展、美食优惠照抢不误）</p>
@@ -1823,13 +2003,13 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <p><strong>美国：</strong> AI 泡沫论（CoreWeave 债券殖利率飙破 15%、全球 AI 股蒸发超 1 兆美元）／生活成本民怨（9 月通膨 3.7%、44% 美国人买不起基本需求）／校园枪击（奥勒冈小学 3 童 1 师遇害，挺身制止的家长 Kalub Giamanco 被赞英雄）／政治荒诞（白宫发言人上任 5 天被撤、川普暂停对俄制裁遭两党砲轰）／狂欢对冲（万圣节、橄榄球、纤维潮，用荒诞对抗说不出口的不安）</p>
 </li>
 </ul>
-<h2>值得注意的变化</h2>
+<h2 id="r-w42-sec-3">值得注意的变化</h2>
 <ul>
 <li><strong>新冒出：</strong> 法国 50 万人上街抗议物价（10/18 单日爆发，多城抢劫纵火、逾 1200 人被捕，美、中、韩媒体与热搜同步跟进）；「2700 元搞死一家店铺」登顶微博热搜；双 11 于 10/15 全面开战；iPhone Duo 从「韩国预购冷清」到 10/18「全球预购即完售」大反转；日本「背德美食」风潮、中国「全民喝大水」挑战。</li>
 <li><strong>降温消失：</strong> 贾永婕穿搭风波烧三天后（10/17 起）无新进展；张秀卿离婚扛债 10/17 震撼弹后 10/18 无新进展；四川炸串摊主轻生调查、尊界 V800、DeepSeek 故障、柬埔寨绑架案皆停滞无新进展；大谷三分砲热度被「酿酒人横扫道奇进世界大赛」接力。</li>
 <li><strong>与上周对比：</strong> 本周为首次完整收集周（10/15 起跑），无上周数据，无法对比；10/15 的股灾是全周情绪起点，但无法判断其是否为上周延续。</li>
 </ul>
-<h2>下周选题参考</h2>
+<h2 id="r-w42-sec-4">下周选题参考</h2>
 <ol>
 <li>10/19 周一开盘——全球 AI 抛售潮后的恐慌与抄底，可对应金融一百零八讲谈「杠杆与信用的代价」。</li>
 <li>蔷琵强台侵台——天灾面前的准备与人心，可对应佛法生活感悟文谈无常与放下。</li>
@@ -1840,12 +2020,31 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         </article>
         <article class="report" id="r-traffic-brief" data-search-block data-search="流量 情报 演示文稿">
           <header class="report-head">
-            <p class="rmeta">2026-10-15</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-15</span>
+                <span class="rstats" title="全文约 675 字，预估阅读时间 2 分钟">约 675 字 · 阅读约 2 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-traffic-brief" data-title="流量情报演示文稿" data-date="2026-10-15" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">流量情报演示文稿</h3>
             <p class="rpoint">流量情报的第一份演示文稿。</p>
           </header>
           <div class="doc">
-<h2>跨区线（多地同题）</h2>
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 6 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-traffic-brief-sec-1">跨区线（多地同题）</a></li>
+            <li><a href="#r-traffic-brief-sec-2">主题分布</a></li>
+            <li><a href="#r-traffic-brief-sec-3">选题建议</a></li>
+            <li class="sub"><a href="#r-traffic-brief-sec-4">金融一百零八讲</a></li>
+            <li class="sub"><a href="#r-traffic-brief-sec-5">俗人对话录</a></li>
+            <li class="sub"><a href="#r-traffic-brief-sec-6">佛法生活感悟文</a></li>
+          </ol>
+        </details>
+<h2 id="r-traffic-brief-sec-1">跨区线（多地同题）</h2>
 <p><strong>美国 9 月 CPI 引爆全球股灾</strong> —— 今日绝对主线，四地同题不同角度：
 - 美国：CPI 年增 3.7% 超预期，Nasdaq 重挫，Fed 升息预期升温；44% 美国人买不起基本需求
 - 台湾：台股盘中狂杀 1655 点掼破 47000；电信三雄逆势创新高成避风港
@@ -1854,26 +2053,26 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <p><strong>川普多线作战</strong> —— 台美两地不同切面：
 - 台湾：川普宣称台湾同意 20 年采购阿拉斯加 LNG 三成产量
 - 美国：亚利桑那造势称「泄密者应被枪决」，致敬查理・柯克</p>
-<h2>主题分布</h2>
+<h2 id="r-traffic-brief-sec-2">主题分布</h2>
 <p><strong>财经市场（11 则）</strong>：台股崩盘、日经暴跌、韩股熔断、美股重挫、台积电法说、A股股王易主、美元回落、通膨民怨
 <strong>社会事件（8 则）</strong>：炸串摊主轻生、电单车恶搞被拘、韩国国政监查、柬埔寨绑架案、日俄记者拘留、高市发言争议、美国政府停摆、稀土贸易战
 <strong>娱乐文化（7 则）</strong>：韩星结婚潮、日剧感动回、声优动态、乃木坂巡演、山下智久邮轮、塔图小帐风波、泽尻分手
 <strong>生活消费（19 则）</strong>：旅展优惠、百货周年庆、Buffet、健检、双11预热、宠物消费、短剧争议、外食涨价、饮食法、肠道健康
 <strong>科技（2 则）</strong>：iPhone 维修费、字节系霸榜</p>
-<h2>选题建议</h2>
-<h3>金融一百零八讲</h3>
+<h2 id="r-traffic-brief-sec-3">选题建议</h2>
+<h3 id="r-traffic-brief-sec-4">金融一百零八讲</h3>
 <ul>
 <li>◇ 全球股灾日 → 今晚 Day 004〈过度交易的心魔〉正好撞上，时机完美，可在社团留言区顺势交互</li>
 <li>◇ 韩国「34兆信用贷款散户哀嚎」→ 杠杆的代价，呼应 Day 001〈被杠杆撕裂的灵魂〉</li>
 <li>A股股王三日三度易主 → 「没有永远的股王」，破除权威迷信</li>
 </ul>
-<h3>俗人对话录</h3>
+<h3 id="r-traffic-brief-sec-5">俗人对话录</h3>
 <ul>
 <li>◇ 四川炸串摊主因差评轻生 → 「差评的权利边界」，网络暴力的日常化</li>
 <li>贾永婕备询穿搭争议 → 「专业不该用穿着评断」，社会对女性的凝视</li>
 <li>美国 Giants 球场视频（8000万观看）→ 性别分工的日常战场</li>
 </ul>
-<h3>佛法生活感悟文</h3>
+<h3 id="r-traffic-brief-sec-6">佛法生活感悟文</h3>
 <ul>
 <li>◇ 全球股灾 → 无常现前时，什么才是真正的避风港（呼应台股电信股逆势上涨的隐喻）</li>
 <li>萨莉亚时隔多年首次涨价 → 连「冻涨」都是无常，接受变化的功课</li>
@@ -1941,17 +2140,40 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         </div>
         <article class="report" id="r-wechat-accounts" data-search-block data-search="微信 公众号 调研 同业 帐号 研究">
           <header class="report-head">
-            <p class="rmeta">2026-10-06</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-06</span>
+                <span class="rstats" title="全文约 5,624 字，预估阅读时间 17 分钟">约 5,624 字 · 阅读约 17 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-wechat-accounts" data-title="微信公众号调研・同业帐号研究" data-date="2026-10-06" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">微信公众号调研・同业帐号研究</h3>
             <p class="rpoint">同业公众号帐号的定位与内容做法。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 10 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-wechat-accounts-sec-1">Summary</a></li>
+            <li><a href="#r-wechat-accounts-sec-2">Findings</a></li>
+            <li class="sub"><a href="#r-wechat-accounts-sec-3">类型一：心灵成长／幸福哲学类</a></li>
+            <li class="sub"><a href="#r-wechat-accounts-sec-4">类型二：生活美学／慢生活类</a></li>
+            <li class="sub"><a href="#r-wechat-accounts-sec-5">类型三：一人公司／自由职业／个人品牌类</a></li>
+            <li class="sub"><a href="#r-wechat-accounts-sec-6">类型四：地方创生／乡村振兴类</a></li>
+            <li class="sub"><a href="#r-wechat-accounts-sec-7">类型五：极简／断舍离／减法生活类</a></li>
+            <li><a href="#r-wechat-accounts-sec-8">对照总表</a></li>
+            <li><a href="#r-wechat-accounts-sec-9">Could not verify</a></li>
+            <li><a href="#r-wechat-accounts-sec-10">Sources</a></li>
+          </ol>
+        </details>
 <blockquote>
 <p>调研对象：简家旗（1976年生，台湾南投，前金融业，一人公司「大道至简」），公众号「简家旗-出租大书」。内容：幸福是一种感知能力、从头脑回到身体、为道日损的减法哲学、一人公司方法论、稻田里的餐桌（2012年起200多场）、地方创生、双基地生活（台湾南投×云南安宁）。语言干净留白、有泥土味（茶、米、泥土、炉火），禁用行销黑话。
 调研日期：2026-10-06。只收录中文个人IP型公众号（不收机构媒体号）。
 验证方式：均为公开网页检索（index）；搜狗微信搜索的直接抓取被反爬虫拦截，未使用。粉丝数字多为估计值，已逐项标注。</p>
 </blockquote>
-<h2>Summary</h2>
+<h2 id="r-wechat-accounts-sec-1">Summary</h2>
 <p>共收录 <strong>10 个</strong>中文个人IP型公众号，覆盖 5 个类型（其中李子柒、李娟同时覆盖「慢生活」与「地方创生」两个类型）。</p>
 <p><strong>活跃状态（2024–2026 有更新）</strong>：武志红、张德芬空间、李娟、粥左罗、刀姐doris、刘润 —— 6 个确认活跃。
 <strong>停更／放缓／待确认</strong>：李子柒（2024-11 后停更近 2 年）、剽悍一只猫（2025 年有更新，2026 年无公开信号）、简叔「极简断舍离」（2018 年后无公开信号）、Chaologies（存在性确认，更新频率待确认）。</p>
@@ -1961,8 +2183,8 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 3. <strong>一人公司类是公众号上最成熟的变现模型</strong>：粥左罗（日更 7583 期＋顶峰会社群）、刘润（日课 900 天＋咨询＋年度演讲）、刀姐doris（公号＋播客＋线下课＋峰会），三者共同点是「免费内容创建信任 → 高客单社群／咨询／课程变现」，与简家旗「一人公司方法论」可直接对照。
 4. <strong>地方创生类纯文本个人IP稀缺</strong>：刘亮程（菜籽沟）、温铁军等有实践无公众号；该类型个人IP主要在短视频平台。李子柒、李娟是唯二横跨内容与在地实践的样本。</p>
 <hr />
-<h2>Findings</h2>
-<h3>类型一：心灵成长／幸福哲学类</h3>
+<h2 id="r-wechat-accounts-sec-2">Findings</h2>
+<h3 id="r-wechat-accounts-sec-3">类型一：心灵成长／幸福哲学类</h3>
 <h4>1. 武志红（公众号「武志红」，ID: wzhxlx）✅ 2024–2026 活跃</h4>
 <ul>
 <li><strong>主理人</strong>：武志红，知名心理作家，北大临床心理学硕士，《为何家会伤人》《巨婴国》作者。</li>
@@ -1983,7 +2205,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得学习的一点</strong>：「金句＋可落地的觉察练习」结尾结构（每篇给一个 1 分钟能做的身体／呼吸练习），以及 IP 联名直播（×杨天真）破圈法——简家旗「从头脑回到身体」的主张，与这种「身体练习收尾」高度兼容。</li>
 <li>来源：https://finance.sina.com.cn/jjxw/2026-03-04/doc-inhpvaym0174146.shtml（2026-03-04，index）</li>
 </ul>
-<h3>类型二：生活美学／慢生活类</h3>
+<h3 id="r-wechat-accounts-sec-4">类型二：生活美学／慢生活类</h3>
 <h4>3. 阿勒泰的李娟（公众号「阿勒泰的李娟」，亦作「阿勒泰李娟」）✅ 2024–2026 活跃 ⭐与调研对象气质最接近</h4>
 <ul>
 <li><strong>主理人</strong>：李娟（1979年生），散文作家，人民文学奖、鲁迅文学奖、朱自清散文奖得主，代表作《我的阿勒泰》《冬牧场》《羊道》系列。</li>
@@ -2004,7 +2226,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得学习的一点</strong>：「慢工出细活」的更新观（宁可停更也不敷衍）与东方美学视觉系统；地方创生端「内容 IP → 在地供应链 → 就业税收」的完整链路，是简家旗「稻田里的餐桌＋地方创生」可以参考的放大模型——但需注意其重资产路径与一人公司逻辑相反。</li>
 <li>来源：https://k.sina.com.cn/article_7879923021_1d5ae154d06801ljpc.html（2026-09-23，index）；https://www.163.com/dy/article/KI46P60E05566S1A.html（index）</li>
 </ul>
-<h3>类型三：一人公司／自由职业／个人品牌类</h3>
+<h3 id="r-wechat-accounts-sec-5">类型三：一人公司／自由职业／个人品牌类</h3>
 <h4>5. 粥左罗（公众号「粥左罗」，ID: fangdushe520）✅ 2024–2026 活跃（日更）</h4>
 <ul>
 <li><strong>主理人</strong>：粥左罗，2015 年进入新媒体行业，以日更写作起家，后创业。</li>
@@ -2045,7 +2267,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得学习的一点</strong>：「认知交付」写作公式——好文章＝认知差（肉）＋信息差（菜）＋情绪（盐）×易读性（手艺）；以及把日更变成「日课」仪式、用年度演讲把一年内容 IP 化的节奏设计。简家旗若做长期主义内容，可借鉴「日课体」的复利机制，但需把商业黑话换成泥土语言。</li>
 <li>来源：https://news.qq.com/rain/a/20260829A04CB200（2026-08-29，index）；https://www.163.com/dy/article/L0LKLMPC05568W0A.html（2026-06，index，含写作公式）；http://www.360doc.com/content/25/1107/08/1842961_1164466809.shtml（index）</li>
 </ul>
-<h3>类型四：地方创生／乡村振兴类</h3>
+<h3 id="r-wechat-accounts-sec-6">类型四：地方创生／乡村振兴类</h3>
 <p>本类型<strong>纯文本个人 IP 极度稀缺</strong>（刘亮程「菜籽沟／木垒书院」、三农学者温铁军等有在地实践但无个人公众号；返乡创业个人 IP 主要集中在短视频平台）。以下两个为横跨内容与在地实践的样本：</p>
 <h4>9. 李子柒（同上，见 #4）⏸️ 停更中</h4>
 <ul>
@@ -2057,7 +2279,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li>地方创生相关事实：以阿勒泰乡村为写作母体；2025 年 12 月个人出资 480 多万成立新疆首例环保类民间基金会「新疆向日葵野生动植物保护基金会」，业务含资助野生动物救助、保护宣传教育进校园／社区／牧区。</li>
 <li>可学习：作家 IP 以公益基金会反哺乡土的路径；「先做起来再说，慢慢地自然就会形成意义」的行动哲学，与简家旗「稻田里的餐桌」（2012 年起 200 多场行为艺术）同构。</li>
 </ul>
-<h3>类型五：极简／断舍离／减法生活类</h3>
+<h3 id="r-wechat-accounts-sec-7">类型五：极简／断舍离／减法生活类</h3>
 <h4>11. 简叔／杨志华（公众号「极简断舍离」）⚠️ 疑似停更／低频（2018 年后无公开信号）</h4>
 <ul>
 <li><strong>主理人</strong>：杨志华（简叔），北京断舍离文化公司创始人，《以极简的方式去生活》（2018）作者。</li>
@@ -2080,7 +2302,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>赛道观察</strong>：中文极简／断舍离个人 IP 在公众号整体式微，现活跃者多在小红书／抖音／视频号做竖屏生活方式内容——这意味着「减法哲学」在公众号上几乎没有直接竞品，是简家旗的差异化窗口。</li>
 </ul>
 <hr />
-<h2>对照总表</h2>
+<h2 id="r-wechat-accounts-sec-8">对照总表</h2>
 <div class="tablewrap"><table>
 <thead>
 <tr>
@@ -2221,7 +2443,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 </table></div>
 <p>* 粉丝量级多为估计值或旁证推断，精确数字本次未能核实（见 Could not verify）。</p>
 <hr />
-<h2>Could not verify</h2>
+<h2 id="r-wechat-accounts-sec-9">Could not verify</h2>
 <ol>
 <li><strong>精确粉丝数</strong>：除李子柒（B站1000万／油管1750万，网易文）、刘润（得到33万学员、6000万＋收入，360doc人物稿）、简叔（2018年书中自述数万）外，其余帐号的公众号粉丝数未能从公开网页核实。新榜／西瓜数据等榜单需登录，未使用。搜狗微信搜索的直接抓取被反爬虫拦截。</li>
 <li><strong>剽悍一只猫 2026 年状态</strong>：2025 年中有更新被转载，2026 年无新的公开更新信号；可能放缓或转型，未能确认。</li>
@@ -2230,7 +2452,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>以下人选经检索确认无个人公众号（或未能确认有），未收录</strong>：刘亮程（菜籽沟／木垒书院，有地方创生实践但无公号）、温铁军（三农学者，无个人公号确认）、卢思浩（青年作家，2026年仍活跃出书／签售，但未能确认其公众号）、连岳（未能确认公号状态）、陈海贤（自述公号「答读者问」栏目已是过去时）、周国平（主阵地为视频号）、大冰（主阵地为直播／微博）、蒋勋（主阵地为视频号／喜马拉雅）、滇西小哥（视频为主，未能确认公众号）、白落梅（未能确认公众号）。</li>
 <li><strong>更新频率细节</strong>：多数帐号的「日更／周更」为转载文章与人物稿中的自述或旁证，非直接读取帐号后台，存在偏差可能。</li>
 </ol>
-<h2>Sources</h2>
+<h2 id="r-wechat-accounts-sec-10">Sources</h2>
 <ul>
 <li>公开网页检索（index），2026-10-06。逐帐号笔记见 <code>notes/01-wuzhihong.md</code> … <code>notes/10-chaologies.md</code>。</li>
 <li>关键 URL：</li>
@@ -2258,13 +2480,21 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         </article>
         <article class="report" id="r-wechat-decision" data-search-block data-search="微信 公众号 调研 上线 决策 待拍板">
           <header class="report-head">
-            <p class="rmeta">2026-10-06<span class="tag">待拍板</span></p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-06</span><span class="tag">待拍板</span>
+                <span class="rstats" title="全文约 280 字，预估阅读时间 1 分钟">约 280 字 · 阅读约 1 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-wechat-decision" data-title="微信公众号调研・上线决策" data-date="2026-10-06" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">微信公众号调研・上线决策</h3>
             <p class="rpoint">研究结论与上线建议，<em>待家旗拍板公开</em>。</p>
           </header>
           <div class="doc">
 <p>家旗今天问：两个调研页能不能直接上线、让别人看到。目前两页只有他可见；云端硬盘「微信公众号调研」文件夹已有两份 HTML 存盘。</p>
-<h2>三个选项</h2>
+<h2 id="r-wechat-decision-sec-1">三个选项</h2>
 <p><strong>1. 不公开（建议）</strong>
 内部数据，零风险。这份调研最大的价值是他的决策依据，不是给读者看的。</p>
 <p><strong>2. 直接公开</strong>
@@ -2272,7 +2502,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 弊：具名点评 21 个同行帐号（相近篇：李娟、粥左罗、刘润、刀姐 doris 等 10 个；反向篇：情绪煽动、日更、卖课等 11 个）；而且「李娟最接近」「极简赛道几无对手」这些结论是调研笔记，他还没认可。公开后被断章取义的代价，比想像中高。</p>
 <p><strong>3. 折衷</strong>
 只公开「风格相近篇」（建设性），反向篇（点评性强）留内部；或两篇去具名化、只留骨架再公开。</p>
-<h2>建议</h2>
+<h2 id="r-wechat-decision-sec-2">建议</h2>
 <p>先把两页看完再决定，不急。调研是工具，不是展品。</p>
 <p>待他拍板：不公开 / 去具名化公开 / 照原样公开。</p>
           </div>
@@ -2280,17 +2510,40 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         </article>
         <article class="report" id="r-wechat-reverse" data-search-block data-search="微信 公众号 调研 逆向 研究">
           <header class="report-head">
-            <p class="rmeta">2026-10-06</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">2026-10-06</span>
+                <span class="rstats" title="全文约 7,102 字，预估阅读时间 21 分钟">约 7,102 字 · 阅读约 21 分钟</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="r-wechat-reverse" data-title="微信公众号调研・逆向研究" data-date="2026-10-06" title="拷贝本篇研报引用信息与锚点链接">
+                <span class="icon">🔗</span> 拷贝引用
+              </button>
+            </div>
             <h3 class="rtitle">微信公众号调研・逆向研究</h3>
             <p class="rpoint">从结果往回拆，公众号的成长路径。</p>
           </header>
           <div class="doc">
+        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇内章节导览</span><span class="mini-toc-count">（共 10 个章节）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+            <li><a href="#r-wechat-reverse-sec-1">总览表</a></li>
+            <li><a href="#r-wechat-reverse-sec-2">Findings</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-3">类型1｜情绪煽动／标题党型</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-4">类型2｜高频日更／信息密集型</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-5">类型3｜直接变现／卖课型</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-6">类型4｜戏谑吐槽型</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-7">类型5｜宏大叙事型</a></li>
+            <li class="sub"><a href="#r-wechat-reverse-sec-8">类型6｜直播带货／口才型</a></li>
+            <li><a href="#r-wechat-reverse-sec-9">Could not verify（未能核实／口径存疑）</a></li>
+            <li><a href="#r-wechat-reverse-sec-10">Sources（按报告引用顺序）</a></li>
+          </ol>
+        </details>
 <blockquote>
 <p>对照基准（简家旗式风格）：干净留白、有泥土味（茶、米、泥土、炉火）、禁用行销黑话、慢而不迎合、减法哲学（为道日损）、长文白描、真诚体、不追热点、不煽动情绪。
 本报告收录 11 个风格与之大致相反、但在商业或影响力上成功的中文内容个人 IP／内容品牌，覆盖 6 个指定类型。每条标注 2024–2026 活跃状态（✅活跃／⚠️半活跃或循环封禁／❌已陨落／❓未能核实）。
 数据源均为索引检索（index），非即时页面抓取；关键数据已在正文中注明出处与口径。</p>
 </blockquote>
-<h2>总览表</h2>
+<h2 id="r-wechat-reverse-sec-1">总览表</h2>
 <div class="tablewrap"><table>
 <thead>
 <tr>
@@ -2382,8 +2635,8 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 </tbody>
 </table></div>
 <hr />
-<h2>Findings</h2>
-<h3>类型1｜情绪煽动／标题党型</h3>
+<h2 id="r-wechat-reverse-sec-2">Findings</h2>
+<h3 id="r-wechat-reverse-sec-3">类型1｜情绪煽动／标题党型</h3>
 <h4>1. 咪蒙（马凌）——情绪工业化的鼻祖，死后转世为短剧厂牌</h4>
 <ul>
 <li><strong>主理人</strong>：马凌（笔名咪蒙），1976年生，四川南充人，山东大学中文系本硕，前《南方都市报》深圳杂志部首席编辑。</li>
@@ -2408,7 +2661,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得反向学习的一点（机制）</strong>：<strong>「事件即内容」的参与感设计</strong>。「逃离北上广」本质是行为艺术式广告：把用户变成事件主角，用「可参与、可炫耀、可传播」的社会实验替代硬广；营销课则把「价格递增制造紧迫感＋分销佣金」做成裂变引擎。学其「参与感与仪式感设计」，不学其诱导分享踩线。</li>
 <li><strong>状态</strong>：❌ 2018年封号事件后边缘化；2024–2026公开动态罕见（未能核实最新状态）。</li>
 </ul>
-<h3>类型2｜高频日更／信息密集型</h3>
+<h3 id="r-wechat-reverse-sec-4">类型2｜高频日更／信息密集型</h3>
 <h4>3. 吴晓波频道（吴晓波／巴九灵）——日更工业化的财经IP公司</h4>
 <ul>
 <li><strong>主理人</strong>：吴晓波，财经作家；内容由杭州巴九灵公司化运营。</li>
@@ -2423,7 +2676,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得反向学习的一点（机制）</strong>：<strong>日更的组织化</strong>。个人IP→编辑团队＋推广团队＋栏目矩阵（深交所问询函曾要求披露其团队配置），把「灵感写作」变成「栏目生产线」；以及「长陪伴」心法：日更十年本身就是最硬的信任状。学其「栏目化＋团队化」的生产机制。</li>
 <li><strong>状态</strong>：⚠️ 2024–2026仍活跃（2026年5月12周年直播），但处于「禁言—恢复」循环——高频财经IP的言论代价样本。</li>
 </ul>
-<h3>类型3｜直接变现／卖课型</h3>
+<h3 id="r-wechat-reverse-sec-5">类型3｜直接变现／卖课型</h3>
 <h4>4. 罗振宇／得到（北京思维造物）——知识付费的开创者与仪式大师</h4>
 <ul>
 <li><strong>主理人</strong>：罗振宇，前央视《经济与法》《对话》制片人；公司北京思维造物（2014年创办，罗振宇持股30.35%为第一大股东）。</li>
@@ -2461,7 +2714,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得反向学习的一点（机制）</strong>：<strong>漏斗式价格带分层</strong>。2980元会员（流量品、走量）→4.8万元商学院→12万元私董会（利润品），同一IP吃尽高、中、低客单价，且用「免责前置」（反复强调不推荐个股）做风险隔离。学其「价格带矩阵」设计。</li>
 <li><strong>状态</strong>：✅ 2024–2026活跃，直接变现做到头部的个人IP。</li>
 </ul>
-<h3>类型4｜戏谑吐槽型</h3>
+<h3 id="r-wechat-reverse-sec-6">类型4｜戏谑吐槽型</h3>
 <h4>7. 王五四（王永智）——痞气时评的「微信时代韩寒」</h4>
 <ul>
 <li><strong>主理人</strong>：王五四（本名王永智），1982年生，山东烟台人，2005年山东大学毕业，专栏作家。</li>
@@ -2472,7 +2725,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得反向学习的一点（机制）</strong>：<strong>「擦边球写作术」</strong>。用戏谑外壳（段子、反讽、隐喻）包裹严肃批评，在受限表达空间里最大化传播半径；本质是「观点→段子」的转译能力。学其转译机制，不学其冒险边界。</li>
 <li><strong>状态</strong>：❓ 公号时代落幕；2024–2026年最新动态未能通过索引核实（见「未能核实」）。</li>
 </ul>
-<h3>类型5｜宏大叙事型</h3>
+<h3 id="r-wechat-reverse-sec-7">类型5｜宏大叙事型</h3>
 <h4>8. 卢克文工作室（卢克文）——「地摊战略家」的民族情绪基本盘</h4>
 <ul>
 <li><strong>主理人</strong>：卢克文，湖南邵阳人，湖南水利水电学校毕业，曾任电商负责人，2018年转型「国际局势观察家」。</li>
@@ -2500,7 +2753,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>最值得反向学习的一点（机制）</strong>：<strong>「事件绑定式创作＋大V杠杆」</strong>。每一幅画都绑定一个国际热点、48小时内发布（时效性＝传播力）；被外交部发言人、官媒转发带来破圈杠杆。学其「热点绑定＋权威转发杠杆」的出圈机制。</li>
 <li><strong>状态</strong>：✅ 2024–2026仍活跃（2023年8月仍有新作；微博认证保留）。</li>
 </ul>
-<h3>类型6｜直播带货／口才型</h3>
+<h3 id="r-wechat-reverse-sec-8">类型6｜直播带货／口才型</h3>
 <h4>10. 李佳琦（美腕）——「买它！」叫卖之王的信任崩塌史</h4>
 <ul>
 <li><strong>主理人</strong>：李佳琦，美腕旗下主播，「口红一哥」。</li>
@@ -2534,7 +2787,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>状态</strong>：✅ 2024–2026头部活跃，抖音带货一哥。</li>
 </ul>
 <hr />
-<h2>Could not verify（未能核实／口径存疑）</h2>
+<h2 id="r-wechat-reverse-sec-9">Could not verify（未能核实／口径存疑）</h2>
 <ol>
 <li><strong>生财有术最新一期年费与会员数</strong>：公开报道口径为「年费两千余元、会员万人级」，但本次未能通过索引检索到一手信源（如官方招募页），报告中仅引用亦仁自述实录中的创办史实（2017年创办、caoz转载带来第一波流量），规模数字标注为「口径」。</li>
 <li><strong>王五四2024–2026年最新动态</strong>：仅能确认公号时代落幕（多次被封），近年公开动态未能通过索引核实。</li>
@@ -2545,7 +2798,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
 <li><strong>董宇辉／与辉同行GMV</strong>：210亿–315亿元为第三方平台估算口径，官方明确表示「内部数据不对外公布，第三方数据一般不准确」；但各方口径一致指向2025年大幅增长。</li>
 <li>本报告全部为索引检索（index），未做实时页面抓取验证；引用中批评向自媒体评论的数据已注明「口径」。</li>
 </ol>
-<h2>Sources（按报告引用顺序）</h2>
+<h2 id="r-wechat-reverse-sec-10">Sources（按报告引用顺序）</h2>
 <ul>
 <li>Wikipedia「咪蒙」：https://zh.wikipedia.org/wiki/%E5%92%AA%E8%92%99 （2026-10-06前11天更新，index）</li>
 <li>东方财富《成本仅300万 破10亿播放！咪蒙身影隐现》：https://finance.eastmoney.com/a/202503213352632710.html （2025-03-21，index）</li>
@@ -2680,10 +2933,57 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         }
 
         // 2. 搜索过滤与标示跳转
+        function clearSearchHighlights() {
+          var marks = Array.prototype.slice.call(document.querySelectorAll('mark.search-hl'));
+          marks.forEach(function (m) {
+            var parent = m.parentNode;
+            if (parent) {
+              parent.replaceChild(document.createTextNode(m.textContent), m);
+              parent.normalize();
+            }
+          });
+        }
+
+        function highlightInElement(root, query) {
+          if (!query || query.length < 2) return;
+          var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (node) {
+              if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+              var parent = node.parentElement;
+              if (!parent) return NodeFilter.FILTER_REJECT;
+              var tag = parent.tagName;
+              if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'MARK' || tag === 'CODE' || tag === 'PRE' || parent.classList.contains('search-clear') || parent.classList.contains('cite-btn') || parent.classList.contains('fold-btn')) {
+                return NodeFilter.FILTER_REJECT;
+              }
+              return NodeFilter.FILTER_ACCEPT;
+            }
+          });
+
+          var textNodes = [];
+          while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+          }
+
+          var escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          var regex = new RegExp('(' + escaped + ')', 'gi');
+
+          textNodes.forEach(function (node) {
+            var val = node.nodeValue;
+            if (regex.test(val)) {
+              var span = document.createElement('span');
+              span.innerHTML = val.replace(regex, '<mark class="search-hl">$1</mark>');
+              if (node.parentNode) {
+                node.parentNode.replaceChild(span, node);
+              }
+            }
+          });
+        }
+
         function performSearch() {
           var q = input.value.trim().toLowerCase();
           matches = []; idx = -1;
           clearBtn.style.display = q ? 'block' : 'none';
+          clearSearchHighlights();
 
           // 清除先前的 no-match 提示
           document.querySelectorAll('.cat-no-match').forEach(function (el) { el.remove(); });
@@ -2729,6 +3029,13 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
             }
           });
 
+          // 套用关键字即时高亮（搜索词 >= 2 字符时）
+          if (q.length >= 2) {
+            matches.forEach(function (b) {
+              highlightInElement(b, q);
+            });
+          }
+
           // 若打开过滤模式，检查分类是否有结果
           if (filterOnly) {
             catSections.forEach(function (sec) {
@@ -2756,6 +3063,7 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         }
         clearBtn.addEventListener('click', function () {
           input.value = '';
+          clearSearchHighlights();
           input.focus();
           performSearch();
         });
@@ -2885,6 +3193,55 @@ https://bookzone.cwgv.com.tw/articles/书单?page=1</li>
         document.addEventListener('keydown', function (ev) {
           if (ev.key === 'Escape') { closeDropdowns(); }
         });
+
+        // 5. 拷贝引用按钮
+        document.addEventListener('click', function (ev) {
+          var btn = ev.target.closest('.cite-btn');
+          if (!btn) return;
+          var reportId = btn.getAttribute('data-id');
+          var title = btn.getAttribute('data-title');
+          var date = btn.getAttribute('data-date');
+          var year = date ? date.slice(0, 4) : '2026';
+          var isZhCn = document.documentElement.lang === 'zh-Hans';
+          var baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/';
+          var currentUrl = baseUrl + '#' + reportId;
+
+          var authorName = isZhCn ? '简家旗' : '简家旗';
+          var libName = isZhCn ? '大道至简研究报告库' : '大道至简研究报告库';
+          var citationText = authorName + '（' + year + '）.《' + title + '》. ' + libName + '. ' + currentUrl;
+
+          function setCopiedState() {
+            var originalHTML = btn.innerHTML;
+            btn.innerHTML = (isZhCn ? '已复制引用 ✓' : '已拷贝引用 ✓');
+            btn.classList.add('copied');
+            setTimeout(function () {
+              btn.innerHTML = originalHTML;
+              btn.classList.remove('copied');
+            }, 2200);
+            if (history.replaceState) {
+              history.replaceState(null, '', '#' + reportId);
+            }
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(citationText).then(setCopiedState).catch(function () {
+              fallbackCopy(citationText, setCopiedState);
+            });
+          } else {
+            fallbackCopy(citationText, setCopiedState);
+          }
+        });
+
+        function fallbackCopy(text, callback) {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); callback(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
       })();
     </script>
   </body>

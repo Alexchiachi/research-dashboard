@@ -151,6 +151,65 @@ def clean_title_for_menu(title):
     """去除標題末尾的（2026-10-22）等贅字，保持目錄精煉"""
     return re.sub(r'（\d{4}-\d{2}-\d{2}）$', '', title).strip()
 
+def calc_reading_stats(body_text):
+    """計算報告字數與預估閱讀時間（以中文 380 字/分、英文 180 詞/分為標準）"""
+    clean_text = re.sub(r'<[^>]+>', '', body_text)
+    cjk_chars = len(re.findall(r'[\u4e00-\u9fff]', clean_text))
+    en_words = len(re.findall(r'[a-zA-Z0-9]+', clean_text))
+    total_words = cjk_chars + en_words
+    minutes = max(1, round(cjk_chars / 380 + en_words / 180))
+    return total_words, f"{total_words:,}", minutes
+
+def inject_mini_toc(report_id, html):
+    """為具備 3 個以上章節的報告自動建立篇內極簡目錄 (Mini-TOC)"""
+    # 1. 標準化特定自訂標題
+    html = re.sub(r'<div style="font-size:16px;color:#82663F;margin-bottom:8px;">(.*?)</div>', r'<h2>\1</h2>', html)
+    
+    # 2. 探測 h2 與 h3 數量
+    all_h2 = re.findall(r'<h2\b[^>]*>(.*?)</h2>', html, flags=re.DOTALL)
+    all_h3 = re.findall(r'<h3\b[^>]*>(.*?)</h3>', html, flags=re.DOTALL)
+    
+    # 決定抓取的標籤深度：總數 <= 15 則包含 h2 + h3，否則僅保留 h2
+    include_h3 = (len(all_h2) + len(all_h3) <= 15) and len(all_h3) > 0
+    target_pattern = r'<(h[23])(\b[^>]*)>(.*?)</\1>' if include_h3 else r'<(h2)(\b[^>]*)>(.*?)</\1>'
+    
+    headings = []
+    def heading_repl(m):
+        tag = m.group(1)
+        attrs = m.group(2) or ""
+        title = m.group(3).strip()
+        clean_title = re.sub(r'<[^>]+>', '', title).strip()
+        if not clean_title or len(clean_title) > 60:
+            return m.group(0)
+            
+        id_match = re.search(r'id=["\']([^"\']+)["\']', attrs)
+        if id_match:
+            h_id = id_match.group(1)
+        else:
+            idx = len(headings) + 1
+            h_id = f"{report_id}-sec-{idx}"
+            attrs = f' id="{h_id}"' + attrs
+            
+        headings.append((tag, h_id, clean_title))
+        return f'<{tag}{attrs}>{title}</{tag}>'
+
+    new_html = re.sub(target_pattern, heading_repl, html, flags=re.DOTALL)
+    
+    if len(headings) >= 3:
+        toc_items = []
+        for tag, hid, htitle in headings:
+            cls = ' class="sub"' if tag == 'h3' else ''
+            toc_items.append(f'            <li{cls}><a href="#{hid}">{htitle}</a></li>')
+        toc_html = "\n".join(toc_items)
+        mini_toc = f"""        <details class="mini-toc">
+          <summary class="mini-toc-summary"><span class="mini-toc-title">篇內章節導覽</span><span class="mini-toc-count">（共 {len(headings)} 個章節）</span><span class="mini-toc-arrow">▾</span></summary>
+          <ol class="mini-toc-list">
+{toc_html}
+          </ol>
+        </details>"""
+        return mini_toc + "\n" + new_html
+    return new_html
+
 def build_zhcn_version(zh_hant_html):
     """參考 happy/tools/build_zhcn.py 產生符合大陸在地用語的簡體版本"""
     cn = zh_hant_html
@@ -236,17 +295,25 @@ def build():
                 point = meta.get("point", "")
                 drive_url = meta.get("drive_url", "")
                 search = meta.get("search", title)
+                clean_title = clean_title_for_menu(title)
+                
+                total_words, formatted_words, minutes = calc_reading_stats(body)
+                rendered_body = render_content(body)
+                body_html = inject_mini_toc(report_id, rendered_body)
                 
                 rep = {
                     "id": report_id,
                     "title": title,
-                    "clean_title": clean_title_for_menu(title),
+                    "clean_title": clean_title,
                     "date": date,
                     "tag": tag,
                     "point": point,
                     "drive_url": drive_url,
                     "search": search,
-                    "body_html": render_content(body),
+                    "total_words": total_words,
+                    "formatted_words": formatted_words,
+                    "minutes": minutes,
+                    "body_html": body_html,
                     "cat_id": cat["id"],
                     "cat_name": cat["name"],
                     "cat_no": cat["no"]
@@ -312,7 +379,15 @@ def build():
                 rfoot_html = f'<p class="rfoot"><a class="drive-link" href="{r["drive_url"]}" target="_blank" rel="noopener">雲端原檔 ↗</a></p>' if r["drive_url"] else ""
                 card = f"""        <article class="report" id="{r["id"]}" data-search-block data-search="{r["search"]}">
           <header class="report-head">
-            <p class="rmeta">{r["date"]}{tag_html}</p>
+            <div class="report-meta-row">
+              <p class="rmeta">
+                <span class="rdate">{r["date"]}</span>{tag_html}
+                <span class="rstats" title="全文約 {r["formatted_words"]} 字，預估閱讀時間 {r["minutes"]} 分鐘">約 {r["formatted_words"]} 字 · 閱讀約 {r["minutes"]} 分鐘</span>
+              </p>
+              <button type="button" class="cite-btn" data-id="{r["id"]}" data-title="{r["clean_title"]}" data-date="{r["date"]}" title="複製本篇研報引用資訊與錨點連結">
+                <span class="icon">🔗</span> 複製引用
+              </button>
+            </div>
             <h3 class="rtitle">{r["title"]}</h3>
             <p class="rpoint">{r["point"]}</p>
           </header>
