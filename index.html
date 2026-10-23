@@ -7,6 +7,10 @@
     <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#211C16" media="(prefers-color-scheme: dark)" />
     <title>研究報告儀表板 · 大道至簡</title>
+    <link rel="canonical" href="https://alexchiachi.github.io/research-dashboard/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://alexchiachi.github.io/research-dashboard/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://alexchiachi.github.io/research-dashboard/zh-cn/" />
+    <link rel="alternate" hreflang="x-default" href="https://alexchiachi.github.io/research-dashboard/" />
     <meta name="description" content="市場調查、流量情報、人物研究、事件追蹤、平台研究——全文平鋪、持續累積的開放研究檔案庫。" />
     
     <!-- OpenGraph & Twitter -->
@@ -360,6 +364,15 @@
         padding: 4px 0; white-space: nowrap;
       }
       .topbar nav a:hover { color: var(--tea); }
+      .topbar nav a.lang-switch {
+        font-family: inherit; font-size: 12.5px; letter-spacing: .1em;
+        color: var(--tea); border: 1px solid var(--line);
+        padding: 1px 7px; line-height: 1.4;
+        transition: all .16s ease; margin-left: 6px; align-self: center;
+      }
+      .topbar nav a.lang-switch:hover {
+        color: var(--terra); border-color: var(--tea); background: var(--surface);
+      }
       .topbar nav a b { color: var(--tea); font-weight: 500; margin-right: 5px; font-family: "Noto Serif TC", serif; }
 
       section.cat, .report, .toc { scroll-margin-top: 92px; }
@@ -480,6 +493,7 @@
           <a href="#cat-events"><b>04</b>事件追蹤</a>
           <a href="#cat-platform"><b>05</b>平台研究</a>
           <a href="#toc">目錄</a>
+          <a class="lang-switch" href="zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体</a>
         </nav>
         <div class="dd dd-top">
           <button class="dd-btn" type="button" aria-haspopup="true" aria-expanded="false">找文章<span class="car" aria-hidden="true">▾</span></button>

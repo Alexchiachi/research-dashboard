@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 大道至簡 · 研究報告儀表板建置腳本 (build.py)
-讀取 reports/ 目錄下的 Markdown 報告，自動編譯為單頁純靜態 index.html。
+參考 happy 倉庫標準：
+1. 讀取 reports/ 目錄下的 Markdown 報告，自動編譯繁體版 index.html。
+2. 透過 OpenCC (tw2sp) 自動產生對應的簡體版 zh-cn/index.html（字型、hreflang、用語在地化轉換）。
+3. 自動產出 sitemap.xml 與 robots.txt。
 """
 
 import os
@@ -17,10 +20,22 @@ try:
 except ImportError:
     HAS_MARKDOWN = False
 
+try:
+    from opencc import OpenCC
+    CC = OpenCC("tw2sp")
+    HAS_OPENCC = True
+except ImportError:
+    HAS_OPENCC = False
+    print("警告：未安裝 opencc-python-reimplemented，將略過簡體版生成。可執行 pip install opencc-python-reimplemented 安裝。")
+
 ROOT_DIR = Path(__file__).resolve().parent
 REPORTS_DIR = ROOT_DIR / "reports"
 TEMPLATE_PATH = ROOT_DIR / "template.html"
 OUTPUT_PATH = ROOT_DIR / "index.html"
+ZH_CN_DIR = ROOT_DIR / "zh-cn"
+ZH_CN_OUTPUT_PATH = ZH_CN_DIR / "index.html"
+
+BASE_URL = "https://alexchiachi.github.io/research-dashboard/"
 
 CATEGORIES = [
     {
@@ -125,6 +140,64 @@ def clean_title_for_menu(title):
     """去除標題末尾的（2026-10-22）等贅字，保持目錄精煉"""
     return re.sub(r'（\d{4}-\d{2}-\d{2}）$', '', title).strip()
 
+def build_zhcn_version(zh_hant_html):
+    """參考 happy/tools/build_zhcn.py 產生符合大陸在地用語的簡體版本"""
+    cn = zh_hant_html
+    # 1. 語言宣告與 canonical
+    cn = cn.replace('<html lang="zh-Hant">', '<html lang="zh-Hans">')
+    cn = cn.replace(f'<link rel="canonical" href="{BASE_URL}" />', f'<link rel="canonical" href="{BASE_URL}zh-cn/" />')
+    
+    # 2. 簡體專用字型（改載 Noto Serif SC 與 Noto Sans SC，避免混用後備字體）
+    cn = cn.replace("Noto+Serif+TC", "Noto+Serif+SC")
+    cn = cn.replace("Noto+Sans+TC", "Noto+Sans+SC")
+    cn = cn.replace('"Noto Sans TC", "PingFang TC", "Microsoft JhengHei"', '"Noto Sans SC", "PingFang SC", "Microsoft YaHei"')
+    cn = cn.replace('"Noto Serif TC", "Songti TC"', '"Noto Serif SC", "Songti SC"')
+    
+    # 3. 語言切換鈕指回繁體版
+    cn = cn.replace(
+        '<a class="lang-switch" href="zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体</a>',
+        '<a class="lang-switch" href="../" hreflang="zh-Hant" lang="zh-Hant">繁体</a>'
+    )
+    
+    # 4. OpenCC tw2sp 繁簡詞彙轉換
+    cn = CC.convert(cn)
+    
+    ZH_CN_DIR.mkdir(parents=True, exist_ok=True)
+    with open(ZH_CN_OUTPUT_PATH, "w", encoding="utf-8") as f:
+        f.write(cn)
+    print(f"✓ 簡體版已產生：{ZH_CN_OUTPUT_PATH.relative_to(ROOT_DIR)}（字型切換為 Noto SC，詞彙 tw2sp 在地化）")
+
+def build_sitemap_and_robots():
+    """產出符合 Google 與各大搜尋引擎標準的雙語 sitemap.xml 與 robots.txt"""
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>{BASE_URL}</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="{BASE_URL}"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}"/>
+  </url>
+  <url>
+    <loc>{BASE_URL}zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="{BASE_URL}"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}"/>
+  </url>
+</urlset>
+"""
+    with open(ROOT_DIR / "sitemap.xml", "w", encoding="utf-8") as f:
+        f.write(sitemap_xml)
+
+    robots_txt = f"""User-agent: *
+Allow: /
+
+Sitemap: {BASE_URL}sitemap.xml
+"""
+    with open(ROOT_DIR / "robots.txt", "w", encoding="utf-8") as f:
+        f.write(robots_txt)
+    print("✓ sitemap.xml 與 robots.txt 已更新")
+
 def build():
     if not TEMPLATE_PATH.exists():
         print(f"錯誤：找不到樣板檔案 {TEMPLATE_PATH}", file=sys.stderr)
@@ -208,7 +281,6 @@ def build():
     cat_blocks = []
     for cat in CATEGORIES:
         reps = categories_reports[cat["id"]]
-        # 分類內部下拉選單
         cat_dd_lines = []
         if cat.get("has_series"):
             cat_dd_lines.append('              <a role="menuitem" href="#r-daily-top10"><span class="d-date">每日更新</span><span>每日社群流量 Top10</span></a>')
@@ -219,7 +291,6 @@ def build():
             cat_dd_lines.append('              <span class="d-note">尚無歸檔報告，待累積</span>')
         cat_dd_html = "\n".join(cat_dd_lines)
 
-        # 報告卡片
         report_cards = []
         if cat.get("has_series"):
             report_cards.append(SERIES_CARD_TRAFFIC)
@@ -268,8 +339,10 @@ def build():
 
     categories_html = "\n\n".join(cat_blocks)
 
-    # 6. 替換樣板變數並輸出
+    # 6. 替換樣板變數產出繁體版
     output = template
+    output = output.replace("{{CANONICAL_URL}}", BASE_URL)
+    output = output.replace("{{LANG_SWITCH}}", '<a class="lang-switch" href="zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体</a>')
     output = output.replace("{{TOPBAR_DROPDOWN}}", topbar_dropdown_html)
     output = output.replace("{{TOTAL_REPORTS}}", str(total_count))
     output = output.replace("{{LATEST_DATE}}", latest_date)
@@ -281,7 +354,14 @@ def build():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(output)
 
-    print(f"✓ 編譯成功！已匯總 {total_count} 份報告至 {OUTPUT_PATH.name}（最新日期：{latest_date}）")
+    print(f"✓ 繁體版編譯成功！已匯總 {total_count} 份報告至 {OUTPUT_PATH.name}（最新日期：{latest_date}）")
+
+    # 7. 產出簡體版 zh-cn/index.html
+    if HAS_OPENCC:
+        build_zhcn_version(output)
+
+    # 8. 產出 sitemap.xml 與 robots.txt
+    build_sitemap_and_robots()
 
 if __name__ == "__main__":
     build()

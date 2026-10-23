@@ -2,7 +2,8 @@
 
 市場調查、流量情報、人物研究、事件追蹤、平台研究——所有研究報告累積在一個頁面，點開即是全文，向下捲動一目瞭然。
 
-- **線上版**：https://alexchiachi.github.io/research-dashboard/
+- **線上版（繁體）**：https://alexchiachi.github.io/research-dashboard/
+- **線上版（簡體）**：https://alexchiachi.github.io/research-dashboard/zh-cn/
 - **內容來源**：Google Drive「研究報告庫」（五分類歸檔）
 - **核心架構**：報告資料（Markdown）與視覺樣板（Template）解耦，透過 `build.py` 一鍵自動編譯。
 
@@ -19,8 +20,12 @@ research-dashboard/
 │   ├── 04_events/           # 04 事件追蹤
 │   └── 05_platform/         # 05 平台研究
 ├── template.html            # 儀表板視覺與互動母樣板（含紙墨美學、防孤字、搜尋與折疊控制）
-├── build.py                 # 一鍵編譯腳本（自動計算統計、產出目錄與下拉選單）
-├── index.html               # 編譯發布產物（GitHub Pages 託管）
+├── build.py                 # 一鍵編譯腳本（自動計算統計、產出目錄、生成繁簡雙版本）
+├── index.html               # 繁體版發布產物（含 hreflang 與「简体」切換鈕）
+├── zh-cn/
+│   └── index.html           # 簡體版發布產物（含 Noto SC 字型與「繁体」切換鈕）
+├── sitemap.xml              # 雙語系 Sitemap
+├── robots.txt               # 爬蟲宣告
 └── README.md
 ```
 
