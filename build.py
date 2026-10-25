@@ -132,9 +132,9 @@ SERIES_CARD_TRAFFIC = """<div class="report series" id="r-daily-top10" data-sear
         <header class="report-head">
           <p class="rmeta"><span class="daily">每日更新</span></p>
           <h3 class="rtitle plain">每日社群流量 Top10</h3>
-          <p class="rpoint">台、中、日、韓、美五地各 10 則，每日更新，原始檔存在專屬資料夾。互動版是 Muse 裡的<em>「流量情報儀表板」</em>，每日自動同步。</p>
+          <p class="rpoint">台、中、日、韓、美五地各 10 則，每日更新。互動版與 Muse 裡的<em>「流量情報儀表板」</em>同一份資料，每日自動同步；原始檔只存雲端硬碟，不再從這裡連過去。</p>
         </header>
-        <p class="rfoot"><a class="drive-link" href="https://drive.google.com/drive/folders/1jDiEBED8qTob14wdkSSonkMP1378cHdq" target="_blank" rel="noopener">開啟資料夾 ↗</a></p>
+        <p class="rfoot"><a class="drive-link" href="https://alexchiachi.github.io/research-dashboard/traffic.html">開啟互動版 ↗</a></p>
       </div>"""
 
 def parse_frontmatter(content):
