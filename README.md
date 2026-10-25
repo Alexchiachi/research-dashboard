@@ -13,12 +13,21 @@
 
 ```text
 research-dashboard/
-├── reports/                 # 獨立 Markdown 報告存放庫（按五分類歸檔）
+├── reports/                 # 獨立 Markdown 報告存放庫（按分類歸檔）
 │   ├── 01_market/           # 01 市場調查
 │   ├── 02_traffic/          # 02 流量情報
 │   ├── 03_people/           # 03 人物研究
 │   ├── 04_events/           # 04 事件追蹤
-│   └── 05_platform/         # 05 平台研究
+│   ├── 05_platform/         # 05 平台研究
+│   └── 06_weekly/           # 06 生活熱點 × 社會創新（37 期雙語原檔與 manifest）
+│       ├── manifest.json
+│       └── raw/*.md
+├── weekly/                  # 生活熱點 × 社會創新專屬全歸檔頁（繁體）
+├── zh-cn/weekly/            # 生活熱點 × 社會創新專屬全歸檔頁（簡體）
+├── sync_weekly.py           # Google Drive 雲端熱點文件自動同步腳本
+├── weekly_parser.py         # 雙語段落與熱點標題智慧解析器
+├── weekly_template.html     # 熱點專屬母樣板（含中英切換、月份導覽與防孤字）
+├── build_weekly.py          # 熱點獨立頁建置模組
 ├── template.html            # 儀表板視覺與互動母樣板（含紙墨美學、防孤字、搜尋與折疊控制）
 ├── build.py                 # 一鍵編譯腳本（自動計算統計、產出目錄、生成繁簡雙版本）
 ├── index.html               # 繁體版發布產物（含 hreflang 與「简体」切換鈕）
@@ -27,6 +36,19 @@ research-dashboard/
 ├── sitemap.xml              # 雙語系 Sitemap
 ├── robots.txt               # 爬蟲宣告
 └── README.md
+```
+
+---
+
+## 🔄 如何同步「每週生活熱點 × 社會創新」
+
+當 Google Drive 雲端硬碟累積了新的熱點週報時：
+```bash
+# 1. 自動從雲端硬碟匯出新期數（僅增量下載）
+python3 sync_weekly.py
+
+# 2. 一鍵編譯主頁與全歸檔獨立頁（繁簡雙版本）
+python3 build.py
 ```
 
 ---

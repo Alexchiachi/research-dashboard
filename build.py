@@ -1,3 +1,36 @@
+
+def render_weekly_series_card():
+    summaries = build_weekly.get_latest_weekly_summary(count=3)
+    items_html = []
+    for s in summaries:
+        pts = "".join(f"<li>{t}</li>" for t in s["titles"])
+        items_html.append(f"""          <div class="wk-digest-item" style="border: 1px solid var(--line); background: var(--surface); padding: 18px 20px; margin-top: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span style="font-family: monospace; font-size: 13px; font-weight: 600; color: var(--terra);">{s["date"]}</span>
+              <a href="weekly/#{s["anchor"]}" style="font-size: 12.5px; color: var(--tea);">閱讀本期全文 ↗</a>
+            </div>
+            <h4 style="font-family: 'Noto Serif TC', serif; font-size: 17px; margin: 4px 0 8px; color: var(--ink);">每週生活熱點 × 社會創新（{s["date"]}）</h4>
+            <ol style="margin: 0; padding-left: 1.4em; font-size: 14.5px; color: var(--muted); line-height: 1.7;">
+              {pts}
+            </ol>
+          </div>""")
+    digest_cards = "\n".join(items_html)
+    return f"""        <div class="report series" id="r-weekly-hub" data-search-block data-search="生活 熱點 社會創新 食 衣 住 行 育 樂 雙語">
+          <header class="report-head">
+            <p class="rmeta"><span class="daily">每週兩期 · 持續累積 37 期</span></p>
+            <h3 class="rtitle plain">每週生活熱點 × 社會創新</h3>
+            <p class="rpoint">從食、衣、住、行、育、樂等日常切角，拆解現象背後的<em>規則重組、關係轉向與社會創新</em>。每期收錄 3 則生活熱點之中文深度解析與英文版（English Draft）。</p>
+          </header>
+          <div class="doc" style="margin-top: 16px;">
+            <p style="font-size: 15px; color: var(--muted); margin-bottom: 8px;">以下為<strong>最新出刊 3 期摘要</strong>；完整 37 期已建立專屬獨立閱讀頁面：</p>
+{digest_cards}
+          </div>
+          <p class="rfoot" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 24px;">
+            <span style="font-size: 13px; color: var(--muted);">累積 37 期全歸檔（2026-06 至 2026-10）</span>
+            <a class="drive-link" href="weekly/" style="background: var(--tint); color: var(--ink); border: 1px solid var(--tea); padding: 6px 16px; font-weight: 500;">前往「每週熱點全歸檔獨立頁」閱讀完整 37 期 ➔</a>
+          </p>
+        </div>"""
+import build_weekly
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -82,6 +115,16 @@ CATEGORIES = [
         "folder": "https://drive.google.com/drive/folders/1Xijg_Hx4V3gXeG79dRs8A3SEDe64LS6p",
         "empty_msg": "平台研究分類已建置完成，待新報告產出後直接歸檔於此處與 Google Drive 專屬資料夾。",
         "has_series": False
+    },
+    {
+        "id": "cat-weekly",
+        "dir": "06_weekly",
+        "no": "06",
+        "name": "生活熱點 × 社會創新",
+        "folder": "weekly/",
+        "empty_msg": "每週生活熱點 × 社會創新系列持續追蹤中。",
+        "has_series": False,
+        "is_weekly": True
     }
 ]
 
@@ -254,6 +297,18 @@ def build_sitemap_and_robots():
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}"/>
   </url>
+  <url>
+    <loc>{BASE_URL}weekly/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="{BASE_URL}weekly/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/weekly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}weekly/"/>
+  </url>
+  <url>
+    <loc>{BASE_URL}zh-cn/weekly/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="{BASE_URL}weekly/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/weekly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}weekly/"/>
+  </url>
 </urlset>
 """
     with open(ROOT_DIR / "sitemap.xml", "w", encoding="utf-8") as f:
@@ -269,6 +324,9 @@ Sitemap: {BASE_URL}sitemap.xml
     print("✓ sitemap.xml 與 robots.txt 已更新")
 
 def build():
+    # 0. 先編譯每週生活熱點獨立頁
+    build_weekly.build_weekly()
+
     if not TEMPLATE_PATH.exists():
         print(f"錯誤：找不到樣板檔案 {TEMPLATE_PATH}", file=sys.stderr)
         sys.exit(1)
@@ -331,7 +389,7 @@ def build():
     total_count = len(all_reports)
     latest_date = all_reports[0]["date"] if all_reports else "2026-10-22"
 
-    empty_cats = [c["name"] for c in CATEGORIES if len(categories_reports[c["id"]]) == 0]
+    empty_cats = [c["name"] for c in CATEGORIES if len(categories_reports[c["id"]]) == 0 and not c.get("has_series") and not c.get("is_weekly")]
     pending_count = len(empty_cats)
     pending_names = "、".join(empty_cats) if empty_cats else "無"
 
@@ -345,6 +403,8 @@ def build():
         if reps:
             for r in reps:
                 topbar_dd_lines.append(f'            <a role="menuitem" href="#{r["id"]}"><span class="d-date">{r["date"]}</span><span>{r["clean_title"]}</span></a>')
+        elif cat.get("is_weekly"):
+            topbar_dd_lines.append('            <a role="menuitem" href="weekly/"><span class="d-date">全 37 期</span><span>前往每週生活熱點全歸檔頁 ➔</span></a>')
         elif not cat.get("has_series"):
             topbar_dd_lines.append('            <span class="d-note">尚無歸檔報告，待累積</span>')
     topbar_dropdown_html = "\n".join(topbar_dd_lines)
@@ -362,9 +422,13 @@ def build():
         cat_dd_lines = []
         if cat.get("has_series"):
             cat_dd_lines.append('              <a role="menuitem" href="#r-daily-top10"><span class="d-date">每日更新</span><span>每日社群流量 Top10</span></a>')
+        if cat.get("is_weekly"):
+            cat_dd_lines.append('              <a role="menuitem" href="weekly/"><span class="d-date">全 37 期</span><span>前往每週生活熱點全歸檔頁 ➔</span></a>')
         if reps:
             for r in reps:
                 cat_dd_lines.append(f'              <a role="menuitem" href="#{r["id"]}"><span class="d-date">{r["date"]}</span><span>{r["clean_title"]}</span></a>')
+        elif cat.get("is_weekly"):
+            topbar_dd_lines.append('            <a role="menuitem" href="weekly/"><span class="d-date">全 37 期</span><span>前往每週生活熱點全歸檔頁 ➔</span></a>')
         elif not cat.get("has_series"):
             cat_dd_lines.append('              <span class="d-note">尚無歸檔報告，待累積</span>')
         cat_dd_html = "\n".join(cat_dd_lines)
@@ -372,6 +436,8 @@ def build():
         report_cards = []
         if cat.get("has_series"):
             report_cards.append(SERIES_CARD_TRAFFIC)
+        if cat.get("is_weekly"):
+            report_cards.append(render_weekly_series_card())
 
         if reps:
             for r in reps:
@@ -397,6 +463,8 @@ def build():
           {rfoot_html}
         </article>"""
                 report_cards.append(card)
+        elif cat.get("is_weekly"):
+            topbar_dd_lines.append('            <a role="menuitem" href="weekly/"><span class="d-date">全 37 期</span><span>前往每週生活熱點全歸檔頁 ➔</span></a>')
         elif not cat.get("has_series"):
             empty_block = f"""        <div class="empty">
           <span class="big">尚無歸檔報告</span>
@@ -417,7 +485,7 @@ def build():
 {cat_dd_html}
             </div>
           </div>
-          <a class="folder" href="{cat["folder"]}" target="_blank" rel="noopener">開啟資料夾 →</a>
+          {"<a class=\"folder\" href=\"weekly/\">全歸檔獨立頁 →</a>" if cat.get("is_weekly") else f'<a class="folder" href="{cat["folder"]}" target="_blank" rel="noopener">開啟資料夾 →</a>'}
         </div>
 {cat_body}
       </section>"""
