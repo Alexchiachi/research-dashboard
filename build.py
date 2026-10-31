@@ -31,6 +31,7 @@ def render_weekly_series_card():
           </p>
         </div>"""
 import build_weekly
+import build_traffic
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -85,7 +86,7 @@ CATEGORIES = [
         "dir": "02_traffic",
         "no": "02",
         "name": "流量情報",
-        "folder": "https://drive.google.com/drive/folders/1u3FoolLkG7uCUekMXx9AC84Lj0W4Dk6e",
+        "folder": "https://drive.google.com/drive/folders/1467YTUDdUK-mlXkddfbN7QhWRGWzBTw_",
         "empty_msg": "流量情報分類已建置完成，待新報告產出後直接歸檔於此處與 Google Drive 專屬資料夾。",
         "has_series": True
     },
@@ -128,11 +129,11 @@ CATEGORIES = [
     }
 ]
 
-SERIES_CARD_TRAFFIC = """<div class="report series" id="r-daily-top10" data-search-block data-search="每日 社群 流量 top10 台灣 中國 日本 韓國 美國 事件">
+SERIES_CARD_TRAFFIC = """<div class="report series" id="r-daily-top10" data-search-block data-search="每日 社群 流量 top10 台灣 中國 日本 韓國 美國 歐洲 中東 事件">
         <header class="report-head">
           <p class="rmeta"><span class="daily">每日更新</span></p>
           <h3 class="rtitle plain">每日社群流量 Top10</h3>
-          <p class="rpoint">台、中、日、韓、美五地各 10 則，每日更新。互動版與 Muse 裡的<em>「流量情報儀表板」</em>同一份資料，每日自動同步；原始檔只存雲端硬碟，不再從這裡連過去。</p>
+          <p class="rpoint">台、中、日、韓、美、歐、中東七地各 10 則，每日更新。互動版與情報儀表板連動，每日自動同步。</p>
         </header>
         <p class="rfoot"><a class="drive-link" href="https://alexchiachi.github.io/research-dashboard/traffic.html">開啟互動版 ↗</a></p>
       </div>"""
@@ -304,6 +305,9 @@ def build_sitemap_and_robots():
     <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}weekly/"/>
   </url>
   <url>
+    <loc>{BASE_URL}traffic.html</loc>
+  </url>
+  <url>
     <loc>{BASE_URL}zh-cn/weekly/</loc>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="{BASE_URL}weekly/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="{BASE_URL}zh-cn/weekly/"/>
@@ -324,8 +328,9 @@ Sitemap: {BASE_URL}sitemap.xml
     print("✓ sitemap.xml 與 robots.txt 已更新")
 
 def build():
-    # 0. 先編譯每週生活熱點獨立頁
+    # 0. 先編譯每週生活熱點獨立頁與每日流量情報
     build_weekly.build_weekly()
+    build_traffic.build_traffic()
 
     if not TEMPLATE_PATH.exists():
         print(f"錯誤：找不到樣板檔案 {TEMPLATE_PATH}", file=sys.stderr)

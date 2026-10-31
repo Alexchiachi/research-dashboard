@@ -1,0 +1,619 @@
+{
+  "date": "2026-10-18",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 344,
+      "rank": 6,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/weibo",
+      "summary": "熱搜第4（30.4萬），大學生創業神話vs.奶茶賽道內捲的兩種敘事並存，年輕人對「低成本創業」的想像與質疑同時引爆。",
+      "title": "杭州大三女孩7個月開了20家檸檬奶店"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 345,
+      "rank": 7,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/weibo",
+      "summary": "熱搜第10（15.7萬），中產消費者對山姆會員店品質下滑的集體抱怨，消費降級時代「貴≠好」情緒的宣洩口。",
+      "title": "「山姆品質暴跌你還敢去嗎」上熱搜，會員超市信任危機再起"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 346,
+      "rank": 8,
+      "region": "中國",
+      "sourceUrl": "https://www.redianba.com/daily",
+      "summary": "百度熱搜第5，大水桶喝水挑戰風靡全網，「喝水都要內捲」的荒誕感＋醫生專業提醒的反差，健康話題一向自帶流量。",
+      "title": "「全民喝大水」火了，醫生提醒：亂喝有風險"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 347,
+      "rank": 9,
+      "region": "中國",
+      "sourceUrl": "https://www.redianba.com/daily",
+      "summary": "百度熱搜「重陽節」「重陽養生做好這幾件事」多條上榜，恰逢重陽節，養老、孝親、慢遊議題與「好好生活」語系高度貼合。",
+      "title": "今又重陽：重陽養生、銀髮族錯峰遊，「縣城康養」搜索熱度同比增203%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 348,
+      "rank": 10,
+      "region": "中國",
+      "sourceUrl": "https://whatshot.top/",
+      "summary": "中央氣象台預報12省迎大到暴雨、北方多地氣溫創新低，颱風＋寒潮雙預警直接影響週末出行與生活安排，生活類硬剛需話題。",
+      "title": "今年第30號超強颱風「薔琵」逼近台灣以東洋面，最大風力17級"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 339,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/stock/jdts/2026-10-17/detail-inivnzst8219569.d.html",
+      "summary": "Roadster搭載SpaceX冷氣推進系統、可爬垂直牆、空中翻滾，蔚來李斌稱「太厲害了這個我們真沒有」；但股價反跌7%，形成「產品驚艷、股價暴跌」的強烈反差。",
+      "title": "特斯拉市值5日蒸發超6200億，跳票9年的Roadster飛行汽車亮相"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 340,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://whatshot.top/",
+      "summary": "白色256GB得物成交價一日內從21170元跌到18666元，「一夜跌一半」的黃牛翻車劇本極具傳播力，也映證果粉搶購退燒的市場信號。",
+      "title": "iPhone Duo預售次日黃牛價明顯回落，部分版本加價空間縮水過半"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 341,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://whatshot.top/",
+      "summary": "高盛Prime數據顯示AI多頭交易遭遇猛烈逆轉，兩年AI牛市信仰動搖，散戶與投資圈高度關注，AI泡沫論再起。",
+      "title": "對沖基金連續五日淨賣出AI股票，全球AI股合計市值蒸發超1兆美元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 342,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://whatshot.top/",
+      "summary": "巴黎、里昂、馬賽等多地爆發暴力事件，店鋪被砸、百年市政廳遭焚燒，被稱為法國近年來破壞性最強的騷亂之一，今日國際新聞流量最高的硬新聞。",
+      "title": "法國數十萬人上街抗議物價上漲，警民衝突約1200人被捕"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 343,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/weibo",
+      "summary": "圍繞小店遭遇職業差評師／惡意索賠的社會議題，小商家生存困境引發廣泛共鳴與憤怒，今日中國社群討論度最高的社會事件。",
+      "title": "「2700元搞死一家店鋪」登頂微博熱搜（熱度78萬）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 334,
+      "rank": 6,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9821602",
+      "summary": "招募體驗活動吸引近200名護理學子、當天簽約25人；護理人力缺口與醫療勞動議題今晨衝上生活版頭條。",
+      "title": "全台護理師荒，彰基祭出最高108萬元獎助學金、回院服務年限縮短至5年3個月"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 335,
+      "rank": 7,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6884310",
+      "summary": "每客換算僅445元；ITF台灣國際旅展前各大飯店囤券大戰開打，消費類今日最熱話題。",
+      "title": "凱撒飯店連鎖線上旅展：聯合餐券買一送一今日10:00開搶，限量100組"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 336,
+      "rank": 8,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6884278",
+      "summary": "許富凱、陳芳語、李炳輝接力登台，北捷推50點換50元美食券＋抽沖繩郵輪雙人遊，流行文化＋夜市經濟話題。",
+      "title": "2026出口音樂節昨晚首度移師北藝中心登場，玖壹壹壓軸、串聯士林夜市美食抵用券"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 337,
+      "rank": 9,
+      "region": "台灣",
+      "sourceUrl": "https://newsday.tw/news/593337",
+      "summary": "從馬祖老酒麵線到阿里山高山茶，消費滿100元集點抽台北—馬祖來回機票，旅遊美食類今日話題。",
+      "title": "2026觀光圈市集日10/16–10/19在國父紀念館登場，18個觀光圈200家地方品牌齊聚台北"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 338,
+      "rank": 10,
+      "region": "台灣",
+      "sourceUrl": "https://hakkanews.tw/2026/10/16/307576/",
+      "summary": "響應中央國旅補助、縣府再加碼，平日入住合作旅宿即發券，可於約50家在地商家消費至12/20。",
+      "title": "新竹縣「竹遊券」500元消費券10/19開跑，限量4000份、總額200萬"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 329,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.mnews.tw/story/mm-20261018edi009",
+      "summary": "今日全台最大話題；氣象粉專「台灣颱風論壇｜天氣特急」衛星雲圖梗「右上有眼睛那坨才是本人」爆紅。",
+      "title": "強颱薔琵猛爆增強成今年第9個強颱，18小時升格、北轉機率大降直撲台灣，光復節連假恐泡湯"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 330,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.storm.mg/article/11173387",
+      "summary": "AI融資疑慮、費半單週崩11.4%，台積電ADR重挫2.28%、美光大跌5.63%，外資連8日賣超；本週台股已重挫2202點。",
+      "title": "台指期夜盤重挫1144點，下週一（10/19）台股恐再現千點崩跌、季線保衛戰開打"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 331,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://ec.ltn.com.tw/article/paper/1774874",
+      "summary": "AI需求超預期帶動「內外皆熱」，出口全年可望突破9000億美元；賴清德同日受訪強調AI發展要避免造成K型經濟。",
+      "title": "中經院三度上修今年經濟成長率至12.16%，創39年（1988年以來）新高"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 332,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.ftvnews.com.tw/news/detail/2026A13W0386",
+      "summary": "民調專家戴立安爆料新北民調，預告下週台北市長民調將出現落差，「洋流效應」由蔣萬安與沈伯洋共同創造。",
+      "title": "九合一選戰倒數：蘇巧慧領先李四川13.1百分點，新北選情剪刀口擴大為「海嘯」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 333,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7321/9816295",
+      "summary": "74台B300伺服器非法出口，涉背信、偽造文書起訴8人；輝達稱「有一定程序非我說了算」，AI供應鏈合規議題再受關注。",
+      "title": "美超微B300高階AI伺服器非法轉賣大陸案10/16首次開庭，輝達台灣資深經理出庭喊冤"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 354,
+      "rank": 6,
+      "region": "日本",
+      "sourceUrl": "https://www.sanspo.com/article/20261017-HYLDHBVF3JOBJDEBPNVRKT36UE/",
+      "summary": "三得利「ギルティ炭酸NOPE」1.5L大容量瓶累計出貨破億本、FamilyMart「背德飯」第三彈；「背德」關鍵字已成食品行銷主流，反映壓力社會下「偶爾寵自己」的心態。",
+      "title": "「背德美食」風潮擴大：高熱量＋罪惡感＝幸福感的消費趨勢"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 355,
+      "rank": 7,
+      "region": "日本",
+      "sourceUrl": "https://www.walknews.com/1406180/",
+      "summary": "首都圈最大秋田宣傳活動，先到300人送品牌米、移住最高110萬円支援，命中「慢生活／地方移住」趨勢。",
+      "title": "AKITA GOOD LIFE FESTIVAL今日在東京國際論壇登場：秋田美食＋秋田犬療癒＋移住相談"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 356,
+      "rank": 8,
+      "region": "日本",
+      "sourceUrl": "https://www.fnn.jp/articles/-/1134899",
+      "summary": "250株圓滾滾紅色コキア被加上眼睛、髮型裝飾，「可愛」「療癒」在Instagram擴散；荒地活化＋地方創生的溫暖故事。",
+      "title": "新潟村上「紅葉コキア」在SNS掀起話題，居民手作表情裝飾成打卡點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 357,
+      "rank": 9,
+      "region": "日本",
+      "sourceUrl": "https://weathernews.jp/news/202610/180061/",
+      "summary": "北海道陸別−4.3℃vs大阪/福岡28℃，「羽絨vs半袖」的極端對比在社群擴散；禦寒、秋冬消費的實用提醒。",
+      "title": "北日本今秋最強寒潮：全國90地點「冬日」（0℃以下），東西溫差達12℃"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 358,
+      "rank": 10,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261018/?iref=com_pickup_news_summary_5_1",
+      "summary": "全球郵輪需求升溫、迪士尼宣布參入日本市場、那霸港與國際巨頭簽約，旅遊消費復甦的結構性話題。",
+      "title": "日本郵輪市場進入成長期：政府目標2030年日本客100萬、訪日250萬"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 349,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://tweetsoku.news/2026/10/18/%e9%87%8e%e5%85%9a%e3%80%81%e8%b2%a1%e6%ba%90%e3%83%bb%e5%88%b6%e5%ba%a6%e8%a8%ad%e8%a8%88%e8%bf%bd%e5%8f%8a%e3%81%b8%e3%80%80%e6%b6%88%e8%b2%bb%e6%b8%9b%e7%a8%8e%e6%b3%95%e6%a1%88%e3%80%8120%e6%97%a5/",
+      "summary": "執政聯盟2年限食品消費稅減稅與「就業者負擔減輕支援金」並進，野黨質疑財源不明、要求高市首相親自答辯，攻防引爆輿論。",
+      "title": "消費稅減稅法案20日審議、野黨追擊財源；新給付制度平均年3萬元案浮現"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 350,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.okinawatimes.co.jp/articles/-/1946984",
+      "summary": "那霸軍港移設計劃立場對立（容認vs反對、無條件返還），牽動沖繩基地議題與地方選舉走向，沖繩媒體今日即時快報。",
+      "title": "那霸市長選今日告示，知念覺（現職）vs久手堅幸子一騎打拚，25日投開票"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 351,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261018/?iref=com_pickup_news_summary_5_1",
+      "summary": "米價高漲、米不足問題之後，豐收預測直接影響米價與政府備蓄米政策（59萬噸中已買回21萬噸），吃進每家餐桌的民生焦點。",
+      "title": "今年產稻米收穫預測740萬噸超，10年來第二高水準"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 352,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261018/?iref=com_pickup_news_summary_5_1",
+      "summary": "自稱「律師」卻無律師資格被美媒揭發、川普勸退；朝日新聞今日三要點之首，美日媒體同步跟進的國際級政治鬧劇。",
+      "title": "川普政府白宮發言人就任僅5天遭解任（經歷造假風波）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 353,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "http://www.shimotsuke.co.jp/articles/-/1442592",
+      "summary": "週日早通勤大動脈中斷、1本下行列車運休，影響返鄉與出遊人流，今晨即時快報流量大。",
+      "title": "東北新幹線今晨一時停駛（東京—仙台上下線），7點25分復駛但延誤"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 374,
+      "rank": 6,
+      "region": "美國",
+      "sourceUrl": "https://trends.cyberkendra.com/google-trends/united-states",
+      "summary": "十月第三個週六是傳統大學橄欖球大戰日，Canes、Auburn、Georgia、Tennessee等球隊比分、球星成為社群即時討論中心，流量完全由賽事驅動。",
+      "title": "大學橄欖球週六霸榜全美熱搜：X趨勢與Google美國熱搜被球隊關鍵詞洗版"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 375,
+      "rank": 7,
+      "region": "美國",
+      "sourceUrl": "https://news.newonnetflix.info/news/stream-or-skip-heres-everything-added-to-netflix-in-america-this-week-october-16-2026/",
+      "summary": "《Cocaine Bear》《Transformers One》《Save Yourselves!》一次上線，各娛樂媒體推出「Stream or Skip」指南，本週新增片單以動作喜劇與動畫為主。",
+      "title": "Netflix美國本週新片上架清單引發周末追劇熱"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 376,
+      "rank": 8,
+      "region": "美國",
+      "sourceUrl": "https://rhfnews.com/article/food-driven-travel-surges-80-of-young-americans-book-trips-for-meals",
+      "summary": "社群爆紅菜色已成訂房觸發器，三分之一美國人願為「在地特色料理」專程前往；報告還點名GLP-1友善的飯店設施成新賣點。",
+      "title": "「為了一餐而旅行」成真：Priceline 2027旅行趨勢報告指80%的Z世代與千禧世代願意為美食體驗專程訂機票"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 377,
+      "rank": 9,
+      "region": "美國",
+      "sourceUrl": "https://www.globenewswire.com/de/news-release/2026/10/13/3379783/0/en/circana-finds-ease-and-personalization-driving-the-next-wave-of-global-wellness.html",
+      "summary": "Circana 10/13全球健康報告：九成以上消費者把健康列為優先事項，但「缺的不是動機，是時間與簡單的下一步」；半數美國成年人正試圖攝取更多蛋白質，機能性營養成日常剛需。",
+      "title": "美國健康市場突破1.2兆美元，GLP-1減重藥物正改變全民食慾與份量"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 378,
+      "rank": 10,
+      "region": "美國",
+      "sourceUrl": "https://people.com/people-in-10-october-15-2026-12174924",
+      "summary": "她稱店主「無禮的騙子」，店家反擊回應；PEOPLE本週娛樂回顧的頭條話題，明星八卦流量居高不下。",
+      "title": "Kelly Clarkson與布魯克林小店主隔空互罵延燒成社群熱議"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 369,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "http://trends.billionsideas.com/google-top-stories/united-states",
+      "summary": "川普援引「國家利益」豁免條款暫停制裁並豁免俄油買家關稅，連共和黨議員都批魯莽、等於「獎勵普京」；澤倫斯基公開譴責美烏關係惡化，今日美國各大媒體頭條第一位。",
+      "title": "川普簽署行政命令、暫停國會新通過的對俄制裁，引發兩黨國會議員齊聲砲轟"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 370,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "http://trends.billionsideas.com/google-top-stories/united-states",
+      "summary": "由青年學運擴大為全國性抗議，BBC、CNN、紐約時報都在跟進直播，馬克龍公開喊話「暴力沒有立足之地」；今日Google美國「Top Stories」國際頭條。",
+      "title": "法國爆發多年來最嚴重街頭動盪：50萬人走上街頭、數百人被捕，多個城市出現搶劫縱火"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 371,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "http://trends.billionsideas.com/google-top-stories/united-states",
+      "summary": "路透獨家引述消息人士，稱限制Starshield的命令來自白宮內部；美烏關係因制裁議題同步緊張，Axios、CBS持續追蹤。",
+      "title": "澤倫斯基指控馬斯克擁有的Starlink系統在烏克蘭仍受限制，烏軍無法攔截俄羅斯無人機"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 372,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.cryptotimes.io/2026/10/17/bitcoin-price-holds-81k-amid-315m-liquidations-google-searches-hit-multi-year-low/",
+      "summary": "本週數位資產投資產品淨流出4.34億美元；Google對比特幣的搜尋熱度已跌到多年新低；市值約1.64兆美元，仍較歷史高點126,080美元低逾三成。",
+      "title": "比特幣回落至8.1萬美元附近盤整，10/15當日加密貨幣爆倉近10億美元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 373,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://watchdogreport.org/riot-gear-standoff-shocks-los-angeles/",
+      "summary": "週五數萬人從市政廳和平遊行至市中心聯邦拘留中心後，部分示威者向聯邦人員投擲物品、市長卡倫·巴斯呼籲冷靜；移民執法已成全美最高張力的社會議題之一。",
+      "title": "洛杉磯「ICE Out」反移民執法大遊行演變成暴力衝突：兩名聯邦僱員送醫，LAPD宣布非法集會並動用催淚彈"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 364,
+      "rank": 6,
+      "region": "韓國",
+      "sourceUrl": "https://keywi.kr/",
+      "summary": "颱風搜尋量暴增（2000+），媒體報導「13年來第30號颱風」強度可達4級；韓國今日也迎來全國強降雨。",
+      "title": "13年來第30號颱風逼近，日本進入超緊張狀態"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 365,
+      "rank": 7,
+      "region": "韓國",
+      "sourceUrl": "https://whereispost.com/hot",
+      "summary": "今日各地強降雨，首都圈與忠清道預計最大80毫米降雨量，氣象話題登上熱搜。",
+      "title": "全國強降雨預報，首都圈、忠清最大80mm（明日天氣）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 366,
+      "rank": 8,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261018_0003830237",
+      "summary": "售價1999美元的蘋果首款摺疊手機預購開賣即售罄，媒體形容「即使329萬韓元也秒殺」；三星等廠商也押注超高價摺疊機。",
+      "title": "蘋果首款摺疊iPhone「iPhone Duo」預購即完售，出貨延至2027年1月"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 367,
+      "rank": 9,
+      "region": "韓國",
+      "sourceUrl": "http://www.newszoom.kr/2068631",
+      "summary": "首爾市今日（10/18）在首爾林舉辦青年主導的健康飲食節：青年廚師烹飪競賽、健康食品市集、親子體驗，迎合慢生活與健康飲食風潮。",
+      "title": "首爾林「青年家族健康餐野餐」今日登場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 368,
+      "rank": 10,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/economy/12175744",
+      "summary": "訪韓外國人59%以K-Food為來韓理由；農心聖水洞「辛拉麵食堂」4個月37萬人造訪、三養明洞體驗店外國客佔八成，食品業搶攻觀光動線。",
+      "title": "K-Food變身旅遊目的：外國遊客從「買伴手禮」變「來韓國吃、做、體驗」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 359,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://todaynews1.tistory.com/40",
+      "summary": "京畿道知事過去的消防相關發言被挖出、已道歉，執政與在野雙方圍繞該發言展開政治攻防，今日韓國熱搜前二。",
+      "title": "秋美愛「消防赤字吸管」發言爭議，朝野攻防加劇"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 360,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://todaynews1.tistory.com/40",
+      "summary": "金振碩在富川工廠火災中殉職，今日開放聯合靈堂接受市民弔唁；李在明親自前往弔唁並追授勳章，社會關注度高。",
+      "title": "富川工廠火災殉職消防士金振碩，聯合靈堂開放、李在明前往弔唁"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 361,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://whereispost.com/hot",
+      "summary": "川普以穩定油價和停戰談判為由宣布無限期延後對俄制裁法生效，引發美國國會強烈反彈；國際油價同步飆升，韓國網路熱搜。",
+      "title": "川普無限期延後對俄制裁法生效，油價逼近110美元"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 362,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://magazine.hankyung.com/business/article/202610188235b",
+      "summary": "IMF 10月世界經濟展望推算韓國潛在成長率今年2.14%、明年2.20%，連兩年上升為1986–1987年三低繁榮以來首次，在27國中排名第7。",
+      "title": "IMF預測韓國潛在成長率40年來首度連兩年反彈"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 363,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://todaynews1.tistory.com/40",
+      "summary": "凍結汽油最高售價4週並補貼煉油業者損失；另20代就業者年減17萬人、青年失業率升至5.4%，「青年就業寒冬」話題熱度高。",
+      "title": "政府凍結油品最高價格4週＋青年就業寒冬持續"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "強颱直撲加上下週一台股季線保衛戰，週末的心情是「一邊囤貨一邊看盤」，戒備與搶購並存。中經院把今年GDP上修到12.16%、創39年新高，數字越亮麗、庶民越無感——賴清德的K型經濟警告，只是把這種脫節說破了。重陽節講孝親慢生活，現實裡「2700元搞死一家店鋪」霸榜熱搜第一——節日溫情與小店困境的撕裂，就是今天的中國心情。喝水都要內捲、黃牛一夜翻車，連養生都帶著荒誕味。物價高騰下「背德美食」大賣、秋田移住祭、紅葉可愛打卡——越是錢包不安，越要寵自己一點。消費稅減稅攻防是頭腦的焦慮，療癒消費是身體的解藥。消防士殉職舉國致哀、油價逼近110美元凍結上限、青年就業年減17萬人——悲傷、憤怒、焦慮三線並行。K-Food變旅遊目的、首爾林青年野餐節是今日少數的亮色。法國的抗議燒到了自己門口——洛杉磯「ICE Out」遊行演變成催淚彈衝突，對外談民主、對內動武力的荒誕全民看在眼裡。川普暫停對俄制裁連本黨都罵，政治疲勞已到頂；大學橄欖球和週末追劇是全民的麻醉劑。五地共同情緒是「緊繃中的自救」——市場恐慌、地緣緊張、物價壓力之下，人們一邊囤貨看盤，一邊用美食、野餐、追劇給自己一點確定的小幸福；錢包越緊，身體越誠實。",
+  "globalTheme": "法國大示威、川普暫停對俄制裁、AI拋售延燒、強颱薔琵：動盪週末的三線交織",
+  "sourceModifiedAt": "2026-10-18T09:10:00+08:00",
+  "storylines": [
+    {
+      "id": 21,
+      "items": [
+        "美國：Google Top Stories國際頭條，BBC/CNN/紐時跟進直播",
+        "中國：熱搜聚合whatshot國際要聞頭條、微博熱議",
+        "韓國：熱搜相關報導，與生活費、油價抗議連動"
+      ],
+      "kind": "跨區線",
+      "summary": "50萬人上街、多城搶劫縱火、逾1200人被捕，美、中、韓媒體與熱搜同步跟進；馬克龍喊話「暴力沒有立足之地」。由青年學運擴大為全國性抗議，被稱為法國近年破壞性最強的騷亂之一。",
+      "title": "法國全國大規模抗議動盪"
+    },
+    {
+      "id": 22,
+      "items": [
+        "美國：各大媒體頭條第一位，兩黨齊聲砲轟",
+        "韓國：網路熱搜，政府凍結油品最高價4週進入第二天"
+      ],
+      "kind": "跨區線",
+      "summary": "川普援引「國家利益」豁免條款簽署行政命令，暫停國會新通過的對俄制裁並豁免俄油買家關稅；連共和黨議員都批「獎勵普京」；澤倫斯基公開譴責美烏關係惡化；國際油價逼近110美元。",
+      "title": "川普暫停對俄制裁"
+    },
+    {
+      "id": 23,
+      "items": [
+        "美國：CoreWeave續跌、納斯達克單週跌逾4%",
+        "台灣：下週一恐再現千點崩跌、季線保衛戰開打",
+        "中國：財經圈熱議，AI泡沫論再起"
+      ],
+      "kind": "跨區線",
+      "summary": "對沖基金連續五日淨賣出AI股票、全球AI股合計市值蒸發超1兆美元；美股費半單週崩11.4%，台指期夜盤重挫1144點；亞洲憂心10/19週一開盤。",
+      "title": "AI融資疑慮引爆科技股拋售延燒"
+    },
+    {
+      "id": 24,
+      "items": [
+        "台灣：今年第9個強颱，光復節連假恐泡湯",
+        "中國：12省迎大到暴雨、北方多地氣溫創新低",
+        "日本：警戒中，疊加東北新幹線停駛交通壓力",
+        "韓國：全國強降雨，首都圈最大80mm"
+      ],
+      "kind": "跨區線",
+      "summary": "13年來首次一年生成30個颱風；薔琵升級強颱直撲台灣以東，北轉機率大降；中國中央氣象台發布颱風＋寒潮雙預警、12省大到暴雨；日韓同步警戒，韓國今日全國強降雨。",
+      "title": "強颱薔琵（今年第30號颱風）"
+    },
+    {
+      "id": 25,
+      "items": [
+        "昨日：韓國預購冷清",
+        "今日：全球完售、出貨延2027年1月；中國黃牛價一日跌半"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日韓國店面反應冷淡（329萬韓元、補貼少）；今日反轉為全球預購即完售、出貨延至2027年1月；中國次日黃牛價回落、部分版本加價縮水過半。",
+      "title": "iPhone Duo預購反轉"
+    },
+    {
+      "id": 26,
+      "items": [
+        "昨日：大谷三分砲，Yahoo實時搜尋552則貼文",
+        "今日：釀酒人橫掃晉級，10/23起爭隊史首冠"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日大谷NLCS三分砲全網狂歡；今日釀酒人4–0橫掃道奇、44年來首度晉級世界大賽，大谷首轟白搭。",
+      "title": "大谷NLCS→釀酒人橫掃晉級世界大賽"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "對沖基金連5日淨賣出AI股票、全球蒸發超1兆美元——牛市時槓桿是信仰，熊市時槓桿是絞索；可從「借錢買夢」的金融史寫一講。",
+      "id": 33,
+      "pillar": "金融一百零八講",
+      "title": "AI融資疑慮：槓桿的雙面"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "中經院上修台灣GDP至12.16%創39年新高，賴清德卻示警K型經濟——數字繁榮與庶民無感的脫節，是「看得見的幸福」最好的反例。",
+      "id": 34,
+      "pillar": "金融一百零八講",
+      "title": "GDP 12.16%的亮麗與無感"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "小店遭遇職業差評師／惡意索賠霸榜熱搜第一——小商家的集體吼叫，是「好好生活」最沉重的一面；切口：當善良沒有盔甲。",
+      "id": 35,
+      "pillar": "俗人對話錄",
+      "title": "2700元搞死一家店鋪"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "彰基祭出最高108萬獎助學金搶護理師——錢能開價，留不住的是人心；切口：什麼樣的工作，值得留下。",
+      "id": 36,
+      "pillar": "俗人對話錄",
+      "title": "護理師荒：108萬也留不住的人"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "日本「背德」食品行銷大爆發——高熱量＋罪惡感＝幸福感；切口：執著與放下之間，只差一句「偶爾寵自己」。",
+      "id": 37,
+      "pillar": "佛法生活感悟文",
+      "title": "背德美食：罪惡感即幸福感"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "舉國致哀的消防士金振碩——英雄也會倒下；切口：無常不是遠方的詞，是每天出門的人。",
+      "id": 38,
+      "pillar": "佛法生活感悟文",
+      "title": "富川消防士殉職：無常的一課"
+    }
+  ]
+}

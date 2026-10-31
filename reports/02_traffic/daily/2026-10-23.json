@@ -1,0 +1,621 @@
+{
+  "date": "2026-10-23",
+  "events": [
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 594,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/weibo",
+      "summary": "微博熱搜第2（59.6萬熱度），「國乒女團」「侯英超談國乒女團不敵日本」等話題並行；男團同期奪冠對比強烈。",
+      "title": "亞錦賽國乒女團2比3不敵日本獲亞軍、男團奪第26冠"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 595,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/douyin",
+      "summary": "座位擺放《第三空間倡議》桌牌，「不消費不能入座」引發全網支持反轉討論；「在星巴克開會1小時被提醒點單5次」並行登微博熱搜第7，抖音熱度破千萬。",
+      "title": "星巴克中國10月22日起全國施行「消費入座」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 596,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/weibo",
+      "summary": "「把濕巾紙都撕成條了」「0台詞無聲哭戲」等多個演技話題登微博熱搜，醫療題材劇口碑擴散。",
+      "title": "肖戰主演《小城良方》開播口碑發酵"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 597,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/douyin",
+      "summary": "抖音熱榜617.8萬熱度，年輕人「輕創業、一人公司」模式引熱議，評論區聚焦低成本起步與執行力。",
+      "title": "杭州大二學生開一人公司年營收破60萬"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 598,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/douyin",
+      "summary": "抖音熱搜188.3萬熱度，「中國體操女團12套全順」「邱祺緣」等話題並行；體操世錦賽「40.966分跳馬」熱度延續。",
+      "title": "中國體操女團世錦賽奪冠，「這一冠等了20年」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 589,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xRvuhsF0N9",
+      "summary": "10月22日22:33發生的地震在今晨公布傷亡排查結果（截至5:20），救災物資已運抵，微博熱搜榜首（156.8萬）、抖音熱榜第2，屬今日最大流量事件。",
+      "title": "西藏那曲巴青縣7.0級地震已致16死46傷，全網刷屏"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 590,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_34314537",
+      "summary": "10月22日美股：納指跌2.60%、費城半導體指數重挫6.72%，Meta跌近7%市值蒸發千億美元，中概股多數下跌；滬深300已較6月高點回落20%進入熊市區間。「美股」「A股科技股」雙雙登微博熱搜。",
+      "title": "美股科技股崩盤，納指重挫2.6%"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 591,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://news.qq.com/rain/a/20261020A05YTD00",
+      "summary": "僅售5個交易日、單只募集上限20億元，預計帶來360億元增量資金；首批向價值、紅利、均衡等穩健策略傾斜，外資摩根首次參與。",
+      "title": "首批18隻主動ETF今日（10/23）開募"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 592,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_34308652",
+      "summary": "10月22日下午中央紀委國家監委通報其涉嫌嚴重違紀違法；夏林茂1970年5月生，二十屆中央候補委員，曾任東城區委書記；登抖音熱榜。",
+      "title": "北京市委常委、副市長夏林茂被查"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 593,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.rddh.cn/trending/douyin",
+      "summary": "抖音熱搜榜首（1190.7萬熱度），「颱風薔琵實時路徑」同步霸榜，冷空氣與防災討論升溫。",
+      "title": "颱風「薔琵」或轉向北上，上海浙江福建等地有大到暴雨"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 584,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://news.ebc.net.tw/news/living/577041",
+      "summary": "各縣市陸續宣布後，高鐵各站湧現返鄉人潮，晚間10時起授權停售自由座票；高鐵5小時內加開9班全車自由座，台鐵深夜加開2班自強號聯防疏運。",
+      "title": "颱風假＋光復連假變4天，昨晚高鐵被擠爆"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 585,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://news.ebc.net.tw/news/living/577036",
+      "summary": "PTT八卦板「現在訂KTV還來得及嗎」爆文，錢櫃熱門時段一位難求，星聚點官網因瞬間流量癱瘓；氣象粉專「用事實說颱風」急籲北北基桃別冒險出門唱歌。",
+      "title": "颱風假掀KTV訂位潮：星聚點官網被刷到當機"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 586,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6885772",
+      "summary": "晚間8時許起新北多區用戶5G滿格卻無法上網、電話打不通，客服打一小時沒人接；官方稱傳輸設備異常、晚間10時已修復。網友酸「颱風還沒來就先掛掉」。",
+      "title": "中華電信昨晚5G大斷網，新北成重災區"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 587,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.setn.com/news/1926993",
+      "summary": "台北101、新光三越全台16店、遠東SOGO、微風、遠百、誠品等今日全數暫停營業；威秀影城全台場次預防性關閉。僅南紡購物中心照常11點開店。",
+      "title": "全台百貨今日幾乎全停業，僅南紡正常開"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 588,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ebc.net.tw/news/society/576939",
+      "summary": "4名工人（1台籍、3外籍）21日上午施工時被大浪捲入海中，海巡以救生艇全數救起，2人輕傷送醫；花蓮海岸已列警戒區，違規觀浪最高罰25萬元。",
+      "title": "花蓮港紅燈塔4工人遭巨浪捲落海全數獲救"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 579,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.cna.com.tw/news/ahel/202610225004.aspx",
+      "summary": "氣象署今晨發布海陸警報，暴風圈已接觸東部及東南部陸地，今明是風雨最顯著時段，北海岸、宜蘭山區防超大豪雨，西半部平原陣風達9至11級。",
+      "title": "薔琵暴風圈今晨觸陸，全台21縣市停班停課（台東今晨急轉彎後僅金門照常）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 580,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.ftvnews.com.tw/news/detail/2026A23W0070",
+      "summary": "饒慶鈴昨午拍片斬釘截鐵回「沒有！你們在想什麼」，臉書被縣民狂刷「咕嚕咕嚕」洗版；今晨近6點緊急改口全縣停班課。「烤雞特攻隊」豪賭19縣市全放假否則請吃100隻烤雞，台東翻盤讓網友哀號「烤雞飛了」。",
+      "title": "台東縣長饒慶鈴「沒機會」到「清晨急轉彎」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 581,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://newtalk.tw/news/view/2026-10-22/1067124",
+      "summary": "11名幹部率先行動、1994票支持的台灣半導體史上首次罷工於今上午9時收尾；昨晚冒雨前來參與「意向調查」的員工絡繹不絕，連非工會成員也簽名表態不滿公司新方案。第二次協商因颱風假延至下週二。",
+      "title": "美光桃園24小時罷工今晨結束，勞資協商延至10/27"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 582,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.mirrormedia.mg/story/20261023edi003",
+      "summary": "台北市宣布停班課後，三立宣布原定今日的節目類頒獎典禮順延至10/25晚間7時於北流舉辦；星光大道改室內舉行、不開放民眾觀禮；戲劇類10/24是否照常視北市停班課而定。",
+      "title": "金鐘61節目類確定延期至10/25（史上頭一遭），戲劇類維持10/24"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 583,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/vote2026/story/124652/9828150",
+      "summary": "信民協會民調顯示兩人差距17個百分點，蔣萬安適合度出現「死亡交叉」；朱立倫、王金平質疑樣本結構與表態落差，籲藍營催出沉默選票；綠營內部反常戒慎恐懼。",
+      "title": "沈伯洋50.3%超車蔣萬安33.3%，藍營反打「沉默螺旋」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 604,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.nikkansports.com/entertainment/news/202610230000031.html",
+      "summary": "19日澀谷電動滑板車與停靠中貨車接觸；聲明全盤否認酒駕、藥物、肇逃、低頭族騎行，僅承認過失。X上率直聲明引發共感，登上mixi娛樂綜合排行第1。",
+      "title": "ちゃんみな交通事故後發聲明：「不對就是不對，要好好說清楚」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 605,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.sponichi.co.jp/entertainment/news/2026/10/22/articles/20261022s00041000281000c.html",
+      "summary": "禿頭特輯中說出「遊民全部都禿啦」等發言，約30分鐘後在節目中深深鞠躬謝罪；SNS話題量排行第1。社會對失言的即時糾偏奏效，迅速謝罪也讓事態平息。",
+      "title": "玉川徹晨間節目失言談遊民，30分鐘內即謝罪"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 606,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://toyokeizai.net/articles/-/961712?display=b",
+      "summary": "含稅297円「一點突破太超過！」系列成話題；10月食品漲價3153品項、全年突破2萬品項的物價高漲下，把配菜壓到1種的「割捨戰略」被解讀為「尋求的不是省錢而是安心感」，引發共鳴。",
+      "title": "羅森含稅297円「貧窮便當」→平價便當人氣背後"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 607,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.itmedia.co.jp/business/articles/2610/22/news005.html",
+      "summary": "店主高齡化與接班人不足，店家從120–130家減至約90家；另一方面「食堂はせ川」進軍東京拉麵街，以半熟溏心蛋・沾麵等「異端」挑戰拿下邀請。老店「該守的與該變的」生存策略成美食大熱文。",
+      "title": "喜多方拉麵能否復活：老店倒閉潮中的新進化"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 608,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://news.infoseek.co.jp/article/yomiuri_20261022_gyt1t00281/?tpgnr=busi-econ",
+      "summary": "電子控制裝置零件不當，恐致電池耗盡、引擎無法啟動；對象為2024年12月–2025年7月生產車款。現役車主直接相關的生活安全新聞，迅速擴散。",
+      "title": "本田「STEPWGN」等8車種共1萬5191輛召回"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 599,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/49f2268cad787edb221ec4e0bc5e7bd9e19d445a",
+      "summary": "22日八重山16:11、宮古島17:45發布暴風警報；石垣・宮古發着87班欠航、八重山航路138班欠航、小中學校停課、宇留麻市發布土砂災害警戒等級4；恐出現毀屋級強風。",
+      "title": "台風30號（薔琵）23–24日最接近先島諸島，暴風警報發布"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 600,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://note.com/kaiyu06/n/ne5348c951521",
+      "summary": "修正版8.5.12等已發布，但2個使用舊架構的服務因「無法採取充分對策」宣布結束營運；Amazon稱10/17即觀測到惡用嘗試，高市首相呼籲「大至急」；銀行等企業網站停服後正依序恢復。",
+      "title": "PHP重大脆弱性（PHP2Shell）續報：攻擊嘗試急增至數百萬件，2個服務宣布結束"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 601,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://topics.smt.docomo.ne.jp/article/tvasahinews/business/tvasahinews-000542237",
+      "summary": "22日晚間發布。2021年5月–2023年3月輸入的意見與接種證明App諮詢等；起因是製作工具Studio公司10/16公布遭不正存取。數字廳繼24.6萬件案件後再度出包，政府網站信任加速崩解。",
+      "title": "數字廳官網：最多1.3萬件諮詢內容恐外洩"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 602,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/c3066a5db10a10690892a3311ff2e7f6e41270bc",
+      "summary": "表明挑戰美職的橫濱・織田翔希投手被巨人強行首輪指名；青學大・渡部海由樂天・中日競合、樂天取得交涉權；日火腿單挑山梨學院二刀流・菰田陽生。X上即時反應熱烈。",
+      "title": "職棒選秀2026：12球團首輪指名確定，巨人強行指名織田翔希"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 603,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://www.zaikei.co.jp/article/20261023/874642.html",
+      "summary": "AI股大跌與美長債殖利率下滑帶動避險買盤；29–30日央行會議預期交錯，158円成上檔壓力（7月協同干預以來）；法國財政不安亦加壓日圓升值。",
+      "title": "日圓匯率3週來首見156円台走強"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 623,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/sports/brewers-rays-clash-with-first-world-series-title-stake-2026-10-22/",
+      "summary": "自1980年以來首場「兩隊皆從未奪冠」的世界大賽；103勝的釀酒人派出三振王Misiorowski（時速104英里可能破紀錄）先發，Fox轉播。",
+      "title": "世界大賽G1今晚8點（ET）開打：釀酒人vs光芒，兩隊拚隊史首冠"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 624,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://digiday.com/marketing/nearly-30-of-holiday-budgets-expected-to-be-spent-by-the-end-of-october/",
+      "summary": "Deloitte調查顯示28%民眾10月底前花光假日預算、42%參加10月促銷；黑五/網一概念被稀釋；Z世代與千禧世代反而計劃多花4%，嘴上說緊縮、身體照買。",
+      "title": "假日購物季變「馬拉松」：28%民眾10月底前花光假日預算（六年最高）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 625,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/10/22/3386390/0/en/new-report-highlights-hidden-fire-risks-in-holiday-traditions-and-how-to-celebrate-more-safely.html",
+      "summary": "近三分之一禮品買家承認買過假貨（估計7000萬人）、近半人承認「插線板串插線板」；假日火災隱患＋仿冒品陷阱成今日消費安全熱議話題。",
+      "title": "UL假日安全指南：近三分之一禮品買家承認買過假貨"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 626,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.cnn.com/2026/10/22/health/cottage-cheese-protein-benefits-wellness?cid=external-feeds_iluminar_meta",
+      "summary": "CNN Wellness專題認證這波高蛋白風潮；Hailey Bieber帶頭曬雞肉丸佐茅屋芝士；配合「肌少症」搜尋年增22%、肌酸女性搜尋暴增，「吃回原型食物」成10月健康流量主線。",
+      "title": "茅屋芝士（Cottage Cheese）TikTok翻紅"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 627,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/entertainment/music/2026/10/22/glee-reboot-potential-taylor-swift-episode/92381946007/",
+      "summary": "Ryan Murphy與原創編劇已完成劇本、聯繫約10位舊卡司；傳將有Taylor Swift致敬集；Swift剛為《玩具總動員5》寫奧斯卡造勢曲。",
+      "title": "《歡樂合唱團》確認重啟：Disney+/Hulu已開發中"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 618,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10222026-12187670",
+      "summary": "AI支出永續性遭質疑＋Meta財報引爆「數據中心反噬」疑慮，投資人轉向公債避險，10年期美債殖利率跌破5%；昨日上漲近1%全數回吐。",
+      "title": "美股週四AI股大屠殺：Nasdaq -2.6%、半導體指數-6.7%、Meta -7%、SpaceX -9%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 619,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.aljazeera.com/news/liveblog/2026/10/23/trump-hints-new-strikes-says-us-knocked-hell-out-of-iran?update=5075232",
+      "summary": "英國宣布派颱風戰機赴沙烏地協防；布蘭特原油應聲續漲至$112（5月以來最高）；美以對伊戰爭live blog持續更新，今日美國外交政策頭號熱點。",
+      "title": "川普暗示對伊朗新一輪打擊：美以計劃再動武、沙烏地頻遭無人機襲擊"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 620,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.cnn.com/2026/10/22/politics/trump-deposition-10-billion-bbc-lawsuit?cid=external-feeds_iluminar_meta",
+      "summary": "法官痛斥川普團隊「搜尋紀錄的用心程度令人難以置信」，否則官司可能被駁回；BBC要求調閱海湖莊園會員紀錄獲准；總統本人打官司反被扒皮的諷刺性讓流量居高不下。",
+      "title": "法官命令川普須在12/11前接受BBC 100億美元誹謗案宣誓作證"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 621,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.timesnownews.com/world/us/us-news/trumps-approval-rating-hits-record-low-in-two-polls-ahead-of-us-midterm-elections-article-156387402",
+      "summary": "川普支持率跌至32%歷史新低；CNN民調經濟處理滿意度僅27%、伊朗戰爭不滿是重因；預測市場看民主黨奪眾院機率約90%。",
+      "title": "期中選舉倒數12天：五大民調民主黨全面領先5–12個百分點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 622,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-22/",
+      "summary": "微軟CEO Nadella坦言「多年未見如此規模」；好消息是漏洞疑似由AI提前標出、尚未造成重大損害；資安ETF今日逆勢上漲、今年累漲近50%。",
+      "title": "PHP重大安全漏洞升級：全球出現「數百萬次駭客攻擊」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 614,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261023_0003837890",
+      "summary": "10/23韓美日等70餘國同步開售；明洞Apple Store開店前約百人排隊取貨，但韓國初期僅配貨3萬台、現場不接受直接購買，預約出貨已排到明年1月。",
+      "title": "Apple首款摺疊機iPhone Duo今日韓國開賣：256GB 329萬韓元起、史上最貴"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 615,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.mt.co.kr/entertainment/2026/10/22/2026102222270540794",
+      "summary": "回歸前夕SNS流傳以秀彬照片合成的深偽影像並登上即時搜尋，BigHit 10/22發聲明稱已在國內外平台蒐證，將採取強硬法律措施；粉絲要求嚴懲的聲浪高漲。",
+      "title": "TXT成員秀彬遭AI深偽色情影像惡意謠言，BigHit宣布「無寬恕、無和解」強硬提告"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 616,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.hankookilbo.com/news/article/A2026102308160005443?dtypecode=pancode_culture",
+      "summary": "7月宣布與圈外人再婚後，10/22在SNS貼出多套婚紗試穿照；46歲、離婚11年獨自撫養發展障礙兒子後再覓幸福，登上今日娛樂版與趨勢搜尋熱詞。",
+      "title": "吳允娥公開再婚婚紗試穿照：「該選哪一套」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 617,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.etoday.co.kr/news/view/2638593?trc=sub_list_news",
+      "summary": "農心聖水「辛拉麵小吃店」開幕4個月吸引37萬人次（一半是外國人）、三養明洞「House of Boon」5天湧入8000人（8成外國人）、校村炸雞開設外國人烹飪課；把觀光體驗轉化為海外再購的策略成今日消費版話題。",
+      "title": "K-Food體驗行銷升溫：食品業搶攻訪韓觀光客「回國後再買」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 609,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.news1.kr/politics/president/6329446",
+      "summary": "10/22深夜NSC常委會討論對北擴音器重啟威脅的應對方案，因部會溫差未能下結論；金與正再發談話要求韓方緩和軍事分界線一帶的警告射擊，半島緊張持續。",
+      "title": "對北擴音器危機升級：青瓦台NSC常委會昨夜開會討論應對、未下結論"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 610,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/stock/12182940",
+      "summary": "10/22三星電子-4.03%、SK海力士-5.49%，Meta財報自由現金流轉負、AI投資獲利疑慮、兩大巨頭自營買股結束導致籌碼真空；10/23延續跌勢，散戶哀鴻遍野。",
+      "title": "KOSPI連日重挫：10/22暴跌3.52%收5533.77，10/23早盤再跌2.76%至5381"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 611,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/business/12183760",
+      "summary": "金融當局在國政監查中連番指出「重複上市」疑慮，加上股東強烈反彈與股價下跌，SK海力士10/23公示中止約5兆韓元規模的上市前引資與IPO檢討；AI資料中心用SSD投資需求仍在，後續資金方案未定。",
+      "title": "SK海力士宣布中斷孫公司Solidigm納斯達克IPO計畫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 612,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.newspim.com/news/view/20261023000221",
+      "summary": "李在明10/23下午在青瓦台接見經團聯會長筒井義信等日方代表，聽取第33次韓日財界會議成果，並呼籲日方財界擴大兩國經濟合作與人員交流。",
+      "title": "李在明今日接見日韓財界會議日本代表團"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 613,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newstree.kr/newsView/ntr202610220014",
+      "summary": "韓國氣象廳預測參琵26日上午減弱為溫帶低氣壓抵達九州近海，但70%機率圈涵蓋濟州東南部、對馬海峽、釜山一帶；日本氣象廳預測26日凌晨經濟州東側北上，週末濟州與南部有雨、海上風浪增強。",
+      "title": "第30號颱風參琵週末逼近濟州與對馬海峽"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "三線交織：台風薔琵橫掃東北亞四地；PHP重大安全漏洞升級為全球數百萬次攻擊；美股AI股大屠殺引發全球市場連鎖下跌。\n台灣：「防颱＋認命＋苦中作樂」——颱風假變全民嘉年華，縣民用迷因完成即時問責，焦慮被轉成行動力。中國：「天災壓頂、日常照舊」——西藏7級地震把「平安」推成全網最大公約數，另一半榜單仍是執著的生活本身。日本：「防災＋資安」雙重警戒——異常被日常化，每個人緊繃著把生活轉下去。韓國：「股市綠、北邊喊、荷包緊」三重夾擊——焦慮是結構性的，消費與溫情是救生圈。美國：為「還沒發生的事」集體焦慮——69%年輕人對未來感到恐懼而非希望。\n恐慌只佔半個榜單，另一半是生活：災難與股災並行時，人們照樣搶KTV、追星、買便當、過日子——這才是五地共同的底色。",
+  "globalTheme": "三線交織：台風薔琵橫掃東北亞四地（台灣21縣市停班課、日本先島暴風警報、中國浙滬閩暴雨、韓國濟州週末戒備）；PHP重大安全漏洞升級為全球數百萬次攻擊（美日韓皆中，日本2服務宣布終了）；美股AI股大屠殺引發全球市場連鎖下跌（Nasdaq -2.6%、KOSPI兩天跌近6%、滬深300入熊）。",
+  "sourceModifiedAt": "2026-10-23T09:10:00+08:00",
+  "storylines": [
+    {
+      "id": 51,
+      "items": [
+        "台灣：陸上警報、21縣市停班課、蘇澳港工人仍失聯",
+        "日本：先島暴風警報、空87班船138班欠航、23日晚最接近",
+        "中國：轉向北上、浙滬閩大到暴雨、抖音榜首",
+        "韓國：預計26日經對馬近海、週末濟州戒備"
+      ],
+      "kind": "跨區線",
+      "summary": "今日最強跨區主線。台灣：暴風圈今晨觸陸東部，全台21縣市停班課（僅金門照常），蘇澳港67歲吊車工人仍失聯逾1天。日本：22日八重山・宮古島發布暴風警報，空87班、船138班欠航，23日晚至24日晨最接近。中國：轉向北上，浙滬閩有大到暴雨，抖音榜首1190.7萬熱度。韓國：預計26日減弱為溫帶低氣壓經濟州東側北上，週末濟州與南部有雨、海上風浪增強。",
+      "title": "台風薔琵橫掃東北亞四地"
+    },
+    {
+      "id": 52,
+      "items": [
+        "美國：數百萬攻擊、企業政府連夜修補",
+        "日本：2服務宣布終了、高市首相呼籲大至急",
+        "韓國：昨日KISA下令更新，今日無新進展",
+        "台灣：今日無新進展"
+      ],
+      "kind": "跨區線",
+      "summary": "昨日僅是示警階段，今日升級為全球數百萬次駭客攻擊。美國：企業政府連夜修補，Nadella坦言「多年未見如此規模」，資安ETF逆勢上漲。日本：攻擊嘗試急增，2個舊架構服務宣布結束營運，高市首相呼籲「大至急」。韓國：昨日KISA已下令更新，今日無新進展。台灣：今日無新進展。",
+      "title": "PHP重大安全漏洞升級為全球攻擊"
+    },
+    {
+      "id": 53,
+      "items": [
+        "美國：Nasdaq -2.6%、Meta -7%、SpaceX -9%",
+        "韓國：KOSPI兩天跌近6%、SK海力士中止IPO",
+        "中國：中概股跟跌、滬深300入熊",
+        "日本：日圓升至156円台"
+      ],
+      "kind": "跨區線",
+      "summary": "Meta財報自由現金流轉負引爆「數據中心反噬」疑慮，AI支出永續性遭質疑。美國：Nasdaq -2.6%（6月來最大）、半導體指數-6.7%、Meta -7%、SpaceX -9%。韓國：KOSPI兩天跌近6%，SK海力士中止5兆韓元Solidigm IPO。中國：中概股跟跌，滬深300較6月高點回落20%入熊。日本：避險買盤推動日圓升至156円台。",
+      "title": "美股AI股大屠殺引發全球市場連鎖下跌"
+    },
+    {
+      "id": 54,
+      "items": [
+        "昨日：上交所召開首批主動ETF市場動員會",
+        "今日：如期開募，預計360億增量資金"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "由昨日「動員會預告」進入實操階段：僅售5個交易日、單只募集上限20億元，預計帶來360億元增量資金；向價值、紅利、均衡等穩健策略傾斜，外資摩根首次參與。",
+      "title": "首批18隻主動ETF今日如期開募"
+    },
+    {
+      "id": 55,
+      "items": [
+        "昨日：今早9時發動24小時罷工",
+        "今日：罷工結束，協商延至10/27"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "台灣半導體史上首次正式罷工於今上午9時收尾；第二次勞資協商因颱風假延期至10/27；公司新方案引發非工會員工也冒雨簽名表達不滿，勞資議題持續升溫。",
+      "title": "美光桃園24小時罷工今晨結束"
+    },
+    {
+      "id": 56,
+      "items": [
+        "昨日：主辦方稱依北市停班課標準決定",
+        "今日：節目類順延至10/25，史上首次"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "台北市宣布停班課後，三立宣布原定今日的節目類頒獎典禮順延至10/25晚間7時於北流舉辦；星光大道改室內舉行、不開放民眾觀禮；戲劇類維持10/24（視北市停班課而定）。",
+      "title": "金鐘61節目類確定延期至10/25（史上首次因颱風延期）"
+    },
+    {
+      "id": 57,
+      "items": [
+        "昨日：金與正威脅啟用對南擴音器",
+        "今日：NSC常委會未下結論，金與正再發話"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "10/22深夜青瓦台NSC常委會討論對北擴音器重啟威脅的應對方案，因部會溫差未能下結論；金與正再發話要求韓方緩和MDL警告射擊；政府另向安理會遞交北韓違反停戰協定信函。",
+      "title": "金與正擴音器威脅升級，韓國NSC開會未下結論"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "當「花錢」本身變成風險，Meta FCF轉負引爆的「數據中心反噬」疑慮，值得一篇破妄文：槓桿狂熱的代價，誰來付？",
+      "id": 79,
+      "pillar": "金融一百零八講",
+      "title": "美股AI股大屠殺：AI資本支出永續性之問"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "散戶的恐慌與機會在哪裡分叉？從韓國散戶哀鴻遍野看市場情緒的傳染鏈。",
+      "id": 80,
+      "pillar": "金融一百零八講",
+      "title": "KOSPI兩天跌近6%、滬深300入熊：全球連鎖下跌時"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "災難日裡的集體自嘲，與迷因完成的一次即時問責：權威的耐心變薄時，人們用幽默拿回話語權。",
+      "id": 81,
+      "pillar": "俗人對話錄",
+      "title": "颱風假KTV訂位潮／饒慶鈴「清晨急轉彎」"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "免費的座位到底誰在付費？從一張桌牌看消費倫理與公共空間的默契。",
+      "id": 82,
+      "pillar": "俗人對話錄",
+      "title": "星巴克「消費入座」：第三空間的邊界"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "「平安」是全網唯一的共識——從16死46傷的數字背後，看無常與珍惜當下。",
+      "id": 83,
+      "pillar": "佛法生活感悟文",
+      "title": "西藏7級地震：無常是最好的老師"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "年輕人的輕創業浪潮：不雇人、不融資，把日子做成公司——這正是大道至簡一人公司的注腳。",
+      "id": 84,
+      "pillar": "俗人對話錄",
+      "title": "杭州大二生一人公司年收60萬"
+    }
+  ]
+}

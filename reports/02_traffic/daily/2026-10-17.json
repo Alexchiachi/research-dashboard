@@ -1,0 +1,628 @@
+{
+  "date": "2026-10-17",
+  "events": [
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 244,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xI0IC6PcsK",
+      "summary": "暴雨、大風、強對流藍色預警同日發布，多地大到暴雨；北京或於10/18提前入冬。",
+      "title": "中央氣象台10/17早三預警齊發"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 245,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.cn/article_5952915705_162d248f906703qwbc.html?from=travel",
+      "summary": "超200商家成交額同比翻倍，機票次卡、酒店通兌、樂園套票熱銷。",
+      "title": "飛豬雙11開售4小時：活動商品累計銷量近100萬件"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 246,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivmiif7692152.d.html",
+      "summary": "扶老攜幼周邊遊成主流，多地景區「敬老免票潮」，周邊住宿搜索熱度環比增四成；縣域康養、外國銀髮旅居中國熱度上升。",
+      "title": "重陽節週末「候鳥老人」出發"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 247,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.com.cn/article_7879776539_1d5abd91b06801itzi.html",
+      "summary": "稻城亞丁免票政策還剩最後兩週，峨眉山進入全年雲海日出概率最高的秋季時段；反向旅遊、縣域小城持續升溫。（該文標註AI生成）",
+      "title": "國慶後錯峰遊窗口期"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 248,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.cn/article_7879776328_1d5abd84806802dx7g.html?from=ent",
+      "summary": "鹿晗以「主辦+壓軸」雙重身份出現，個人IP音樂節商業模式引發輿論場討論。（該文標註AI生成）",
+      "title": "鹿晗gapday音樂節常州站今明開唱"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 239,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://news.ifeng.com/c/8xFDF2ApgFC",
+      "summary": "10/17-18訪烏茲別克斯坦、10/18-20訪塔吉克斯坦並出席上合總理會議、10/20-22赴俄舉行中俄總理第31次定期會晤；今日正式啟程。",
+      "title": "李強今起連訪中亞與俄羅斯"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 240,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/stock/jdts/2026-10-17/detail-inivnrap6596376.d.html",
+      "summary": "天貓、京東10/15同日開大促發布會、抖音同日啟動，平台推AI導購/智能體、出海一鍵工具；今日多家媒體評析。",
+      "title": "雙11大戰提前開打、AI成核心抓手"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 241,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xGFk6S3sYY",
+      "summary": "工信部等三部門10/15成立聯合調查組；余承東朋友圈回應「正義可能會遲到，但永遠不會缺席」，10/16仍是熱搜高位。",
+      "title": "尊界V800剎車踏板斷裂持續發酵"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 242,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.cn/article_7879923373_1d5ae16ad06801fj3a.html?from=ent",
+      "summary": "10/15曬一家三口合照官宣，10/16徐藝洋直播證實親生、否認代孕傳聞；相關話題登上熱搜。",
+      "title": "黃子韜徐藝洋官宣生子"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 243,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.cn/article_7879776328_1d5abd84806802dzbe.html?from=ent",
+      "summary": "徐若晗線下活動即興畫出丞磊角色頭像並雙簽名，#徐若晗劇宣現場畫丞磊#閱讀量破億。",
+      "title": "《玉簟秋》劇宣霸榜熱搜"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 234,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5609069",
+      "summary": "吳德榮指歐洲模式路徑大幅調整，對台威脅升高；今日至下週二西半部「秋老虎」，高溫上看34至36度。",
+      "title": "第29號颱風「薔琵」今晨升級中颱，路徑轉向西北西撲向台灣、恐成「大型強颱」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 235,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5609093",
+      "summary": "8.23公里地下化消除9處平交道，昨晚500多人徹夜切換軌道，今早大量民眾搶拍見證。",
+      "title": "台南鐵路地下化第一階段今晨6:30首發通車"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 236,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://ent.ltn.com.tw/news/breakingnews/5608909",
+      "summary": "10/16深夜自爆與小12歲前夫僅是「室友」，全台娛樂版最大震撼彈，續燒中。",
+      "title": "台語歌后張秀卿自爆已離婚3年、為前夫扛下3400萬債務"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 237,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5607380",
+      "summary": "跨年機票漲逾15%、買氣卻年增1成，日本拿下5席；今日旅遊生活版熱議話題。",
+      "title": "易遊網公布2027跨年十大熱門航點：東京冠軍、沖繩躍升第2、釜山買氣增逾40%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 238,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://woman.udn.com/woman/amp/story/123164/9818484",
+      "summary": "10/23「百鬼夜行」從新光三越天母店踩街到大葉高島屋，10/24天母運動公園主活動，250家店家串聯討糖。",
+      "title": "第18屆「天母搞什麼鬼」萬聖節嘉年華10/23、24登場，與「塔麻歌子」30週年聯名"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 229,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5609058",
+      "summary": "各報今日頭版；衛福部估約403萬人受惠、每年支出近400億元，卓榮泰轟違憲、世代不公，藍綠白激烈對撞。",
+      "title": "藍白立院三讀老人福利法修正案：65歲以上、綜所稅率未達20%長者免繳健保費，由中央補助"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 230,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://money.udn.com/money/amp/story/11112/9820281",
+      "summary": "那斯達克跌2.15%、費半連8黑，台積電ADR跌逾2%；週六台股休市，夜盤走勢牽動下週一盤勢，10/15股災後恐慌延續。",
+      "title": "美國9月CPI年增3.7%高於預期，美股週五全面收黑，台指期夜盤大跌1144點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 231,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/politics/paper/1774804",
+      "summary": "移民署認定違背對等尊嚴原則；藍營質疑「言論自由看護照」，綠營喊國安底線不退，社群延燒。",
+      "title": "中國籍交換生抖音「捏頭」錯位照事件：10/16驅逐出境、管制5年不得來台"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 232,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/politics/paper/1774803",
+      "summary": "理由是二度專訪沈伯洋「包庇台獨頑固分子」；趙少康強硬回應，蔣萬安、張善政等藍營人士先後表態。",
+      "title": "國民黨中央委員江永雄發起連署請考紀會開除趙少康黨籍"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 233,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/politics/paper/1774884",
+      "summary": "「英粉」「純派」人潮包圍簽名合影，不到十分鐘的路程走了一小時，「小英旋風」掃台中。",
+      "title": "前總統蔡英文陪同何欣純到台中一中商圈掃街造勢"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 254,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://search.yahoo.co.jp/realtime/search/matome/4ee48e999132468ab3cc083be2c548f3-1792180200?rkf=1&fr=rts_ogp",
+      "summary": "Yahoo實時搜尋552則貼文，道奇攻守氣勢逆轉的關鍵一擊。",
+      "title": "大谷翔平NLCS轟三分砲，全網狂歡"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 255,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://search.yahoo.co.jp/realtime/search/matome/ab1adc1a497b40a98d745b0403c4db38-1792189800?rkf=1&fr=rts_ogp",
+      "summary": "傳以入札制度赴美、球團傾向放行；SNS兩派交錯，本季休賽期最大焦點。",
+      "title": "日本火腿王牌伊藤大海認真考慮挑戰大聯盟"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 256,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://search.yahoo.co.jp/realtime/search/matome/4ee48e999132468ab3cc083be2c548f3-1792180200?rkf=1&fr=rts_ogp",
+      "summary": "守備失誤後立刻將功補過，476則貼文「正木くん最高！」。",
+      "title": "正木智也逆轉兩分砲助球隊奪太平洋聯盟CS冠軍"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 257,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://search.yahoo.co.jp/realtime/search/matome/4ee48e999132468ab3cc083be2c548f3-1792180200?rkf=1&fr=rts_ogp",
+      "summary": "東京–新大阪區間，明年7月起購票適用；SNS一片哀嚎，關聯生活成本話題。",
+      "title": "新幹線「のぞみ」指定席票價漲700日圓"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 258,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://search.yahoo.co.jp/realtime/search/matome/4ee48e999132468ab3cc083be2c548f3-1792180200?rkf=1&fr=rts_ogp",
+      "summary": "全國門市上午10點起、每人限購5-10回，80則貼文粉絲提前排隊歡呼。",
+      "title": "一番くじ《金肉人・超人血盟軍》今日開賣"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 249,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.scmp.com/news/asia/east-asia/article/3371219/japans-takaichi-sends-offering-controversial-yasukuni-war-shrine?utm_source=rss_feed",
+      "summary": "連續第三次例大祭本人不參拜；鄰國反應與「安倍門生」路線再度被檢視。",
+      "title": "高市早苗首相靖國神社秋之例大祭奉納「真榊」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 250,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.nippon.com/en/news/yjj2026101600658/",
+      "summary": "被控在薩哈林間諜活動；疑與日本移交俄籍駭客有關，官房長官否認間諜行為。",
+      "title": "俄羅斯拘捕北海道新聞記者，日媒稱或尋求「囚犯交換」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 251,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://news.web.nhk/newsweb/na/nd-20261017de60794",
+      "summary": "10/17在泰國強調基本物價升溫；10/29-30政策會議前市場押注下次升息時機。",
+      "title": "日銀植田總裁：物價超過2%「絕不容忍」，升息將繼續"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 252,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/118d7e9c6df9ee9b9dfffedc1ab9cc00fb333068",
+      "summary": "防災系統業者「アルカディア」遭入侵；大和運輸531萬件、LAWSON 215萬件、日經183萬件；JNN統計三週逾69社、1億件以上。",
+      "title": "個人情報大規模外洩連環爆"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 253,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://weathernews.jp/news/202610/170051/",
+      "summary": "20日最大瞬間風速預測70m/s，21-22日移至沖繩南方；各國模式分歧，先島諸島嚴防。",
+      "title": "颱風30號チャンパー急速增強，週一轉「非常強烈」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 274,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://pulptastic.com/news/",
+      "summary": "店方多管道聯繫未獲回應，成音樂迷因重災區。",
+      "title": "Kelly Clarkson與布魯克林玩具店15,000美元機械鳥糾紛發酵"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 275,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://pulptastic.com/news/",
+      "summary": "起因Goliath雲霄飛車教師墜亡事件，去「Dead」字眼表達尊重。",
+      "title": "喬治亞Six Flags將萬聖節活動改名「Dr. Fright's Party」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 276,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.ndtv.com/health/nutritionist-addresses-latest-viral-gut-health-hack-fibre-maxxing-8657805/amp/1",
+      "summary": "每天刻意攝取30-60克纖維；專家指若不喝水反而腹脹便秘，建議循序漸進。",
+      "title": "TikTok健康潮「Fibre maxxing」遭營養師警告"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 277,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.bollywoodshaadis.com/articles/keeping-up-with-the-kardashians-85698?utm_source=related-articles&utm_medium=web&utm_campaign=widgets",
+      "summary": "網友對比當年模樣震驚轉發，「全然變了一個人」成流行文化熱議。",
+      "title": "卡戴珊家族2007年第一季開場片重出江湖"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 278,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.instyle.com/charli-xcx-unexpected-prophet-instyle-imagemaker-awards-2026-12176937",
+      "summary": "引用Rae金句致敬造型師，兩人多年好友與音樂合作夥伴。",
+      "title": "Charli XCX在InStyle頒獎禮致詞稱Addison Rae是「先知」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 269,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.straitstimes.com/world/while-you-were-sleeping-5-stories-you-might-have-missed-oct-17-2026",
+      "summary": "因「冒充律師」爭議與被群嘲的記者會遭換下；川普親口表示早勸她「好好想想」。",
+      "title": "川普新任白宮新聞秘書Katie Zacharia上任不到一週即被撤換"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 270,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.indiatimes.com/trending/who-is-kalub-giamanco-carpenter-who-confronted-oregon-school-shooter-hailed-as-a-hero-but-struggles-with-guilt/articleshow/135003107.html",
+      "summary": "4死2重傷；Giamanco 3分鐘內行動阻止更多傷亡，社群要求頒發總統獎章，他自稱「愧對沒能救下更多孩子」。",
+      "title": "奧勒岡校園槍擊案英雄：36歲木匠家長Kalub Giamanco挺身制止槍手"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 271,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.kedm.org/npr-news/2026-10-16/brewers-sweep-the-dodgers-to-reach-the-world-series-for-the-first-time-since-1982",
+      "summary": "國聯冠軍賽4-0淘汰兩屆衛冕冠軍；10/23起主場對克里夫蘭或坦帕灣爭隊史首冠。",
+      "title": "釀酒人橫掃道奇，44年來首度晉級世界大賽"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 272,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.straitstimes.com/world/while-you-were-sleeping-5-stories-you-might-have-missed-oct-17-2026",
+      "summary": "CoreWeave續跌12%、近五日累跌25%、債券殖利率飆破15%；納斯達克單週跌逾4%，油價上漲加劇週末避險情緒。",
+      "title": "華爾街再跌、AI信用危機延燒"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 273,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.fastbull.com/newsdetail/us-government-shutdown-unresolved-japanese-political-turmoil-intensifies-4350159_0",
+      "summary": "聯邦雇員薪資法案卡關；聯邦法院資金本週耗盡、運作降到最低。",
+      "title": "政府停擺進入第17天：參院撥款法案再闖關失敗"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 264,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-it/2026/10/17/SBNC4CYWDNCZ3HYX2OXRZRCEZA/",
+      "summary": "定價329萬韓元、店頭補貼少；電信商力推Fold8，換機價最低壓到90萬韓元。",
+      "title": "iPhone Duo韓國預購冷清，Galaxy Z Fold8靠補貼搶客"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 265,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-retail/2026/10/16/EIM374MY3ZE5LB3ND6IQVTOHBE/",
+      "summary": "10-11月海外機票與住宿搜尋較盛夏各漲40%與34%；日本佔機票搜尋52%，芬蘭住宿搜尋暴漲13倍。",
+      "title": "韓人秋遊海外搜尋暴增：日本溫泉、香港、北歐極光"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 266,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-retail/2026/10/16/C3HQBH4XRNCRRO726TIWVKNFDQ/",
+      "summary": "鮮花佈置＋LED燭光＋拍攝一條龍約200萬韓元起；媒體稱這是20-30歲世代「買不起房但買得起人生一次瞬間」的消費趨勢。",
+      "title": "首爾頂級飯店「一條龍求婚」服務爆紅"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 267,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.koreatimes.co.kr/lifestyle/travel-food/20261014/seouls-oraegage-week-celebrates-150-historic-local-shops",
+      "summary": "12天活動推廣150家老字號餐飲、工藝店；東大門設計廣場快閃攤位，集章抽獎，10/25結束。",
+      "title": "首爾Oraegage Week老店節開跑"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 268,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.koreatimes.co.kr/lifestyle/travel-food/20261016/kto-uses-digital-tools-discounts-to-boost-rural-tourism",
+      "summary": "密陽芒草原健行、內藏山賞楓、KTX美食之旅，最高3萬韓元30%折扣，帶動地方小商家消費。",
+      "title": "韓國觀光公社推鄉村旅遊數位優惠"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 259,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.channelnewsasia.com/east-asia/north-korea-tests-submarine-launched-strategic-cruise-missiles-6460706",
+      "summary": "邊境地雷事件後半島緊張升溫；韓軍加強監視警戒，今日國際熱議。",
+      "title": "北韓本週密集試射飛彈：10/14潛射巡航飛彈、10/15再向日本海發射彈道飛彈"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 260,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-finance/2026/10/17/AVSC63E4GZD43KRQSFIXDOADHM/",
+      "summary": "上半年衝進股市的家庭資金如今被套牢；股市財富效應帶動消費落空，反而壓制支出意願。",
+      "title": "韓家庭股市資金被套、內需降溫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 261,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-policy/2026/10/16/GKDA3TUMGBDBTEFFZAHI7RYOVA/",
+      "summary": "10/17零時起；中東緊張推升油價（布蘭特105.9美元），9月石油製品價格年增14.8%。",
+      "title": "韓政府凍結燃油價格上限4週"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 262,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://en.sedaily.com/politics/2026/10/17/korea-to-fold-military-prosecutors-police-into-defense",
+      "summary": "最快明年下半年併入、直接向部長報告，改革軍事司法獨立性；《首爾經濟日報》今日獨家報導細節。",
+      "title": "軍檢、憲兵將併入國防部"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 263,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/south-korea-reviews-expanding-military-mission-middle-east-report-2026-10-16/",
+      "summary": "川普施壓韓國支援伊朗戰爭；正評估把作戰範圍擴至阿曼灣並派護衛艦增援，國防部稱尚未定案。",
+      "title": "政府研議擴大青海南東部隊中東任務"
+    }
+  ],
+  "followupNote": "10/19（週一）亞洲開盤是關鍵觀察點：台股、韓股、日經能否止穩；薔琵颱風路徑是否持續轉向台灣；美國政府停擺第18天；尊界V800調查進展。",
+  "globalSummary": "各地集體情緒都是「驚魂未定＋硬撐日常」。市場面：AI信用危機延燒第二波，美CPI超預期再引爆拋售，散戶在恐慌與撿便宜間反覆橫跳，SNS流傳「黑色星期一」預言；韓國家庭資金被套牢「換家電的錢動不了」，是庶民最真實的痛。政治面：台灣選戰三線齊爆、美國槍擊案重啟槍枝辯論、停擺第17天生活成本憤怒悶燒、北韓密集試射。生活面反向用力抓住小確幸：跨年機票、萬聖節、雙11囤貨照搶不誤，恐慌與享樂並存；年輕人用「買不起房但買得起人生一次瞬間」的求婚套餐，給自己一個確定的幸福。跨區共同底色：務實、比價、求確定性。",
+  "globalTheme": "AI信用危機第二波＋地緣緊繃：美CPI超預期引爆拋售，全球市場憂心10/19週一開盤；停擺第17天、北韓密集試射、中東戰火升級",
+  "sourceModifiedAt": "2026-10-17T01:12:00Z",
+  "storylines": [
+    {
+      "id": 12,
+      "items": [
+        "台灣：美9月CPI年增3.7%超預期，台指期夜盤大跌1144點（綜合#2）",
+        "美國：CoreWeave續跌12%、債券殖利率飆破15%，納指單週跌逾4%（綜合#4）",
+        "韓國：10/15熔斷暴跌7.57%（史上第16次），市場憂心10/19週一開盤（昨日追蹤）",
+        "日本：SNS流傳「10/19ブラックマンデー」焦慮（昨日追蹤）"
+      ],
+      "kind": "跨區線",
+      "summary": "10/15全球股災（台股暴跌1655點、日經重挫3318點、韓股熔斷、美股重挫）→ 10/16美9月CPI年增3.7%超預期再引爆拋售（納指跌2.15%、費半連8黑、CoreWeave殖利率破15%）→ 台指期夜盤重挫1144點；亞洲市場憂心10/19週一開盤續跌。",
+      "title": "AI信用危機延燒第二波"
+    },
+    {
+      "id": 13,
+      "items": [
+        "美國：政府停擺第17天，參院撥款法案再闖關失敗、聯邦法院資金耗盡（綜合#5）",
+        "韓國：北韓本週密集試射飛彈（綜合#1）；政府研議擴大青海南東部隊中東任務（綜合#5）；凍結燃油價格上限4週（綜合#3）",
+        "日本：俄羅斯拘捕北海道新聞記者，疑報復性扣押（綜合#2）",
+        "中東：伊朗攻擊霍爾木茲海峽船隻、胡塞襲擊沙烏地設施（布蘭特原油105.9美元）"
+      ],
+      "kind": "跨區線",
+      "summary": "政治與地緣三線並進：美國停擺進入第17天；北韓10/14潛射巡航飛彈、10/15再射彈道飛彈；中東戰火升級推升油價，韓國凍結燃油上限、研議擴大中東派兵。",
+      "title": "地緣緊繃三線並進"
+    },
+    {
+      "id": 14,
+      "items": [
+        "10/15暴跌1655點、外資史上最大賣超3025億 → 台指期夜盤再跌1144點，下週一盤勢承壓",
+        "薔琵颱風：昨日預估逼近菲律賓 → 今日升級中颱、路徑轉向台灣，恐成「大型強颱」",
+        "張秀卿10/16深夜自爆離婚3年、扛3400萬債務 → 今日全台娛樂版最大震撼彈，續燒中",
+        "賈永婕立院穿搭事件今日無新進展"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "台股延續恐慌、薔琵颱風威脅升高、張秀卿離婚續燒。",
+      "title": "台灣昨日追蹤"
+    },
+    {
+      "id": 15,
+      "items": [
+        "雙11 10/15開戰 → 今日首份戰報：飛豬4小時近100萬件，媒體復盤AI電商戰",
+        "尊界V800：10/15三部門調查組成立 → 余承東回應「正義可能會遲到，但永遠不會缺席」",
+        "冷空氣：10/16預報 → 今日三預警齊發，北京或10/18提前入冬",
+        "DeepSeek API 10/15故障後官方已補償，今日無新進展"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "雙11出戰報、尊界調查發酵、三預警落地。",
+      "title": "中國昨日追蹤"
+    },
+    {
+      "id": 16,
+      "items": [
+        "颱風30號昨日編號 → 今日急速增強，20日最大瞬間風速預測70m/s",
+        "10/15股災（日經重挫3318點） → SNS「黑色星期一」焦慮",
+        "個資外洩：新增アルカディア防災系統事件；JNN統計三週逾69社、1億件以上"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "颱風增強、市場焦慮、個資外洩連環爆。",
+      "title": "日本昨日追蹤"
+    },
+    {
+      "id": 17,
+      "items": [
+        "10/15熔斷暴跌7.57%（史上第16次） → 市場憂心10/19週一開盤（註：部分國際媒體誤標為10/17事件，實為10/15週四盤中；10/17週六韓股休市）",
+        "柬埔寨綁架案：政府派聯合應對小組後，今日暫無新進展"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "熔斷餘波未平，市場聚焦週一開盤。",
+      "title": "韓國昨日追蹤"
+    },
+    {
+      "id": 18,
+      "items": [
+        "奧勒岡槍擊案10/15發生 → 今日英雄Kalub Giamanco故事發酵",
+        "停擺第16天 → 第17天，聯邦法院資金本週耗盡",
+        "AI信用危機：CoreWeave殖利率破15% → 美股續跌，納指單週跌逾4%"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "槍擊英雄發酵、停擺惡化、華爾街續跌。",
+      "title": "美國昨日追蹤"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "從台韓散戶被套牢、AI信用疑慮寫「槓桿與信用的邊界」，呼應破妄卷主題：看不見的槓桿最危險。",
+      "id": 19,
+      "pillar": "金融一百零八講",
+      "title": "股災之後，散戶該學的第一課不是抄底"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "從日銀植田「絕不容忍」與美CPI超預期，談通膨時代的守御心法：錢變薄時，什麼才是真正的錨。",
+      "id": 20,
+      "pillar": "金融一百零八講",
+      "title": "當全世界都在談升息"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "首爾飯店求婚套餐爆紅，談年輕世代的確定性消費與小確幸哲學：在不確定的時代買一個確定的瞬間。",
+      "id": 21,
+      "pillar": "俗人對話錄",
+      "title": "買不起房，但買得起人生一次瞬間"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "重陽週末扶老攜幼周邊遊、敬老免票潮，談陪伴與慢生活：幸福有時就是陪爸媽去爬一座山。",
+      "id": 22,
+      "pillar": "俗人對話錄",
+      "title": "重陽節的候鳥老人：慢下來，陪父母去登高"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "薔琵颱風路徑大轉向，從天氣無常談放下執著、隨緣應變：計劃趕不上變化時，心要先轉彎。",
+      "id": 23,
+      "pillar": "佛法生活感悟文",
+      "title": "颱風轉向如人心：無常才是常"
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "date": "2026-10-16",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 194,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xGHSgrxUiB",
+      "summary": "萬豪全國3晚通兌每晚最低千元內",
+      "title": "飛豬雙11旅遊囤貨節昨晚8點開賣，「囤券給自己放個假」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 195,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkfvt7836408.d.html",
+      "summary": "不必硬湊非剛需商品即可享優惠",
+      "title": "天貓雙11規則變簡單：免定卡0元付定、消費券面額可膨脹"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 196,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkncr7794975.d.html",
+      "summary": "十月晚些時候發布測試版",
+      "title": "庫克現身上海：Apple Intelligence（阿里千問大模型）已獲批"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 197,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkncr7794975.d.html",
+      "summary": "特斯拉周邊產品線再擴張",
+      "title": "特斯拉中國上架2-6歲兒童平衡車，售1399元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 198,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.com.cn/money/future/hyxh/2026-10-16/doc-inivkncr7809988.shtml",
+      "summary": "中央氣象台繼續發布暴雨藍色預警",
+      "title": "較強冷空氣16-18日自西向東影響大部，局地降溫超8℃"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 189,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkfvt7836408.d.html",
+      "summary": "天貓主打簡單直接的優惠規則",
+      "title": "雙11大戰今日開打：阿里京東抖音同日開發布會，天貓今晚8點開啟預售"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 190,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkncr7794975.d.html",
+      "summary": "外交部宣布訪問烏茲別克斯坦等多國",
+      "title": "李強10/17-22連訪中亞與俄羅斯"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 191,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkncr7794975.d.html",
+      "summary": "針對網絡反映的質量問題展開調查",
+      "title": "尊界V800剎車踏板支架斷裂，三部門成立聯合調查組"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 192,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-16/detail-inivkncr7794975.d.html",
+      "summary": "北京時間10/15故障近5小時",
+      "title": "DeepSeek API昨日故障近5小時，官方發補償"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 193,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://jingji.cctv.com/2026/10/16/ARTICpJJy5XYFTItPXxqs5gj261016.shtml",
+      "summary": "工信部披露新型儲能累計裝機超預期",
+      "title": "新型儲能邁入市場化新階段：上半年儲能電池產量超420GWh年增110%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 184,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/amp/news/6883838",
+      "summary": "10/15至11/12點主餐加碼優惠",
+      "title": "金子半之助週年感謝祭「天丼買一送一」、辻半海鮮丼第二件66折"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 185,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6883828",
+      "summary": "牽絲年糕成社群打卡焦點",
+      "title": "涓豆腐今起開賣5大年糕新菜，拉絲年糕爆紅"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 186,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://dailyview.tw/popular/detail/33829",
+      "summary": "網友瘋問店名，登上網路溫度計熱門",
+      "title": "高雄鴨肉便當肉量驚人爆紅，Threads單篇吸12萬讚"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 187,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://woman.udn.com/woman/story/123162/9809099",
+      "summary": "關子嶺線直達泥漿溫泉泡湯吃桶仔雞",
+      "title": "秋遊西拉雅：10/17-18搭台灣好行領50元消費券"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 188,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9816701?from=udn-referralnews_ch2artbottom",
+      "summary": "開幕首日免費1000份香菇脆筍湯",
+      "title": "台南關子嶺溫泉美食節10/24登場，「天下第一鼎」免費千人品嘗"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 179,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://ec.ltn.com.tw/article/paper/1774739",
+      "summary": "CoreWeave債券殖利率飆破15%",
+      "title": "台股今拚反彈：昨日暴跌1655點、外資史上最大賣超3025億"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 180,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.ftvnews.com.tw/news/detail/2026A16W0133",
+      "summary": "賈永婕立院備詢穿搭風波延燒三天",
+      "title": "賴惠員今晨09:30再為「穿得純樸」言論道歉"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 181,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://www.setn.com/news/1922582",
+      "summary": "台北市長選戰升溫，志工帶洋流小物赴日",
+      "title": "沈伯洋「洋流」跨海燒到日本：500條飄帶大阪東京被索取一空"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 182,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://newtalk.tw/news/view/2026-10-15/1065601",
+      "summary": "現身沈伯洋競總成立大會後遭小粉紅出征",
+      "title": "蔡康永撤下小紅書工作聯繫欄位，疑全面退出中國市場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 183,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5607622",
+      "summary": "信民協會民調顯示蘇巧慧支持度大幅領先",
+      "title": "新北民調「麻花捲變剪刀口」：蘇巧慧雙位數領先"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 204,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/d982c430c00d1ae4b238febc02425c77f701fb7e",
+      "summary": "旅行比價網統計九州7縣搜尋全數大增",
+      "title": "2026秋九州旅行搜尋暴增：鹿兒島年增198%、宮崎204%"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 205,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://note.com/easy_snipe4578/n/na4417cef8860",
+      "summary": "X上只想放鬆的國內短途旅行成主流",
+      "title": "「心の平穏最優先」療癒系旅行成主流：不求冒險只求放鬆"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 206,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://www.jiji.com/jc/article?k=000000491.000019382&g=prt",
+      "summary": "創紀錄大雨帶動宅家時間增加",
+      "title": "9月鍋物湯底購買量年增1.8倍，「殘暑火鍋需求」提前引爆"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 207,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://sirabee.com/2026/10/15/20163590739/",
+      "summary": "藝人追逐親手羽化的蝴蝶引發熱議",
+      "title": "《水曜日のダウンタウン》蝴蝶企劃成「神回」，X趨勢「ローランド」引爆誤會"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 208,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://topics.smt.docomo.ne.jp/article/hochi/entertainment/hochi-20261016-OHT1T51000",
+      "summary": "童星出身的鈴木福以金髮造型亮相",
+      "title": "鈴木福人生首次染金髮，為音樂劇《RENT》「從頭髮獲得能量」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 199,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.reuters.com/jp/markets/japan/SPQHJGI26JOHRBMT3XHTA27XKM-2026-10-16/",
+      "summary": "昨日暴跌3318點為歷代第三大跌幅",
+      "title": "日經今日反彈開高499點、一度收復65000點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 200,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.fnn.jp/articles/-/1133529",
+      "summary": "一年生成30個颱風為2013年以來首次",
+      "title": "13年來首次！第30號颱風「チャンパー」生成，20日以非常強之姿逼菲律賓東方"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 201,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/articles/ASVBG0352VBGUQIP006M.html?iref=ogimage_rek",
+      "summary": "過去眾院選舉中陣營以接駁巴士免費接送",
+      "title": "簗前農水相免費巴士疑雲延燒，FNN再爆「電話動員給報酬」新疑點"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 202,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/b86d95507c0c0119daa326f22ad7243340e92617",
+      "summary": "鷲見玲奈單日實現虧損後忍痛損切",
+      "title": "日經暴跌日的名人投資眾生相：JOY曬含損、水谷隼信用交易9339萬円逆勢重押"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 203,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://www.usatoday.com/story/news/nation/2026/10/15/bend-oregon-elementary-school-shooting/92270668007/",
+      "summary": "16歲槍手持霰彈槍闖入小學",
+      "title": "美國奧勒岡州小學槍擊案震驚日本社群"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 224,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/grocery/stores/2026/10/15/whole-foods-2027-trends-food-and-drink-predictions/92265933007/",
+      "summary": "消費者轉向更短的成分表",
+      "title": "Whole Foods預測2027年10大食品趨勢：成分越簡單越好、苦味回歸"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 225,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.travelandtourworld.com/news/article/ffmt73eqa5i3/",
+      "summary": "長程線附完整餐飲含侍酒師選酒",
+      "title": "JetBlue推國內線頭等艙「BlueFirst」：13.3吋螢幕＋空中調酒師模式"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 226,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/shopping/trending/2026/09/30/nyc-halloween-cruise-deals-groupon/92026655007/",
+      "summary": "Groupon萬聖節遊船優惠引發搶購",
+      "title": "萬聖節新玩法：NYC哈德遜河萬聖節遊船8美元起"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 227,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.timesnownews.com/education/school-assembly-news-headlines-today-oct-16-world-national-and-sports-updates-for-students-article-156346292",
+      "summary": "皮尤調查44%美國人過去一年生活困難",
+      "title": "社會安全金將調漲：通膨3.7%下退休族實質購買力保衛戰"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 228,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://recommend.com/travel-interests/hotels-resorts/halloween-travel-ideas-spooky-stays-and-fall-escapes/",
+      "summary": "從免費城市街頭嘉年華到付費沉浸式體驗",
+      "title": "萬聖節主題旅遊升溫：13種沉浸式體驗橫跨美加墨"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 219,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/news/nation/2026/10/15/bend-oregon-elementary-school-shooting/92270668007/",
+      "summary": "15日下午Bend市小學發生槍擊案",
+      "title": "奧勒岡州小學槍擊案：16歲槍手殺害3童1師後被路人擊斃"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 220,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://indianexpress.com/article/world/us-iran-war-live-updates-trump-tehran-threat-to-shipping-strait-of-hormuz-saudi-conflict-india-oil-prices-10923782/",
+      "summary": "Houthi飛彈襲擊亞丁總統府局勢升級",
+      "title": "政府停擺第16天＋中東急速升級：CNN稱美軍已擬定打擊伊朗能源與核設施計畫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 221,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://sundayguardianlive.com/world/amp/",
+      "summary": "針對這位民主黨眾議員的高風險調查",
+      "title": "眾議員Ilhan Omar遭聯邦調查：手機被扣押、大陪審團發出十餘張傳票"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 222,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://sundayguardianlive.com/world/amp/",
+      "summary": "川普政府擴大對毒品走私集團的軍事打擊",
+      "title": "期中選舉倒數三週：司法部起訴加州涉非公民投票，Peltola阿拉斯加民調領先"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 223,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.timesnownews.com/education/school-assembly-news-headlines-today-oct-16-world-national-and-sports-updates-for-students-article-156346292",
+      "summary": "繼佛羅里達州之後另有8州跟進提告",
+      "title": "8州跟進佛州控告OpenAI兒童安全問題"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 214,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.sedaily.com/article/20102132",
+      "summary": "刀削麵紫菜包飯等8大外食菜單價格全漲",
+      "title": "「만원의 행복은 끝났다」：客單價未滿1萬韓元的餐廳只剩兩成"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 215,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.mbn.co.kr/news/life/5225168",
+      "summary": "白雪糕加披薩料的創意吃法爆紅",
+      "title": "年糕變最潮甜點：「Q彈芯」熱潮席捲"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 216,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.insight.co.kr/amp/news/577876",
+      "summary": "排隊名店號碼牌破320號一位難求",
+      "title": "江陵草堂豆腐村：名店排2小時 vs 在地店10分鐘入座"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 217,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/en/society/12153056",
+      "summary": "政府振興內需推秋季旅遊優惠",
+      "title": "「2026秋天旅行」開跑：KTX免費券、8萬張住宿折扣券"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 218,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISI20261016_0021491063",
+      "summary": "原定22日截止的希望退休申請提前額滿",
+      "title": "Homeplus希望退休申請提前額滿，零售寒冬訊號"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 209,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISI20261016_0021491063",
+      "summary": "昨日黑色星期四兩大指數盤中熔斷",
+      "title": "KOSPI掙脫暴跌陰霾反彈出發、重返5600點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 210,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.mbn.co.kr/news/society/5225279",
+      "summary": "13日在大型購物中心持刀亂揮致多人傷",
+      "title": "仁川購物中心兇器亂動案：59歲崔某今日下午2點拘捕審查"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 211,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.mbn.co.kr/news/society/5225279",
+      "summary": "政府6月降價每公升150韓元後續受關注",
+      "title": "第11次石油最高價格今日公布，凍結或調降受矚目"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 212,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://m.news.nate.com/view/20261015n33585",
+      "summary": "總統長文稱已擺脫只代表部分支持者的框架",
+      "title": "李在明：「國民政府明日上任500天」，SNS回應開憲陰謀論"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 213,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISI20261016_0021491063",
+      "summary": "國防部考慮將年底任滿的清海部隊延長派駐",
+      "title": "北韓-中國新鴨綠江大橋完工12年後開通；清海部隊研議延長派駐"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "今日五地被同一條主線串起：10/15 AI信用疑慮（CoreWeave債券殖利率飆破15%）引爆全球股災，台日韓美股市同步重挫；10/16出現反彈企圖（日經開高499點、道瓊隔夜+556、台指期夜盤+435、KOSPI重返5600）。同時美國政府停擺進入第16天、中東戰火升級，奧勒岡小學槍擊案再添社會傷痕。\n人心觀察：台灣股災驚魂中資金躲進防禦股，政治對立火氣十足但生活面照搶小確幸；中國雙11前夕消費者變精、反衝動成主流；日本從追逐刺激轉向療癒系「心の平穏」；韓國在散戶哀嚎與午餐通膨的憤怒中半信半疑觀望政府；美國在槍擊案心碎、停擺與通膨悶燒中，用萬聖節的及時行樂對沖不安。",
+  "globalTheme": "AI信用疑慮引爆全球股災後的反彈企圖，疊加美國停擺第16天與中東戰火升級",
+  "sourceModifiedAt": "2026-10-16T09:10:00+08:00",
+  "storylines": [
+    {
+      "id": 9,
+      "items": [
+        "台股暴跌1655點收46969點，外資賣超3025億",
+        "日經重挫3318點創歷代第三大跌幅"
+      ],
+      "kind": "跨區線",
+      "summary": "CoreWeave債券殖利率飆破15%引爆AI信用疑慮，疊加美國9月CPI超預期引發全球股災",
+      "title": "AI信用疑慮引爆10/15全球股災，10/16反彈企圖"
+    },
+    {
+      "id": 10,
+      "items": [
+        "美國政府停擺第16天，參議院第九次表決失敗",
+        "美軍擬打擊伊朗核設施計畫曝光，Houthi襲擊沙烏地"
+      ],
+      "kind": "跨區線",
+      "summary": "美國政府停擺進入第16天，參議院第九次未能通過重啟法案；中東急速升級",
+      "title": "美國停擺第16天＋中東戰火升級牽動亞洲"
+    },
+    {
+      "id": 11,
+      "items": [
+        "10/15暴跌1655點，外資賣超3025億史上最大",
+        "10/16道瓊+556、台指期夜盤+435拚反彈"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日暴跌1655點收46969點、外資狂砍3025億創紀錄，19檔千金股跌停",
+      "title": "台股暴跌後拚反彈"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "從CoreWeave債券殖利率飆破15%談槓桿的代價",
+      "id": 16,
+      "pillar": "金融一百零八講",
+      "title": "台股AI信用疑慮股災"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "排兩小時的隊，排的是味道還是安心：名氣與真實的距離",
+      "id": 17,
+      "pillar": "俗人對話錄",
+      "title": "江陵豆腐村資訊差"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "旅行不再為了征服遠方，而是為了放過自己：心の平穏最優先",
+      "id": 18,
+      "pillar": "佛法生活感悟文",
+      "title": "日本療癒系旅行"
+    }
+  ]
+}

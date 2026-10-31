@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-21",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 494,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://news.qq.com/rain/a/20261020A05BFT00",
+      "summary": "10月16日起全國各省同步上線，8類近親屬可跨省共用個人帳戶餘額，試運行20天已跑出29.52萬筆；衝上微博熱搜第3（68.3萬熱度），異地打工族直呼「能給老家父母用了」。",
+      "title": "醫保錢包2.0版全國上線：職工醫保個人帳戶跨省共濟全面落地"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 495,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261020/49805928.html",
+      "summary": "節後供給放量＋禮品需求回落，南京市場母蟹均價跌40%、公蟹降幅達60%；蟹農感嘆「最慘的一年」，「大閘蟹價格腰斬」頻登熱搜（42.4萬熱度）。",
+      "title": "大閘蟹價格暴跌超40%，今年被稱為「螃蟹價格最低的一年」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 496,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261021/49806345.html",
+      "summary": "湖北襄陽男子撿到裝有3.8萬現金的挎包貼招領啟事，將手機號後四位隱去、用失主身分證中的四個數字作提示；「能撥通的一定是失主」衝上今日微博熱搜第1（147.2萬熱度）。",
+      "title": "男子撿到38000元留了道題給失主：手機後四位換成身分證數字防冒領"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 497,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://ent.sina.cn/2026-10-21/detail-inivxvuv6206926.d.html?vt=4",
+      "summary": "短劇演員曾輝憑《披荊斬棘2026》走紅後被質疑借熱度帶女友上戀綜；10/21直播親自回應時間線，澄清邀約早於披哥，衝上今日熱搜第4（61.7萬熱度）。",
+      "title": "曾輝回應與韓雨彤參加戀綜《請原地結婚》：合約早於披哥敲定，不存在誰蹭誰"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 498,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.com.cn/roll/2026-10-20/doc-inivwyrf6378954.shtml",
+      "summary": "劉雯10月18日在洛杉磯完成個人第十次維密走秀，續保亞洲模特登台次數最高紀錄；網紅博主易夢玲巴黎時裝周登機箱被偷、護照簽證全丟，連帶「劉雯維密回歸太權威了」上榜。",
+      "title": "維密週中國面孔冰火兩重天：劉雯第十次登台刷新紀錄，易夢玲因行李被盜錯過秀場"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 489,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261021/49806371.html",
+      "summary": "美方10月19日依據《保護美國知識產權法》制裁與前Google工程師丁林葳相關的5個實體，並下令聯邦機構刪除DeepSeek產品；商務部20日強硬回應「將採取必要措施予以回應」，AI科技戰升級。",
+      "title": "美國以「竊取商業秘密」為由制裁5家中國實體，商務部回應：性質惡劣、堅決反對"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 490,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/6809/9827629",
+      "summary": "上週末至少3000家店鋪遭洗劫，總理承認情報與部署失誤、內政部長道歉，出動軍隊、延長宵禁嚴防24日新一波抗議；「法國亂成一鍋粥」衝上微博熱搜第2（87.7萬熱度）。",
+      "title": "法國大暴動後政府認錯：出動軍隊、延長宵禁，嚴防24日新一波抗議"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 491,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_34291927",
+      "summary": "10月20日丁薛祥出席揭牌，由國務院、雄安新區、三大運營商、國家電網、南方電網共同出資，主責數據資源開發利用、服務AI發展；「國家隊入場數據要素市場」被解讀為頂層設計轉向規模化實施。",
+      "title": "新央企國家數據集團在雄安成立，位列央企名錄第28位"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 492,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.enanyang.my/news/20261020/Finance/1420530",
+      "summary": "商務部19日公告對盾構機、岩石隧道掘進機等大型工程設備及無人機物項實施/調整管制；微博熱搜「德國盾構機賣印度需中國放行」23.5萬熱度呼應，出口管制武器化話題持續發酵。",
+      "title": "中國首次對盾構機實施出口管制，並優化調整無人機出口管制"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 493,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-21/doc-inivxrnv5592540.shtml",
+      "summary": "獲批不到24小時18家基金公司火速公告，僅售5個交易日；以單隻20億上限計有望帶來360億活水，A股回調下這筆資金成市場焦點。",
+      "title": "首批18隻主動ETF本週五（10/23）開募，或帶來360億元增量資金"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 484,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6885045",
+      "summary": "搖滾天王宣布2027全新巡演從高雄出發、挑戰更大場館，演唱會精選實錄10/23預購，歌迷搶票預期＋專輯彩蛋歌〈兄弟〉，樂迷社群熱議。",
+      "title": "伍佰預告2027《Rock Star 3》從高雄出發、挑戰更大場館"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 485,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://travel.ettoday.net/article/3258013.htm",
+      "summary": "旅遊節＋團費補助＋集章抽獎＋十道限定豆宴，秋冬小旅行話題，食尚玩家影片帶動。",
+      "title": "2026大溪豆干旅遊節開跑：三大遊程補助600元、限定豆宴11/14登場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 486,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://n.yam.com/Article/20261020353431",
+      "summary": "連假出遊懶人包性質，火舞＋溫泉＋萬聖＋購物節抽獎一次滿足，旅遊版高分享。",
+      "title": "台南光復節連假活動潮：國際火舞藝術節《火神祭》、關子嶺溫泉美食節等10/22登場"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 487,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://health.ltn.com.tw/article/breakingnews/5612557",
+      "summary": "JAMA新研究「吃太多會傷腦」吸睛結論，洋芋片、含糖飲料、手搖飲全部中槍，健康版廣傳。",
+      "title": "研究：超加工食品吃最多者腦部血管病灶增約40%，醫師教4招減量"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 488,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.cts.com.tw/cts/life/202610/202610203091640.html",
+      "summary": "Threads原PO貼文引爆食安討論，店員「食用花有蛞蝓正常」回應更添話題；業者已道歉自主停業一天。",
+      "title": "台中「嵩sung」餐廳飲料驚見活蛞蝓，業者道歉自主停業一天"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 479,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9827549?from=udn-catebreaknews_ch2",
+      "summary": "薔琵強度維持巔峰並列今年風王，明起外圍環流影響、週五至週六上半天為風雨最集中時段，北部宜花慎防豪雨至大豪雨；放假與防災讓它連續兩日霸榜氣象熱搜。",
+      "title": "強颱薔琵並列今年風王，週五至週六「黃金36小時」影響最劇"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 480,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.ctee.com.tw/news/20261021700063-439901",
+      "summary": "外資連日提款近800億、台幣近9個交易日8貶；央行昨日盤中罕見喊話後仍重貶破32.6，創18個月新低淪最弱亞幣，「央行獨木難支」成焦點。",
+      "title": "股匯雙殺加劇：台股昨挫逾500點、新台幣貶破32.6元創18個月新低、淪最弱亞幣"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 481,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://www.cna.com.tw/news/asoc/202610210021.aspx",
+      "summary": "檢調昨約談到案、今晨以串證及逃亡之虞聲押，法院將開羈押庭；地方政治弊案＋司法程序，地方與全國版皆追蹤。",
+      "title": "台東農路弊案：前縣長吳俊立遭檢方聲押"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 482,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.ftvnews.com.tw/news/detail/2026A20S09M1",
+      "summary": "大帳房兄妹態度鬆動認罪，政治獻金侵占案進入二審關鍵節點；媒體持續解讀後續，藍白政治版圖與司法攻防全民關注。",
+      "title": "柯文哲案二審重大轉折：李文宗部分認罪、李文娟全部認罪"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 483,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://www.chinatimes.com/realtimenews/20261020003705-260404",
+      "summary": "廖人帥、阿達、唐禹哲等知名藝人全數判刑但緩刑，需支付公庫、做勞務；娛樂＋司法雙重流量，社群討論刑度輕重。",
+      "title": "藝人閃兵案首波宣判：9藝人自首組全獲緩刑、認罪付公庫罰金"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 504,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/00240c8f1a5c71e3031ae883638d42a29fff671d",
+      "summary": "10/20承認遭不正存取；年末納稅旺季前夕爆發，寄附控除試算額等資訊外洩，衝擊消費者信任。",
+      "title": "故鄉納稅平台「ふるさとチョイス」：約445萬件會員個資流出、服務停止"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 505,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/0e1f9de1d3768a9a0c2add6e866f0200ebf6dfda",
+      "summary": "史蒂達王妃14日親駕波音737來新千歲、22日離開；20日晚兩陛下笑臉迎接、50分鐘英語懇談；王妃還創下現職王妃單飛戰鬥機史上首例，「異色王妃」話題流量大。",
+      "title": "泰國王妃親自駕駛王室專機來日，兩陛下御所茶會初懇談"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 506,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "http://www.excite.co.jp/news/article/Qoly_01449684841ab5a978611ca2b9beb82eb9b19cd3/",
+      "summary": "阪神表明容認27歲三冠王（打擊率.306、39轟、106打點）挑戰MLB；大谷、山本、佐佐木所屬的道奇被傳為潛在買家，日韓媒體都關注。",
+      "title": "阪神三冠王佐藤輝明獲准入札制，道奇等MLB多隊傳出有興趣"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 507,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "http://www.excite.co.jp/news/article/Kyodo_1485384334592409973/",
+      "summary": "今日共同社報導，研究生從社群貼文照片確認到未記錄的蜂類；「網路公民科學」故事性強，Yahoo今日話題榜上榜。",
+      "title": "SNS貼文偶然發現新種蜜蜂，九大研究生驚呼「新發現」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 508,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://news.ntv.co.jp/n/fbs/category/life/fsb002a1e658154568a0f49a17c8390ade",
+      "summary": "火災事故接連發生、召回對象品仍有約18萬台未回收；西鐵鐵路把行動電源起火納入災害演習，防災意識話題延燒。",
+      "title": "行動電源火災高居榜首：福岡一年20件，安全型「準固體式」成熱賣"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 499,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.jiji.com/jc/article?k=2026102100271&g=eco",
+      "summary": "財務省10/21早上發布通關速報；輸入增、出口受美國關稅影響，是高市政權經濟路線的直接考驗，各大媒體頭條。",
+      "title": "2026年度上半期貿易赤字2兆8184億日圓，赤字幅為前年近2倍、連續11期赤字"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 500,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.sankei.com/article/20261020-PIFA3STCR5PVJKZOJWM5QGSKQU/",
+      "summary": "1989年導入以來首次減稅立法；高市首相親自答辯但財源未明示，5兆/年財源與現金給付細節成焦點，外食維持10%引發「外食離れ」擔憂。",
+      "title": "食料品消費稅8%→1%減稅相關法案，眾院本會議審議深入"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 501,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "http://www.excite.co.jp/news/article/Kyodo_1485417302760293228/",
+      "summary": "外務省10/21正式要求，美國國務院也公開譴責；記者涉間諜嫌疑被移送莫斯科，日方迄今未能見到本人。",
+      "title": "外務省要求俄羅斯當局即時釋放被扣押的日本記者"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 502,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/c063b273585c3bd55cdef4ed2ea0d67a7aaea1cb",
+      "summary": "21日早上6時中心氣壓900hPa、最大瞬間風速85公尺；預測24日先島諸島近海、26日對馬近海，奄美、沖繩23〜25日恐大荒れ，防災警戒流量大。",
+      "title": "台風30號（薔琵）21日達「猛烈」級，進路轉向日本"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 503,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://www.jiji.com/jc/article?k=2026102000630&g=eco",
+      "summary": "MMX 10/20凌晨升空成功後，今日時事通訊發出製造方三菱電機專訪（融入SLIM與「鸛號」經驗），延續昨日宇宙話題熱度。",
+      "title": "MMX發射翌日：三菱電機談「塞滿創意的機關」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 524,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.yardbarker.com/mlb/articles/one_tough_offseason_decision_for_dodgers_guardians_after_mlb_playoff_exits/s1_17016_44451495",
+      "summary": "光芒4:2淘汰守護者晉級美聯冠軍後，釀酒人在國聯冠軍賽橫掃道奇；10/23開打，雙雙追逐隊史第一座世界大賽獎盃，佛州賭盤與社群熱度全面升溫。",
+      "title": "MLB世界大賽對決確定：光芒vs釀酒人，兩隊都拼隊史首冠"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 525,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://vietnamnet.vn/en/apple-responds-as-foldable-iphone-duo-sells-out-2566097.html",
+      "summary": "10/16開賣數分鐘內售罄，$1,999起售價機型全部延後至1月22日後到貨；蘋果形容需求「超乎預期」，記憶體晶片缺貨加劇供應吃緊，社群討論度爆表。",
+      "title": "蘋果首款摺疊機iPhone Duo預購秒殺，交期被推到2027年1月"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 526,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/money/consumer-protection/recalls-alerts/2026/10/19/meat-poultry-recalled-kayem-foods/92326132007/",
+      "summary": "麻州Kayem Foods倉庫冷藏故障導致產品溫度失控，涉及Kayem、Al Fresco等8個品牌、2026/3/31–10/7間生產的全美＋香港通路商品；社群與媒體紛紛提醒「先檢查冰箱再開烤肉」。",
+      "title": "Kayem食品召回近160萬磅熱狗、培根與熟食肉品，列USDA最嚴重Class I"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 527,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.thewrap.com/creative-content/tv-shows/the-simpsons-apu-return-new-voice-actor/",
+      "summary": "萬聖節特別集《The Revengening》中Apu揭開「Daft Monk」真面目，劇情直接自我調侃過去九年被「冷藏」的爭議；配音多元化話題再掀熱議。",
+      "title": "《辛普森家庭》Apu時隔九年終於開口說話，由印度裔演員Sunil Malhotra接棒配音"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 528,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.radiotimes.com/tv/fantasy/anime/cyberpunk-edgerunners-2-comment/",
+      "summary": "相隔四年Studio Trigger回歸夜城，全新四主角獨立故事取代第一季大衛；IGN稱「打鬥場面驚人」，動漫圈與遊戲社群今日全面洗版。",
+      "title": "Netflix《電馭叛客：邊緣行者2》10/20全10集上架，評價開盤"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 519,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.vetmelbourne.com.au/news/pentagon-orders-withdrawal-of-5-000-us-troops-from-germany-as-trump-escalates-feud-with-merz/53777",
+      "summary": "國防部長赫格塞斯簽署撤軍令，稱是對德國總理梅爾茨拒挺美國對伊朗作戰的報復；川普另威脅若歐洲盟友「不找到方向」就退出北約，跨大西洋關係陷入二戰後最嚴重危機。",
+      "title": "五角大廈下令撤出駐德5000美軍，川普與北約盟友因伊朗戰事翻臉升級"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 520,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.channelnewsasia.com/world/zelenskyy-hails-resumption-us-advance-warning-strikes-ukraine-6476751",
+      "summary": "川普此前威脅切斷情報與軍援、還罵澤倫斯基是戰爭販子；澤倫斯基10/20在奧斯陸記者會證實預警系統已恢復並感謝美方，象徵美烏裂痕出現緩和跡象。",
+      "title": "澤倫斯基：美國已恢復向烏克蘭分享俄軍飛彈預警情報"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 521,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.cnn.com/2026/10/20/business/spacex-tesla-merger-musk?cid=external-feeds_iluminar_meta",
+      "summary": "馬斯克在SpaceX第三季財報電話會議上首度鬆口，表示合併「有很多道理」（共享AI／超級智慧軟體、Terafab晶片廠）；兩家公司均由獨立董事組成委員會洽談，SpaceX盤後漲逾4%、Tesla漲約1%。",
+      "title": "馬斯克證實Tesla與SpaceX各成立特別委員會討論合併，潛在規模約3.5兆美元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 522,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.cnn.com/2026/10/20/politics/amy-acton-mother-video?cid=external-feeds_iluminar_meta",
+      "summary": "期中選舉前兩週流出的60秒影片中，生母Donna Arthur斥女兒「說謊一輩子」；艾克頓陣營反擊稱她自12歲遭繼父性侵後即與母親斷聯，直指對手把兒虐傷痛當政治武器，CNN、USA Today等全面跟進。",
+      "title": "俄亥俄州州長選戰：民主黨候選人Amy Acton失聯母親拍片呼籲選民不要投她"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 523,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.washingtonexaminer.com/news/world/4770557/marine-le-pen-end-anarchic-immigration-france-riots/",
+      "summary": "巴黎等地週末逾3000家商店遭破壞掠奪，內政部長一度請辭；勒龐以「總統式」演說將自己塑造成秩序候選人，民調支持度34%居冠，美國媒體高度關注並引發「美國會不會跟進」討論。",
+      "title": "法國暴動延燒、政府延長宵禁，極右勒龐趁勢搶奪聲量"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 514,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://mbiz.heraldcorp.com/article/10909532",
+      "summary": "20日播出的《同床異夢2》中，他坦言47歲罹癌、為還債與養家手術兩週就復工拍《黃金新娘》；「最掛心的是當時才小學一年級的小女兒」一句話刷爆中老年觀眾淚點，引發「養家者健康代價」的討論。",
+      "title": "65歲演員姜信日自爆：肝癌手術2週後綁著束腹帶趕回拍戲"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 515,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "http://www.srtimes.kr/news/articleViewAmp.html?idxno=215372",
+      "summary": "韓國美妝龍頭首度把「音樂談話秀×直播帶貨」結合，由BTOB徐恩光主持、NMIXX出席首集；K-pop專輯類目在Olive Young年增152%，粉絲經濟正式殺入美妝零售版圖。",
+      "title": "CJ Olive Young推出K-pop直播購物節目「Green Room」，今晚首播"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 516,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.kedglobal.com/retail/newsView/ked202610200012",
+      "summary": "LVMH韓國刷卡消費增速降至7%，Chanel、Dior出現衰退，百貨銷售動能熄火；「股市財富效應退潮」的消費觀察，直接打中上半年靠股票賺錢的中產階級。",
+      "title": "股市震盪讓有錢人收手：韓國奢侈品消費降溫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 517,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://qazinform.com/news/south-korea-to-use-four-legged-patrol-robots-to-guard-public-spaces-42ff98",
+      "summary": "韓國首例獲准上人行道巡邏的四足機器人，可爬樓梯、即時回傳影像、洪水或犯罪發生時引導避難；「機器狗巡警」概念新奇又帶點賽博龐克感，科技版與地方新聞同步擴散。",
+      "title": "天安市獲准測試「四足巡邏機器狗」守公園河道"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 518,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://isplus.com/article/view/isp202610210040",
+      "summary": "11月男團回歸大戰開打，TWS、ENHYPEN、Stray Kids同場廝殺，全球粉絲平台UPICK已啟動投票爭奪宣傳資源；繽紛復古的「B-side版」概念照在粉絲社群轉發熱烈。",
+      "title": "TWS釋出單曲二輯《TO US》概念照，11月2日回歸"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 509,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.asiae.co.kr/article/2026102013545673602",
+      "summary": "中國民運人士在X爆料金正恩腦出血死於北京，帖文破600萬觀看；北韓10/20緊急公開金正恩攜李雪主、金主愛參觀服裝展照片闢謠，川普一句「不確定他還願不願見面」更添柴火。",
+      "title": "「金正恩腦出血死亡」謠言席捲全球，北韓急公開視察照片「闢謠」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 510,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.donga.com/news/Inter/article/all/20261020/134871526/1",
+      "summary": "一週前川普還說「可能很有趣」，如今卻坦言連「誰想見誰都不確定」；北韓零回應加上金正恩健康疑雲，讓美朝峰會不確定性飆到頂點。",
+      "title": "川普改口：下月在中國APEC會金正恩？「我也不知道」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 511,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://biz.chosun.com/en/en-finance/2026/10/21/PZOUWVLECFCS3MBKLSDXMSTE6M/",
+      "summary": "昨日才摔破5700嚇壞散戶，今日中東降溫＋油價回落，三星電子、SK海力士大漲3–4%，上演「V型反轉」，財經版全是「到底是反彈還是抄底」的爭論。",
+      "title": "KOSPI單日飆漲逾2%，重返5666點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 512,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://en.yna.co.kr/view/AEN20261021002051320",
+      "summary": "關稅局數據顯示10月1–20日出口616億美元，晶片出口暴漲222%佔總出口近45%，日均出口額史上最高；市場解讀AI半導體循環仍在，但「美國關稅戰下的曇花一現」擔憂並存。",
+      "title": "10月前20天出口翻倍，貿易順差145億美元創紀錄"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 513,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003834520",
+      "summary": "李在明稱北韓核武只是「最後防禦武器」、作戰權是「收回不是移交」，遭前議員劉承旼怒批「不是親北是從北」；美方重申須滿足轉換條件，朝野在國會最高會議上交鋒。",
+      "title": "李在明「戰時作戰權早日收回」發言引爆朝野攻防，美國防部澆冷水"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "今日全球主線三線交織：一是法國暴動升級（政府認錯、出動軍隊、延長宵禁嚴防24日新一波抗議）在中、美、台三地共振，勒龐民調34%居冠；二是台風薔琵達「猛烈」級（中心氣壓900hPa、最大瞬間風速85公尺）直逼東北亞，台日韓同日防災頭條；三是半島疑雲：金正恩死亡謠言席捲全球、北韓闢謠，川普改口「我也不知道」是否會金正恩。\n\n人心觀察：五地共同情緒是「對體制的信任打折，人心轉向顧好自己的生活」——台灣股民數資產看放假，股匯雙殺的慌從「探底」變成認命；中國圍觀法國亂局裡藏著一絲人性亮光（襄陽撿3.8萬留題防冒領登頂熱搜）；日本收緊荷包進入防災模式；韓國謠言一來全家戒備、焦慮是結構性的；美國在失序裡找唯一能預測結局的娛樂。和昨日相比，焦慮更具體、更貼身：從地緣大敘事下沉到冰箱、荷包和休假。",
+  "globalTheme": "法國暴動升級與颱風薔琵：秩序與自然的雙重壓力測試，半島疑雲與美歐裂痕同步升溫",
+  "sourceModifiedAt": "2026-10-21T09:10:52+0800",
+  "storylines": [
+    {
+      "id": 38,
+      "items": [
+        "中國：微博熱搜第2（87.7萬熱度），「法國亂成一鍋粥」圍觀秩序崩壞",
+        "美國：勒龐民調34%居冠，媒體引發「美國會不會跟進」討論",
+        "台灣：巴黎等多城宵禁、至少3000家商鋪遭劫掠，社媒同步發酵"
+      ],
+      "kind": "跨區線",
+      "summary": "法國政府認錯，總理承認情報與部署失誤、內政部長道歉；出動軍隊、延長宵禁嚴防24日新一波抗議；勒龐以「總統式」演說將自己塑造成秩序候選人，民調34%居冠。",
+      "title": "法國暴動升級：軍隊出動、宵禁延長，嚴防24日新一波抗議"
+    },
+    {
+      "id": 39,
+      "items": [
+        "台灣：並列今年風王，週五至週六「黃金36小時」影響最劇",
+        "日本：21日達「猛烈」級，進路轉向日本，奄美、沖繩23–25日恐大荒れ",
+        "韓國：同日防災警戒，颱風動向全韓關注"
+      ],
+      "kind": "跨區線",
+      "summary": "薔琵達「猛烈」級，中心氣壓900hPa、最大瞬間風速85公尺；台日韓三地同日進入防災頭條，路徑仍有變數。",
+      "title": "台風薔琵達「猛烈」級，直逼東北亞"
+    },
+    {
+      "id": 40,
+      "items": [
+        "韓國：全韓最看新聞第1名",
+        "美國：川普主動降溫，美朝峰會不確定性飆至頂點"
+      ],
+      "kind": "跨區線",
+      "summary": "中國民運人士在X爆料金正恩腦出血死於北京，帖文破600萬觀看；北韓10/20緊急公開金正恩攜李雪主、金主愛參觀服裝展照片闢謠；川普改口「我也不知道」11月APEC是否會金正恩。",
+      "title": "半島疑雲：金正恩死亡謠言與川普改口"
+    },
+    {
+      "id": 41,
+      "items": [
+        "台灣：台幣貶破32.6創18個月新低、淪最弱亞幣；柯文哲案李文宗/李文娟認罪後續解讀",
+        "中國：18隻主動ETF本週五開募、360億活水火速落地；盾構機出口管制微博熱搜發酵",
+        "日本：消費稅減稅法案眾院審議深入；外務省要求俄即時釋放被扣押記者",
+        "韓國：KOSPI單日飆漲逾2%重返5666點，V型反轉",
+        "美國：澤倫斯基證實美烏飛彈預警情報已恢復；美撤出駐德5000美軍、威脅退出北約"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日熱點多線延續：股匯震盪加劇又反轉（台灣續貶、韓國V型反彈）、美烏裂痕出現緩和訊號、美歐關係卻更撕裂、法國暴動與颱風持續發酵。",
+      "title": "昨日熱點今日延續（10-20 → 10-21）"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "外資提款近800億、台幣淪最弱亞幣，散戶的慌從「探底」變成認命——寫資產焦慮裡的人如何找回自己的錨。",
+      "id": 61,
+      "pillar": "金融一百零八講",
+      "title": "台股股匯雙殺：央行獨木難支"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "跌破5700哀嚎、隔日飆漲2%，追漲殺跌的人性劇本每天都在重演——寫波動裡的貪與怕。",
+      "id": 62,
+      "pillar": "金融一百零八講",
+      "title": "KOSPI V型反轉：反彈還是抄底"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "A股回調中的360億增量資金，機構「抄底」時散戶該跟嗎——寫從眾與獨立判斷。",
+      "id": 63,
+      "pillar": "金融一百零八講",
+      "title": "首批主動ETF 360億活水"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "善良的巧思比善良本身更難得——寫一句話的人性光亮。",
+      "id": 64,
+      "pillar": "俗人對話錄",
+      "title": "撿到3.8萬留題防冒領（熱搜第1）"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "為還債與養家拼命的中年身體，養家者的代價與尊嚴——寫男人的苦與溫柔。",
+      "id": 65,
+      "pillar": "俗人對話錄",
+      "title": "姜信日肝癌手術2週綁束腹帶返工"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "兒虐傷痛被拿來當政治武器——寫家事不該成為公器的刀。",
+      "id": 66,
+      "pillar": "俗人對話錄",
+      "title": "Amy Acton生母影片"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "一條X貼文讓半島全家戒備——寫無常從來不打招呼，謠言即心魔。",
+      "id": 67,
+      "pillar": "佛法生活感悟文",
+      "title": "金正恩死亡謠言600萬觀看"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "放假、行程、收成都敵不過一場風——寫計畫與無常的對話。",
+      "id": 68,
+      "pillar": "佛法生活感悟文",
+      "title": "薔琵颱風黃金36小時"
+    }
+  ]
+}

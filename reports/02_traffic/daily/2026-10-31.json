@@ -1,0 +1,814 @@
+{
+  "date": "2026-10-31",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 628,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.cw.com.tw/",
+      "summary": "2026台北市長電視辯論會中午12時登場，尋求連任的蔣萬安與民進黨參選人沈伯洋首度同台正面對決，歷經申論、交叉詰問與媒體提問四階段激烈攻防，成全台政壇焦點。",
+      "title": "2026台北市長選舉首場電視辯論會登場，蔣萬安沈伯洋同台交鋒"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 629,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/",
+      "summary": "主計總處公布第3季經濟成長率概估達14.36%，創48年來同期新高，連四季維持雙位數成長；但K型復甦顯著，民間基層感受冷熱不均引熱議。",
+      "title": "主計總處上修Q3經濟成長率至14.36%，創48年同期新高"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 630,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/",
+      "summary": "10月台股歷經AI信用恐慌與外資史上最大單月賣超，但投信與八大公股行庫聯手低接護盤，月底展開強勁土洋籌碼大對決，守穩季線。",
+      "title": "台股10月外資大舉調節，投信與公股行庫強勢護盤守季線"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 631,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/",
+      "summary": "公平會經協調與審查後宣布，蘋果公司正式承諾自10月31日起將台灣App Store標準佣金費率由30%調降至26%，開發者社群高度關注。",
+      "title": "公平會宣布蘋果台灣App Store佣金今起調降至26%"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 632,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/",
+      "summary": "聯發科召開第3季法人說明會，執行長蔡力行宣布資料中心首款客製化AI加速器已順利量產出貨，宣示正式跨入雲端ASIC戰場，推動股價強彈。",
+      "title": "聯發科法說報喜：首款資料中心客製化AI加速器正式量產出貨"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 633,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.rti.org.tw/",
+      "summary": "第24屆台灣同志遊行於北市府前廣場盛大展開，主題「聲做伙聽，路做伙行」，適逢萬聖節湧入逾15萬人盛裝參與，蕭美琴出席、鄭麗文扮黑魔女祝福。",
+      "title": "第24屆台灣同志遊行盛大展開，萬聖節週末吸引逾15萬人齊聚"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 634,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://artemperor.tw/",
+      "summary": "已故日本傳奇音樂大師坂本龍一的大型逝世回顧展《坂本龍一｜觀音．聽時》於台北市立美術館正式開展，全台樂迷朝聖，首日預約秒殺。",
+      "title": "大師安魂曲：《坂本龍一｜觀音．聽時》大型回顧展北美館開展"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 635,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://www.upmedia.mg/",
+      "summary": "邁入第19屆的「2026搖滾台中」於文心森林公園熱血開唱，跨國攜手日本富士搖滾（Fuji Rock）與韓國GCA引進多組國際樂團，吸引數萬樂迷擠爆現場。",
+      "title": "搖滾台中攜手日本富士搖滾熱力開唱，文心森林公園湧入萬人"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 636,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://today.line.me/",
+      "summary": "2026台灣咖啡節於雲林古坑綠色隧道登場，集結全台與國際170家獨立咖啡莊園，主打風土手沖與田園生活美學，成為秋季慢旅熱門打卡點。",
+      "title": "2026台灣咖啡節古坑開喝：170家精品咖啡聚落體驗風土慢活"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 637,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ebc.net.tw/",
+      "summary": "今年萬聖節遇上週六，全台從天母萬聖節嘉年華到各大商圈擠滿「變裝打怪」家庭人潮，周邊交通塞爆，餐飲與變裝租賃商機創下歷年新高。",
+      "title": "萬聖節週末夜天母商圈湧入破十萬人，百鬼夜行帶動餐飲商機爆棚"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 638,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://www.wenweipo.com/",
+      "summary": "第七屆載人航天學術大會披露中國載人月球探測最新方案：2030年前將採用長征十號兩次發射、環月軌道對接模式，乘組三人其中兩人登月，登月服與月面著陸器進入初樣研發。",
+      "title": "中國首次載人登月任務詳情公布：長征十號兩次發射，2人踏上月球"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 639,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://www.163.com/",
+      "summary": "媒體發表深度調查引發全網激辯，紅果等短劇App佔據極大用戶時長，引發算法剝奪注意力、精神鴉片與防沉迷機制的廣泛爭議，字節高管強硬回應。",
+      "title": "「字節時間」與紅果短劇壟斷引激辯：互聯網時長收割下的文化焦慮"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 640,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/",
+      "summary": "美軍首度解密公佈中國在軌可重複使用試驗航天器（神龍）的高清衛星照片，引發國際軍事界對太空戰略與空天往返載具能力的連日解讀。",
+      "title": "美軍首度曝光中國可重複使用航天器在軌高清照片，引發國際熱議"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 641,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://news.sina.com.cn/",
+      "summary": "淘寶天貓、京東與抖音雙11第一階段付尾款開打，平台主打即時零售、以舊換新補貼，但消費者「反衝動覺醒」普遍比價、尋找性價比極致。",
+      "title": "雙11第一波尾款日開打：電商主打以舊換新，消費者比價理性轉向"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 642,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/",
+      "summary": "冷空氣全面南下，北方多地迎來顯著降溫並提早供暖，南方陰雨濕冷，氣象部門連發大風降溫警報，冬裝與羽絨服線上銷量暴增。",
+      "title": "下半年最強冷空氣南下席捲中東部，北方提早供暖防寒保供"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 643,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://www.hk01.com/",
+      "summary": "古風音樂元老級歌手、「鸞鳳鳴」團隊核心成員吾恩胃癌復發離世，終年41歲，其抗癌歷程與堅韌態度感動全網，微博熱搜登頂悼念。",
+      "title": "古風歌手吾恩因胃癌復發不幸離世，終年41歲，微博全網痛惜悼念"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 644,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://news.sina.com.cn/",
+      "summary": "NBA常規賽焦點對決，76人險勝尼克斯，勒布朗·詹姆斯在末節關鍵時刻完成壓哨補籃鎖定勝局，砍下賽季新高，衝上微博熱搜前列。",
+      "title": "詹姆斯壓哨補籃殺死比賽！76人險勝尼克斯衝上熱搜榜前二"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 645,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://www.ifeng.com/",
+      "summary": "黃子韜與徐藝洋直播護妻與過往宣傳言論落差引發全網討論，公眾人物在私領域、人設變現與粉絲信任邊界上的反覆拉扯再受審視。",
+      "title": "黃子韜徐藝洋直播引發爭議：明星私領域人設變現與公信力邊界"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 646,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.thepaper.cn/",
+      "summary": "萬聖節來臨，上海、廣州等一線城市年輕人轉向合規主題樂園與室內派對變裝狂歡，融合傳統東方神話角色與賽博龐克風格成為新流行。",
+      "title": "萬聖節變裝轉向室內潮玩：年輕人以東方神話Cosplay詮釋情緒釋放"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 647,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.douyin.com/",
+      "summary": "抖音等短影音平台掀起「非遺秋收手工」熱潮，從柿餅晾曬到農耕手作，鄉村慢生活美學成為當代打工人下班後的集體精神避難所。",
+      "title": "鄉村非遺秋收手作治癒打工人，短影音慢生活美學熱度飆升"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 648,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://kabutan.jp/",
+      "summary": "日本銀行（央行）在最新金融政策決定會合中釋放訊號，確認基調物價上升率已朝2%目標邁進，市場密切注視後續升息節奏，日圓震盪回升。",
+      "title": "日銀確認基調物價正向2%靠攏，市場高度戒備年底追加升息動向"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 649,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://us-jf.org/",
+      "summary": "自2月高市早苗內閣「未來投資解散」奪下眾院三分之二席次以來，內閣今日釋出最新綜合經濟對策細節，聚焦AI、半導體自主與民生減稅抗通膨。",
+      "title": "高市內閣推動大規模經濟刺激方案，聚焦半導體自立與抗通膨減稅"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 650,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://www.nikkei.com/",
+      "summary": "受週末美股AI族群劇烈震盪波及，東京股市日經指數半導體板塊走勢分化，愛德萬與東京威力科創逢低買盤進場，多空在38,000點激烈攻防。",
+      "title": "日經指數震盪收黑，半導體與出口股多空對決守護38,000點大關"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 651,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.tokyo-np.co.jp/",
+      "summary": "東京都澀谷區針對萬聖節週末夜實施最高警戒，ハチ公前設立圍欄隔離，路上禁酒令全面執行，防範外國觀光客滋事，成功將狂歡疏導至室內。",
+      "title": "澀谷封鎖八公像防範萬聖夜混亂，嚴格執行街頭禁酒與人潮疏導"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 652,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/",
+      "summary": "日本政府厚生勞動省今日針對高齡照護人力缺口發布最新白皮書，全面放寬介護領域外國特定技能簽證與導入長照AI輔助，引發基層體制檢討。",
+      "title": "厚勞省擴大介護外籍勞力與AI輔助引入，力解少子超高齡結構性難題"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 653,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.kab.co.jp/",
+      "summary": "日本列島迎來秋晴行樂好天氣，東京都心高溫突破25度，創下萬聖節當天31年來首次「夏日」紀錄，民眾紛紛脫下厚衣換上短袖出遊。",
+      "title": "萬聖節當日東京都心破25度夏日！創31年來季節外高溫紀錄"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 654,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.j-cast.com/",
+      "summary": "道奇季後賽止步後，大谷翔平在IG罕見公開愛犬「デコピン（Decopin）」洗澡時的呆萌放鬆照片，瞬間吸數百萬讚，治癒全日本球迷。",
+      "title": "大谷翔平突發愛犬Decopin洗澡治癒照，球迷直呼被天使拯救"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 655,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://enjoytokyo.jp/",
+      "summary": "「池袋萬聖節Cosplay嘉年華2026」今明兩日盛大舉行，吸引來自全球破十萬名Cosplayer與粉絲，結合動漫原創，成為亞洲最具規模的街頭盛典。",
+      "title": "池袋萬聖節Cosplay嘉年華熱鬧開跑，數萬動漫創作者盛裝佔領街頭"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 656,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.kab.co.jp/",
+      "summary": "靜岡縣河津町爬蟲動物園iZoo歷時11年跨國協議，自印尼迎來世界最大蜥蜴「科莫多巨蜥」並於今日正式公開亮相，吸引大批民眾排隊朝聖。",
+      "title": "歷經11年交涉！世界最大科莫多巨蜥今日於靜岡iZoo首度公開亮相"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 657,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://note.com/",
+      "summary": "物價上漲下，日本社群爆紅「週末自炊備餐（作り置き）」與極簡便當美學，年輕上班族不再依賴昂貴外食，回歸廚房找尋生活掌控感與療癒。",
+      "title": "面對物價上漲潮，日本年輕族群掀起「週末備餐與自煮療癒」新風尚"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 658,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.chinatimes.com/",
+      "summary": "萬聖節正日恰逢週末，梨泰院事故地點轉為肅穆悼念與安靜空間；韓國警方在弘大、江南等28處熱點動員近8千名警力實施單向人流管控，嚴防推擠。",
+      "title": "萬聖夜首爾警方部署近8千名警力嚴防踩踏，梨泰院悼念弘大嚴管"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 659,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.bau.com.hk/",
+      "summary": "韓國央行公佈第3季GDP超越市場預期，帶動民間消費微幅回暖，央行正式上調2026全年經濟成長預測，但結構性就業冷感仍引發學者質疑。",
+      "title": "韓國央行上調2026全年GDP成長預期，民間消費緩步復甦仍存溫差"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 660,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://tmgm.com/",
+      "summary": "受美股晶片波動影響，三星電子與SK海力士在高頻寬記憶體（HBM）競爭中股價大幅拉鋸，散戶加碼抄底與外資避險操作形成強烈多空對決。",
+      "title": "HBM晶片板塊多空激戰：三星與SK海力士牽動KOSPI科技權值走勢"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 661,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.donga.com/",
+      "summary": "南韓朝野就北韓近期頻繁試射及邊境擴音器宣傳政策展開國會激烈攻防，在野黨批政府對外政策過於強硬，國安高層強調防衛態勢絕不妥協。",
+      "title": "朝鮮半島邊界緊張局勢延燒，南韓國會就安保與對話政策激烈對峙"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 662,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.chosun.com/",
+      "summary": "首爾市針對租賃保證金詐騙（全貰詐欺）受害者擴大提供緊急低利安置貸款與法律支援，試圖平息青年族群因居住焦慮引發的社會怒火。",
+      "title": "首爾擴大全貰詐騙青年租客救濟方案，提供緊急安置貸款與訴訟協助"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 663,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.chineseherald.co.nz/",
+      "summary": "一款名為「山寺（Sansatemple）」的獨立網頁遊戲爆紅，玩家化身虛擬小和尚在3D佛堂中盤佛珠、打坐，全程零聊天零社交，上線首日擠爆伺服器。",
+      "title": "韓國「絕不社交」虛擬寺廟遊戲爆紅：無聊天無好友，年輕人瘋狂盤佛珠"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 664,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://seouloffscript.com/",
+      "summary": "年輕人不再跟風昂貴街頭萬聖節變裝，轉而盛行「家庭微型恐怖電影夜（Home Halloween）」，外送炸雞與南瓜甜點訂單在夜間迎來暴漲。",
+      "title": "萬聖夜狂歡回流客廳：韓國年輕人熱衷「微型家庭影院」與南瓜微醺"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 665,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.koreatimes.co.kr/",
+      "summary": "首爾深秋楓葉與銀杏進入全盛觀賞期，南山塔與景福宮周邊韓服體驗店全數預約滿額，外國觀光客與情侶湧入，秋季戶外慢步成為社群打卡焦點。",
+      "title": "首爾銀杏與楓葉進入全盛期，景福宮與南山秋色引發戶外漫步潮"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 666,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.yna.co.kr/",
+      "summary": "K-Pop大勢女團最新回歸單曲攻佔Melon等各大音源榜冠軍，輕快復古舞步在TikTok與YouTube Shorts掀起全球模仿舞蹈挑戰熱潮。",
+      "title": "大勢K-Pop女團回歸橫掃音源榜，復古輕快舞步掀起全球Challenge"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 667,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.joongang.co.kr/",
+      "summary": "面對外食餐飲連連漲價，韓國各大便利商店展開「巨型平價便當」戰，以大份量、少於5000韓元的極致性價比吸引學生與單身獨居族搶購。",
+      "title": "物價通膨下便利商店「巨型平價便當」逆勢大賣，獨居族精算求生"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 668,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.washingtonpost.com/",
+      "summary": "距離11月3日美國期中選舉僅剩最後數日，最新民調顯示選民對生活成本與通膨持久性高度焦慮，兩黨候選人在關鍵搖擺州展開最後衝刺拉票。",
+      "title": "2026美國期中選舉最後倒數：經濟與通膨焦慮成為選戰終局最大變數"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 669,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.theguardian.com/",
+      "summary": "前FBI局長柯米（James Comey）的法律團隊於10月31日向聯邦法院申請駁回其面臨的第三起起訴案，指控該指控為選前政治清算，引發司法攻防。",
+      "title": "前FBI局長柯米律師團要求駁回起訴案，斥選前政治動機司法角力"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 670,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.t3.com/",
+      "summary": "蘋果剛亮相首款配備7吋觸控螢幕與A18晶片的智慧家庭中樞「Apple HomeView」，亞馬遜火速推出預購折價促銷迎戰，智慧家庭巨頭戰火白熱化。",
+      "title": "蘋果推Apple HomeView智慧中樞，亞馬遜火速降價促銷正面交鋒"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 671,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.theguardian.com/",
+      "summary": "涉嫌刺殺聯合健康執行長的槍手曼吉歐尼（Luigi Mangione）律師向紐約州法院提動議，主張雙重審判保護以駁回州級謀殺控罪，全美高度矚目。",
+      "title": "聯合健康CEO命案後續：嫌犯律師援引「一罪不二審」爭取駁回州控罪"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 672,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.gizmodo.com/",
+      "summary": "在科技財報週與AI高估值疑慮下，華爾街科技股震盪加劇，亞馬遜與好市多等零售通路針對搭載最新晶片的筆電發起降價潮，硬體促銷戰提前引爆。",
+      "title": "美股科技股震盪修正，各大電商提前發動M系列晶片筆電降價促銷"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 673,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.chicagoparkdistrict.com/",
+      "summary": "萬聖節當日全美社區展開盛大變裝要糖（Trick or Treat）活動，芝加哥士兵球場等地舉辦大型家庭派對，經典超級英雄與怪獸Cosplay引領街頭風潮。",
+      "title": "萬聖夜狂歡席捲全美：社區要糖與球場派對湧現，變裝熱潮嗨翻週末"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 674,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://mashable.com/",
+      "summary": "各大串流平台在萬聖節週末夜推出經典恐怖與神秘學電影馬拉松，影迷社群掀起復古驚悚片重溫熱，成為不少家庭抵禦寒夜的最佳娛樂方式。",
+      "title": "萬聖夜串流平台恐怖片馬拉松熱播，復古驚悚電影引發全美討論"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 675,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://9to5toys.com/",
+      "summary": "今年萬聖節遇上高通膨物價，美國民間家庭盛行「DIY變裝與糖果團購」風潮，社群平台TikTok上的「低成本創意萬聖裝扮」影片觀看量破億。",
+      "title": "通膨下的萬聖節：美家庭掀起DIY環保變裝風，TikTok省錢創意爆紅"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 676,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.espn.com/",
+      "summary": "大學美式足球秋季關鍵戰役與MLB世界大賽後的休賽期熱烈討論交織，球迷週末聚焦各大焦點對決，體育酒吧人氣爆滿迎來狂歡狂潮。",
+      "title": "大學美式足球熱戰與萬聖節週末重疊，全美運動酒吧湧入觀賽狂潮"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 677,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.foodnetwork.com/",
+      "summary": "秋季南瓜香料（Pumpkin Spice）與蘋果酒熱飲再度霸占各大連鎖咖啡店與烘焙坊，結合萬聖節南瓜雕刻的家庭傳統，溫暖整個秋冬時節。",
+      "title": "秋季南瓜香料甜點再度制霸全美飲食圈，南瓜雕刻成溫馨家庭記憶"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 678,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.aljazeera.com/",
+      "summary": "歐洲多國持續受高通膨與生活成本危機衝擊，法國於萬聖節在全國佈署7萬警力嚴防極高秩序風險，德國約30城與義大利羅馬同步爆發大規模青年示威。",
+      "title": "生活成本危機引發全歐青年抗爭：法國部署7萬警力嚴防萬聖夜失控"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 679,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.reuters.com/",
+      "summary": "G20外長會議於亞特蘭大召開，因俄外長拉夫羅夫出席，英德加澳等盟友拒絕同框，主辦方為免爭議取消全家福合照，凸顯西方與俄羅斯的深刻撕裂。",
+      "title": "G20外長會因俄外長出席引發爭議，歐美盟友拒絕同框取消大合照"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 680,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.storm.mg/",
+      "summary": "華府在推進俄烏和談並重新評估駐歐美軍規模之際，透過雙邊閉門會向波羅的海等北約歐洲盟友發出警示，要求在公開談論涉俄威脅時謹言慎行。",
+      "title": "美方私下警示北約歐洲盟友：涉俄涉烏言論應謹言慎行避免升級"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 681,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.people.com.cn/",
+      "summary": "德國總統施泰因邁爾對中國展開國事訪問並與習近平會談，聚焦綠色低碳、數字經濟與穩定中歐經貿合作，在歐洲景氣低迷之際尋求務實出口。",
+      "title": "德國總統訪華深化雙邊合作，聚焦綠色轉型與中歐經貿穩定"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 682,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://www.theguardian.com/",
+      "summary": "波蘭憲法法院因法官停職爭議引發憲政體制震盪，防暴警察與抗議民眾在法院外激烈對峙，總統卡羅爾緊急中斷西非外訪回國介入，東歐局勢緊繃。",
+      "title": "波蘭憲法法院爭端引發首都激烈抗爭，總統緊急中斷外訪回國介入"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 683,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.sportsevents365.com/",
+      "summary": "歐洲足壇迎來罕見超級德比週末：德甲拜仁慕尼黑對多特蒙德國家德比、意甲米蘭同城德比與尤文圖斯對那不勒斯同日激戰，吸引全歐數千萬球迷。",
+      "title": "歐洲足壇「超級德比週末」引爆狂歡：德甲意甲三大世紀對決同日開打"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 684,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.thehindu.com/",
+      "summary": "德國青年團體發起GenZ regelt示威，將萬聖節諷刺變裝與抗議通膨、住房租金飆漲訴求結合，席捲柏林法蘭克福30城，展現青年以荒誕對抗現實。",
+      "title": "德國Z世代以萬聖諷刺變裝走上30城街頭，抗議高房租與通膨高壓"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 685,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://kyivindependent.com/",
+      "summary": "國際體育仲裁法庭CAS裁定撤銷國際冰球聯會對俄選手禁令，為俄運動員參賽開口，引發東歐與北歐體壇強烈抗議，體育與政治邊界再成焦點。",
+      "title": "國際體育仲裁法庭撤銷俄冰球禁令，引發東歐與北歐多國體壇強烈反彈"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 686,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.bbc.com/",
+      "summary": "歐盟環保與社區團體發起友善南瓜倡議，推動萬聖節南瓜雕刻後全食利用（湯品、烘焙與堆肥），反對節慶食物浪費，在倫敦與巴黎年輕家庭爆紅。",
+      "title": "歐盟青年推廣「零浪費萬聖南瓜」倡議：從南瓜雕刻到風土全食料理"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 687,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://www.timeout.com/",
+      "summary": "面對昂貴生活成本，倫敦與巴黎年輕人流行起週末二手古著市集與公共美術館慢步，以低消費、重體驗的日常美學找回生活鬆弛感。",
+      "title": "高物價下的生活美學轉向：英法青年熱衷週末復古古著市集與慢旅"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 688,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.thenationalnews.com/",
+      "summary": "伊朗革命衛隊稱多艘未經授權油輪在荷姆茲海峽觸雷起火，美軍加派戰機執行夜間護航，卡達在聯合國安理會緊急呼籲確保自由航行，國際油價飆升。",
+      "title": "荷姆茲海峽多艘油輪觸雷起火，美軍加強巡邏護航、國際油價跳漲"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 689,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://www.aljazeera.com/",
+      "summary": "川普在訪談中稱美伊衝突預計很快結束、絕不演變為無限期戰爭；同時美財長貝森特推動經濟逐底行動，全面封鎖胡塞與真主黨外部資金鏈。",
+      "title": "川普稱美伊衝突不會演變成無限期戰爭，美財政部升級極限經濟制裁"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 690,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.jpost.com/",
+      "summary": "情報指黎巴嫩真主黨正利用階段性停火重整武裝部隊，以軍高度戒備；貝魯特當局在國際解除武裝施壓與以軍完全撤離間陷入艱難外交平衡。",
+      "title": "以黎停火協議浮現脆弱隱憂：真主黨重整戰力引發邊境新一輪警戒"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 691,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/",
+      "summary": "葉門胡塞武裝向亞丁國際機場發射彈道導彈未造成傷亡，沙烏地多國聯軍隨後在南部邊界上空成功攔截胡塞攻擊無人機，阿拉伯半島防空警報頻響。",
+      "title": "胡塞武裝突襲葉門亞丁，沙烏地防空部隊南部邊界緊急攔截無人機"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 692,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://www.worldbank.org/",
+      "summary": "中東地緣升溫導致波斯灣原油與液化天然氣海運保險費用飆升，世銀旗下MIGA與日歐等進口國政府紛紛啟動緊急貿易金融再保險支援計畫。",
+      "title": "波斯灣航運風險驟升，世界銀行與多國政府啟動能源海運再保險機制"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 693,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.arabnews.com/",
+      "summary": "沙烏地阿拉伯第七屆利雅德季盛大展開，主題Big Time帶來為期10週娛樂盛宴，10/31頂級世界級拳擊世紀之戰開打，全球名流與體育迷湧入。",
+      "title": "沙烏地「利雅德季2026」狂歡迎高潮：世界拳王爭霸戰引爆波斯灣娛樂夜"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 694,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/",
+      "summary": "10月底杜拜氣溫降至舒適宜人，露天庭園咖啡、濱海海灘俱樂部與戶外市集全面復甦，告別酷暑後居民與遊客掀起波斯灣秋季戶外慢活潮流。",
+      "title": "告別酷暑迎來黃金氣候：杜拜戶外慢活生活風格全面復甦"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 695,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/",
+      "summary": "杜拜第31季全球村（Global Village）盛大回歸，集合世界數十國文化館、傳統手作與街頭美食，成為中東居民週末家庭出遊的第一選擇。",
+      "title": "杜拜第31季「全球村」火熱回歸：多元文化手工藝與美食匯聚地標"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 696,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://www.dubaidet.gov.ae/",
+      "summary": "年度「杜拜健身挑戰（30x30）」帶動全民運動風氣，號召連續30天每天運動30分鐘，現代健康體魄與身心平衡成為海灣青年主流生活態度。",
+      "title": "杜拜健身挑戰掀起全民熱潮：倡導每日30分鐘，運動重塑城市節奏"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 697,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://www.visitdubai.com/",
+      "summary": "杜拜家居節登場，展現阿拉伯傳統貝都因美學與現代直角簡約設計的完美融合，當地年輕家庭掀起追求自然材質與內在平靜的「極簡治癒居家風」。",
+      "title": "杜拜家居節引領新風尚：傳統貝都因風土遇上現代極簡居家美學"
+    }
+  ],
+  "followupNote": "本日擴充納入歐洲與中東，完整覆蓋台、中、日、韓、美、歐、中東七地，共 70 則情報（綜合與生活各半）；呈現地緣能源焦點與全球青年生活型態轉向。",
+  "globalSummary": "萬聖節週末與秋末景致交織出七地（台、中、日、韓、美、歐、中東）無比豐富的人心光譜：\n\n一端是緊繃的地緣博弈與資本對決——荷姆茲海峽油輪觸雷引發能源神經緊繃、G20外長會歐俄分歧取消合照、美歐就涉俄言論私下敲打、台灣市長電視辯論與美國期中選舉進入衝刺；科技巨頭間的真金白銀硬仗（聯發科首款資料中心AI加速器出貨、蘋果HomeView大戰亞馬遜）更預示著AI泡泡退潮後的落實廝殺。\n\n但在宏觀巨浪之下，普通人正在用極其生動的方式「拿回生活的錨點」：\n- 歐洲青年面對高物價與生活成本危機，將萬聖節變裝轉化為諷刺抗爭，法國出動7萬警力嚴防，同時英法青年走向零浪費南瓜與復古古著市集；\n- 中東在航運地緣風暴旁，迎來一年最舒適的秋季，利雅德季拳王爭霸與杜拜戶外慢活、全城健身挑戰展現繁華與現代生機；\n- 東亞四地與美國則在狂歡與悼念間尋找喘息：韓國擠爆「絕不社交」的佛堂小遊戲盤佛珠、日本在31年夏日高溫下被大谷愛犬洗澡照治癒、台灣同志遊行與咖啡節多元共融、中國在短劇時長收割爭議中走向秋收慢作。\n\n當外部世界的熵增無法阻擋，每個人都在用具體的行動，為自己的日子構築一座微型避風港。",
+  "globalTheme": "萬聖週末的全球人心光譜：喧囂政局、荷姆茲地緣火線與跨越七地的「身心降熵」自救",
+  "sourceModifiedAt": "2026-10-31T12:00:00.000Z",
+  "storylines": [
+    {
+      "id": 58,
+      "items": [
+        "台灣：同志遊行逾15萬人盛裝出遊、天母百鬼夜行商機爆棚",
+        "日本：都心創31年夏日紀錄、澀谷八公圍欄防滋事、池袋萬聖Cosplay大展",
+        "韓國：梨泰院悼念肅穆、警方部署近8千名警力防踩踏、年輕人盛行微型家庭萬聖夜",
+        "美國：全美社區要糖派對熱鬧登場、通膨下DIY低成本創意變裝在TikTok爆紅",
+        "中國：年輕人轉向合規室內潮玩與主題樂園、東方神話變裝成新趨勢"
+      ],
+      "kind": "跨區線",
+      "summary": "五地同過萬聖節，卻呈現完全不同的社會心理切面：日美台沈浸於狂歡與遊行釋放，韓社會在梨泰院記憶下以謹慎秩序與室內小聚替代狂歡，中國則將變裝轉化為室內情緒出口。",
+      "title": "五地萬聖節光譜：狂歡、秩序、悼念與省錢的五重奏"
+    },
+    {
+      "id": 59,
+      "items": [
+        "台灣：聯發科法說宣布首款資料中心客製化AI加速器量產出貨，強打雲端ASIC戰場",
+        "美國：蘋果推Apple HomeView智慧中樞、亞馬遜發動促銷，M系列晶片筆電降價潮",
+        "日本：日銀確認物價回升2%、愛德萬與東京威力科創逢低護盤守38,000點",
+        "韓國：三星電子與SK海力士在HBM板塊激烈攻防，外資與散戶多空對抗"
+      ],
+      "kind": "跨區線",
+      "summary": "AI與科技巨頭進入「算力落地與商用變現」的硬仗階段，從聯發科ASIC到蘋果亞馬遜智慧家庭，虛浮概念褪去，真金白銀的落地產品與性價比成為決定性戰場。",
+      "title": "科技退潮後的實戰期：客製化AI晶片與智慧家庭中樞全面交鋒"
+    },
+    {
+      "id": 60,
+      "items": [
+        "韓國：主打無聊天無好友的「山寺」網頁遊戲因湧入十萬人擠崩伺服器",
+        "日本：物價高企下年輕人掀起週末自炊備餐（作り置き）與極簡便當狂潮",
+        "中國：「字節時間」紅果短劇演算法收割時長引全網反思，農耕秋收慢生活影片成避風港",
+        "台灣：咖啡節與坂本龍一回顧展朝聖，樂迷與慢活族在風土中尋求精神定錨"
+      ],
+      "kind": "跨區線",
+      "summary": "面對資訊過載與演算法綁架，東亞四地年輕人集體展現「低能耗、反社交、尋回生活掌控」的降熵嘗試，拒絕被時長收割，回歸個人真實五感。",
+      "title": "反社交與精神喘息：青年族群的集體降熵與自救"
+    },
+    {
+      "id": 61,
+      "kind": "跨區線",
+      "title": "荷姆茲海峽火線與全球能源神經：地緣緊張下的海運再保險大動員",
+      "summary": "伊朗荷姆茲海峽多艘油輪觸雷起火，美軍夜間巡邏護航、國際油價飆漲；波斯灣航運風險驟升推動世界銀行MIGA、歐盟與日韓等進口國緊急啟動國家級海運再保險機制。",
+      "items": [
+        "中東：多艘未授權油輪觸雷、胡塞發射導彈、卡達於安理會疾呼航行自由",
+        "美國：川普稱衝突不演變成無限期戰爭、財政部擴大經濟逐底極限制裁",
+        "歐洲與日韓：世銀MIGA保險激增、日本修法擴大中東原油LNG海上再保險支援"
+      ]
+    },
+    {
+      "id": 62,
+      "kind": "跨區線",
+      "title": "生活成本危機下的全球青年覺醒：從巴黎德意示威到極簡降熵生活",
+      "summary": "高物價與通膨重壓下，歐洲法德意青年萬聖節發起大規模生活成本抗議（法國出動7萬警力防失控），同時催生倫敦零浪費倡議、日本週末自炊備餐、韓國巨型平價便當與美國DIY變裝熱潮。",
+      "items": [
+        "歐洲：法國7萬警力防秩序失控、德國30城Z世代萬聖諷刺遊行抗議高房租",
+        "日本與韓國：日青年週末備餐（作り置き）對抗物價、韓超商巨型平價便當熱銷",
+        "美國：TikTok低成本DIY萬聖裝扮爆紅、通膨下家庭回歸社區要糖"
+      ]
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "從韓國「無社交寺廟遊戲」爆紅看一人公司的精髓：當全世界都在教你做大做重、社交擴圈時，真正的奢侈是「為道日損」的主動斷捨離。給心靈降熵，才是一切生機的起點。",
+      "id": 85,
+      "pillar": "佛法生活感悟文",
+      "title": "「絕不社交」的寺廟小遊戲：當我們渴望一座不需要開口的佛堂"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "主計總處上修Q3經濟至14.36%創48年新高，然而街頭小店家與打工人為何普遍感受不到「繁榮」？剖析科技巨浪下的K型撕裂，以及一人公司在宏觀巨獸面前的「反脆弱生存法」。",
+      "id": 86,
+      "pillar": "金融一百零八講",
+      "title": "GDP 14.36%的狂歡與街頭的寂靜：K型社會下的個人避風港"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "從《字節時間》短劇爭議談注意力的產權：演算法用低級多巴胺收割你的時間，而你該如何建立「防沉迷護城河」？真正的財富不是銀行的數字，而是自由支配生命的注意力。",
+      "id": 87,
+      "pillar": "俗人對話錄",
+      "title": "紅果短劇與「字節時間」：在演算法的重力場裡，奪回生命的注意力"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "萬聖節變裝與天母百鬼夜行背後，是現代人用荒誕對抗現實焦慮的集體儀式。從「扮裝」到「卸妝」，看我們如何誠實面對內在最真實的自己。",
+      "id": 88,
+      "pillar": "俗人對話錄",
+      "title": "萬聖夜的荒誕狂歡：當我們需要戴上面具，才敢表達真實的生活"
+    },
+    {
+      "id": 89,
+      "brandRelevant": true,
+      "pillar": "金融一百零八講",
+      "title": "荷姆茲油輪觸雷與航運再保險：當黑天鵝變成日常，你的資產有護城河嗎？",
+      "direction": "從波斯灣航運危機與世界銀行MIGA再保險激增，解析地緣黑天鵝如何穿透全球供應鏈。真正的資產配置不是預測風暴何時來，而是構建低能耗、抗脆弱的負熵底盤。"
+    },
+    {
+      "id": 90,
+      "brandRelevant": true,
+      "pillar": "俗人對話錄",
+      "title": "法德7萬警力與青年抗爭：當「生活成本」變成下一代不可承受之重",
+      "direction": "歐洲Z世代在萬聖節借題發揮抗議通膨與租金，反思社會體制如何將年輕人逼入死角。一人公司的核心不是賺大錢，而是跳出被剝奪的體制重力場，找回自己的主權。"
+    }
+  ]
+}
