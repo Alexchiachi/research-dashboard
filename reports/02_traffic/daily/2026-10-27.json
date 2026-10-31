@@ -1,0 +1,810 @@
+{
+  "date": "2026-10-27",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 883,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xVKU5lBHvU",
+      "summary": "恒隆廣場戶外市集每日11:00至21:00，泰式香茅豬頸肉、韓式芝士金幣燒、比利時華夫餅等，雲閃付滿減券與霸王餐為收尾話題。",
+      "title": "武漢國際美食周今日收尾，15國美食、80餘家商戶市集到10/27"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 884,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/7333/9818856",
+      "summary": "把購物車丟給AI打分、列「不買清單」，有人刪掉近半購物車、攔下數千元衝動消費，從拚手速轉為拚理性。",
+      "title": "年輕人用AI整頓雙11，「便宜但用不上的東西最貴」成金句"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 885,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-27/doc-iniwrkkz4820139.shtml",
+      "summary": "國際金價較年初高點回撤約29%，多家銀行把積存金買入端費率推向零區間，但風險測評過期、准入線上移、贖回端仍收費。",
+      "title": "積存金克價跌回「8字頭」，90後投資人掛單撿便宜、買完即浮虧成今日理財故事"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 886,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.cn/article_7857201856_1d45362c001908sl52.html?from=ent",
+      "summary": "新浪綜藝小時報今日頭條為《後會友期》耍大牌爆料、鄧超熱場聊不停、范丞丞看向王安宇的「下意識」一幕。",
+      "title": "綜藝熱點：鄧超共創之夜聊滿全場、范丞丞王安宇友情互動刷屏"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 887,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-20/detail-inivwiti7780666.d.html",
+      "summary": "京東跨店每滿300減50、品類券與PLUS 95折可疊加，天貓已開賣、綜合優惠低至7.2折，AI服務首次納入大促。",
+      "title": "雙11美妝節奏進入囤套裝關鍵檔，10/31開門紅為下一波高峰"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 878,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "署名高校在讀生的聯名呼籲書出現在校內論壇後多被刪除，截圖轉傳暗網與境外平台，成五中全會場外話題。",
+      "title": "五中全會第二天，北大等校學生聯名呼籲書促廢國家主席無限任期制引境外熱議"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 879,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://www.bastillepost.com/hongkong/article/17053786-%e9%87%91%e5%83%b9%e5%8f%8d%e5%bd%88-%e7%8f%be%e8%b2%a8%e9%87%91%e9%87%8d%e4%b8%8a4000%e7%be%8e%e5%85%83",
+      "summary": "上週創3個月低位後反彈，油價下跌略緩通膨憂慮，市場靜待本週聯準會議息，金價仍在4000美元關口拉鋸。",
+      "title": "金價反彈重上4000美元，現貨金報約4016美元、紐約期金漲約0.8%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 880,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261027/49819807.html",
+      "summary": "中華網今日熱點並列白銀新低與金銀跳水、原油狂飆，貴金屬與能源走勢分化成投資社群帳面話題。",
+      "title": "白銀價格創近一年新低，金銀跳水、原油狂飆成今日財經熱點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 881,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261027/49819807.html",
+      "summary": "巴西高等選舉法院計票99.77%後判定魯拉以約435萬票差距勝出，川普的質疑使巴西大選成跨區話題。",
+      "title": "巴西總統決選底定：魯拉51.76%擊敗Flávio Bolsonaro連任，川普稱「操縱選舉」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 882,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.nownews.com/news/6886822",
+      "summary": "姆巴佩在金球獎訪談中稱最喜歡把自己臉合成到毛澤東頭像上的迷因，引發中國球迷抨擊，懂球帝稱不予翻譯。",
+      "title": "姆巴佩稱最愛「毛澤東迷因」惹怒中國網友，懂球帝發聲明切割不翻譯"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 933,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/world/mena/middle-east-war-drone-missile-intercepted-over-riyadh-as-king-khalid-airport-resumes-operations-1.500722685",
+      "summary": "機場10/26起1號航廈飛國內線、2號航廈飛本國籍國際線，10月初遇襲造成13死、300多人傷，是沙烏地十多年來最致命攻擊。",
+      "title": "利雅德哈立德國王機場復航後在再襲警告下營運，國內與國際航線分流恢復"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 934,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://english.ajel.sa/lifestyle/p2mcsunef",
+      "summary": "第七屆利雅德季10月21日開幕、為期10週，Boulevard World迎來第五年，含10月31日Canelo對Mbilli拳擊賽、11月7日WWE Crown Jewel等重頭戲。",
+      "title": "利雅德季Boulevard World門票開賣，10月30日對外開放，新增葉門、葡萄牙、烏茲別克、荷蘭四國展區"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 935,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.ad-hoc-news.de/unterhaltung/reisen/dubai-mall-hosts-the-twilight-spectacle-from-15-october/70352209",
+      "summary": "杜拜購物中心House of Hype推出萬聖節限定企劃，含不給糖就搗蛋探險、現場表演、巡遊與主題餐飲，萬聖節已成杜拜家庭旅遊旺季招牌。",
+      "title": "杜拜購物中心萬聖節「暮光奇觀」：House of Hype變裝派對至11月1日"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 936,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/lifestyle/brick-or-treat-trails-and-the-dragon-a-parents-guide-to-halloween-at-legoland-dubai-1.500705378",
+      "summary": "樂園主打「不嚇人」的親子萬聖節：尋糖步道、南瓜拼砌、迷你樂園尋鬼換冰淇淋與4D萬聖節電影，天氣轉涼後戶外樂園進入旺季。",
+      "title": "杜拜樂高樂園萬聖節：Brick-or-Treat尋糖步道至11月2日，門票已含活動"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 937,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://en.arqam.news/599519/",
+      "summary": "Mandarin Oriental Downtown的Billionaire Dubai推出六夜限定晚餐秀，以「感知失靈」為主題，義大利與日本料理搭配LED錯覺舞台。",
+      "title": "杜拜61樓萬聖節晚餐秀DISTURBIA今晚開演，10月27日至11月1日，鏡像錯覺主題"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 928,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.philstar.com/world/2026/10/27/2566051/netanyahu-rivals-trade-attacks-over-iran-clock-counts-down-israel-vote",
+      "summary": "納坦雅胡以伊朗威脅為主軸催票，稱只有他能「完成對付德黑蘭的工作」，對手艾森科特指其把安全議題政治化、搞恐懼競選。",
+      "title": "以色列今日大選投票，納坦雅胡政治生死戰、730萬選民決定120席國會"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 929,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://www.timesnownews.com/world/middle-east/israel-elections-benjamin-netanyahu-idf-eyal-zamir-clash-iran-strike-article-156406206",
+      "summary": "Channel 12披露扎米爾接獲政治領導層指令後要求深入討論並索取有政治領袖簽名的書面法律授權，擔心誤判引發選前突然對抗。",
+      "title": "納坦雅胡與參謀總長扎米爾就伊朗行動爆發衝突，軍方要求書面法律授權"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 930,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.dailywaadaa.com/world/2026/10/26/houthis-say-they-attacked-saudi-oil-pumping-stations-riyadh-airport-as-fighting-intensifies",
+      "summary": "胡塞稱打擊1200公里東西油管泵站與哈立德國王機場，聯軍稱摧毀沙那兩具彈道飛彈發射器、空襲葉門境內飛彈隧道與彈藥庫。",
+      "title": "胡塞稱襲擊沙烏地東西油管泵站與利雅德機場，聯軍稱摧毀沙那發射器反擊"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 931,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://www.geo.tv/latest/688447-saudi-arabia-urges-iran-crisis-parties-to-negotiate-warns-against-renewed-military-escalation",
+      "summary": "麥加公約三國高官與伊朗官員在德黑蘭會談，沙烏地稱此舉旨在補充卡達與巴基斯坦主導的調解、以對話解決危機而非重啟軍事對抗。",
+      "title": "沙烏地、土耳其、巴基斯坦高官赴德黑蘭談判，利雅德籲對話代替再升級"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 932,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://www.aljazeera.com/news/liveblog/2026/10/27/iran-war-live-iran-says-us-not-serious-on-talks-ship-on-fire-off-iraq",
+      "summary": "近500艘船仍在海峽外等候，英國海事機構通報伊拉克外海船隻起火，油價維持近半年高點，美國戰略儲油降至1982年以來最低。",
+      "title": "荷莫茲海峽航運受阻未解，伊拉克外海船隻起火、油價維持近半年高點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 873,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://sports.ltn.com.tw/news/breakingnews/5619302",
+      "summary": "梅賽鍶8局無失分包辦單場與系列賽MVP，龍隊4勝中有3場完封兄弟，寫下台灣大賽歷史新高。",
+      "title": "味全龍G6以6：0完封兄弟，4勝2敗奪隊史第6冠，逾30家合作夥伴推封王同慶優惠"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 874,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6886800",
+      "summary": "莊凱勛強調台灣多元包容，並婉拒多家AI廠商索取臉孔與聲音授權，認為那就不是本人的表演。",
+      "title": "莊凱勛慶功談蔡康永風波直呼「峰迴路轉？」，並拒賣臉孔與聲音給AI"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 875,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://news.ebc.net.tw/news/living/577614",
+      "summary": "氣象署針對14縣市發布強風特報，局部恐有8級以上陣風，未來一週三波季風接力。",
+      "title": "東北季風增強，今晚至週三清晨宜蘭雨最大，14縣市發布陸上強風特報"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 876,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "消費版面熱議的換機話題，OLED與防水升級伴隨漲價，買不買的算盤成為社群討論點。",
+      "title": "蘋果iPad mini大改款傳聞：首搭OLED、IP67防塵防水，漲價22,900元起"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 877,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "頒獎夜後戲劇節目大獎歸屬、視帝視后爆冷與否成為娛樂版延續流量，慶功宴發言逐句被截圖轉發。",
+      "title": "金鐘61完整得獎名單持續發酵，《與惡II》奪戲劇節目大獎成社群二刷話題"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 868,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "蔡康永出席沈伯洋競總成立大會後遭中國抵制、品牌切割，發聲明致歉並強調沒支持過台獨，引發「被周子瑜」既視感。",
+      "title": "蔡康永突致歉稱「沒支持過台獨」，沈伯洋痛心：台灣人的自由不應被中國干預"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 869,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5619411",
+      "summary": "台中、新北、基隆市長與議員、里長今日上午陸續抽籤，新北蘇巧慧、李四川皆由競選團隊代抽。",
+      "title": "九合一號次抽籤今日全台登場，原訂10/23因薔琵順延"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 870,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "莊凱勛擊敗周渝民、曾敬驊奪視帝，楊貴媚以《與惡II》奪視后，《忘了我記得》6獎、《與惡II》4獎。",
+      "title": "金鐘61戲劇類結果出爐：《忘了我記得》狂掃6獎最大贏家，莊凱勛封帝、楊貴媚三度封后"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 871,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619686",
+      "summary": "煙花已達中颱中段班、今日有機會增強為強颱，預計10/31至11/1後大角度轉向東北，依目前路徑不會靠近台灣。",
+      "title": "煙花颱風眼現形，今恐升強颱，預估下週大角度北轉不影響台灣"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 872,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5619662",
+      "summary": "台東地院原裁500萬交保遭花蓮高分院撤銷，吳俊立以住院缺席羈押庭，檢方確認無大礙後晚間上銬帶回重開羈押庭。",
+      "title": "農路弊案500萬交保遭撤銷，吳俊立稱病住院、檢方自高雄押回台東"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 893,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/9497fe5964905949348b65eb7a2ac88f3ae289f3",
+      "summary": "軟銀先發松本晴對決DeNA王牌東克樹，2024年同樣劇本為軟銀橫濱2連勝後DeNA連贏4場逆轉，福岡3至5戰採用DH制。",
+      "title": "日本系列賽第3戰今晚18時福岡開打，軟銀2連勝、DeNA背水一戰"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 894,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://dtimes.jp/post-1428337/",
+      "summary": "Travelco秋日歸巴士搜尋動向：關鍵字第1紅葉、第2海鮮、第3麝香葡萄，東日本目的地第1河口湖，紅葉＋富士山＋美食成定番。",
+      "title": "秋日歸巴士旅遊搜尋第1名是「紅葉」，東日本首選河口湖"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 895,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://note.com/yutopia88/n/nd80e079f2321",
+      "summary": "展示與警備費用增加為背景，高中生以下與65歲以上免費措施維持，文化機構漲價潮成生活版話題。",
+      "title": "國立美術館觀覽料上漲，京都國立近代美術館收藏展430円漲至1000円"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 896,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://nagomunews.com/%e4%bb%8a%e6%97%a5%e3%81%ae%e5%89%8d%e5%90%91%e3%81%8d%e3%81%aa%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%b95%e9%81%b8%ef%bc%882026%e5%b9%b410%e6%9c%8827%e6%97%a5%ef%bc%89/",
+      "summary": "在深海嚴苛環境下把海底火山熱能轉換為清潔電力，海洋資源再生能源實用化邁出一大步。",
+      "title": "世界首例海底地熱發電實證成功，海面下1.6公里活火山熱能轉為電力"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 897,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://nagomunews.com/%e4%bb%8a%e6%97%a5%e3%81%ae%e5%89%8d%e5%90%91%e3%81%8d%e3%81%aa%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%b95%e9%81%b8%ef%bc%882026%e5%b9%b410%e6%9c%8827%e6%97%a5%ef%bc%89/",
+      "summary": "兵庫縣立醫院眾籌達標引進高度救命處置醫生車，佐賀大學育種大豆製成的無調整豆乳以青臭味低、口感醇厚為賣點。",
+      "title": "眾籌4500萬円達標，兵庫「會動的急救室」醫生車即將導入；佐賀大學新品種大豆豆乳上市"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 888,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.47news.jp/15143406.html",
+      "summary": "27日東京股市開盤即反彈，與昨日開盤續跌、盤中跌逾500円完全翻轉，投資人關注美股、物價與聯準會動向。",
+      "title": "東證反彈，日經一度漲逾1000円，午前9時15分漲1142円"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 889,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/rkk/3032496",
+      "summary": "GMO面臨顧客情報公開與追加攻擊預告，社長表明不支付贖金，金融相要求金融機構採取被害防止措施。",
+      "title": "GMO遭預告27日正午公開顧客情報並追加攻擊，攻擊者索價79億円"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 890,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://note.com/yutopia88/n/nd80e079f2321",
+      "summary": "樂天集團26日公布海外飯店預約網站遭入侵，最多260萬件顧客情報為對象，安全碼不在外洩範圍。",
+      "title": "樂天旅遊遭不正存取，最多約260萬件個資可能外洩、3.6萬件含卡名義與有效期限"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 891,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/rkk/3032496",
+      "summary": "日本全國新聞頭條並列以色列大選，納坦雅胡以伊朗威脅為主軸催票，對手艾森科特指其把安全議題政治化。",
+      "title": "以色列今日大選投票，納坦雅胡政治生死戰、政權交替可能性受關注"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 892,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://note.com/yutopia88/n/nd80e079f2321",
+      "summary": "福田康夫2007至2008年任首相，與父親赳夫成憲政史上首對親子首相，任內創設消費者廳、推動公文書管理制度。",
+      "title": "福田康夫前首相逝世，享年90歲，22日病逝、自民黨26日公布"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 923,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://planetefootball.com/news/premier-league-matchweek-8-review",
+      "summary": "曼聯在老特拉福德遭三球羞辱，利物浦靠Wirtz與Isak四分鐘內兩球取勝，兵工廠2-0勝艾佛頓暫居第2。",
+      "title": "英超第8輪：曼聯主場0-3慘敗給伯恩茅斯，利物浦2-0勝布萊頓升第4"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 924,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://internewscast.com/news/storm-boelo-strikes-uk-a-day-after-storm-austen-passes-through/",
+      "summary": "西碼頭自2003年兩場縱火後不斷被海水侵蝕，Austen巨浪再沖垮一側結構，全盛期年吸200萬遊客，如今只剩殘骸。",
+      "title": "布萊頓西碼頭再塌入海：風暴Austen巨浪沖垮1866年地標殘段"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 925,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.marathons.com/en/marathon-de-lille/lille-marathon-makes-its-grand-return-this-sunday-october-25-after-31-years-away_y39v",
+      "summary": "里爾馬拉松自1995年後首度復辦，路線從市中心自由大道至城堡廣場，逾萬跑者參賽，Austen強風導致起點附近一名跑者被吹落物砸傷。",
+      "title": "里爾馬拉松睽違31年回歸：週日穿越10個市鎮，風暴中一名跑者受傷"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 926,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.thesun.ie/news/17809085/brits-warned-do-not-travel-storm-austen-winds/",
+      "summary": "Haven度假園區疏散住客，赴英旅客被提醒出發前確認航班，週末旅遊行程普遍受阻，今日復電與復課進度成民生話題。",
+      "title": "風暴打亂歐洲旅遊：康沃爾87所學校停課、度假園區疏散，史基浦機場取消約90班機"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 927,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://rg.org/news/gambling-industry/best-bets-today-brewers-rays-cowboys-eagles-october-26-2026?utm_source=chatgpt.com",
+      "summary": "週一賽程包括PSG對里昂的焦點戰，前一輪摩納哥1-1里爾、雷恩16分暫居榜首，PSG 14分排第5，法甲爭冠集團混戰。",
+      "title": "法甲週一夜：巴黎聖日耳曼對里昂，爭冠集團混戰延續"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 918,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.telegraphindia.com/amp/gallery/serbias-student-list-ousts-vucic-with-52-7-vote-but-who-will-govern-remains-unclear-photogallery/cid/2186394",
+      "summary": "官方計票近99%完成，學生名單52.7%對SNS聯盟39.2%，學生名單獲139席、SNS聯盟97席，投票率近70%為南斯拉夫解體後最高。",
+      "title": "塞爾維亞學生名單得票52.7%確認，139席終結武契奇12年統治"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 919,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.tribuneindia.com/news/world/protesters-target-police-convoy-in-belgrade-after-vucic-concedes-defeat-in-parliamentary-polls-report/",
+      "summary": "武契奇承認敗選後，市中心群眾向撤離中的警車喝倒彩、投擲物品，警方撤離關鍵地點時多處路口爆發對峙。",
+      "title": "貝爾格勒週日晚群眾圍堵撤離警車，變天慶祝轉為街頭對峙"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 920,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.japantimes.co.jp/news/2026/10/27/world/politics/vucic-defeat-moscow-gloom/",
+      "summary": "日本時報引路透指出武契奇敗選使莫斯科半年內連失兩名歐洲重要夥伴，俄方視塞爾維亞為抵禦歐盟圍堵的堡壘。",
+      "title": "莫斯科為失去塞爾維亞盟友而低迷，半年內連失匈牙利與塞爾維亞"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 921,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://n.yam.com/Article/20261022652158",
+      "summary": "當局部署7萬警力，多數集會和平，巴黎、馬賽入夜後仍爆衝突，總理會見學生領袖後抗議統計與執法爭議成延續話題。",
+      "title": "法國反生活成本示威24日逾1300人被捕、53名警員受傷，內政部估41萬人上街"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 922,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://magazine24-7.com/n/storm-boelo-cuts-power-to-22000-homes-amid-new-wind-alert-D5O3",
+      "summary": "應急團隊已預置資源因應夜間強風，能源供應商開設專線通報復電進度，Austen與Boelo連襲已造成英、法、德逾15萬戶一度斷電。",
+      "title": "風暴Boelo餘波：仍有2.2萬戶斷電，氣象局再發西部風警報"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 913,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/shopping/sports/tickets/2026/10/26/buy-world-series-game-4-tickets-rays-vs-brewers/92445005007/",
+      "summary": "G1釀酒人3-2、G2 5-4勝出後系列賽移師坦帕，G4今晚8時ET在Tropicana Field舉行，門票起價約796美元。",
+      "title": "世界大賽G4今晚坦帕開打，釀酒人若連取G3、G4最快本週即可封王"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 914,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/sports/world-series-tickets-tampa-plunge-with-rays-0-2-hole--flm-2026-10-26/",
+      "summary": "光芒0-2落後後坦帕三場潛在比賽入場價全數低於密爾瓦基前兩場的一半，G1密爾瓦基入場價2338美元創世界大賽紀錄。",
+      "title": "世界大賽坦帕門票暴跌，G3入場價較三天前跌37%至536美元"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 915,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://beebulletin.com/halloween/",
+      "summary": "74%美國人計劃慶祝，裝扮44億、裝飾43億、糖果41億，成人最熱門裝扮是女巫，兒童是蜘蛛人。",
+      "title": "萬聖節消費再創新高：NRF預估2026全美支出135億美元、人均115美元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 916,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.surfer.com/news/king-tides-california-super-el-nino-video",
+      "summary": "聖嬰Kelvin波使實際水位比天文預測高18至22吋，Newport Beach已宣布地方緊急狀態、部署沙包與抽水機。",
+      "title": "南加州大潮進入高峰，潮位達8.3至8.5呎，橙縣沿海洪水警報持續至週四"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 917,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://beebulletin.com/halloween/",
+      "summary": "2026年獵人月於美東時間週一午夜後達最圓，萬聖節當晚月亮已虧、天黑後升起較晚，提醒孩童攜帶手電筒與反光裝備。",
+      "title": "獵人月滿月後，萬聖節當晚為虧凸月、天黑後升起較晚"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 908,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.tribuneindia.com/news/usa-news/trump-offers-usd-1-million-reward-for-reporting-voter-fraud-in-past-and-upcoming-2026-midterm-polls/",
+      "summary": "川普在Truth Social宣布檢舉過去或2026期中選舉舞弊者，在舞弊者被逮捕定罪後可獲100萬美元，白宮未說明獎金來源。",
+      "title": "川普懸賞100萬美元檢舉選舉舞弊，稱逮捕定罪後即支付"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 909,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.timesnownews.com/world/us/us-news/trump-doj-charges-47-green-card-holders-with-alleged-illegal-voting-article-156411568",
+      "summary": "案件橫跨加州、賓州、佛州、紐約、內華達5州，涉及非法投票、冒稱公民登記、入籍程序不實陳述等多個選舉週期。",
+      "title": "司法部起訴48名非公民選舉犯罪，其中47人為綠卡持有者"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 910,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.aljazeera.com/news/liveblog/2026/10/27/iran-war-live-iran-says-us-not-serious-on-talks-ship-on-fire-off-iraq",
+      "summary": "半島電視台今日戰爭直播指出伊朗批美方談判缺乏誠意，英國海事機構通報伊拉克外海船隻起火，荷莫茲航運受阻仍持續。",
+      "title": "伊朗稱美國「不認真」談判，伊拉克外海一艘船起火"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 911,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "http://trends.billionsideas.com/google-top-stories/united-states",
+      "summary": "Google美國今日熱門頭條首位為巴西大選，魯拉戲劇性回歸勝出，Flávio拒絕承認結果並尋求選舉無效。",
+      "title": "巴西大選：魯拉第四任期勝出，Flávio Bolsonaro拒絕承認、川普稱操縱"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 912,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "http://trends.billionsideas.com/google-top-stories/united-states",
+      "summary": "法官裁定川普政府非法解僱Maurene Comey，認定總統豁免裁決不能成為解僱理由，「總統並非凌駕於法律之上」。",
+      "title": "法官裁定司法部非法解僱前FBI局長柯米之女Maurene Comey"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 903,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.koreatrendboard.com/ko",
+      "summary": "韓國趨勢板今日1位為ATEEZ，T1與2026世界賽亦在榜首輪替，電競與偶像流量壓過政治版面。",
+      "title": "韓國搜尋榜今日由遊戲與偶像主導：T1、2026世界賽、ATEEZ輪流登頂"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 904,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://ameblo.jp/windy69/entry-12981560739.html",
+      "summary": "以照片、影像、美術與空間設計重構K-POP藝術肖像，參展者包括BTS、G-Dragon、Stray Kids、aespa、IVE等。",
+      "title": "BTS等48組K-POP藝人展覽《D'FESTA THE ORIGIN》首爾汝矣島展至11/30"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 905,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261024_0003839700?id=NISX20261024_0003839700&reply",
+      "summary": "10/24首爾廣場市民追悼大會2000人出席後，京畿道已宣布營運追悼期間，萬聖節以安全為主題的行動接續。",
+      "title": "梨泰院慘案4週期追悼走向10/29正日，31日綠莎坪接續「哀悼與安全的節慶」萬聖節行動"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 906,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/society/12185205",
+      "summary": "25日最後一場「無車潛水橋」以400米長桌「炸雞日」送別車流後，26日零時起全面禁車，步行橋成漢江慢生活新地標。",
+      "title": "首爾潛水橋開通50年變身漢江首座步行專用橋，22處眺望空間與透明甲板2027年8月完工"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 907,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://mobile.newsis.com/view_amp.html?ar_id=NISI20261027_0021505730",
+      "summary": "Newsis今日熱門娛樂並列朴娜莱近況自述「想守護自己」、金淑濟州宅石牆崩塌監視器畫面追兇。",
+      "title": "娛樂熱搜：朴娜莱「注射阿姨」近況、金淑濟州230坪老宅石牆崩塌成話題"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 898,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.etoday.co.kr/news/view/2640332?trc=right_categori_news",
+      "summary": "韓銀27日公布速報值，半導體出口季增2.3%、設備投資季增4.1%，但民間消費季減0.2%，出口與消費的溫度差成主線。",
+      "title": "韓國第3季GDP季增1.0%，遠超央行預期的0.3%，年增3.4%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 899,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261026_0003841496?id=NISX20261026_0003841496&reply",
+      "summary": "民主黨今日上午在國會舉行國政監查對策會議，外交統一委員會等綜合監查把韓美同盟、金正恩快閃訪中列為焦點。",
+      "title": "國政監查今日登場，韓美同盟與金正恩訪中成爭點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 900,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261026_0003841496?id=NISX20261026_0003841496&reply",
+      "summary": "韓媒今日頭條並列川普對巴西大選結果的質疑，魯拉以約435萬票差距勝出，美國期中選舉前的選舉信任議題同步升溫。",
+      "title": "川普稱巴西大選為「操縱選舉」，魯拉連任引發跨區爭議"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 901,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261026_0003841496?id=NISX20261026_0003841496&reply",
+      "summary": "韓媒今日金融頭條指出Anthropic相關利好成為開盤催化劑，半導體雙雄領漲，與昨日KOSPI跌破5500的弱勢形成對比。",
+      "title": "Anthropic利好帶動半導體股早盤急漲，三星電子約4%、SK海力士約6%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 902,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261026_0003841496?id=NISX20261026_0003841496&reply",
+      "summary": "韓媒今日社會頭條指出金建希案在大法院追加拘束審問在即，釋放時程與司法程序成為社群追蹤點。",
+      "title": "金建希釋放前4天，大法院將舉行追加拘束審問"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "七地人心今日共同的底色是「投票與空襲同一天、慶祝與算帳同一天」：以色列人排隊投票決定納坦雅胡去留，同一時間胡塞飛彈仍指向利雅德與油管；塞爾維亞學生用選票換掉12年統治，隔夜街頭卻已圍堵警車；台灣抽籤與道歉並行、美國懸賞檢舉舞弊與起訴綠卡選民並行。恐懼沒有讓生活停擺——利雅德季照常售票、杜拜萬聖節照常佈置、金鐘與封王照常慶祝——只是每一個「照常」都帶著一點硬撐的意味。數字很好、荷包還沒感覺是另一條共同線：韓國GDP 1.0%卻民間消費負成長、中國金價重上4000美元卻人人算著積存金的點差與贖回費。上面談方向，下面練節制。",
+  "globalTheme": "以色列大選投票日＋美伊戰爭僵局＋選舉週與變天餘波",
+  "sourceModifiedAt": "2026-10-27T09:10:00+08:00",
+  "storylines": [
+    {
+      "id": 85,
+      "items": [
+        "中東：730萬選民投票決定120席國會，兩陣營皆未過半",
+        "美國：川普背書納坦雅胡，稱只有他留任美方才會再對伊朗動手",
+        "日本：全國新聞頭條並列以色列大選與政權交替可能性",
+        "歐洲：多國呼籲以外交代替新攻擊"
+      ],
+      "kind": "跨區線",
+      "summary": "以色列今日投票，納坦雅胡以伊朗威脅催票、對手指其政治化安全議題，軍方與政治領導層就伊朗行動爆發衝突；川普公開背書納坦雅胡，日本、歐洲版面同步關注，組閣僵局與看守政府可能性並存。",
+      "title": "以色列大選投票日"
+    },
+    {
+      "id": 86,
+      "items": [
+        "中東：東西油管為繞過荷莫茲海峽的替代出口路線，成新攻擊目標",
+        "美國：美方對沙烏地等13國發布旅遊警示，伊拉克外海船隻起火",
+        "歐洲：多國關注油價與航運受阻對能源與物價的連動"
+      ],
+      "kind": "跨區線",
+      "summary": "胡塞稱襲擊東西油管泵站與利雅德機場，聯軍反擊沙那發射器；沙烏地、土耳其、巴基斯坦高官赴德黑蘭談判，伊朗稱美方談判不認真，荷莫茲海峽近500艘船等候、油價近半年高點。",
+      "title": "美伊戰爭僵局與胡塞襲沙烏地油管升級"
+    },
+    {
+      "id": 87,
+      "items": [
+        "美國：選舉信任本身成了選戰武器",
+        "歐洲：塞爾維亞變天後組閣未知，法國生活成本抗議逾1300人被捕",
+        "台灣：抽籤是制度儀式，道歉卻是情緒引爆點",
+        "中國：五中全會第二天，場外聯名呼籲書成境外話題"
+      ],
+      "kind": "跨區線",
+      "summary": "美國期中選舉11/3前最後一週，川普懸賞100萬美元檢舉舞弊、司法部起訴48名非公民；塞爾維亞學生名單52.7%確認139席，貝爾格勒夜圍堵警車；巴西魯拉連任，川普稱操縱；台灣九合一今日號次抽籤。",
+      "title": "選舉週與變天餘波"
+    },
+    {
+      "id": 88,
+      "items": [
+        "台灣：金鐘慶功發言逐句被截圖轉發",
+        "台灣：味全龍逾30家合作夥伴推封王同慶優惠"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日預告的金鐘戲劇類與台灣大賽G6今日皆有結果：金鐘《忘了我記得》6獎、莊凱勛封帝、楊貴媚三度封后；味全龍G6以6：0完封兄弟、4勝2敗奪隊史第6冠。",
+      "title": "金鐘與台灣大賽結果出爐"
+    },
+    {
+      "id": 89,
+      "items": [
+        "日本：金融相要求金融機構採取被害防止措施",
+        "日本：政府「能動的網路防禦」適用討論再升溫"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "昨日GMO社長承認事前已有安全性課題指摘，今日攻擊者預告正午公開顧客情報並索價79億円；樂天旅遊最多260萬件個資可能外洩，兩起事件同一天並排，數位生活的安全感成日本今日主線。",
+      "title": "GMO與樂天資安連爆"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "從現貨金重上4000美元、積存金克價跌回「8字頭」、銀行買入端零費率但贖回端仍收費切入，談回撤不等於安全邊際、點差才是隱形成本。",
+      "id": 108,
+      "pillar": "金融一百零八講",
+      "title": "金價在4000美元關口拉鋸：撿便宜的人在算什麼帳"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "半導體出口與設備投資拉動GDP，民間消費卻由增轉減，對照上週個人與外資雙賣壓，談出口與生活的溫度差。",
+      "id": 109,
+      "pillar": "金融一百零八講",
+      "title": "韓國GDP 1.0%卻民間消費負成長：數字很好、荷包還沒感覺"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "從「被周子瑜」既視感切入，談表態壓力下的自由底線，不選邊站隊、只問一句：誰有權要求另一個人交代立場。",
+      "id": 110,
+      "pillar": "俗人對話錄",
+      "title": "蔡康永道歉：在台灣參加什麼活動，憑什麼要向對岸交代"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "139席之後組閣未知、街頭慶祝轉為圍堵警車，談街頭能換人，但換人之後的復電、算帳與日常才是真正的考驗。",
+      "id": 111,
+      "pillar": "俗人對話錄",
+      "title": "塞爾維亞學生勝選後的第一夜：換人之後的日子怎麼過"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "以色列投票、胡塞襲油管、德黑蘭談判同一天，利雅德季照常售票、杜拜萬聖節照常佈置，談硬撐的照常與真正的安住有何不同。",
+      "id": 112,
+      "pillar": "佛法生活感悟文",
+      "title": "投票與空襲同一天：恐懼裡的「照常」是什麼意思"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "從「便宜但用不上的東西最貴」切入，談刪掉近半購物車的節制不是不買了，是把決策權拿回來，與慢生活的修行同一回事。",
+      "id": 113,
+      "pillar": "佛法生活感悟文",
+      "title": "雙11用AI整頓購物車：不想再被大促牽著走"
+    }
+  ]
+}

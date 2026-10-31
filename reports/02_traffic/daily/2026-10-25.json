@@ -1,0 +1,621 @@
+{
+  "date": "2026-10-25",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 693,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xVFhyXgrmS",
+      "summary": "金價下跌恰逢週末，水貝人流爆滿；一個月內品牌金飾克價從1300元附近跌至1200元附近；羊年賀歲金首發走輕量化、重工藝路線，年輕人更看設計與文化寓意。",
+      "title": "深圳水貝金價跌、週末擠爆，「買黃金的人比菜市場還多」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 694,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://news.ifeng.com/c/8xSzzQuCOKu",
+      "summary": "近半數首次進入武漢；雲閃付發放滿減美食券＋1000份霸王餐，1–9月武漢餐飲收入同比增5.7%。",
+      "title": "武漢國際美食周10/23–27：15國美食、80餘家商戶"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 695,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/stock/jdts/2026-10-22/detail-iniwamip5194611.d.html",
+      "summary": "10/15開鑼橫跨秋冬換季、囤貨節點；手機、護膚、運動戶外、家具類目爆款湧現，店播破千萬新商數同比增133%。",
+      "title": "抖音商城雙11好物節開門紅：消費券帶動破億商家數同比增200%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 696,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://news.qq.com/rain/a/20261023A03INJ00",
+      "summary": "國貨增16.5%、國際品牌增27.6%；珀萊雅、薇諾娜、玉澤、毛戈平等國貨領跑，高端線赫蓮娜、修麗可增幅居前。",
+      "title": "抖音雙11美妝開閘前八天：重點品牌GMV 25.45億元、同比增20.1%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 697,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.21jingji.com/article/20261024/herald/662f8257521364e352d932c3eda16469.html",
+      "summary": "運動員公開抵制偷拍行為引發共鳴；同日「小天才封閉社交」「白鹿掉粉」等話題亦在熱文榜前列，公眾人物邊界感成熱議。",
+      "title": "樊振東發文抵制偷拍，衝上熱搜第一"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 688,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://news.mingpao.com/pns/%e4%b8%ad%e5%9c%8b/article/20261025/s00013/1792862610834/%e9%87%91%e6%ad%a3%e6%81%a9%e7%aa%81%e8%a8%aa%e4%b8%ad%e6%9d%b1-%e5%bf%ab%e9%96%83%e5%8f%96%e9%81%93%e6%96%b0%e9%b4%a8%e7%b6%a0%e6%b1%9f%e6%a9%8b-%e5%87%ba%e5%b8%ad%e6%8a%97%e7%be%8e%e6%8f%b4%e6%9c%9d%e7%b4%80%e5%bf%b5%e6%b4%bb%e5%8b%95-%e7%8e%8b%e6%bb%ac%e5%af%a7-%e9%80%9a%e8%bb%8a%e5%a5%91%e6%a9%9f%e6%93%b4%e7%b6%93%e8%b2%bf",
+      "summary": "時隔13個月再訪華，經本月中才通車的新鴨綠江大橋赴丹東、當日來回；適逢抗美援朝76周年，王滬寧稱願以大橋通車為契機擴大經貿合作；外界解讀或為APEC期間特金會探路。",
+      "title": "金正恩快閃訪丹東，王滬寧陪同獻花、參觀汽車工廠"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 689,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xVFZh4SyeY",
+      "summary": "截至24日17時16死76傷；在院傷者36人、其餘已離院；共記錄餘震949次；四級調配物資60518件套，轉移群眾12489人，板房陸續到位轉入過渡安置。",
+      "title": "西藏巴青地震救援：震區電力全面恢復，在院傷者36人、餘震949次"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 690,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/7331/9829637",
+      "summary": "分析稱預料無重大人事變動，但習近平將藉機進一步鞏固權威；會前6省人事換班，郭寧寧料任福建省長，唐登杰、王志軍分任山西、湖南省委書記。",
+      "title": "中共二十屆五中全會10/26–29召開，習近平進一步鞏固權威"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 691,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.com.cn/roll/2026-10-25/doc-iniwkrxe0133645.shtml",
+      "summary": "美東週五現貨收跌0.72%報3995.63美元；國內品牌足金飾品10/24跟跌6–12元；高油價、美聯儲12月加息預期升溫、全球去槓桿是三大推手，預計10月下旬至11月上旬續承壓。",
+      "title": "金價大跌：現貨跌破4000美元，國內品牌金飾一個月跌約100元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 692,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/6809/9835541?from=searchresult",
+      "summary": "繼上週末演變成嚴重暴力後，政府增派警力、部署7萬警員，羅浮宮等閉館；示威者訴苦物價上漲「不得不走上街頭」。",
+      "title": "法國41萬人再示威抗議生活成本，巴黎相對平和落幕"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 683,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.mirrordaily.news/story/93254",
+      "summary": "節目類延至今日、戲劇類延至10/26，61年來首次因颱風延期；星光大道改北流表演廳室內舉行、不開放民眾觀禮。",
+      "title": "金鐘61節目類今晚19時北流登場，61年來首次因颱風延期"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 684,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://n.yam.com/Article/20261021271514",
+      "summary": "第5戰因颱風順延至今晚17時05分；PLG、TPBL職籃同步延賽，市長議員選舉號次抽籤改至10/27。",
+      "title": "職棒台灣大賽第5戰今晚17時05分，龍象大戰續戰"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 685,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://n.yam.com/Article/20261023786878",
+      "summary": "路線自新光三越台北天母店沿忠誠路二段至大葉高島屋；今年與塔麻歌子合作，園遊會10/26下午1時至8時於天母運動公園。",
+      "title": "天母搞什麼鬼百鬼夜行今晚19時出發，250家討糖改10/26"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 686,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7323/9831036?from=udn-relatednews_ch2",
+      "summary": "溫泉季10/22–26於北投光明路、七星街舉行，主題「泉湧北投百年湯・北海道Yosakoi夜來祭」；遊行期間光明路實施彈性交管。",
+      "title": "台北溫泉季踩街遊行今日下午13時30分登場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 687,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://n.yam.com/Article/20261023786878",
+      "summary": "第十屆萬聖嘉年華10/25–26舉行，變裝免費入園、12歲以下可領限量小禮包；持天母搞什麼鬼DM變裝還可領士林市場美食抵用券。",
+      "title": "兒童新樂園萬聖嘉年華今日登場，變裝免費入園"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 678,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/125052/9833052?from=udn-ch1_breaknews-1-cate9-news",
+      "summary": "薔琵昨晚8時30分解除海上警報，災情更新為1死634傷、一般災情9676件，曾停電逾35萬戶；農損1.33億元，雲林佔82%，防衛重心全面轉入災後復原。",
+      "title": "薔琵海警昨晚解除，全台轉入災後復原，1死634傷、農損1.33億"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 679,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/124652/9831795",
+      "summary": "沈伯洋帶動的「洋流」效應拉抬綠營小雞選情，綠營稱要戒慎恐懼、藍營稱將成大混戰；原定今日內湖、南港車掃與市政開講宣布延期。",
+      "title": "選戰「洋流」效應延燒，沈伯洋台北大洋流車掃宣布延期"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 680,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9831399",
+      "summary": "市占三成的大豆沙拉油7月爆苯駢芘超標遭勒令停工；雲林學校自購沙拉油遇限購、現金結帳，餐飲業者抱怨每桶從800元漲破千元。",
+      "title": "中聯油脂停工，食用油供應吃緊波及校園午餐"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 681,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9831399",
+      "summary": "內政部公布114年簡易生命表，國人平均壽命81.27歲；衛福部稱及早發現治療，癌症能如慢性病般長期控制。",
+      "title": "國人平均壽命81.27歲，排除癌症可增至84.97歲"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 682,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/7266/9831399",
+      "summary": "死者與同團女子各住單人房、並未同住；網友挖出互追、代墊萬元疑點，友人澄清代墊款是借給在台室友，案情仍待日本警方調查。",
+      "title": "台女河口湖命案，網友挖出互追、代墊萬元疑點，友人出面澄清"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 703,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.baseballchannel.jp/npb/296096/",
+      "summary": "第1戰軟銀延長11回庄子適時打先勝；第2戰TBS／NHK-BS轉播、TVer免費直播；27日起移師福岡。",
+      "title": "日本シリーズ第2戰今晚18時橫濱：DeNA vs 軟銀，連霸 vs 下剋上"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 704,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://news.infoseek.co.jp/article/theanswer_744226/",
+      "summary": "巨人新監督就任、24年ぶり日本復歸；網友稱「大谷が監督になるくらいに匹敵」；ESPN紀錄片中松井贈簽名球給大谷的場面再被翻出。",
+      "title": "松井秀喜「年輕世代知らない可能性」が話題，大谷受簽名舊事再翻"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 705,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://news.infoseek.co.jp/article/response_418175/",
+      "summary": "218ps、52kWh電池；新型雷諾「5」同時發表，兄弟車相乘效應推高話題；價格11月19日公布。",
+      "title": "阿爾卑斯首款EV「A290」11月19日日本發售，續航360km，SNS歡迎"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 706,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/sbs/3036187",
+      "summary": "睽違11年的東京灣大型煙火祭昨晚登場，成週末話題。",
+      "title": "東京灣大華火祭11年ぶり開催，夜空を彩る"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 707,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/sbs/3036187",
+      "summary": "車站建設進度首度對外展示，抽選倍率約12倍，鐵道迷與沿線居民關注。",
+      "title": "リニア中央新幹線「神奈川縣站」建設中月台初公開，抽選倍率約12倍"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 698,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/nbc/3036154",
+      "summary": "氣象廳25日5時15分全般氣象解説情報；前線南下活發化，西日本至東日本太平洋沿岸警報級大雨；26日暴風・高波・高潮に警戒。",
+      "title": "台風30号、26日朝九州北部最接近・上陸恐れ，25日夜から土砂災害嚴戒"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 699,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261025/",
+      "summary": "顧客情報持ち出され攻撃者から金錢要求；10月施行の関連法に基づく適用を要請；不正取引確認分は損失補償へ。",
+      "title": "GMO不正アクセス、政府に「能動的サイバー防御」緊急要請、利用者一律5000円見舞金"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 700,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://newsdig.tbs.co.jp/articles/sbs/3036187",
+      "summary": "王滬寧が抗美援朝紀念館廣場で出迎え、紀念塔に獻花；妹・與正氏も同行；APEC前の米朝首腦會談への「積極信號」との見方も。",
+      "title": "金正恩が電撃訪中、開通直後の新鴨綠江大橋を渡り丹東へ"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 701,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261025/",
+      "summary": "背景は干ばつ、飼育數75年ぶり低水準；11月の中間選舉を控えるトランプ政權も對策に追われる。",
+      "title": "米國の牛肉高騰、日本に余波：輸入の4割弱を占める米国産が高止まり、豪州産へシフト"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 702,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://www.asahi.com/pickup-news-summary/20261025/",
+      "summary": "土地を買わず期限付きで借りるため所有權より1～2割安い傾向；一方で借地期間滿了が近づくにつれ資産價值が大きく下落する可能性。",
+      "title": "定借マンション、都心で腳光：昨年1都3縣で過去最多の供給戶數"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 723,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.jsonline.com/story/sports/mlb/brewers/2026/10/23/brewers-vs-rays-live-updates-world-series-game-1-score-highlights--live/92391084007/",
+      "summary": "G1釀酒人首局2-0領先，103勝主場迎戰98勝光芒；Fox轉播，今晚第二戰決定系列賽走向。",
+      "title": "世界大賽G2今晚續戰：釀酒人vs光芒，46年來首次兩隊皆未奪冠之對決"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 724,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://nypost.com/2026/10/24/us-news/southern-california-coastal-flooding-threatens-laguna-beach-resort-as-king-tides-loom/",
+      "summary": "NWS警告週一至週四晨潮或達7.5–8呎，挑戰2005年聖佩德羅7.93呎紀錄；拉古納海灘400萬美元緊急加固斷崖，卡皮斯特拉諾海灘6–7戶紅標拆除。",
+      "title": "南加州海岸洪水警報10/25–29：橙縣警告、洛杉磯建議，潮位或破8呎"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 725,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://digiday.com/marketing/nearly-30-of-holiday-budgets-expected-to-be-spent-by-the-end-of-october/",
+      "summary": "六年最高；黑五概念被稀釋，Z世代與千禧世代反而計劃多花4%；「先買再說」成今年消費主調。",
+      "title": "假日購物季變「馬拉松」：Deloitte調查28%民眾10月底前花光假日預算"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 726,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://mynewsla.com/orange-county/2026/10/24/forecasters-warn-of-possible-record-high-tides-in-la-county/",
+      "summary": "南加州本週先迎破紀錄大潮，下週末低壓轉向西岸，萬聖節戶外活動面臨變數。",
+      "title": "萬聖節週末風暴窗口：10/30–11/2降雨機率90%，萬聖節活動恐受影響"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 727,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/entertainment/music/2026/10/22/glee-reboot-potential-taylor-swift-episode/92381946007/",
+      "summary": "Ryan Murphy與原創編劇已完成劇本、聯繫約10位舊卡司回歸；懷舊重啟潮再添一筆。",
+      "title": "《歡樂合唱團》確認重啟：Disney+／Hulu開發中，傳有Taylor Swift致敬集"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 718,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/news/politics/2026/10/24/trump-votes-early-in-florida-for-midterm-elections/92420938007/",
+      "summary": "週六下午3時58分抵達，投完即赴喬治亞造勢；此前他以郵寄投票卻屢批郵寄制，引發「言行不一」議論；期中選舉11月3日舉行，共和黨力保國會控制權。",
+      "title": "川普佛州提前投票：與梅拉尼婭親赴棕櫚灘投票站，稱「完全按黨派投」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 719,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.manilatimes.net/world",
+      "summary": "民主黨在期中選舉倒數10天全力催票；民調顯示民主黨領先5–12個百分點，共和黨恐失眾議院、甚至參議院。",
+      "title": "歐巴馬赴俄亥俄助選，批川普「殘酷」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 720,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/business/autos-transportation/trump-set-announce-plan-by-audi-build-us-factory-georgia-source-says-2026-10-24/",
+      "summary": "路透引政府官員稱川普週六將在喬治亞宣布；關稅壓力下外國車廠製造回流，Audi拒評。",
+      "title": "川普將宣布Audi喬治亞建廠：年產20萬輛SUV（Q7／Q8／Q9），南卡另產2.5萬輛"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 721,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.manilatimes.net/world",
+      "summary": "韓美高官稱11/18–19深圳APEC前時間不足；金正恩經新通車鴨綠江大橋赴丹東、當日來回，或為潛在峰會探路。",
+      "title": "金正恩快閃訪中，APEC前特金會可能性渺茫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 722,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://udn.com/news/story/6809/9835541?from=searchresult",
+      "summary": "政府部署7萬警員、羅浮宮等閉館，巴黎遊行相對平和；示威者訴苦物價上漲「不得不走上街頭」；法國動盪亦成美國選戰移民辯論的遠方鏡像。",
+      "title": "法國41萬人再示威、約1000人被拘，抗議生活成本"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 713,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://moamoa.live/deepdive/38a32c52aedcfd2ec7809a8d1b912801",
+      "summary": "1900年10月25日高宗頒布大韓帝國敕令第41號明定獨島為領土；慶北教育廳以累計300萬人次的網絡獨島學校為基礎擴大體驗教育，鬱陵島建獨島教育院；10/26格列飛列島特別演出。",
+      "title": "獨島之日（10/25）第126週年：金長勳×徐敬德紀念影像、網絡獨島學校體驗教育強化"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 714,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "「完연한 가을，바다 바라보며 질주」為號召，跑者沿海邊賽道競跑，成週末健康話題。",
+      "title": "2026紐西斯海洋馬拉松：秋日海邊奔跑登場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 715,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "得獎作家作品銷量急升，書店藉勢營銷；與音樂劇「明星營銷」逆襲、觀眾轉向話劇芭蕾同列文化消費話題。",
+      "title": "諾貝爾文學獎帶動書市「特殊效果」，書店熱賣"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 716,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "FC首爾睽違10年奪冠，集團會長公開向球員致意；季後賽「秋季英雄」話題延燒，三星金英雄多全壘打記憶被提起。",
+      "title": "FC首爾10年來首冠：GS會長許泰秀祝賀球員辛勞"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 717,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "兩人結婚一週年之際公布喜訊，粉絲祝福湧入；同日李多海回應「中國風外貌」評價、安恩真10公斤減重後粉紅禮服成話題。",
+      "title": "金佳恩×尹善宇結婚1年宣布懷孕，「天使寶寶來了」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 708,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "濟州山區逾200mm暴雨，南部20–80mm；韓半島上陸可能性低，26日轉溫帶低氣壓；今日南部仍受間接影響。",
+      "title": "태풍 참피：제주 한라산 200mm超 물폭탄，각종 피해·행사 취소"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 709,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://newspim.com/news/view/20261023000905",
+      "summary": "韓聯社率先披露，統一部證實；王滬寧陪同獻花、參觀汽車工廠；路透引韓美高官稱11/18–19深圳APEC前時間不足，年內特金會可能性渺茫。",
+      "title": "김정은 24일 전격 방중，新압록강대교 거쳐 단둥 당일往返"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 710,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261024032451004?section=local/all",
+      "summary": "10/29正日將至；追悼自梨泰院站祈禱會起，遊行至首爾廣場，含犧牲者呼名、默念、遺屬致詞與追悼演出；外國犧牲者遺屬亦致詞。",
+      "title": "梨泰院慘案4週期市民追悼大會10/24首爾廣場，總理、吳世勳、遺屬、市民2000人出席"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 711,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261024_0003839716",
+      "summary": "就政治資金法二審無罪後首日跑滿行程；批執政黨要求彈劾大法院長是「選出權力凌駕三權的錯覺」，呼籲執政黨自制。",
+      "title": "吳世勳無罪翌日全日行程：真觀寺水陸齋、追悼大會、瑞典石材捐贈式"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 712,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261021_0003835300",
+      "summary": "繼企業網站停服風波後，學校系統亦被攻破；與日本GMO事件同頻，東亞資安焦慮升溫。",
+      "title": "學校也遭駭：接連駭客入侵、個人信息外洩，教育界疲於應對"
+    }
+  ],
+  "followupNote": "明日留意：台風30號26日九州最接近／上陸；中共五中全會10/26–29；金鐘戲劇類10/26；台灣大賽第5戰今晚結果；世界大賽G2今晚；日本シリーズ第2戰今晚。",
+  "globalSummary": "今日全球主線：金正恩快閃訪中（中、韓、日三地同題）＋台風30號北上逼近九州（台、日、韓連動）＋美國期中選舉最後衝刺（川普提前投票、歐巴馬助選）。人心觀察：台灣從防災切回過節模式，今晚金鐘、龍象大戰、百鬼夜行三台同夜，狂歡底下是務實的收尾心態；中國災區的燈亮了、錢包還在暗處，金價跌反而讓水貝更擠，避險神話破滅後是另一種執念；日本是「備える週末」，九州等颱風、東京算牛肉漲價、GMO用戶等見舞金，都在問出事後誰兜底；韓國在獨島之日與梨泰院追悼之間同時記住與悼念，焦慮結構性、日子照樣熱鬧；美國選民要的很具體——先降生活成本、結束伊朗戰爭，政治口水與自然潮水同一天漲到家門口。",
+  "globalTheme": "金正恩快閃訪中＋台風北上逼近九州＋美國期中選舉最後衝刺",
+  "sourceModifiedAt": "2026-10-25T09:03:00+08:00",
+  "storylines": [
+    {
+      "id": 62,
+      "items": [
+        "金正恩24日經新通車鴨綠江大橋快閃丹東，王滬寧陪同獻花、參觀汽車工廠，當日來回",
+        "中、韓、日三地同題：中國官媒強調血盟與經貿，韓媒關注APEC前特金會可能性渺茫，日媒關注大橋通車的地緣意義",
+        "明日觀察：五中全會開幕後中朝互動是否再有後續"
+      ],
+      "kind": "跨區線",
+      "summary": "今日最強跨區線：中、韓、日三地同時頭條，焦點是新鴨綠江大橋通車後的中朝經貿與APEC前美朝峰會探路。",
+      "title": "金正恩快閃訪中"
+    },
+    {
+      "id": 63,
+      "items": [
+        "台灣：薔琵10/24晚解除海警，災情1死634傷、農損1.33億，轉入災後復原",
+        "日本：台風30號26日朝九州北部最接近、上陸恐れ，25日夜起土砂災害嚴戒",
+        "韓國：濟州漢拏山逾200mm暴雨、南部大雨，26日轉溫帶低氣壓"
+      ],
+      "kind": "跨區線",
+      "summary": "同一颱風的三地接力：台灣收尾、日本備戰、韓國淋雨，颱風鏈仍是東亞今日共同天氣敘事。",
+      "title": "台風30號北上鏈"
+    },
+    {
+      "id": 64,
+      "items": [
+        "10/24：海警解除、災情1死634傷、農損1.33億",
+        "10/25：金鐘節目類、台灣大賽第5戰、天母百鬼夜行同晚登場，連假熱鬧回歸"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "薔琵線收尾：從防災轉向復原與過節，帳單（農損、停電、觀光損失）陸續見報。",
+      "title": "薔琵解除與災後復原"
+    },
+    {
+      "id": 65,
+      "items": [
+        "10/24：16死76傷、中央三筆資金馳援",
+        "10/25：震區電力全面恢復、在院傷者36人、餘震949次、6萬件套物資運抵，防寒成安置核心"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "西藏地震線從搜救轉向安置：燈亮了，接下來是零下5度的過冬考驗。",
+      "title": "西藏地震救援進展"
+    },
+    {
+      "id": 66,
+      "items": [
+        "10/24：AP-NORC民調8成選民要降生活成本、川普提前投票前夕",
+        "10/25：川普親赴佛州投票、歐巴馬赴俄亥俄助選批「殘酷」，倒數10天對決白熱化"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "期中選舉線：民調訴求（降物價、停戰爭）與候選人行動（投票、助選）合流，最後衝刺開始。",
+      "title": "美國期中選舉倒數"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "金價一個月跌100元、水貝反而擠爆：避險神話破滅後，人們為何跌了更想買？從「保值執念」談資產與安全感的錯位。",
+      "id": 91,
+      "pillar": "金融一百零八講",
+      "title": "金價跌、水貝擠：避險神話破滅後的買金執念"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "關稅壓力下Audi喬治亞建廠年產20萬輛SUV：製造回流是真回流還是選舉語言？從一座工廠看全球供應鏈重組。",
+      "id": 92,
+      "pillar": "金融一百零八講",
+      "title": "Audi喬治亞建廠：關稅下的製造回流"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "定借マンション供給創新高：不買地、只租地住一輩子——日本人正在用「使用權」取代「所有權」的人生算法。",
+      "id": 93,
+      "pillar": "金融一百零八講",
+      "title": "定借マンション：租地不買地的人生算法"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "水貝「比菜市場人還多」與樊振東抵制偷拍：熱搜上同時在吵錢與邊界——普通人對「被看見」與「被保護」的雙重渴望。",
+      "id": 94,
+      "pillar": "俗人對話錄",
+      "title": "水貝人潮與偷拍抵制：被看見與被保護"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "梨泰院4週期追悼：2000人在首爾廣場呼名、默念——一座城市如何用儀式把傷口留下來，而不是假裝癒合。",
+      "id": 95,
+      "pillar": "俗人對話錄",
+      "title": "梨泰院追悼：儀式如何留住傷口"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "從被告到市長，一天之內把失去的時間追回來——政治人物的東山再起敘事。",
+      "id": 96,
+      "pillar": "俗人對話錄",
+      "title": "吳世勳無罪翌日：把失去的時間追回來"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "颱風過後、地震之後：災難的收尾不是重建房屋，而是收拾人心——從薔琵復原與巴青安置看「破壞後的秩序」。",
+      "id": 97,
+      "pillar": "佛法生活感悟文",
+      "title": "災後收尾：破壞之後的秩序"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "獨島之日126年與梨泰院4週期同日：記住與悼念——集體記憶的兩種修行，一個向外、一個向內。",
+      "id": 98,
+      "pillar": "佛法生活感悟文",
+      "title": "記住與悼念：集體記憶的兩種修行"
+    }
+  ]
+}

@@ -1,0 +1,801 @@
+{
+  "date": "2026-10-26",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 813,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xVKU5lBHvU",
+      "summary": "恒隆廣場戶外市集每日 11:00 至 21:00，雲閃付滿減券＋1000 份霸王餐持續發放。",
+      "title": "武漢國際美食周進入尾聲，15 國美食、80 餘家商戶排隊到 10/27"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 814,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/7333/9818856",
+      "summary": "把購物車丟給 AI 打分、列不買清單，有人刪掉近半購物車、攔下數千元衝動消費；從拚手速轉為拚理性。",
+      "title": "年輕人用 AI 整頓雙 11，「便宜但用不上的東西最貴」成金句"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 815,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261025/49816806.html",
+      "summary": "電商百億補貼 256GB 降至 15769 元；軟體未適配大屏、內屏鉸鏈與無 Face ID 成主要吐槽點。",
+      "title": "iPhone Duo 開售 2 天即跌破 15999 元首發價，成近年最快破發新機"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 816,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-20/detail-inivwiti7780666.d.html",
+      "summary": "跨店每滿 300 減 50、品類券與 PLUS 95 折可疊加；11/9 至 11/11 為巔峰爆發期，但大牌爆款易斷貨。",
+      "title": "京東雙 11 美妝節奏：10/20 秒殺場後，10/31 開門紅為囤套裝關鍵檔"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 817,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-15/detail-inivhyaf7381436.d.html",
+      "summary": "10/20 晚 8 點正式開賣，品牌立減疊加消費券；大模型推出囤 Token 優惠，88VIP 消費券可自選面額膨脹。",
+      "title": "天貓雙 11 已開賣、綜合優惠低至 7.2 折，AI 服務首次納入大促"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 808,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://www.ftvnews.com.tw/news/detail/2026A26W0111",
+      "summary": "約 300 名中央委員與候補委員與會，官方主題為整飭黨紀，外界聚焦落馬幹部處分與第七代幹部接班布局。",
+      "title": "中共二十屆五中全會今日北京開幕，閉門 4 天定調 21 大人事"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 809,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://feng.ifeng.com/c/8xWwe3cnhSy",
+      "summary": "截至今日 8 時，3.0 級以下 1993 次、3.0 級以上 61 次；台站稀疏導致兩次大震均無預警資訊，成防災討論焦點。",
+      "title": "西藏巴青 7.0 級地震餘震增至 2054 次，最大 5.7 級、未產出預警引關注"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 810,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "http://www.qinghai.gov.cn/zwgk/system/2026/10/26/030111157.shtml",
+      "summary": "10/24 發生，今日青海省委第一時間調度部署，逐戶排查、轉移危險區群眾，交通、通信、電力運行正常。",
+      "title": "青海玉樹雜多 5.3 級地震，為巴青強餘震，官方稱無人員傷亡"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 811,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.ctee.com.tw/news/20261025700047-439901",
+      "summary": "AI 與科技股拋售使投資人被迫賣金籌現金；外銀中長期仍看多，亞洲買盤在 4000 美元附近承接。",
+      "title": "金價摜破 4000 美元、上週跌逾 4%，科技股拋售引發跨資產平倉"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 812,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://udn.com/news/story/7333/9817925",
+      "summary": "大陸首個區域電力市場，被稱為全球最大、最繁忙的電力超市，支撐 AI 與產業轉型用電。",
+      "title": "南方區域電力市場轉入正式運行，覆蓋粵桂瓊黔滇五省區"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 863,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.jpost.com/middle-east/article-912766",
+      "summary": "機場週日起 1 號航廈飛國內線、2 號航廈飛本國籍國際線；10 月初遇襲造成 13 死、300 多人傷，是沙烏地十多年來最致命攻擊，復航仍籠罩在胡塞再襲警告下。",
+      "title": "利雅德哈立德國王機場兩週後部分復航：10/10 遇襲關閉後，國內與國際航線分流恢復"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 864,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://english.ajel.sa/lifestyle/p2mcsunef",
+      "summary": "第七屆利雅德季 10 月 21 日開幕、為期 10 週，Boulevard World 迎來第五年，含 10 月 31 日 Canelo 對 Mbilli 拳擊賽、11 月 7 日 WWE Crown Jewel 等重頭戲。",
+      "title": "利雅德季 Boulevard World 門票開賣：10 月 30 日對外開放，新增葉門、葡萄牙、烏茲別克、荷蘭四國展區"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 865,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.ad-hoc-news.de/unterhaltung/reisen/dubai-mall-hosts-the-twilight-spectacle-from-15-october/70352209",
+      "summary": "杜拜購物中心 House of Hype 推出萬聖節限定企劃，含不給糖就搗蛋探險、現場表演、巡遊與主題餐飲；萬聖節已成杜拜家庭旅遊旺季招牌。",
+      "title": "杜拜購物中心萬聖節「暮光奇觀」：House of Hype 變裝派對至 11 月 1 日"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 866,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/lifestyle/brick-or-treat-trails-and-the-dragon-a-parents-guide-to-halloween-at-legoland-dubai-1.500705378",
+      "summary": "樂園主打「不嚇人」的親子萬聖節：尋糖步道、南瓜拼砌、迷你樂園尋鬼換冰淇淋與 4D 萬聖節電影；天氣轉涼後戶外樂園進入旺季。",
+      "title": "杜拜樂高樂園萬聖節：Brick-or-Treat 尋糖步道至 11 月 2 日，門票已含活動"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 867,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://en.arqam.news/599519/",
+      "summary": "Mandarin Oriental Downtown 的 Billionaire Dubai 推出六夜限定晚餐秀，以「感知失靈」為主題，義大利與日本料理搭配 LED 錯覺舞台；中東高端餐飲娛樂化趨勢的代表作。",
+      "title": "杜拜 61 樓萬聖節晚餐秀 DISTURBIA：10 月 27 日至 11 月 1 日，鏡像錯覺主題"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 858,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/world/mena/middle-east-war-drone-missile-intercepted-over-riyadh-as-king-khalid-airport-resumes-operations-1.500722685",
+      "summary": "川普排除週日對伊朗動武，與前一日「可能再來一次小規模史詩怒火」形成對比；伊朗議長批美方陷入「泥淖」，外長稱荷莫茲海峽管理「不會回到戰前常態」。",
+      "title": "川普稱今日不空襲伊朗，但警告新攻擊仍可能發生"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 859,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://www.haaretz.com/middle-east-news/2026-10-25/ty-article/.premium/saudi-arabia-intercepts-drones-missiles-as-fighting-with-houthis-continues/000001a1-72cd-d46d-a1fd-f2cde9ec0000",
+      "summary": "沙烏地聯軍週日攔截射向利雅德的 2 架無人機與彈道飛彈、射向南部的巡弋飛彈，隨後再攔截 10 枚射向南部的彈道飛彈；胡塞警告利雅德機場仍是「軍事目標」，兩人被攔截碎片砸傷。",
+      "title": "胡塞升級攻擊沙烏地：利雅德上空攔截無人機與飛彈，麥加、吉達落下殘骸"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 860,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.reuters.com/world/middle-east/around-1200-palestinians-are-displaced-hebron-israel-begins-military-operation-2026-10-24/",
+      "summary": "以軍在兩名士兵週五遭槍殺後展開大規模行動，希伯崙副市長稱 373 個家庭被迫離家、約 30 個家庭面臨驅離；巴勒斯坦自治政府批為「集體懲罰」，以軍稱行動將持續至處理完哈瑪斯問題。",
+      "title": "希伯崙行動升級：以軍驅離逾千名巴勒斯坦人，選前三天封城"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 861,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://www.jpost.com/israel-election-2026/article-912743",
+      "summary": "四份最終民調皆顯示無陣營能單獨取得 61 席，Eisenkot 的 Yashar 黨領先 Likud；小黨能否跨過 3.25% 門檻將決定組閣走向，55% 民眾支持組聯合政府。",
+      "title": "以色列 10/27 大選前最終民調分歧：納坦雅胡陣營 48–59 席、反對派 51–55 席，皆未過半"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 862,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://indianexpress.com/article/world/iran-war-live-updates-us-military-not-allowed-enter-gulf-trump-strike-warning-saudi-attack-oil-prices-india-hormuz-shipping-10935569/",
+      "summary": "海峽通行受限、船隻大排長龍，美方警告胡塞攻擊「可能迅速擴散」；美國已對沙烏地、巴林、伊朗、伊拉克等 13 國發布旅遊警示，籲重新考慮前往。",
+      "title": "荷莫茲海峽航運受阻：近 500 艘船在外等候，阿曼附近一艘液化石油氣船遇襲"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 803,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6885720",
+      "summary": "17:00 星光大道、19:00 頒獎，兩部作品各入圍 13 項，紅毯改室內、不開放觀禮，是今晚最大娛樂流量。",
+      "title": "金鐘 61 戲劇類今晚登場，陳庭妮首扛主持、《與惡 2》對決《忘了我記得》"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 804,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.nownews.com/news/6886562",
+      "summary": "龍隊 3：2 領先，今日若封王即結束系列賽；若兄弟再勝，明日 G7 移師桃園。",
+      "title": "台灣大賽 G6 今日 15:05 大巨蛋開打，味全龍聽牌、中信兄弟拚三連勝"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 805,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://n.yam.com/Article/20261023786878",
+      "summary": "13:00 至 20:00 天母運動公園園遊會，超人力霸王、假面騎士登場，250 多家特約店家全天討糖。",
+      "title": "天母搞什麼鬼今日園遊會＋250 家討糖"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 806,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.pchome.com.tw/travel/pchometravel/20261024/index-79277870386727222015.html",
+      "summary": "10/22 至 10/26，近 50 場演出、近百攤展區，今日為最後一天現場販售優惠券，慢生活、泡湯話題與秋冬旅遊預熱重疊。",
+      "title": "台北溫泉季今日最終日，北投溫泉＋北海道夜來祭收尾"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 807,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://www.setn.com/ampnews/1928093",
+      "summary": "今日下午 2 時至晚間 9 時為高鐵北返尖峰，國道北向車流量達平日 1.2 倍，是今日民生實用流量。",
+      "title": "光復連假收假日北返潮，高鐵逾百班北上、國道 11 處路段易塞"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 798,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5618684",
+      "summary": "選戰熱度從台北外溢到新竹，兩人同逛波光市集、放風箏，是今日選戰最大流量話題。",
+      "title": "沈伯洋「洋流號」首度駛出台北，新竹合體莊競程塞爆南寮漁港"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 799,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/125052/9833052?from=udn-ch1_breaknews-1-cate9-news",
+      "summary": "颱風警報解除後焦點轉為算帳與復原，農損、停電搶修、校園與市容復原接連見報。",
+      "title": "薔琵災後復原加速，農損逼近 2 億、北市轉入復原中心"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 800,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://udn.com/news/story/124652/9832717",
+      "summary": "原訂 10/23 的抽籤因薔琵停班停課全面順延至 10/27，今日為抽籤前一天，選情版面持續預熱。",
+      "title": "地方選舉參選人號次抽籤延至明日 10/27"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 801,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5618684",
+      "summary": "俄烏戰後睽違 4 年再有台灣民航機飛越俄領空，25 日凌晨 CI75 拔得頭籌，省時省油成熱議點。",
+      "title": "華航重返俄羅斯領空，飛羅馬單趟省 1 至 1.5 小時"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 802,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://news.ltn.com.tw/news/life/breakingnews/5618684",
+      "summary": "北檢已起訴 4 名台嫌、通緝 2 名港籍雇主，法務部研議修反滲透法加重刑責，國安議題與選戰交織。",
+      "title": "中國跨國鎮壓案延燒，官員稱在台港人若配合將廢止居留定居"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 823,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://www.baseballchannel.jp/npb/298215/",
+      "summary": "筒香嘉智 8 局逆轉 3 分砲一度讓橫濱沸騰，但山川穗高 9 局代打追平、川村友斗 10 局決勝轟；27 日起移師福岡。",
+      "title": "日本系列賽第 2 戰：軟銀延長 10 回 4-3 再勝 DeNA，取得 2 連勝"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 824,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://dtimes.jp/post-1428337/",
+      "summary": "Travelco 秋日歸巴士搜尋動向：關鍵字第 1 紅葉；東日本目的地第 1 河口湖，紅葉＋富士山＋美食成定番。",
+      "title": "秋日歸巴士旅遊搜尋第 1 名是「紅葉」，東日本首選河口湖"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 825,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://home.kingsoft.jp/news/pr/financial_field/525182.html",
+      "summary": "湯之湖、龍頭瀑布可免費賞楓；但提醒紅葉季伊呂波坂塞車可達 2–3 小時，日歸有深夜返家風險。",
+      "title": "東京出發日光紅葉日歸旅預算試算成話題：夫婦 2 人約 2.1–2.7 萬円"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 826,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.toonippo.co.jp/articles/-/2390211",
+      "summary": "24–25 日二度造訪青森觀看障礙者運動會；先前國體期間配戴的津輕塗耳環已帶動注文熱潮。",
+      "title": "佳子內親王結束 2 日青森視察、25 日夜由三澤機場歸京"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 827,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/382719f0a7707698fc32d95eeab08cd20aa45296",
+      "summary": "繼 13–15 日國體後二度來縣，稱接力是田徑之華；26 日閉會式為本屆賽事收尾話題。",
+      "title": "高圓宮妃久子殿下 25 日觀看青森障礙者運動會、26 日出席閉會式後訪聾學校與縣立美術館再歸京"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 818,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://tenki.jp/forecaster/y_maki/2026/10/25/41082.html",
+      "summary": "26 日九州北部 24 小時雨量最多 200mm；10 月颱風上陸將是 2019 年以來 7 年首見。",
+      "title": "颱風 30 號薔琵 26 日接近九州、上陸恐懼，九州至關東警報級大雨"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 819,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://www.sanspo.com/article/20261026-CUQUK5JJYNITJGH5HXAQDEVQFE/",
+      "summary": "熊谷正寿社長 25 日夜發文致歉；GMO 已向政府緊急要請適用能動的網路防禦。",
+      "title": "GMO 社長承認不正存取前社內早有安全性課題指摘、對應不足遭攻擊者鑽空"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 820,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://txbiz.tv-tokyo.co.jp/txn/news_txn/post_351213",
+      "summary": "東京電視台與日本經濟新聞 10 月民調：支持率與 9 月持平 62%；物價對策減稅 54% 勝過現金給付 33%。",
+      "title": "高市內閣支持率橫盤 62%，食料品消費稅減稅被視為最有效物價對策 54%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 821,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.toonippo.co.jp/articles/-/2390365",
+      "summary": "26 日東京股市日經平均開盤續落，盤中跌幅一度超過 500 円，延續上週末弱勢。",
+      "title": "週一東證開盤續跌、日經一度跌逾 500 円"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 822,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/97d917ff8ccf1431ac1c9e5f3a35aa34644204b8",
+      "summary": "26 日凌晨登上 Yahoo! 國內瀏覽第 1 名；警方以強盜殺人嫌疑逮捕，地方社會對高齡店主安全議論升溫。",
+      "title": "山口美禰市和菓子店主殺害案：「便利屋」業 20 多歲男子 2 人被捕"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 853,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://planetefootball.com/news/premier-league-matchweek-8-review",
+      "summary": "曼聯在老特拉福德遭伯恩茅斯三球羞辱；利物浦靠 Wirtz 與 Isak 四分鐘內兩球取勝，兵工廠 2-0 勝艾佛頓暫居第 2。",
+      "title": "英超第 8 輪：曼聯主場 0-3 慘敗給伯恩茅斯，利物浦 2-0 勝布萊頓升第 4"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 854,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://internewscast.com/news/storm-boelo-strikes-uk-a-day-after-storm-austen-passes-through/",
+      "summary": "西碼頭自 2003 年兩場縱火後不斷被海水侵蝕，Austen 巨浪再沖垮一側結構；全盛期年吸 200 萬遊客，如今只剩殘骸，畫面在社群瘋傳。",
+      "title": "布萊頓西碼頭再塌入海：風暴 Austen 巨浪沖垮 1866 年地標殘段"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 855,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.marathons.com/en/marathon-de-lille/lille-marathon-makes-its-grand-return-this-sunday-october-25-after-31-years-away_y39v",
+      "summary": "里爾馬拉松自 1995 年後首度復辦，路線從市中心自由大道至城堡廣場，逾萬跑者參賽；Austen 強風導致起點附近一名跑者被吹落物砸傷。",
+      "title": "里爾馬拉松睽違 31 年回歸：週日穿越 10 個市鎮，風暴中一名跑者受傷"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 856,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.thesun.ie/news/17809085/brits-warned-do-not-travel-storm-austen-winds/",
+      "summary": "Haven 度假園區 Perran Sands 與 Riviere Sands 疏散住客，康沃爾學校大規模停課；赴英旅客被提醒出發前確認航班，週末旅遊行程普遍受阻。",
+      "title": "風暴打亂歐洲旅遊：康沃爾 87 所學校停課、度假園區疏散，史基浦機場取消約 90 班機"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 857,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://sportradar.com/?q=116470035776090198",
+      "summary": "摩納哥主場與里爾握手言和，兩隊同積 15 分分居 2、3 名；巴黎聖日耳曼 14 分排第 5，法甲爭冠集團混戰。",
+      "title": "法甲第 8 輪：摩納哥 1-1 戰平里爾，雷恩 16 分暫居榜首"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 848,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.channelnewsasia.com/world/serbia-election-vucic-concede-defeat-student-protest-movement-6491631",
+      "summary": "提前大選投票率近 70%（南斯拉夫解體後最高），學生運動以約 52% 得票擊敗執政黨 SNS；貝爾格勒街頭數萬人慶祝，武契奇稱敗選是「歐洲國家與美國深層政府煽動的革命」，但表示不會上訴。",
+      "title": "塞爾維亞變天：武契奇承認敗選，學生名單拿下 135–140 席終結 12 年統治"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 849,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.gulfnews.com/world/europe/people-are-in-deep-deep-anger-frances-pm-key-ministers-to-meet-student-leaders-monday-1.500723401",
+      "summary": "總理 Lecornu 與兩位教育部長週一在 Matignon 會見學生領袖，會後將開記者會；此前週末再有示威，警方執法致多名青少年重傷、數千人被捕，遭家長與人權團體批評過當。",
+      "title": "法國總理今日會學生領袖：生活成本與高中改革抗議延燒逾月"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 850,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.newstalkzb.co.nz/news/world/storms-batter-europe-hitting-power-supplies-flights-and-phones/",
+      "summary": "Austen 吹垮布萊頓西碼頭殘段、法國高峰 28.8 萬戶停電，Boelo 隨後以 80mph 陣風襲蘇格蘭與北英格蘭；荷蘭、比利時亦有樹木倒塌傷人，阿姆斯特丹史基浦機場大規模取消航班。",
+      "title": "風暴 Austen、Boelo 連襲北歐：法國 28.8 萬戶斷電、德國醫院限急診、史基浦取消約 90 班機"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 851,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.reuters.com/world/europe/euro-zone-growth-slows-4-month-low-amid-rising-costs-french-turmoil-pmi-shows-2026-10-23/",
+      "summary": "法國綜合 PMI 從 51.1 跌至 48.4，企業信心跌至 2012 年以來（疫情除外）最低，主因政治與財政不確定性；歐洲央行 10 月 29 日會議預期按兵不動。",
+      "title": "歐元區 PMI：法國 10 月跌至 48.4 陷入萎縮，歐元區整體放緩至四個月低點 51.9"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 852,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://particle.news/story/germany-commits-staff-officers-and-a400m-tankers-to-first-koalicja-2026-exercise",
+      "summary": "法英主導的 Koalicja 2026 演習將測試停火後保障部隊的陸海空協同；德國先前猶豫後加入，總理 Merz 同日警告俄羅斯「每天都在破壞德國穩定」。",
+      "title": "德國加入「志願者聯盟」11 月演習：派參謀軍官與 A400M 加油機赴波蘭、羅馬尼亞與黑海"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 843,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/sports/baseball/brewers-erase-four-run-deficit-take-2-0-world-series-lead-vs-rays--flm-2026-10-25/",
+      "summary": "釀酒人首局 0-4 落後，靠牛棚六局無失分與 Cooper Pratt 七局超前安打逆轉；G3 週一移師坦帕。",
+      "title": "世界大賽 G2：釀酒人 5-4 逆轉光芒，系列賽 2-0 聽牌"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 844,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/sports/motor/formula1/2026/10/25/2026-f1-united-states-grand-prix-in-austin-results/92422799007/",
+      "summary": "Mercedes 車手 Antonelli 在奧斯汀桿位起跑、一停策略奪本季第 9 勝，Mercedes 同時鎖定車隊冠軍；下週墨西哥站他只需拿第 9 名即可封王。",
+      "title": "美國大獎賽：20 歲 Antonelli 奪冠，距史上最年輕 F1 世界冠軍只差 2 分"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 845,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.surfer.com/news/king-tides-california-super-el-nino-video",
+      "summary": "聖嬰 Kelvin 波使實際水位比天文預測高 18–22 吋，Newport Beach 已宣布地方緊急狀態、部署沙包與抽水機。",
+      "title": "南加州大潮進入高峰：週一至週三潮位或達 8.3–8.5 呎，橙縣沿海洪水警報持續至週四"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 846,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://beebulletin.com/halloween/",
+      "summary": "74% 美國人計劃慶祝，裝扮 44 億、裝飾 43 億、糖果 41 億；成人最熱門裝扮是女巫，兒童是蜘蛛人。",
+      "title": "萬聖節消費再創新高：NRF 預估 2026 全美支出 135 億美元、人均 115 美元"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 847,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://beebulletin.com/halloween/",
+      "summary": "2026 年 10 月獵人月於美東時間週一午夜後達最圓，萬聖節當晚已是虧凸月、天黑後升起較晚。",
+      "title": "獵人月今夜達滿月：萬聖節前一週的滿月，錯過要等明年"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 838,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.reuters.com/world/us/trump-campaigns-michigan-day-after-obama-rallies-democrats-2026-10-25/",
+      "summary": "川普週日赴密西根 Port Huron 為 Mike Rogers 造勢，前一天歐巴馬在底特律為 Abdul El-Sayed 站台；密西根參議院之爭將決定參院控制權。",
+      "title": "川普密西根造勢、歐巴馬底特律助選，期中選舉最後一週對決白熱化"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 839,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.kcau9.com/news/national/ap-oregon-coastal-city-issues-evacuation-order-after-fire-at-seafood-plant/",
+      "summary": "Pacific Seafood 加工廠週日上午起火，屋頂局部坍塌，市府對廠區一英里半徑下達疏散令；無人受傷，疏散令稍後已部分降級。",
+      "title": "奧勒岡 Newport 海鮮廠大火、疑氨氣外洩，一英里範圍緊急疏散"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 840,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://www.firstpost.com/auto/audi-plans-4-billion-us-plant-as-trumps-tariffs-push-automakers-to-shift-production-14055209.html",
+      "summary": "Audi 將在 Macon 附近建首座美國工廠，年產 20 萬輛 Q7／Q8／Q9，2027 年動工、2030 年代初投產。",
+      "title": "川普正式宣布 Audi 喬治亞建廠：42 億美元、4500 個職位"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 841,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://depor.com/en/us-live/who-won-brazils-election-2026-flavio-bolsonaro-vs-lula-da-silva-live-results-and-runoff-updates-nnda-nnrt-noticia/",
+      "summary": "巴西高等選舉法院計票 99.77% 後判定魯拉以約 435 萬票差距勝出；計票初期兩人一度僅差 0.02 個百分點。",
+      "title": "巴西總統決選計票底定：魯拉 51.76% 擊敗 Flávio Bolsonaro 連任"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 842,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://tribune.com.pk/story/2636838/obama-backs-el-sayed-in-michigan-senate-race-trump-dismisses-rally-turnout",
+      "summary": "期中選舉前夕川普支持率探底，民主黨在多項民調領先 5–12 個百分點；民調與選民先降生活成本的訴求形成對照。",
+      "title": "路透／益普索民調：川普支持率跌至 31% 創新低"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 833,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/society/12185205",
+      "summary": "25 日最後一場無車潛水橋活動以 400 米長桌炸雞日送別車流；2027 年 8 月完工，740、405 路公車改走盤浦大橋。",
+      "title": "首爾潛水橋 26 日零時起全面禁車，開通 50 年變身漢江首座步行專用橋"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 834,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.asiae.co.kr/article/2026102607315152150",
+      "summary": "決賽 2-1 逆轉印度辛杜，今年戰績 67 戰 66 勝 1 負、勝率 98.5%，國際賽通算 48 冠逼近 50 冠。",
+      "title": "安洗瑩法國公開賽 3 連霸、賽季第 10 冠、50 連勝"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 835,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://supple.kr/news/cmvndgsxv000xtp9xr3w4hg61",
+      "summary": "為紀念獨島之日，在北格列飛島燈塔附近無觀眾演出，YouTube 直播；格列飛列島面積約為獨島 2.7 倍。",
+      "title": "「西海的獨島」格列飛列島史上首次演唱會：金長勳 26 日正午特別演出"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 836,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://isplus.com/article/view/isp202610250123",
+      "summary": "在洛磯山脈門戶坎莫爾小鎮散步、弓河泛舟後，夜訪卡加利 MZ 熱點牛仔俱樂部，看見年輕人共舞竟哽咽。",
+      "title": "全炫茂加拿大卡加利之旅落淚成話題：MBN《This Is 玄茂路》第 6 集"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 837,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://ameblo.jp/windy69/entry-12981560739.html",
+      "summary": "以照片、影像、美術與空間設計重構 K-POP 的藝術肖像，參展者包括 BTS、G-Dragon、Stray Kids、aespa、IVE 等。",
+      "title": "BTS 等 48 組 K-POP 藝人展覽《D'FESTA THE ORIGIN》10/23–11/30 首爾汝矣島展出"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 828,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.yonhapnewstv.co.kr/news/MYH20261026091252gYx",
+      "summary": "漢拏山三角峰 3 日累計逾 300mm；27 日起冷空氣南下、28 日首爾晨溫恐跌至 2 度。",
+      "title": "颱風參琵 26 日凌晨在西歸浦東南海上減弱為溫帶低氣壓，濟州・南海仍有強風巨浪"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 829,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.donga.com/news/politics/article/all/20261025/134904311/1",
+      "summary": "東亞日報指此行打破歷次訪中必見習近平的慣例，僅見王滬寧；年內特金會仍不明朗。",
+      "title": "金正恩快閃訪中後續分析：無習近平會談的當日來回丹東被解讀為 APEC 前抬高對美身價"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 830,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261026032600008?section=economy/economic-policy",
+      "summary": "延續上週跌勢；市場關注本週美國大型科技股 AI 業績驗證與 AI 投資高點爭議。",
+      "title": "KOSPI 26 日開盤跌破 5500 點：開盤 5499.05（-0.92%）"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 831,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.etoday.co.kr/news/view/2639522",
+      "summary": "上週個人淨賣 1.104 兆韓元、外資淨賣 7180 億韓元；AI 泡沫論引發的不安被視為主因。",
+      "title": "上週外資＋個人雙賣壓拖垮大盤：KOSPI 週跌 2.08% 收 5550.30，KOSDAQ 週跌 5.42%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 832,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261024_0003839700?id=NISX20261024_0003839700&reply",
+      "summary": "以星星之光、朝向真相為主題；10/29 正日將至，31 日綠莎坪另有哀悼與安全的節慶萬聖節行動接續。",
+      "title": "梨泰院慘案 4 週期市民追悼大會 10/24 首爾廣場舉行，2000 人出席"
+    }
+  ],
+  "followupNote": "2026-10-26 七地共 70 則齊備（原五地 50 則＋歐洲、中東補送 20 則）。",
+  "globalSummary": "人心觀察（七地一句版）：台灣—颱風走了切回過節與選戰，狂歡底下是務實的收尾心態；中國—大敘事開幕之日，小日子算的是金價與購物車的節制；日本—風雨裡照常過日子，真正不安的是數位安全感；韓國—風過了帳還沒算完，市場的冷與追悼的暖並排；美國—選戰噪音蓋過生活帳單，8成選民只想先降生活成本；歐洲—風暴與街頭一起發作，恐慌與希望並存；中東—在警報聲裡照常生活，每一個照常都帶著硬撐。今日全球主線：美伊戰爭與胡塞攻擊沙烏地升級、颱風薔琵北上、選舉週（美國期中選舉、以色列明日大選）。",
+  "globalTheme": "戰爭升級、颱風北上、選舉週：恐懼與日常並行",
+  "sourceModifiedAt": "2026-10-26T09:25:00+08:00",
+  "storylines": [
+    {
+      "id": 79,
+      "items": [
+        "美國：川普密西根造勢與民調探底之外的戰爭陰影",
+        "中東：胡塞攻擊、希伯崙封城、以色列明日大選",
+        "歐洲：多國呼籲以外交代替新攻擊，德國加入志願者聯盟演習"
+      ],
+      "kind": "跨區線",
+      "summary": "川普稱今日不空襲伊朗，但警告新攻擊仍可能；胡塞升級攻擊沙烏地，利雅德上空攔截無人機與飛彈，美國對沙烏地等 13 國發布旅遊警示，荷莫茲海峽近 500 艘船等候通行。",
+      "title": "美伊戰爭與胡塞攻擊沙烏地升級"
+    },
+    {
+      "id": 80,
+      "items": [
+        "台灣：災後復原與農損算帳",
+        "日本：九州至關東警報級大雨",
+        "韓國：濟州漢拏山 3 日雨量逾 300mm",
+        "中國：煙花動向與雙 11 消費節奏並行"
+      ],
+      "kind": "跨區線",
+      "summary": "台灣轉入災後復原、農損逼近 2 億；日本九州今日最接近、10 月上陸恐成 7 年首見；韓國凌晨減弱為溫帶低氣壓但強風風浪特報持續；31 號颱風煙花預估週二達強颱、週末北轉無直接影響。",
+      "title": "颱風薔琵北上、煙花生成"
+    },
+    {
+      "id": 81,
+      "items": [
+        "美國：密西根參議院之爭決定參院控制權",
+        "中東：以色列大選組閣關鍵在小黨門檻",
+        "台灣：洋流號首度駛出台北",
+        "歐洲：法國抗議與塞爾維亞學生運動勝選"
+      ],
+      "kind": "跨區線",
+      "summary": "美國期中選舉最後衝刺，川普與歐巴馬同赴密西根對決；以色列 10/27 大選最終民調皆未過半；台灣選戰洋流外溢新竹、號次抽籤延至明日；法國生活成本抗議延燒逾月，總理今日會學生領袖。",
+      "title": "選舉週"
+    },
+    {
+      "id": 82,
+      "items": [
+        "韓國：東亞日報分析",
+        "中國：五中全會今日開幕，兩條大敘事同日並行"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "韓媒定調為無習會談的破格當日行，分析聚焦 APEC 前對美抬價與北中經貿合作，而非對話已啟動。",
+      "title": "金正恩快閃訪中後續"
+    },
+    {
+      "id": 83,
+      "items": [
+        "中國：會期 10/26–29 閉門舉行",
+        "中國：防災預警缺口成討論焦點"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "五中全會今日北京開幕；巴青餘震增至 2054 次、最大 5.7 級，因台站稀疏兩次大震均未產出預警。",
+      "title": "五中全會與巴青地震"
+    },
+    {
+      "id": 84,
+      "items": [
+        "台灣：G6 龍隊聽牌",
+        "日本：軟銀延長 10 回再勝",
+        "美國：世界大賽 G3 週一在坦帕",
+        "美國：Newport Beach 潮位週二 8.5 呎"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "台灣大賽 G5 兄弟勝追成 2:3、今日 G6；日本系列賽軟銀 2 連勝；世界大賽釀酒人 2-0 聽牌；南加州大潮今日進入高峰。",
+      "title": "球賽與天氣的延續線"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": false,
+      "direction": "從金價上週跌逾 4%、KOSPI 跌破 5500、法國 PMI 萎縮三條線，談恐慌時人為什麼先賣掉避險資產籌現金——槓桿斷裂時，連黃金都不是避風港。",
+      "id": 105,
+      "pillar": "金融一百零八講",
+      "title": "金價跌破 4000 美元與 AI 泡沫論"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "把購物車丟給 AI 打分、刪掉近半衝動消費：從拚手速到拚理性，消費決策權拿回來的那一刻，人心在轉向什麼？",
+      "id": 106,
+      "pillar": "俗人對話錄",
+      "title": "年輕人用 AI 整頓雙 11"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "利雅德機場遇襲兩週後復航、杜拜萬聖節照常佈置、颱風過後天母討糖照常舉行：無常不是生活停下來，而是生活帶著裂痕繼續走。",
+      "id": 107,
+      "pillar": "佛法生活感悟文",
+      "title": "在警報聲裡照常生活"
+    }
+  ]
+}

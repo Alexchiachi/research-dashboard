@@ -1,0 +1,791 @@
+{
+  "date": "2026-10-29",
+  "events": [
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1023,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-28/detail-iniwukpz5939999.d.html",
+      "summary": "去哪兒 10 月 28 日數據顯示「秋假」「親子」「賞秋」搜索量環比增 2.2 倍，11 月酒店預訂同比增五成，研學、賞秋、縣城追秋成主流玩法，慢遊與深度體驗正取代走馬觀花。",
+      "title": "多地秋假密集落地，親子研學遊帶火 11 月旅遊市場，11 月有望成「第五消費季」"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1024,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://news.china.com/socialgd/10000169/20261028/49823070.html",
+      "summary": "家住漢陽、孩子在漢口讀初中的詹先生放棄租房、改為工作日住校旁酒店，引發「靈活省心 vs 長期開銷划不划算」的兩派熱議，戳中陪讀家庭的時間與睡眠焦慮。",
+      "title": "武漢家長「住酒店陪讀」，月均花 3000 多元換孩子每天多睡 40 分鐘"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1025,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.com.cn/article_7880069195_1d5b0504b068017l5m.html",
+      "summary": "抖音熱點顯示「在稻城亞丁看一場秋日童話」熱度逾 1200 萬，疊加門票、觀光車全免政策 10 月 31 日截止，秋色窗口將盡推高錯峰出遊討論。",
+      "title": "稻城亞丁秋日登上抖音熱搜榜首，免票末班車至 10 月 31 日"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1026,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://www.hkcd.com/hkcdweb/content/2026/10/28/content_8782348.html",
+      "summary": "10 月 27–29 日活動以「暖冬八桂、壽悅賓朋」為主題，廣西 38 個「中國長壽之鄉」、2025 年國內康養市場規模達 9.5 萬億元的數據，搭上銀髮經濟與慢生活話題。",
+      "title": "「康養旅居在廣西」交流推介活動在崇左舉辦，主打秋冬暖冬康養目的地"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1027,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://k.sina.com.cn/article_7857201856_1d45362c001908sudc.html",
+      "summary": "報導拆解其貴陽站內場前排票面價 1717 元、不捆綁不搭售的價格克制，在高票價爭議頻發的演出市場中形成對照，引發歌迷與路人討論。",
+      "title": "薛之謙演唱會票價為何一直壓得很低，登上 10 月 29 日晨新浪音樂熱點小時報"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1018,
+      "rank": 1,
+      "region": "中國",
+      "sourceUrl": "https://www.cna.com.tw/news/acn/202610280279.aspx",
+      "summary": "新華社 10 月 28 日下午發布訃告，10 月 29 日晨仍居微博熱搜與綜合熱榜前列，屬當日中國官方與社群同步關注的重大消息。",
+      "title": "國務院原副總理劉延東逝世，享年 81 歲"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1019,
+      "rank": 2,
+      "region": "中國",
+      "sourceUrl": "https://www.163.com/news/article/LA8NMJAA0001899O.html",
+      "summary": "據熱榜統計，該話題累積 225 條熱搜、438 篇報導，是近兩日中國社群流量最大的國際體育事件；10 月 29 日晨「皇馬終於道歉了」仍在熱搜榜上。",
+      "title": "姆巴佩涉華言論風波延燒：多家中國品牌解約、央視停播相關賽事，本人以中英法三語道歉"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1020,
+      "rank": 3,
+      "region": "中國",
+      "sourceUrl": "https://news.qq.com/rain/a/20261028A085FK00",
+      "summary": "10 月 28 日發布會後登上微博熱搜，官方稱多核性能提升 23%、NPU 提升 140%，國產芯片自主迭代的話題在科技圈與消費圈同時引爆討論。",
+      "title": "華為 Mate 90 系列發布，麒麟 9050「邏輯折疊 τ 芯片」成焦點"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1021,
+      "rank": 4,
+      "region": "中國",
+      "sourceUrl": "https://finance.sina.cn/7x24/2026-10-29/detail-iniwvwre2897846.d.html",
+      "summary": "10 月 29 日晨新浪財經滾動報導：港股空頭頭寸占比降至 7 個月低位 6.3%，市場普遍預期第三季淨利潤約 121 億元、同比增近 55%，財報日＋股價年內跌約 26% 的反差推高關注。",
+      "title": "比亞迪今日公布第三季業績，空頭撤退、市場預期淨利潤反彈"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1022,
+      "rank": 5,
+      "region": "中國",
+      "sourceUrl": "https://www.cs.com.cn/xwzx/01/2026/10/28/detail_2026102810047753.html",
+      "summary": "國家統計局 10 月 27 日發布、28 日持續發酵的數據新聞，AI 算力與先進存儲需求帶動電子業利潤增 103.8%，成為解讀中國經濟動能的官方錨點。",
+      "title": "前 9 月全國規模以上工業企業利潤同比增長 15.5%，電子行業利潤翻倍"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1073,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.travelsdubai.com/19-Oct-2026/dubai-halloween-2026-ribambelle-announces-three-nights-spooky-family-fun",
+      "summary": "今日為最後一夜，17:00 起有變裝、討糖、南瓜工坊與親子表演，鎖定家庭客群，是杜拜本週最集中的親子節慶流量。",
+      "title": "杜拜萬聖節家庭活動今晚收尾：Bluewaters Ribambelle 三夜慶典 10 月 27–29 日"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1074,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/lifestyle/brick-or-treat-trails-and-the-dragon-a-parents-guide-to-halloween-at-legoland-dubai-1.500705378",
+      "summary": "活動 10 月 7 日至 11 月 2 日原定期間延長至 11 月 8 日，含 Brick-or-Treat 糖果步道、南瓜拼砌、Miniland 尋寶與 4D 怪物電影，天涼後戶外樂園進入旺季。",
+      "title": "杜拜樂高樂園萬聖節延長至 11 月 8 日，糖果步道與樂高南瓜成親子打卡熱點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1075,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://www.dailysabah.com/business/transportation/istanbul-airport-named-worlds-best-by-condenast-readers-once-again/amp",
+      "summary": "英國版《Condé Nast Traveller》讀者票選 2026 結果：伊斯坦堡 94.29 分第一、樟宜 93.92 分第二、杜拜 93.18 分第三，土耳其航空樞紐地位與轉機旅遊話題持續發酵。",
+      "title": "伊斯坦堡機場再奪 2026 全球最佳機場，94.29 分力壓樟宜與杜拜國際機場"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1076,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://gulfnews.com/business/aviation/etihad-makes-history-with-first-abu-dhabi-calgary-flight-1.500722671",
+      "summary": "EY29/EY30 每週四班、787-9 執飛，原定 11 月 3 日提前至 10 月 25 日首航，卡加利成為阿提哈德第二個加拿大航點，旅遊與商務連結話題仍在延燒。",
+      "title": "阿提哈德阿布達比—卡加利首航 10 月 25 日落地，波灣首條直飛加拿大西部航線"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1077,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://saudigazette.com.sa/article/665557/saudi-arabia/over-21-million-faithful-visit-prophets-mosque-in-september",
+      "summary": "兩聖寺管理總局公布 9 月數據：先知清真寺共 21,615,977 人次到訪，其中 1,449,791 人在 Rawdah 祈禱，圖書館與展覽亦吸引逾 21 萬人次；寧靜祈禱氛圍與朝聖服務體系是慢生活、幸福感知取向的題材。",
+      "title": "麥地那先知清真寺 9 月迎來 2,161 萬訪客，朝聖慢旅規模再受關注"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1068,
+      "rank": 1,
+      "region": "中東",
+      "sourceUrl": "https://www.aljazeera.com/news/liveblog/2026/10/29/iran-war-live-tehran-presses-7-day-hormuz-plan-trump-denies-peace-talks",
+      "summary": "伊朗外長阿拉格齊稱正與調解人密切接觸、落實七日重開荷姆茲海峽計畫，川普則否認和談進展；荷姆茲關係全球能源命脈，牽動油價與各國市場情緒。",
+      "title": "伊朗推七日荷姆茲重開計畫、川普否認和談，美以伊戰爭即時戰況成今日最大流量焦點"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1069,
+      "rank": 2,
+      "region": "中東",
+      "sourceUrl": "https://udn.com/news/story/6809/9843451?from=udn-catelistnews_ch2",
+      "summary": "10 月 27 日大選開票近八成後，兩大陣營皆未過半（61 席門檻），兩個阿拉伯裔政黨合計創紀錄 17 席；內唐亞胡稱將組強大右翼政府、並稱與川普聯手「徹底消除伊朗威脅」，組閣談判可能拖數週。",
+      "title": "以色列國會大選陷僵局，內唐亞胡陣營 54 席、反對派 49 席，阿拉伯政黨成組閣關鍵"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1070,
+      "rank": 3,
+      "region": "中東",
+      "sourceUrl": "https://news.ltn.com.tw/news/world/breakingnews/5620928",
+      "summary": "兩名美國官員透露駐中東美軍已做好準備，一旦川普下令，96 小時內可發動新一波規模巨大的軍事行動；最可能時間點在 11 月 3 日美國期中選舉之後，華爾街日報亦報導美方已示警波灣國家做好準備。",
+      "title": "傳美軍期中選後再轟伊朗，已備妥 96 小時內發動大規模攻擊"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1071,
+      "rank": 4,
+      "region": "中東",
+      "sourceUrl": "https://news.ltn.com.tw/news/world/breakingnews/5621873",
+      "summary": "青年運動 10 月 28 日在 Telegram 要求亞丁機場所有人員立即撤離，稱有沙國軍用貨機現身；此前 27 日亦稱以彈道飛彈攻擊沙國拉斯坦努拉煉油廠（日產 55 萬桶），沙國方面未即時證實，葉門戰事升溫引發區域關注。",
+      "title": "青年運動警告亞丁機場人員「立即」撤離，並稱飛彈襲擊沙國最大煉油廠"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1072,
+      "rank": 5,
+      "region": "中東",
+      "sourceUrl": "https://www.reuters.com/business/energy/us-oil-prices-fall-investors-gauge-risks-mideast-supply-2026-10-29/",
+      "summary": "10 月 29 日 WTI 跌約 0.9% 至 101.86 美元、此前一日曾漲 3% 至 102.78 美元，布蘭特 10 月 28 日收 115.32 美元；卡達調解人向伊朗提出新草案、伊朗高層稱「不可接受」，市場在戰爭風險溢價與外交希望之間拉鋸。",
+      "title": "油價在 100–115 美元高檔震盪，交易員緊盯中東外交跡象"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1013,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://aguamenti.news/caco-opens-four-harry-potter-pop-ups-across-taiwan-on-october-29-with-a-house-photo-booth/",
+      "summary": "台北 101、台南、高雄 SKM Park 等四店齊開，附四學院拍照亭與學院吊墜鑰匙圈，開幕日即成粉絲打卡熱點。",
+      "title": "CACO 哈利波特快閃店 10 月 29 日全台四地同步開幕，逢電影 25 週年"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1014,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.youtube.com/watch?v=jScwUpUrAYE",
+      "summary": "9 大主題區、雙舞台演出與親子變裝步道，南部萬聖節活動預熱流量明顯升溫。",
+      "title": "第三屆高雄萬聖節 10 月 30 日起在衛武營連辦三天，主打 360 度南瓜燈光秀"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1015,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://focustaiwan.tw/culture/202610170006",
+      "summary": "今年主題「夜 ka shi」取材那卡西走唱文化，首度與巴黎 Centquatre 合作，成為週末藝文出遊最大話題。",
+      "title": "台北白晝之夜 10 月 31 日在圓山花博登場，逾 30 件裝置、50 場演出徹夜舉行"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1016,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.youtube.com/watch?v=K0pwO5tJcew",
+      "summary": "主題展覽、親子 DIY 與農夫市集帶民眾認識在地農產與飲食文化，土地、食物與永續生活的連結正合大道至簡的慢生活調性。",
+      "title": "第五屆花蓮食農博覽會以「從土地到餐桌」親子食農教育吸睛"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1017,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://www.youtube.com/watch?v=5DzoAI7WGuE",
+      "summary": "在地居民視角挖掘非觀光客路線的五家小店，商圈巷弄美食內容在影音社群持續擴散。",
+      "title": "台北景美商圈隱藏美食半日遊影片走紅，蔥油餅、牛排、豆花、牛肉麵一次介紹"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1008,
+      "rank": 1,
+      "region": "台灣",
+      "sourceUrl": "https://www.youtube.com/watch?v=W8BHqv5c_Yw",
+      "summary": "聯合報最新民調引爆藍綠攻防，沈伯洋本人冷靜回應「民調僅供參考」，選前一個月台北選情成為全台政治流量焦點。",
+      "title": "台北市長選戰民調翻轉，沈伯洋以 45% 微幅領先蔣萬安 41%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1009,
+      "rank": 2,
+      "region": "台灣",
+      "sourceUrl": "https://www.dukecountry.fm/2026/10/27/china-dismisses-taiwans-accusations-of-involvement-in-comedian-attack/",
+      "summary": "北京國台辦駁斥為民進黨捏造，兩岸「跨境鎮壓」與選舉干預指控成為 10 月 28 日以來最受國際媒體跟進的台灣事件。",
+      "title": "檢方起訴五人涉嫌受雇攻擊諷刺北京的喜劇演員黃逸豪，賴清德批評北京以「跨境鎮壓」介選"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1010,
+      "rank": 3,
+      "region": "台灣",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/taiwans-umc-approves-additional-32-billion-capacity-expansion-2026-10-28/",
+      "summary": "聯電第三季營收年增 25.6%、股價今年已漲 147.5%，AI 相關營收三年內目標占 25%，半導體擴產消息帶動台股 AI 供應鏈熱議。",
+      "title": "聯電董事會通過約 32 億美元擴產計畫，預期 2027 年平均售價上漲 10%"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1011,
+      "rank": 4,
+      "region": "台灣",
+      "sourceUrl": "https://www.ad-hoc-news.de/boerse/marktberichte/taiwan-weighted-taiex-ends-higher-after-anthropic-ipo-939-points/70425526",
+      "summary": "加權指數盤中一度衝上 47,060 點、單日漲幅 2%，市場緊盯 10 月 29 日凌晨聯準會利率決議與晚間美國 PCE 通膨數據。",
+      "title": "台股 10 月 28 日大漲 939 點收 47,035 點，Anthropic IPO 點火 AI 晶片股"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1012,
+      "rank": 5,
+      "region": "台灣",
+      "sourceUrl": "https://www.unclewinston.com/news/2026-10-27-taiwan-s-dpp-warns-of-fast-spreading-election-disinformation.html",
+      "summary": "距九合一投票日僅約一個月，民進黨點名未經查證民調與反美敘事操作，選舉資訊戰成為社群熱議話題。",
+      "title": "民進黨示警選舉假訊息快速擴散，協同帳號、AI 生成政治影片與斷章取義剪輯激增"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1033,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://netshop.impress.co.jp/n/2026/10/29/16950",
+      "summary": "以暖冬為背景，點名「智慧防寒小物」「突發惡劣天氣對策商品」「戶外冬日美食」三大消費軸，輕量機能防寒、戶外用餐相關商品銷售明顯上升，呼應慢生活與務實日常的消費轉向。",
+      "title": "樂天市場發表 2026 年冬季趨勢預測，主打「暖冬轉向消費」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1034,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "https://xtrend.nikkei.com/atcl/contents/18/00109/00237/",
+      "summary": "訪日遊客在社群分享的食體驗「反向輸入」美國，親子丼三明治等洋食被列為 2027 年八大食趨勢之一，今日美食與跨境消費話題。",
+      "title": "美國 Whole Foods 預測 2027 年食趨勢：日本洋食將在美國爆紅"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1035,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "https://www.jiji.com/jc/article?k=000000266.000006357&g=prt",
+      "summary": "旅行搜尋數據顯示福岡、鹿兒島、長崎大幅躍升，九州復興優惠券與紅葉、溫泉、美食疊加，反映「近處、節制預算、重體驗」的秋旅風格。",
+      "title": "2026 年秋季國內旅行排行：北海道居首、九州需求急擴"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1036,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.japan-explorers.com/koyo/100sen/",
+      "summary": "10 月 29 日清晨更新的色澤情報顯示，奧入瀨溪流、白神山地、鳴子峽、定山溪等地已入見頃，正是賞楓出遊的決策高峰期。",
+      "title": "日本紅葉名所 100 選今日更新：24 處正值見頃、24 處開始轉色"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1037,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://news.yahoo.co.jp/articles/bacd8e3c5a4d3fc50b4422f3b39f10ab6f950232",
+      "summary": "她在 Instagram 分享新劇校園制服花絮，網友留言「最高にチャーミング」「還能演高中生」「太可愛」，成為今日娛樂社群的輕量洗版話題。",
+      "title": "剛力彩芽戲劇制服花絮照引發網路熱議"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1028,
+      "rank": 1,
+      "region": "日本",
+      "sourceUrl": "https://news.cts.com.tw/cna/international/202610/202610293094975.html",
+      "summary": "德國總理梅爾茨訪日，與高市早苗首相發表聯合聲明，同意加強國防、經濟安全與 AI、半導體等合作，並對東海、南海局勢表達嚴重關切，是今日日德關係與印太安全的主線新聞。",
+      "title": "日德峰會深化安全與經濟合作，重申維護台海和平穩定"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1029,
+      "rank": 2,
+      "region": "日本",
+      "sourceUrl": "http://www.excite.co.jp/news/article/TBSNews_1488249307275674521/",
+      "summary": "眾議院選舉制度改革出現實質進展，三黨就削減比例席次達成正式合意，牽動未來選制與政黨版圖，今日政治新聞熱度最高之一。",
+      "title": "自民、維新、國民民主三黨今日正式合意削減眾議院比例代表 31 席"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1030,
+      "rank": 3,
+      "region": "日本",
+      "sourceUrl": "http://www.excite.co.jp/news/article/SportsHochi_20261028_OHT1T51360/",
+      "summary": "28 日以 4 比 2 擊敗 DeNA，四戰全勝封王，優勝次數追平西武、僅次於巨人；昨晚至今仍是體育版與社群洗版話題。",
+      "title": "軟銀鷹日本大賽二連霸、隊史第 13 度優勝"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1031,
+      "rank": 4,
+      "region": "日本",
+      "sourceUrl": "https://www.itmedia.co.jp/news/article/2610/29/2000002692/",
+      "summary": "營運商モイ確認伺服器有第三方不正存取痕跡，28 日上午 10 時 40 分起停止服務，復舊需「相當時間」；累計註冊用戶逾 4000 萬人，創作者與觀眾社群高度關注。",
+      "title": "直播平台「TwitCasting」遭不正存取，28 日起全面停擺"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1032,
+      "rank": 5,
+      "region": "日本",
+      "sourceUrl": "https://s.kabutan.jp/news/n202610290386/",
+      "summary": "美國 FOMC 如預期維持利率、美股上漲帶動日股開高，但 Alphabet 盤後急跌，令近期反彈的 AI 相關股漲勢受阻；日本銀行 29–30 日亦召開金融政策會議，市場緊盯後續利率訊號。",
+      "title": "日股開盤續漲、日經平均一度漲逾 170 點，但 Alphabet 財報失望壓抑 AI 股"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1063,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.traveltourister.com/news/spain-train-strike-italy-general-strike-october-29-30-2026",
+      "summary": "高鐵僅約五至七成最低服務、義大利航班與鐵路齊受影響，正值出行旺季前夕，旅客查詢與改票流量暴增。",
+      "title": "西班牙 Renfe 司機 10 月 29 日罷工 24 小時、義大利 10 月 30 日全國大罷工，歐洲南線交通連兩天大亂"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1064,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.nextholidays.com/blog/places-to-celebrate-halloween-in-europe",
+      "summary": "今年萬聖節落在週六，兩天連假活動滿檔，古堡、哥德街道與親子活動攻略成為旅遊類流量高峰。",
+      "title": "歐洲萬聖節週末將至，德里 40 週年大遊行、哥本哈根 Tivoli、川索瓦尼亞布朗城堡成熱搜目的地"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1065,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.picolo.com/en-gb/destinations/europe/european-cities-to-visit-at-christmas",
+      "summary": "維也納、哥本哈根、紐倫堡、科隆等市集多在 11 月中下旬開幕，慢遊、美食與市集行程規劃提前引爆搜尋與訂房討論。",
+      "title": "歐洲聖誕市集 2026 日期陸續出爐，維也納 11 月 6 日最早開市"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1066,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.morningstar.com/news/alliance-news/1792623691645200200/uk-consumer-sentiment-worsens-in-october-ahead-of-government-budget",
+      "summary": "預算案前夕的悲觀情緒與節慶消費預期上升並存，反映通膨壓力下「省著花、但仍要過節」的矛盾心態，零售與民生討論熱烈。",
+      "title": "英國 10 月消費者信心再跌，經濟預期降至 -40、個人財務預期 -18 創次低"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1067,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://www.stan.news/29-october-4-november-2026",
+      "summary": "曼聯主帥帥位保衛戰、阿森納聯賽盃爆冷出局後反彈等劇情疊加，成為本週歐洲體育社群最熱話題之一。",
+      "title": "英超週末焦點戰：10 月 31 日切爾西對曼聯、11 月 2 日利物浦對阿森納"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1058,
+      "rank": 1,
+      "region": "歐洲",
+      "sourceUrl": "https://www.ndtv.com/world-news/spain-train-crash-toledo-live-updates-deaths-madrid-news-today-pedro-sanchez-12248070",
+      "summary": "本世紀歐洲最嚴重鐵路災難之一，馬德里往塞維亞高鐵停運、首相下令徹查是否有人為疏失，成為今日歐洲頭條。",
+      "title": "西班牙托萊多高鐵相撞至少 68 死，全國 10 月 29–31 日哀悼三天"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1059,
+      "rank": 2,
+      "region": "歐洲",
+      "sourceUrl": "https://www.youtube.com/watch?v=aQEfc4wyXtU",
+      "summary": "物價與燃油漲價引發的示威已連續多週，宵禁持續、街頭衝突畫面不斷發酵，社群討論度居高不下。",
+      "title": "法國抗議未歇，週末全國逾 1,400 人被捕、馬克宏突訪馬賽不排除緊急狀態"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1060,
+      "rank": 3,
+      "region": "歐洲",
+      "sourceUrl": "https://www.reuters.com/world/uk/view-britains-new-finance-minister-unveils-first-budget-2026-10-28/",
+      "summary": "2,000 萬戶 A–D 稅級家戶冬季可領 100 英鎊能源補貼、銀行附加稅由 3% 暫升至 6%，市場反應平穩，財經與民生討論同步升溫。",
+      "title": "英國新財相希利首份秋季預算案出爐，家戶能源補貼與銀行附加稅成焦點"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1061,
+      "rank": 4,
+      "region": "歐洲",
+      "sourceUrl": "https://www.europesays.com/europe/168368/",
+      "summary": "歐元區 9 月通膨升至 3.8%、能源價格年增 18.9%，在能源衝擊與需求轉弱拉鋸下，央行按兵不動與否牽動全歐借貸與物價預期。",
+      "title": "歐洲央行今日議息，市場預期存款利率維持 2.5% 不變"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1062,
+      "rank": 5,
+      "region": "歐洲",
+      "sourceUrl": "https://www.reuters.com/world/dutch-pledge-ukraine-reconstruction-support-zelenskiy-visits-2026-10-28/",
+      "summary": "援助涵蓋能源設施緊急修復與重建投資，北約同日亦呼籲加強對烏防空，烏克蘭議題再度回到歐洲新聞前排。",
+      "title": "荷蘭承諾未來三年向烏克蘭提供 12 億歐元非軍事重建援助，澤倫斯基訪海牙"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1053,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.usatoday.com/story/sports/mlb/2026/10/28/brewers-rays-world-series-score-highlights-watch-channel-game-5--live/92481878007/",
+      "summary": "光芒在第 4 戰 12 局以 4 比 3 驚險擊敗釀酒人，擋下對手 57 年來首冠的慶祝；第 5 戰於 29 日晚間在坦帕灣開打，全美體育流量焦點。",
+      "title": "世界大賽今晚第 5 戰：光芒 12 局逆轉續命，釀酒人仍 3 比 1 聽牌"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1054,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://www.consolidatedcredit.org/financial-news/halloween-spending-statistics/",
+      "summary": "NRF 調查顯示 74% 美國人計畫慶祝，人均 115.14 美元；服裝 44 億、裝飾 43 億、糖果 41 億美元，但 79% 購物者預期關稅將推高價格，過節仍精打細算。",
+      "title": "萬聖節消費再創新高，全美預計花費 135 億美元"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1055,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://finance.sina.cn/2026-10-29/detail-iniwvwre2884068.d.html",
+      "summary": "民調顯示雜貨價格對心理健康與壓力影響大於運動、睡眠等因素；2020 年 9 月至 2026 年 9 月雜貨價漲 28%，碎牛肉漲 67%、咖啡漲 108%，約 6 成低收入家庭月光。",
+      "title": "食品漲價壓垮餐桌：半數美國人因雜貨漲價減少用餐次數"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1056,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/10/07/3376692/0/en/trying-harder-yet-feeling-worse-americans-self-reported-health-status-hits-a-record-low.html",
+      "summary": "IFIC 2026 調查顯示 64% 美國人過去一年遵循特定飲食法、高蛋白居首，但自評健康「極佳或很好」者僅 40%，為 2012 年追蹤以來最低、一年內跌 8 個百分點；「健康老化」取代「精力」成為首要飲食訴求。",
+      "title": "越努力越不健康？美國人自評健康創歷史新低"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1057,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.businessday.co.za/lifestyle/wellness/2026-10-26-brands-face-scrutiny-as-protein-trend-fuels-new-products/",
+      "summary": "約 48% 美國成人想增加蛋白質攝取，Aldi、Walmart 等紛紛推高蛋白新品；但營養師與調查指出，不少產品蛋白質含量實低、加工成分偏多，三分之一受訪者認為業界過度炒作蛋白質。",
+      "title": "高蛋白熱潮遭檢視：標榜蛋白質的產品未必真的健康"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1048,
+      "rank": 1,
+      "region": "美國",
+      "sourceUrl": "https://www.ettoday.net/news/20261029/3262538.htm",
+      "summary": "Fed 如預期維持利率區間 3.75% 至 4% 不變，市場押注 12 月升息機率上升；道瓊、標普、那斯達克與費城半導體指數 28 日全數收高，甲骨文與 SK 海力士 ADR 漲逾 10%。",
+      "title": "聯準會按兵不動，美股全面收紅、甲骨文狂飆逾 10%"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1049,
+      "rank": 2,
+      "region": "美國",
+      "sourceUrl": "https://news.cts.com.tw/cna/international/202610/202610293094968.html",
+      "summary": "兩黨廣告淹沒 YouTube、電視、電郵甚至手機遊戲，俄亥俄州等拉鋸選區攻勢最猛；許多選民直言身心俱疲、盼選戰早日落幕。",
+      "title": "期中選舉倒數一週，負面廣告鋪天蓋地、支出破百億美元創新高"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1050,
+      "rank": 3,
+      "region": "美國",
+      "sourceUrl": "https://udn.com/news/story/6813/9843439",
+      "summary": "民調顯示共和黨恐丟掉眾議院控制權、參議院亦岌岌可危；川普 27 日表示若選舉廉潔不論結果都會尊重，若民主黨掌眾議院將以否決權與談判因應。",
+      "title": "期中選舉共和黨陷苦戰，川普稱「若廉潔就會尊重結果」"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1051,
+      "rank": 4,
+      "region": "美國",
+      "sourceUrl": "http://original.ifeng.com/c/8xbuPsQ0Ot7",
+      "summary": "批評者認為時機與對象選擇帶有政治色彩，司法部則稱遵循事實與法律；柯米案相關辯論將於週五開庭。",
+      "title": "司法部選前密集調查川普政敵：搜查歐瑪住宅、指控前 FBI 官員、重啟柯米追責"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1052,
+      "rank": 5,
+      "region": "美國",
+      "sourceUrl": "https://www.nownews.com/amp/news/6887111",
+      "summary": "FEC 自美東時間 26 日晚間起中斷，政治團體無法提交選前 24／48 小時支出報告，影響選前資金流向透明度；專家稱 26 年來未見此事，但不影響選民投票。",
+      "title": "期中選舉前爆網攻，聯邦選舉委員會電子申報系統癱瘓"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1043,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://www.joongang.co.kr/article/25473920",
+      "summary": "食藥處核准約 3 週後開賣，首 4 週供貨價約 12.98 萬韓元、約為競爭藥馬甲半價，挑戰由 Wegovy、Mounjaro 兩強壟斷的市場，價格與供貨穩定性是關注點。",
+      "title": "韓國首款國產 GLP-1 肥胖治療藥「에페」今日起在部分醫療機構開始處方"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1044,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261028028700530?section=society/all",
+      "summary": "初冬級寒流加上午後降雨擴及全國，穿衣、農作物管理與交通安全成為早晨實用搜尋與生活話題。",
+      "title": "今日清晨內陸多地跌破零度、午後起首都圈開始下雨，日夜溫差達 10～15 度"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1045,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.newspim.com/news/view/20261029000193",
+      "summary": "樂天免稅店外國顧客人數增 74%、銷售額增 40%，但人均購買額下滑，業者改推韓妝、韓食、韓酒與獨家聯名商品搶客。",
+      "title": "訪韓外國遊客增加但人均消費不增，免稅店轉向獨家商品競爭"
+    },
+    {
+      "brandRelevant": false,
+      "category": "生活",
+      "id": 1046,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.mk.co.kr/news/economy/12175744",
+      "summary": "10 月連假後外國遊客不再只買伴手禮，而是現場吃、親手做、體驗，農心聖水「辛拉麵食堂」4 個月吸引 37 萬人次、約半數為外國人。",
+      "title": "K 食品變成旅行本身：仁寺洞親手做泡菜、聖水洞吃拉麵體驗爆紅"
+    },
+    {
+      "brandRelevant": true,
+      "category": "生活",
+      "id": 1047,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.k-trendynews.com/news/articleView.html?idxno=206338",
+      "summary": "調查顯示旅遊決策先看住宿與在地飲食，鄉村地區旅遊消費中餐飲與住宿合計占 77.7%，慢下來、住下來、吃在地成為主流，呼應慢生活與幸福感知的取向。",
+      "title": "2026 國內旅遊趨勢：想「療癒休息」者 65.8%、想吃美食者 60.7%"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1038,
+      "rank": 1,
+      "region": "韓國",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10918583",
+      "summary": "今日韓國搜尋第 1 位，當天上午 10 時公布確定財報，連續四季刷新紀錄，HBM 與約 30 兆韓元配息動向牽動整個股市。",
+      "title": "三星電子第 3 季半導體營業利益首破 100 兆韓元、創歷史新高"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1039,
+      "rank": 2,
+      "region": "韓國",
+      "sourceUrl": "https://www.kado.net/news/articleView.html?idxno=2081285",
+      "summary": "歐洲 13 年來最嚴重鐵路事故，疑似管制中心在紅燈與前方有車情況下仍下令復駛，李在明總統已發文致哀並指示確保國民安全。",
+      "title": "西班牙高鐵追撞釀 68 死逾百傷，車上韓國人 10 名中有 2 人受傷"
+    },
+    {
+      "brandRelevant": true,
+      "category": "綜合",
+      "id": 1040,
+      "rank": 3,
+      "region": "韓國",
+      "sourceUrl": "https://www.ebn.co.kr/news/articleView.html?idxno=1729579",
+      "summary": "上月升息後此次以「看效果、放慢腳步」凍結，但 2 名委員主張再升息；韓美利差維持 1 個百分點，韓國第 3 季 GDP 年增表現強勁使升息呼聲加重。",
+      "title": "美國聯準會基準利率凍結在 3.75～4.00%，韓國央行 11 月升息預期升溫"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1041,
+      "rank": 4,
+      "region": "韓國",
+      "sourceUrl": "https://www.fnnews.com/news/202610290107457788",
+      "summary": "針對 6·3 地方選舉選票不足爭議，驗證延續至 29 日凌晨，特檢稱已扣留需精密鑑定的選票，場外仍有議員與集會者阻擋投票箱移送，政治對立持續延燒。",
+      "title": "選管會特檢完成奧林匹克公園 247 萬張選票公開驗證，歷時約 13 小時"
+    },
+    {
+      "brandRelevant": false,
+      "category": "綜合",
+      "id": 1042,
+      "rank": 5,
+      "region": "韓國",
+      "sourceUrl": "https://www.chosunonline.com/site/data/html_dir/2026/10/29/2026102980026.html",
+      "summary": "源於首爾市公共產後調理院預約優待引發的社群爭議，總統在 X 上轉貼相關討論並表示將與地方政府協商、甚至修施行令，成為當日社群與政治熱議焦點。",
+      "title": "李在明總統稱將檢討地方政府對多文化家庭的優待制度，是否廢止也納入考量"
+    }
+  ],
+  "followupNote": null,
+  "globalSummary": "台灣：選前一個月的民調翻轉讓社群既亢奮又多疑，數字一出、攻防立刻跟上；與此同時，台股大漲與萬聖節、白晝之夜預熱並行，大家一邊盯政治與盤勢、一邊替週末找出口，緊與鬆又一次同框。；中國：民族情緒的高位仍未退，道歉被放在放大鏡下逐字檢驗，連鎖反應一路燒到轉播與代言；另一邊，秋假、賞秋與康養旅居的熱度說明：大家罵歸罵，日子還是要往暖和、慢一點的地方走。；日本：封王的狂歡與直播平台停擺的不安在同一天並存，球迷一邊慶祝、一邊擔心自己常用的服務會不會突然斷掉；股市開高卻被美國財報潑冷水，大家對「系統與市場會不會突然斷掉」的敏感，比天氣更讓人有感。；韓國：三星財報破紀錄的亢奮與清晨零度以下的寒意再度對撞，帳面上的熱與身體感受到的冷不同步；西班牙事故裡的韓國傷者與總統致哀，讓遠方災難一下子有了本國名字，社群的情緒從看熱鬧轉為揪心。；美國：議息落地的鬆一口氣、期中選舉倒數的緊繃、戰事升級的警報三線並行，美國社群的情緒仍是「屏息」：大家一邊算荷包（雜貨漲 28%、半數人因漲價少下館子），一邊盼選戰早日落幕，連世界大賽的狂歡都帶著一點「先贏再說」的心急。；歐洲：歐洲的情緒是「撐不住也要撐」：法國街頭沒有因為一次讓步而熄火，西班牙的災難又添一層哀傷；與此同時，預算案補貼與聖誕市集提前開鑼並行，生活成本的怒火與「省著花、但仍要過節」的執念綁在同一天。；中東：中東的情緒是「選完了卻更不確定」再加一層「打不打、幾時打」的等待：以色列選民等不到勝者，波灣居民在防空警報與復航消息之間來回擺盪；油價在 100–115 美元高檔震盪，大家一邊刷戰況、一邊訂杜拜萬聖節與利雅德季的票，戰事的緊與節慶的鬆被迫共存。",
+  "globalTheme": "聯準會按兵不動牽動全球市場、西班牙高鐵68死橫跨歐韓中、美以伊戰爭升級風險牽動油價",
+  "sourceModifiedAt": "2026-10-29T09:45:00+08:00",
+  "storylines": [
+    {
+      "id": 94,
+      "items": [
+        "聯準會按兵不動、美股收紅",
+        "台股大漲 939 點、聯電擴產",
+        "日股開高但 Alphabet 壓抑 AI 股",
+        "韓國央行 11 月升息預期升溫",
+        "歐洲央行議息預期維持 2.5%"
+      ],
+      "kind": "跨區線",
+      "summary": "Fed 維持 3.75% 至 4% 不變、美股全面收紅，台股大漲 939 點、日股開高、韓國升息預期升溫、歐洲央行同日議息，同一組利率消息橫跨五地版面。",
+      "title": "聯準會按兵不動，全球市場同頻"
+    },
+    {
+      "id": 95,
+      "items": [
+        "西班牙高鐵相撞 68 死、全國哀悼三天",
+        "車上韓國人 10 名中有 2 人受傷",
+        "西班牙罷工、義大利全國大罷工接續"
+      ],
+      "kind": "跨區線",
+      "summary": "托萊多高鐵相撞成歐洲本世紀最嚴重鐵路災難之一，車上韓國人 2 傷、總統致哀，中國熱搜同步跟進，事故調查與罷工潮疊加。",
+      "title": "西班牙高鐵 68 死，哀傷橫跨歐韓中"
+    },
+    {
+      "id": 96,
+      "items": [
+        "伊朗推七日荷姆茲重開計畫",
+        "傳美軍期中選後再轟伊朗",
+        "油價 100–115 美元高檔震盪",
+        "以色列大選僵局、阿拉伯政黨成關鍵"
+      ],
+      "kind": "跨區線",
+      "summary": "荷姆茲七日重開計畫與川普否認和談並行，傳美軍期中選後 96 小時內可再轟伊朗，油價在 100–115 美元高檔震盪。",
+      "title": "美以伊戰爭升級風險"
+    },
+    {
+      "id": 97,
+      "items": [
+        "軟銀鷹日本大賽二連霸",
+        "世界大賽光芒 12 局逆轉續命",
+        "世界大賽第 5 戰今晚坦帕開打"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "日本軟銀 4 戰全勝二連霸；美國世界大賽光芒第 4 戰 12 局逆轉續命，釀酒人仍 3 比 1 聽牌，第 5 戰今晚坦帕開打。",
+      "title": "封王夜與續命夜"
+    },
+    {
+      "id": 98,
+      "items": [
+        "姆巴佩三語道歉、品牌解約、央視停播",
+        "法國抗議未歇、逾 1400 人被捕"
+      ],
+      "kind": "昨日追蹤",
+      "summary": "姆巴佩道歉後品牌解約、央視停播接續；法國抗議未因讓步而熄火，週末逾 1,400 人被捕。",
+      "title": "姆巴佩風波與法國抗議延燒"
+    }
+  ],
+  "suggestions": [
+    {
+      "brandRelevant": true,
+      "direction": "聯儲不動、美股收紅、台股大漲 939 點，但美國半數人因雜貨漲價少下館子、法國信心 13 年低點，寫指數與體感的落差。",
+      "id": 117,
+      "pillar": "金融一百零八講",
+      "title": "按兵不動的一夜：指數漲、體感冷"
+    },
+    {
+      "brandRelevant": true,
+      "direction": "美國人自評健康創歷史新低、高蛋白熱潮遭檢視，從「追指標」切入，寫身體本來就知道的事。",
+      "id": 118,
+      "pillar": "俗人對話錄",
+      "title": "越努力越不健康？"
+    },
+    {
+      "brandRelevant": false,
+      "direction": "以色列大選僵局與期中選舉倒數並行，寫等待答案時的心如何安放。",
+      "id": 119,
+      "pillar": "佛法生活感悟文",
+      "title": "選完了卻更不確定"
+    }
+  ]
+}
