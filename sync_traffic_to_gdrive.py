@@ -6,15 +6,22 @@
 功能：
 1. 將 reports/02_traffic/daily/<date>.json 轉為高質感的 Markdown 簡報（含全球主線、人心觀察、故事線、選題與七地 70 則詳細情報）。
 2. 同步上傳至 Google Drive 的「02_流量情報」資料夾（ID: 1467YTUDdUK-mlXkddfbN7QhWRGWzBTw_）。
-3. 同時上傳 Markdown 簡報與原始 JSON 檔案，實現雙保險雲端留痕。
+3. 支援雙模式：
+   - 模式 A（本機模式）：調用系統本機之 gdrive CLI（利用既有登入授權）。
+   - 模式 B（雲端 Actions 模式）：讀取環境變數 GDRIVE_SERVICE_ACCOUNT_KEY（JSON 字串），以 Google 官方 REST API 免依賴上傳。
 """
 
-import json
 import os
-import re
+import sys
+import json
 import shutil
 import subprocess
-import sys
+import urllib.request
+import urllib.error
+import time
+import base64
+import hmac
+import hashlib
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent
@@ -32,7 +39,7 @@ def find_gdrive():
     fallback = Path.home() / ".gemini/config/plugins/gdrive/skills/gdrive/scripts/gdrive"
     if fallback.exists():
         return str(fallback)
-    sys.exit("找不到 gdrive CLI，請確認已安裝並完成登入。")
+    return None
 
 
 def run_cmd(args):
@@ -101,8 +108,88 @@ def json_to_markdown(entry):
     return "\n".join(lines)
 
 
+# -------------------------------------------------------------
+# 雲端原生 Google Drive API 上傳 (免安裝 gdrive CLI，支援 Service Account)
+# -------------------------------------------------------------
+def get_service_account_token(sa_info: dict) -> str:
+    # 支援標準 Google OAuth2 JWT Bearer Flow
+    import urllib.parse
+    header = {"alg": "RS256", "typ": "JWT"}
+    now = int(time.time())
+    payload = {
+        "iss": sa_info["client_email"],
+        "scope": "https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive",
+        "aud": "https://oauth2.googleapis.com/token",
+        "exp": now + 3600,
+        "iat": now
+    }
+    
+    def b64url(data: bytes) -> str:
+        return base64.urlsafe_b64encode(data).decode('utf-8').rstrip('=')
+    
+    encoded_header = b64url(json.dumps(header).encode('utf-8'))
+    encoded_payload = b64url(json.dumps(payload).encode('utf-8'))
+    unsigned_jwt = f"{encoded_header}.{encoded_payload}"
+    
+    # 使用 private_key 進行 RS256 簽名
+    # 若在 GitHub Actions 容器中未預裝 cryptography，可用 openssl 簽名
+    p_key = sa_info["private_key"]
+    sign_cmd = subprocess.run(
+        ["openssl", "dgst", "-sha256", "-sign", "/dev/stdin"],
+        input=p_key.encode('utf-8'),
+        capture_output=True,
+        check=True
+    )
+    signature = sign_cmd.stdout
+    jwt = f"{unsigned_jwt}.{b64url(signature)}"
+    
+    token_req = urllib.request.Request(
+        "https://oauth2.googleapis.com/token",
+        data=urllib.parse.urlencode({
+            "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            "assertion": jwt
+        }).encode("utf-8"),
+        headers={"Content-Type": "application/x-www-form-urlencoded"}
+    )
+    with urllib.request.urlopen(token_req) as resp:
+        res = json.loads(resp.read().decode('utf-8'))
+        return res["access_token"]
+
+
+def upload_via_service_account(file_path: Path, parent_id: str, sa_info: dict, mime_type: str = "text/plain"):
+    token = get_service_account_token(sa_info)
+    metadata = {
+        "name": file_path.name,
+        "parents": [parent_id]
+    }
+    
+    boundary = "-------314159265358979323846"
+    delimiter = f"\r\n--{boundary}\r\n".encode('utf-8')
+    close_delimiter = f"\r\n--{boundary}--\r\n".encode('utf-8')
+    
+    body = bytearray()
+    body.extend(delimiter)
+    body.extend(b"Content-Type: application/json; charset=UTF-8\r\n\r\n")
+    body.extend(json.dumps(metadata).encode('utf-8'))
+    body.extend(delimiter)
+    body.extend(f"Content-Type: {mime_type}\r\n\r\n".encode('utf-8'))
+    body.extend(file_path.read_bytes())
+    body.extend(close_delimiter)
+    
+    req = urllib.request.Request(
+        "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+        data=bytes(body),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": f"multipart/related; boundary={boundary}"
+        }
+    )
+    with urllib.request.urlopen(req) as resp:
+        res = json.loads(resp.read().decode('utf-8'))
+        return res.get("id")
+
+
 def sync_date_to_gdrive(date_str):
-    gd = find_gdrive()
     json_path = DAILY_DIR / f"{date_str}.json"
     if not json_path.exists():
         print(f"錯誤：找不到 {json_path}")
@@ -115,16 +202,35 @@ def sync_date_to_gdrive(date_str):
     md_path.write_text(md_content, "utf-8")
     print(f"  ✓ 本機 Markdown 簡報已生成：{md_path.name}")
 
-    # 上傳 Markdown 簡報至 Google Drive「02_流量情報」資料夾
-    print(f"  ⬆ 正在上傳 {md_path.name} 至 Google 雲端硬碟「02_流量情報」資料夾...")
+    sa_key_env = os.environ.get("GDRIVE_SERVICE_ACCOUNT_KEY")
+    if sa_key_env:
+        # 雲端 Actions 模式
+        print("  🌐 偵測到 GDRIVE_SERVICE_ACCOUNT_KEY，使用 Google Drive REST API 上傳...")
+        try:
+            sa_info = json.loads(sa_key_env)
+            md_file_id = upload_via_service_account(md_path, GDRIVE_TRAFFIC_FOLDER_ID, sa_info, "text/markdown")
+            print(f"  ✓ Markdown 上傳成功 (ID: {md_file_id})")
+            json_file_id = upload_via_service_account(json_path, GDRIVE_TRAFFIC_FOLDER_ID, sa_info, "application/json")
+            print(f"  ✓ JSON 上傳成功 (ID: {json_file_id})")
+            return True
+        except Exception as e:
+            print(f"  ⚠️ 雲端 REST API 上傳失敗: {e}")
+            return False
+
+    # 本機模式：尋找 gdrive CLI
+    gd = find_gdrive()
+    if not gd:
+        print("  ℹ️ 未配置 GDRIVE_SERVICE_ACCOUNT_KEY 且找不到 gdrive CLI，跳過 Google Drive 上傳。")
+        return True
+
+    print(f"  ⬆ 正在透過本機 gdrive CLI 上傳 {md_path.name} 至「02_流量情報」資料夾...")
     try:
         upload_res = run_cmd([gd, "mutate", "upload", str(md_path), "--parent", GDRIVE_TRAFFIC_FOLDER_ID])
         print(f"  ✓ {upload_res.strip()}")
     except Exception as e:
         print(f"  ⚠️ Markdown 上傳提示: {e}")
 
-    # 同步上傳原始 JSON 檔案
-    print(f"  ⬆ 正在上傳 {json_path.name} 至 Google 雲端硬碟...")
+    print(f"  ⬆ 正在透過本機 gdrive CLI 上傳 {json_path.name} 至「02_流量情報」資料夾...")
     try:
         upload_json_res = run_cmd([gd, "mutate", "upload", str(json_path), "--parent", GDRIVE_TRAFFIC_FOLDER_ID])
         print(f"  ✓ {upload_json_res.strip()}")
