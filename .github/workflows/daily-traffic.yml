@@ -2,8 +2,8 @@ name: 每日社群流量 Top10 全球情報雲端自動巡檢與發布
 
 on:
   schedule:
-    # 每天 UTC 23:00 觸發（對應台灣時間 UTC+8 早上 07:00）
-    - cron: '0 23 * * *'
+    # 每天 UTC 20:00 觸發（對應台灣時間 UTC+8 清晨 04:00，確保早上 07:00 前發布）
+    - cron: '0 20 * * *'
   workflow_dispatch: # 支援在 GitHub 網頁上手動一鍵點擊執行
 
 permissions:
