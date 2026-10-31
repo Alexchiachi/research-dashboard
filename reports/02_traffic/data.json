@@ -1,737 +1,798 @@
 [
   {
     "date": "2026-10-31",
-    "globalTheme": "全球在地化分流與跨區共振：演算法時代下的集體注意力焦點",
-    "globalSummary": "今日全球七大區域的搜尋與社群軌跡顯示，地緣政經、通膨生活成本與數位多巴胺娛樂持續拉扯大眾心智。群眾一方面高度關注切身之生計與局部紛爭，另一方面則透過社群娛樂尋求降熵與避風港。",
-    "events": [
-      {
-        "id": 1,
-        "region": "台灣",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【台灣】苗栗火災",
-        "summary": "台灣社群與搜尋趨勢關注焦點「苗栗火災」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E8%8B%97%E6%A0%97%E7%81%AB%E7%81%BD",
-        "brandRelevant": true
-      },
-      {
-        "id": 2,
-        "region": "台灣",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【台灣】李正皓",
-        "summary": "台灣社群與搜尋趨勢關注焦點「李正皓」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%9D%8E%E6%AD%A3%E7%9A%93",
-        "brandRelevant": false
-      },
-      {
-        "id": 3,
-        "region": "台灣",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【台灣】張銘祐",
-        "summary": "台灣社群與搜尋趨勢關注焦點「張銘祐」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E5%BC%B5%E9%8A%98%E7%A5%90",
-        "brandRelevant": true
-      },
-      {
-        "id": 4,
-        "region": "台灣",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【台灣】林楚茵",
-        "summary": "台灣社群與搜尋趨勢關注焦點「林楚茵」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%9E%97%E6%A5%9A%E8%8C%B5",
-        "brandRelevant": false
-      },
-      {
-        "id": 5,
-        "region": "台灣",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【台灣】高雄全家海神",
-        "summary": "台灣社群與搜尋趨勢關注焦點「高雄全家海神」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%AB%98%E9%9B%84%E5%85%A8%E5%AE%B6%E6%B5%B7%E7%A5%9E",
-        "brandRelevant": true
-      },
-      {
-        "id": 6,
-        "region": "台灣",
-        "category": "生活",
-        "rank": 6,
-        "title": "【台灣】鄭麗文",
-        "summary": "台灣社群與搜尋趨勢關注焦點「鄭麗文」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%84%AD%E9%BA%97%E6%96%87",
-        "brandRelevant": false
-      },
-      {
-        "id": 7,
-        "region": "台灣",
-        "category": "生活",
-        "rank": 7,
-        "title": "【台灣】chelsea vs man utd",
-        "summary": "台灣社群與搜尋趨勢關注焦點「chelsea vs man utd」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20vs%20man%20utd",
-        "brandRelevant": true
-      },
-      {
-        "id": 8,
-        "region": "台灣",
-        "category": "生活",
-        "rank": 8,
-        "title": "【台灣】เชลซี พบ แมนยู",
-        "summary": "台灣社群與搜尋趨勢關注焦點「เชลซี พบ แมนยู」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E0%B9%80%E0%B8%8A%E0%B8%A5%E0%B8%8B%E0%B8%B5%20%E0%B8%9E%E0%B8%9A%20%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%A2%E0%B8%B9",
-        "brandRelevant": false
-      },
-      {
-        "id": 9,
-        "region": "台灣",
-        "category": "生活",
-        "rank": 9,
-        "title": "【台灣】chelsea đấu với man utd",
-        "summary": "台灣社群與搜尋趨勢關注焦點「chelsea đấu với man utd」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20%C4%91%E1%BA%A5u%20v%E1%BB%9Bi%20man%20utd",
-        "brandRelevant": true
-      },
-      {
-        "id": 10,
-        "region": "台灣",
-        "category": "生活",
-        "rank": 10,
-        "title": "【台灣】癌症",
-        "summary": "台灣社群與搜尋趨勢關注焦點「癌症」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E7%99%8C%E7%97%87",
-        "brandRelevant": false
-      },
-      {
-        "id": 11,
-        "region": "中國",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【中國】雲量",
-        "summary": "中國社群與搜尋趨勢關注焦點「雲量」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%9B%B2%E9%87%8F",
-        "brandRelevant": true
-      },
-      {
-        "id": 12,
-        "region": "中國",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【中國】車路士對曼聯",
-        "summary": "中國社群與搜尋趨勢關注焦點「車路士對曼聯」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E8%BB%8A%E8%B7%AF%E5%A3%AB%E5%B0%8D%E6%9B%BC%E8%81%AF",
-        "brandRelevant": false
-      },
-      {
-        "id": 13,
-        "region": "中國",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【中國】高海寧",
-        "summary": "中國社群與搜尋趨勢關注焦點「高海寧」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%AB%98%E6%B5%B7%E5%AF%A7",
-        "brandRelevant": true
-      },
-      {
-        "id": 14,
-        "region": "中國",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【中國】chelsea vs man utd",
-        "summary": "中國社群與搜尋趨勢關注焦點「chelsea vs man utd」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20vs%20man%20utd",
-        "brandRelevant": false
-      },
-      {
-        "id": 15,
-        "region": "中國",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【中國】切爾西對曼聯",
-        "summary": "中國社群與搜尋趨勢關注焦點「切爾西對曼聯」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E5%88%87%E7%88%BE%E8%A5%BF%E5%B0%8D%E6%9B%BC%E8%81%AF",
-        "brandRelevant": true
-      },
-      {
-        "id": 16,
-        "region": "中國",
-        "category": "生活",
-        "rank": 6,
-        "title": "【中國】朱敏瀚",
-        "summary": "中國社群與搜尋趨勢關注焦點「朱敏瀚」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%9C%B1%E6%95%8F%E7%80%9A",
-        "brandRelevant": false
-      },
-      {
-        "id": 17,
-        "region": "中國",
-        "category": "生活",
-        "rank": 7,
-        "title": "【中國】蘭桂坊人踩人",
-        "summary": "中國社群與搜尋趨勢關注焦點「蘭桂坊人踩人」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E8%98%AD%E6%A1%82%E5%9D%8A%E4%BA%BA%E8%B8%A9%E4%BA%BA",
-        "brandRelevant": true
-      },
-      {
-        "id": 18,
-        "region": "中國",
-        "category": "生活",
-        "rank": 8,
-        "title": "【中國】算命",
-        "summary": "中國社群與搜尋趨勢關注焦點「算命」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E7%AE%97%E5%91%BD",
-        "brandRelevant": false
-      },
-      {
-        "id": 19,
-        "region": "中國",
-        "category": "生活",
-        "rank": 9,
-        "title": "【中國】北都馬拉松",
-        "summary": "中國社群與搜尋趨勢關注焦點「北都馬拉松」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E5%8C%97%E9%83%BD%E9%A6%AC%E6%8B%89%E6%9D%BE",
-        "brandRelevant": true
-      },
-      {
-        "id": 20,
-        "region": "中國",
-        "category": "生活",
-        "rank": 10,
-        "title": "【中國】百佳超級市場",
-        "summary": "中國社群與搜尋趨勢關注焦點「百佳超級市場」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E7%99%BE%E4%BD%B3%E8%B6%85%E7%B4%9A%E5%B8%82%E5%A0%B4",
-        "brandRelevant": false
-      },
-      {
-        "id": 21,
-        "region": "日本",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【日本】菅田将暉",
-        "summary": "日本社群與搜尋趨勢關注焦點「菅田将暉」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E8%8F%85%E7%94%B0%E5%B0%86%E6%9A%89",
-        "brandRelevant": true
-      },
-      {
-        "id": 22,
-        "region": "日本",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【日本】月 今日",
-        "summary": "日本社群與搜尋趨勢關注焦點「月 今日」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%9C%88%20%E4%BB%8A%E6%97%A5",
-        "brandRelevant": false
-      },
-      {
-        "id": 23,
-        "region": "日本",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【日本】桂川有人",
-        "summary": "日本社群與搜尋趨勢關注焦點「桂川有人」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%A1%82%E5%B7%9D%E6%9C%89%E4%BA%BA",
-        "brandRelevant": true
-      },
-      {
-        "id": 24,
-        "region": "日本",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【日本】庄司浩平",
-        "summary": "日本社群與搜尋趨勢關注焦點「庄司浩平」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E5%BA%84%E5%8F%B8%E6%B5%A9%E5%B9%B3",
-        "brandRelevant": false
-      },
-      {
-        "id": 25,
-        "region": "日本",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【日本】橋本環奈 ほん怖",
-        "summary": "日本社群與搜尋趨勢關注焦點「橋本環奈 ほん怖」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E6%A9%8B%E6%9C%AC%E7%92%B0%E5%A5%88%20%E3%81%BB%E3%82%93%E6%80%96",
-        "brandRelevant": true
-      },
-      {
-        "id": 26,
-        "region": "日本",
-        "category": "生活",
-        "rank": 6,
-        "title": "【日本】オバマ大統領",
-        "summary": "日本社群與搜尋趨勢關注焦點「オバマ大統領」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E3%82%AA%E3%83%90%E3%83%9E%E5%A4%A7%E7%B5%B1%E9%A0%98",
-        "brandRelevant": false
-      },
-      {
-        "id": 27,
-        "region": "日本",
-        "category": "生活",
-        "rank": 7,
-        "title": "【日本】鹿児島 対 熊本",
-        "summary": "日本社群與搜尋趨勢關注焦點「鹿児島 対 熊本」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%B9%BF%E5%85%90%E5%B3%B6%20%E5%AF%BE%20%E7%86%8A%E6%9C%AC",
-        "brandRelevant": true
-      },
-      {
-        "id": 28,
-        "region": "日本",
-        "category": "生活",
-        "rank": 8,
-        "title": "【日本】ほん怖 吉高由里子 旅館",
-        "summary": "日本社群與搜尋趨勢關注焦點「ほん怖 吉高由里子 旅館」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E3%81%BB%E3%82%93%E6%80%96%20%E5%90%89%E9%AB%98%E7%94%B1%E9%87%8C%E5%AD%90%20%E6%97%85%E9%A4%A8",
-        "brandRelevant": false
-      },
-      {
-        "id": 29,
-        "region": "日本",
-        "category": "生活",
-        "rank": 9,
-        "title": "【日本】レバンテ 対 アトレティコ",
-        "summary": "日本社群與搜尋趨勢關注焦點「レバンテ 対 アトレティコ」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E3%83%AC%E3%83%90%E3%83%B3%E3%83%86%20%E5%AF%BE%20%E3%82%A2%E3%83%88%E3%83%AC%E3%83%86%E3%82%A3%E3%82%B3",
-        "brandRelevant": true
-      },
-      {
-        "id": 30,
-        "region": "日本",
-        "category": "生活",
-        "rank": 10,
-        "title": "【日本】高宮まり",
-        "summary": "日本社群與搜尋趨勢關注焦點「高宮まり」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E9%AB%98%E5%AE%AE%E3%81%BE%E3%82%8A",
-        "brandRelevant": false
-      },
-      {
-        "id": 31,
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【韓國】레반테 대 아틀레티코",
-        "summary": "韓國社群與搜尋趨勢關注焦點「레반테 대 아틀레티코」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EB%A0%88%EB%B0%98%ED%85%8C%20%EB%8C%80%20%EC%95%84%ED%8B%80%EB%A0%88%ED%8B%B0%EC%BD%94",
-        "brandRelevant": true
-      },
-      {
-        "id": 32,
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【韓國】스토크 시티 대 프레스턴 노스 엔드",
-        "summary": "韓國社群與搜尋趨勢關注焦點「스토크 시티 대 프레스턴 노스 엔드」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EC%8A%A4%ED%86%A0%ED%81%AC%20%EC%8B%9C%ED%8B%B0%20%EB%8C%80%20%ED%94%84%EB%A0%88%EC%8A%A4%ED%84%B4%20%EB%85%B8%EC%8A%A4%20%EC%97%94%EB%93%9C",
-        "brandRelevant": false
-      },
-      {
-        "id": 33,
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【韓國】로또1248",
-        "summary": "韓國社群與搜尋趨勢關注焦點「로또1248」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EB%A1%9C%EB%98%901248",
-        "brandRelevant": true
-      },
-      {
-        "id": 34,
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【韓國】dewa united vs persija jakarta",
-        "summary": "韓國社群與搜尋趨勢關注焦點「dewa united vs persija jakarta」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=dewa%20united%20vs%20persija%20jakarta",
-        "brandRelevant": false
-      },
-      {
-        "id": 35,
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【韓國】금",
-        "summary": "韓國社群與搜尋趨勢關注焦點「금」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EA%B8%88",
-        "brandRelevant": true
-      },
-      {
-        "id": 36,
-        "region": "韓國",
-        "category": "生活",
-        "rank": 6,
-        "title": "【韓國】chelsea đấu với man utd",
-        "summary": "韓國社群與搜尋趨勢關注焦點「chelsea đấu với man utd」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20%C4%91%E1%BA%A5u%20v%E1%BB%9Bi%20man%20utd",
-        "brandRelevant": false
-      },
-      {
-        "id": 37,
-        "region": "韓國",
-        "category": "生活",
-        "rank": 7,
-        "title": "【韓國】장동윤",
-        "summary": "韓國社群與搜尋趨勢關注焦點「장동윤」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EC%9E%A5%EB%8F%99%EC%9C%A4",
-        "brandRelevant": true
-      },
-      {
-        "id": 38,
-        "region": "韓國",
-        "category": "生活",
-        "rank": 8,
-        "title": "【韓國】내일 날씨",
-        "summary": "韓國社群與搜尋趨勢關注焦點「내일 날씨」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%EB%82%B4%EC%9D%BC%20%EB%82%A0%EC%94%A8",
-        "brandRelevant": false
-      },
-      {
-        "id": 39,
-        "region": "韓國",
-        "category": "生活",
-        "rank": 9,
-        "title": "【韓國】chelsea vs man utd",
-        "summary": "韓國社群與搜尋趨勢關注焦點「chelsea vs man utd」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20vs%20man%20utd",
-        "brandRelevant": true
-      },
-      {
-        "id": 40,
-        "region": "韓國",
-        "category": "生活",
-        "rank": 10,
-        "title": "【韓國】เชลซี พบ แมนยู",
-        "summary": "韓國社群與搜尋趨勢關注焦點「เชลซี พบ แมนยู」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%E0%B9%80%E0%B8%8A%E0%B8%A5%E0%B8%8B%E0%B8%B5%20%E0%B8%9E%E0%B8%9A%20%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%A2%E0%B8%B9",
-        "brandRelevant": false
-      },
-      {
-        "id": 41,
-        "region": "美國",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【美國】telemundo",
-        "summary": "美國社群與搜尋趨勢關注焦點「telemundo」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=telemundo",
-        "brandRelevant": true
-      },
-      {
-        "id": 42,
-        "region": "美國",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【美國】melanie lynskey per episode pay",
-        "summary": "美國社群與搜尋趨勢關注焦點「melanie lynskey per episode pay」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=melanie%20lynskey%20per%20episode%20pay",
-        "brandRelevant": false
-      },
-      {
-        "id": 43,
-        "region": "美國",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【美國】scarlett johansson",
-        "summary": "美國社群與搜尋趨勢關注焦點「scarlett johansson」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=scarlett%20johansson",
-        "brandRelevant": true
-      },
-      {
-        "id": 44,
-        "region": "美國",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【美國】marco palestra",
-        "summary": "美國社群與搜尋趨勢關注焦點「marco palestra」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=marco%20palestra",
-        "brandRelevant": false
-      },
-      {
-        "id": 45,
-        "region": "美國",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【美國】criminal defense lawyer",
-        "summary": "美國社群與搜尋趨勢關注焦點「criminal defense lawyer」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=criminal%20defense%20lawyer",
-        "brandRelevant": true
-      },
-      {
-        "id": 46,
-        "region": "美國",
-        "category": "生活",
-        "rank": 6,
-        "title": "【美國】gamecocks football",
-        "summary": "美國社群與搜尋趨勢關注焦點「gamecocks football」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=gamecocks%20football",
-        "brandRelevant": false
-      },
-      {
-        "id": 47,
-        "region": "美國",
-        "category": "生活",
-        "rank": 7,
-        "title": "【美國】tucker carlson",
-        "summary": "美國社群與搜尋趨勢關注焦點「tucker carlson」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=tucker%20carlson",
-        "brandRelevant": true
-      },
-      {
-        "id": 48,
-        "region": "美國",
-        "category": "生活",
-        "rank": 8,
-        "title": "【美國】frank miller",
-        "summary": "美國社群與搜尋趨勢關注焦點「frank miller」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=frank%20miller",
-        "brandRelevant": false
-      },
-      {
-        "id": 49,
-        "region": "美國",
-        "category": "生活",
-        "rank": 9,
-        "title": "【美國】josh jacobs news",
-        "summary": "美國社群與搜尋趨勢關注焦點「josh jacobs news」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=josh%20jacobs%20news",
-        "brandRelevant": true
-      },
-      {
-        "id": 50,
-        "region": "美國",
-        "category": "生活",
-        "rank": 10,
-        "title": "【美國】deontay wilder",
-        "summary": "美國社群與搜尋趨勢關注焦點「deontay wilder」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=deontay%20wilder",
-        "brandRelevant": false
-      },
-      {
-        "id": 51,
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【歐洲】talksport live",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「talksport live」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=talksport%20live",
-        "brandRelevant": true
-      },
-      {
-        "id": 52,
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【歐洲】harry maguire",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「harry maguire」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=harry%20maguire",
-        "brandRelevant": false
-      },
-      {
-        "id": 53,
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【歐洲】talksport",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「talksport」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=talksport",
-        "brandRelevant": true
-      },
-      {
-        "id": 54,
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【歐洲】jersey airport drone disruption flights",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「jersey airport drone disruption flights」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=jersey%20airport%20drone%20disruption%20flights",
-        "brandRelevant": false
-      },
-      {
-        "id": 55,
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【歐洲】morgan rogers",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「morgan rogers」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=morgan%20rogers",
-        "brandRelevant": true
-      },
-      {
-        "id": 56,
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 6,
-        "title": "【歐洲】man u chelsea",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「man u chelsea」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=man%20u%20chelsea",
-        "brandRelevant": false
-      },
-      {
-        "id": 57,
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 7,
-        "title": "【歐洲】chelsea f.c. games",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「chelsea f.c. games」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20f.c.%20games",
-        "brandRelevant": true
-      },
-      {
-        "id": 58,
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 8,
-        "title": "【歐洲】hbo max",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「hbo max」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=hbo%20max",
-        "brandRelevant": false
-      },
-      {
-        "id": 59,
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 9,
-        "title": "【歐洲】tnt sports",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「tnt sports」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=tnt%20sports",
-        "brandRelevant": true
-      },
-      {
-        "id": 60,
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 10,
-        "title": "【歐洲】talk sport",
-        "summary": "歐洲社群與搜尋趨勢關注焦點「talk sport」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=talk%20sport",
-        "brandRelevant": false
-      },
-      {
-        "id": 61,
-        "region": "中東",
-        "category": "綜合",
-        "rank": 1,
-        "title": "【中東】التعاون ضد الاتفاق",
-        "summary": "中東社群與搜尋趨勢關注焦點「التعاون ضد الاتفاق」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D8%B6%D8%AF%20%D8%A7%D9%84%D8%A7%D8%AA%D9%81%D8%A7%D9%82",
-        "brandRelevant": true
-      },
-      {
-        "id": 62,
-        "region": "中東",
-        "category": "綜合",
-        "rank": 2,
-        "title": "【中東】fakhar zaman",
-        "summary": "中東社群與搜尋趨勢關注焦點「fakhar zaman」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=fakhar%20zaman",
-        "brandRelevant": false
-      },
-      {
-        "id": 63,
-        "region": "中東",
-        "category": "綜合",
-        "rank": 3,
-        "title": "【中東】levante vs atlético",
-        "summary": "中東社群與搜尋趨勢關注焦點「levante vs atlético」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=levante%20vs%20atl%C3%A9tico",
-        "brandRelevant": true
-      },
-      {
-        "id": 64,
-        "region": "中東",
-        "category": "綜合",
-        "rank": 4,
-        "title": "【中東】ليفانتي ضد أتلتيكو مدريد",
-        "summary": "中東社群與搜尋趨勢關注焦點「ليفانتي ضد أتلتيكو مدريد」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%D9%84%D9%8A%D9%81%D8%A7%D9%86%D8%AA%D9%8A%20%D8%B6%D8%AF%20%D8%A3%D8%AA%D9%84%D8%AA%D9%8A%D9%83%D9%88%20%D9%85%D8%AF%D8%B1%D9%8A%D8%AF",
-        "brandRelevant": false
-      },
-      {
-        "id": 65,
-        "region": "中東",
-        "category": "綜合",
-        "rank": 5,
-        "title": "【中東】nidhi razdan",
-        "summary": "中東社群與搜尋趨勢關注焦點「nidhi razdan」，反映當前群眾在綜合面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=nidhi%20razdan",
-        "brandRelevant": true
-      },
-      {
-        "id": 66,
-        "region": "中東",
-        "category": "生活",
-        "rank": 6,
-        "title": "【中東】chelsea vs man utd",
-        "summary": "中東社群與搜尋趨勢關注焦點「chelsea vs man utd」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chelsea%20vs%20man%20utd",
-        "brandRelevant": false
-      },
-      {
-        "id": 67,
-        "region": "中東",
-        "category": "生活",
-        "rank": 7,
-        "title": "【中東】تشيلسي ضد مان يونايتد",
-        "summary": "中東社群與搜尋趨勢關注焦點「تشيلسي ضد مان يونايتد」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=%D8%AA%D8%B4%D9%8A%D9%84%D8%B3%D9%8A%20%D8%B6%D8%AF%20%D9%85%D8%A7%D9%86%20%D9%8A%D9%88%D9%86%D8%A7%D9%8A%D8%AA%D8%AF",
-        "brandRelevant": true
-      },
-      {
-        "id": 68,
-        "region": "中東",
-        "category": "生活",
-        "rank": 8,
-        "title": "【中東】saudi arabia travel ban kenya 2026",
-        "summary": "中東社群與搜尋趨勢關注焦點「saudi arabia travel ban kenya 2026」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=saudi%20arabia%20travel%20ban%20kenya%202026",
-        "brandRelevant": false
-      },
-      {
-        "id": 69,
-        "region": "中東",
-        "category": "生活",
-        "rank": 9,
-        "title": "【中東】chennaiyin vs kerala blasters",
-        "summary": "中東社群與搜尋趨勢關注焦點「chennaiyin vs kerala blasters」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=chennaiyin%20vs%20kerala%20blasters",
-        "brandRelevant": true
-      },
-      {
-        "id": 70,
-        "region": "中東",
-        "category": "生活",
-        "rank": 10,
-        "title": "【中東】hong kong sixes schedule",
-        "summary": "中東社群與搜尋趨勢關注焦點「hong kong sixes schedule」，反映當前群眾在生活面向的最新情緒波動與注意力聚焦點。",
-        "sourceUrl": "https://www.google.com/search?q=hong%20kong%20sixes%20schedule",
-        "brandRelevant": false
-      }
-    ],
+    "sourceModifiedAt": "2026-10-31T21:30:00+08:00",
+    "followupNote": null,
+    "globalTheme": "美以伊海峽博弈與荷姆茲航運警報牽動全球油價；歐美選戰前夕民調倒掛與通膨家計簿算盤對撞；東亞AI產業強韌與秋冬生活避風港同台共振",
+    "globalSummary": "台灣：選戰前哨兩份民調倒掛成了茶餘飯後的判讀遊戲，台股十月月線收官與外資期貨空單拉扯，大巨蛋搶票哀鴻與天母萬聖節踩街成了週末釋放壓力的集體出口。；中國：PMI重返擴張與房貸利率下調正式落地，官方講底線信心，民間看的是就業與實體復甦；而在巨富長發瘋式Cosplay與秋假錯峰賞秋中，大家把日子往幽默與慢節奏裡安頓。；日本：石破茂內閣選後面臨執政未過半的國會大考，日銀暗示升息但東京都CPI持續高企，家計簿算著加油與外食開銷；澀谷封街防人潮，佐賀熱氣球升空成了民眾替週末留存的喘息。；韓國：9月工業生產創15年半新高與首都圈青年購屋焦慮對撞，半導體單騎救主難掩內需冷感；而梨泰院部署AI防踩踏警戒與寺廟寄宿冥想熱，說明社會一邊極度防備、一邊渴望心靈降熵。；美國：大選進入最後倒數，搖擺州民調緊咬與PCE通膨達標並行，選民一邊盯著選情一邊算感恩節返鄉機票；全美萬聖節手作省錢過節，與釀酒人首冠遊行交織出中西部少見的狂歡。；歐洲：歐元區Q3經濟微幅優於預期，但德國製造業震盪與法國債息高企烏雲未散；罷工餘波未平之際，大霧籠罩倫敦機場，聖誕市集提前搭建則透露出歐洲人在緊繃生活裡緊握節慶溫暖的執念。；中東：海峽油輪觸雷警報與日內瓦外交斡旋同步拉鋸，航運保費暴漲牽動全球神經；普通人的日常則在避冬度假與利雅德狂歡季中前進，連杜拜的寵物萬聖節派對都展現出在警報邊緣依然用力生活的韌性。",
     "storylines": [
       {
-        "id": 1,
-        "kind": "主線",
-        "title": "演算法重力場下的全球生活成本抗禦",
-        "summary": "從歐美日韓的即時搜尋關鍵字觀察，高通膨與生活成本推動群眾關注極簡生活與平價方案，展現跨區域的自發性韌性。",
+        "id": 104,
+        "kind": "跨區線",
+        "title": "荷姆茲油輪觸雷警報與全球能源航運連動",
+        "summary": "荷姆茲海峽4艘油輪觸雷後，國際海事組織拉高安全警戒，再保險費率暴漲三成；沙國與阿曼於日內瓦重啟斡旋，五角大廈調派軍艦防範外溢，全球油價與航運股應聲震盪。",
         "items": [
-          "東亞區域關注在地生計、日常消費與娛樂解壓",
-          "歐美區域聚焦大選政經、勞動權益與通膨因應",
-          "中東區域持續牽動能源安全與區域穩定神經"
+          "4艘油輪觸雷起火引發國際海事組織高度警戒",
+          "波斯灣油輪航運保費單日暴漲逾30%",
+          "沙國阿曼於日內瓦斡旋力促降級",
+          "美軍調派驅逐艦強化海峽周邊防衛",
+          "歐洲與東亞航空能源採購全面啟動避險"
+        ]
+      },
+      {
+        "id": 105,
+        "kind": "跨區線",
+        "title": "東亞晶片出口高奏凱歌 vs 內需家計簿體感緊縮",
+        "summary": "台灣Q3 GDP年增3.97%、韓國工業生產創15年半最大增幅，全靠AI與半導體出口獨撐大局；但兩地傳產就業、青年購屋與外食生活成本攀升，呈現『總經數字達標、庶民體感偏冷』的分歧局面。",
+        "items": [
+          "台灣Q3 GDP受AI伺服器拉動上修至3.97%",
+          "韓國9月工業生產創15年半新高但內需偏弱",
+          "SK海力士與台積電產能吃緊撐起出口大梁",
+          "台北與首爾外食費及房貸壓力讓青年精打細算",
+          "超商暖食與平價小確幸成兩地共同消費出口"
+        ]
+      },
+      {
+        "id": 106,
+        "kind": "跨區線",
+        "title": "萬聖節全球維安總動員與青年「降熵解壓」消費潮",
+        "summary": "從首爾梨泰院AI人流監控、東京澀谷八公封街、到上海巨富長幽默Cosplay與台北天母20萬人踩街，各國在安全防踩踏的緊繃神經下，青年群眾透過自嘲與低成本裝扮尋求集體釋壓。",
+        "items": [
+          "首爾部署3,200名警力與AI防踩踏系統嚴防梨泰院",
+          "東京澀谷八公圍封並頒布禁酒令分流人潮",
+          "上海年輕人以打工人迷因展開發瘋式幽默裝扮",
+          "台北天母商圈湧入20萬人潮踩街討糖",
+          "全美萬聖消費破百億但家戶轉向手作省錢"
+        ]
+      },
+      {
+        "id": 107,
+        "kind": "跨區線",
+        "title": "歐美大選與政局動盪下的財政預算拉鋸",
+        "summary": "美國搖擺州大選倒數計時民調陷入膠著，英國工黨預算案增稅填補黑洞，法國罷工反對緊縮，日本石破茂內閣面臨執政聯盟未過半考驗，選民在選戰喧囂與緊縮稅單間尋求平衡。",
+        "items": [
+          "美選搖擺州民調在誤差範圍內陷入激戰",
+          "英國秋季預算案擬調高稅負填補財政缺口",
+          "法國公務員罷工反對削減公共開支",
+          "日本特別國會首相指名與朝野協商拉鋸",
+          "群眾對政治承諾呈現高度防禦性審視"
+        ]
+      },
+      {
+        "id": 108,
+        "kind": "昨日追蹤",
+        "title": "釀酒人隊史首冠全城遊行與中西部體育經濟效應",
+        "summary": "密爾瓦基釀酒人隊4比1奪冠終結57年等待的後續效應持續延燒，全城冠軍大遊行吸納數十萬球迷，聯名球衣與周邊商品瞬間售罄，為中西部注入罕見的實體經濟活力。",
+        "items": [
+          "密爾瓦基全城冠軍大遊行吸引數十萬人湧入",
+          "釀酒人首冠紀念商品全面斷貨帶動週邊消費",
+          "中西部體育迷集體狂歡創近年在地消費高峰"
         ]
       }
     ],
     "suggestions": [
       {
-        "id": 1,
-        "pillar": "佛法生活感悟文",
-        "title": "在躁動的熱搜之外：給大腦一座免於資訊轟炸的僻靜所",
-        "direction": "從每日全球數十萬筆熱門關鍵字切入，探討在多巴胺與資訊過載的時代，如何守護內心的清澈與主權。",
+        "id": 123,
+        "pillar": "金融一百零八講",
+        "title": "指標擴張與荷包緊縮：當總經數據與個體體感徹底分道揚鑣",
+        "direction": "從台灣GDP 3.97%與韓國工業生產創15年半新高，對照東京東京都CPI、台北外食與全美感恩節機票高漲，寫宏觀數據的繁榮如何掩蓋微觀個體的體感，一人公司如何跳脫總經迷霧專注自體造血。",
         "brandRelevant": true
       },
       {
-        "id": 2,
-        "pillar": "金融一百零八講",
-        "title": "熱搜背後的注意力經濟：看懂資本如何定價群眾的情緒",
-        "direction": "解析流量數據如何轉化為消費脈動與資本定價，以及一人公司如何建立抗脆弱的資產結構。",
+        "id": 124,
+        "pillar": "俗人對話錄",
+        "title": "民調倒掛與數字迷宮：我們是在看趨勢，還是找自己想信的答案？",
+        "direction": "從雙北市長選戰前哨兩份完全相反的民調、到美選搖擺州統計誤差範圍內的數字拉鋸，剖析資訊過載時代群眾如何用信仰解讀數字，大道至簡如何引導我們向內收攝、專注於真實行動。",
         "brandRelevant": true
+      },
+      {
+        "id": 125,
+        "pillar": "佛法生活感悟文",
+        "title": "在海峽烽火與萬聖狂歡之間：如何安頓一顆被演算法撕裂的心？",
+        "direction": "荷姆茲海峽的觸雷起火與首爾、澀谷、天母的萬聖節人潮同日並陳，一邊是生死無常，一邊是狂歡喘息。寫在撕裂的多巴胺世界裡，如何退步看清實相，尋得內心一處免於恐懼的寧靜道場。",
+        "brandRelevant": false
+      }
+    ],
+    "events": [
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "主計總處概估 Q3 GDP 年增率達 3.97%，AI 伺服器與半導體出口創單季新高",
+        "summary": "受惠全球 AI 基礎建設算力需求暴增，台灣第三季出口表現亮眼，主計總處上修全年經濟成長預期；但傳統機械、石化與內需服務業復甦不均，產業呈現明顯雙速發展。",
+        "sourceUrl": "https://www.stat.gov.tw",
+        "id": 1148
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "雙北市長選戰前哨戰民調熱議，選民結構與「支持度與看好度倒掛」成政論焦點",
+        "summary": "最新雙北兩份民調領先人選相互矛盾，支持度與看好度出現罕見倒掛現象，社群與政論節目連日熱議選民策略投票與隱性中間選民流向，成為茶餘飯後的判讀遊戲。",
+        "sourceUrl": "https://www.cna.com.tw",
+        "id": 1149
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "台股十月最後交易日震盪收官月線翻紅，外資期貨淨空單仍高、散戶觀望氣氛濃",
+        "summary": "權值股台積電與聯發科尾盤穩盤，台股月線順利收紅終結連續跌勢；但外資在台指期未平倉空單依然維持高檔，市場普遍緊盯美聯準會議息與大選結果前夕之避險部位。",
+        "sourceUrl": "https://www.twse.com.tw",
+        "id": 1150
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "台灣",
+        "brandRelevant": false,
+        "title": "苗栗木雕街與通霄民宅清晨火警迅速撲滅無人傷亡，老街管線安全引發廣泛關切",
+        "summary": "苗栗清晨連續兩起火警動員大批消防人員灌救，所幸居民疏散及時未釀傷亡；老舊木造街區電線老化與秋冬乾燥季節防火巡查成為地方社群與議會關注焦點。",
+        "sourceUrl": "https://news.ltn.com.tw",
+        "id": 1151
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "高雄全家海神職籃新賽季主場開幕戰，巨蛋湧入破萬球迷結合音樂祭跨界吸客",
+        "summary": "TPBL 職籃新賽季南部首戰開打，高雄全家海神主場吸引破萬名球迷進場，現場結合港都流行音樂節與周邊文創市集，運動娛樂化體驗成功拉動青年觀賽商機。",
+        "sourceUrl": "https://sports.ltn.com.tw",
+        "id": 1152
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "台北「天母搞什麼鬼」萬聖節踩街盛大登場，逾 20 萬人擠爆天母商圈創人潮新高",
+        "summary": "一年一度天母萬聖節踩街嘉年華吸引破 20 萬人潮，家長與孩童創意變裝洗版社群，周邊忠誠路與天母東西路實施交管，地方餐飲店家業績成長逾三成。",
+        "sourceUrl": "https://udn.com/news/story/7323",
+        "id": 1153
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "台北大巨蛋跨年演唱會實名制抽選放榜，數十萬人搶票中籤率僅 3% 社群哀鴻遍野",
+        "summary": "年底跨年大巨蛋演唱會實名抽選公布結果，極低中籤率引發社群熱議，主辦單位嚴格防堵黃牛票與加開候補機制受讚譽，大巨蛋周邊飯店跨年夜訂房已全數售罄。",
+        "sourceUrl": "https://www.cna.com.tw",
+        "id": 1154
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "新光三越週年慶首波週末迎來消費人潮高峰，平價保養品與保暖冬衣成採購主力",
+        "summary": "各大百貨週年慶週末首波迎來人潮高峰，家計簿消費轉向實用理性，高單價奢侈品買氣持平，但平價美妝組與機能保暖服飾成為家戶重點儲備標的。",
+        "sourceUrl": "https://www.chinatimes.com",
+        "id": 1155
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "超商秋冬熱食爭霸開打：關東煮升級濃郁湯頭、現烤地瓜單日熱銷破 50 萬條",
+        "summary": "隨著東北季風帶來微涼秋意，7-11 與全家超商升級秋冬熱食專區，產地直送現烤地瓜與關東煮熱湯銷量倍增，成為外食族與加班族最便捷的溫暖避風港。",
+        "sourceUrl": "https://www.ettoday.net",
+        "id": 1156
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "台灣",
+        "brandRelevant": true,
+        "title": "大谷翔平與道奇隊世界大賽熱度全台延燒，聯名球衣與奪冠紀念周邊全台專賣店秒殺",
+        "summary": "大谷翔平帶領道奇隊征戰世界大賽掀起全台棒球狂熱，運動酒吧晨間轉播客滿，聯名球帽與冠軍紀念 T 恤在全台各大旗艦店連夜被球迷搶購一空。",
+        "sourceUrl": "https://tsna.com",
+        "id": 1157
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "中共二十屆三中全會刺激政策細則陸續落地，民營經濟促進法草案公眾徵求意見",
+        "summary": "司法部與發改委公布民營經濟促進法草案並廣泛徵求各界意見，從平等准入、融資保障與權益維護多維度規範，市場關注政策能否實質提振民營企業中長期投資信心。",
+        "sourceUrl": "https://www.xinhuanet.com",
+        "id": 1158
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "中國 10 月官方製造業 PMI 回升至 50.1% 重返擴張區間，供需雙向回暖支撐景氣",
+        "summary": "國家統計局數據顯示，受一攬子增量政策帶動，10 月份製造業採購經理人指數較上月回升 0.3 個百分點，新訂單指數由降轉升，高技術製造業與設備更新領域表現亮眼。",
+        "sourceUrl": "https://www.stats.gov.cn",
+        "id": 1159
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "華為原生鴻蒙 HarmonyOS NEXT 開啟多款旗艦機公測，生態重構與原生應用適配受矚",
+        "summary": "華為純血鴻蒙正式擴大面向 Pura 70 系列等主力機型公測，各大主流 App 加速原生適配進度，開發者生態全面脫離安卓框架，成為國產自主作業系統的關鍵里程碑。",
+        "sourceUrl": "https://www.thepaper.cn",
+        "id": 1160
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "六大國有商業銀行集體下調存量房貸利率正式落地，百萬房貸每月可省利息逾兩百元",
+        "summary": "工商銀行、建設銀行等六大行於 10 月底完成存量房貸利率批量調降，多數符合條件的個人住房貸款利率統一降至 LPR 減 30 個基點，實質減輕城鎮家庭每月負債負擔。",
+        "sourceUrl": "https://www.caixin.com",
+        "id": 1161
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "消費品以舊換新補貼持續加碼，新能源汽車與一級能效家電全國消費額突破千億元",
+        "summary": "商務部等部門推動的以舊換新補貼政策在各地見效，綠色家電與節能汽車銷售顯著提振，各地財政專項資金落實與補貼申領便利度成為社群高頻討論話題。",
+        "sourceUrl": "https://www.mofcom.gov.cn",
+        "id": 1162
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "秋假錯峰賞秋出遊持續火熱，重慶巫山紅葉與雲南騰衝銀杏村酒店預訂翻倍",
+        "summary": "避開國慶大客流的秋假錯峰遊熱度飆升，重慶巫山三峽紅葉季與騰衝銀杏村成為親子與銀髮客群首選，縣域高品質精品民宿預訂量同比增長超過 160%。",
+        "sourceUrl": "https://www.ctrip.com",
+        "id": 1163
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "上海「巨富長」街區萬聖節管制人流，年輕人以打工人迷因展開發瘋式幽默 Cosplay",
+        "summary": "上海巨鹿路、富民路一帶萬聖節週末夜間實施分流管制，年輕族群以辦公室工牌、甲方需求等現實打工人痛點為題材裝扮，以生活幽默化解職場焦慮引發全網瘋傳。",
+        "sourceUrl": "https://www.thepaper.cn",
+        "id": 1164
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "杭州西湖桂花盛花期與銀杏轉黃相遇，雙休日湧入逾 40 萬遊客擠爆湖濱步道",
+        "summary": "今年秋季氣溫偏高致西湖晚桂盛開與銀杏初黃罕見重疊，滿隴桂雨與北山街湧入如織遊人，景區共享單車調度與茶園露天茶座一席難求，秋日賞景消費極具人氣。",
+        "sourceUrl": "https://www.hangzhou.com.cn",
+        "id": 1165
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "雙十一電商購物節首波尾款開跑，各大平台取消繁複預售現貨直開、消費者轉向減法理性",
+        "summary": "今年天貓與京東雙十一第一波現貨全面開售，摒棄繁複定金預售模式，大眾購物傾向剛需囤貨與減法消費，平價日用品與性價比國貨品牌銷量穩步增長。",
+        "sourceUrl": "https://www.36kr.com",
+        "id": 1166
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "中國",
+        "brandRelevant": true,
+        "title": "故宮博物院與國家博物館秋季特展預約秒殺，年輕族群掀起「文博打卡集章」熱潮",
+        "summary": "故宮秋季書畫珍品特展預約場場秒殺，各地博物館推出文創印章與沉浸式互動展覽，年輕一代將週末時光投入文博美學陶冶，帶動周邊文創周邊商品銷量翻倍。",
+        "sourceUrl": "https://www.dpm.org.cn",
+        "id": 1167
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "石破茂內閣選後面臨執政未過半僵局，國民民主黨成關鍵少數左右政策走向",
+        "summary": "日本眾議院大選後自公執政聯盟議席未過半，石破茂內閣需在特別國會尋求在野黨部分政策合作，國民民主黨主張提高個人所得稅起徵點成為朝野協商焦點。",
+        "sourceUrl": "https://www3.nhk.or.jp",
+        "id": 1168
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "日本央行決議維持政策利率 0.25% 不變，植田和男暗示若經濟如期將考慮升息",
+        "summary": "日銀在貨幣政策會議上全員一致通過維持基準利率不變，總裁植田和男在記者會表示將密切觀察美國經濟與全球金融市場，並暗示未來適時推進貨幣正常化方針。",
+        "sourceUrl": "https://www.nikkei.com",
+        "id": 1169
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "東京都心 10 月核心 CPI 年增 1.8%，生鮮食品與外食米價高漲衝擊家計簿支出",
+        "summary": "總務省公布東京市區 10 月消費者物價指數核心升幅為 1.8%，受白米短缺與加工食品漲價拉動，民間生活成本體感依然高企，官方通膨指標與庶民感受形成反差。",
+        "sourceUrl": "https://www.stat.go.jp",
+        "id": 1170
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "豐田汽車宣布擴建美國電池產線投入 5 億美元，加速油電混合與電動化佈局",
+        "summary": "豐田汽車宣布對美國北卡羅來納州電池製造工廠追加投資，旨在擴大油電複合動力 (HEV) 與純電車載電池產能，以應對北美市場強勁的節能車型需求。",
+        "sourceUrl": "https://global.toyota",
+        "id": 1171
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "日本",
+        "brandRelevant": false,
+        "title": "日本海上保安廳與防衛省強化南西諸島海域巡弋，應對周邊多重海上安全挑戰",
+        "summary": "日本防衛省加速在沖繩及先島群島推進雷達監測與警備部隊部署，防範周邊海域突發狀況，相關防衛預算增長與離島居民疏散演練引發政界與社會持續討論。",
+        "sourceUrl": "https://www.mod.go.jp",
+        "id": 1172
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "澀谷區長宣示萬聖節封街與禁酒管制，八公像圍封促使人潮轉移至新宿與池袋",
+        "summary": "東京澀谷區連續第二年採取嚴格防範措施，八公銅像四周架設白色圍欄並實施夜間公共場所禁酒，萬聖變裝人潮明顯分散至新宿歌舞伎町及池袋太陽城商圈。",
+        "sourceUrl": "https://www.asahi.com",
+        "id": 1173
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "佐賀國際熱氣球節天候轉晴，逾百架熱氣球齊飛嘉瀨川河畔吸引十萬遊客",
+        "summary": "亞洲規模最大的佐賀熱氣球節進入競技賽程，晨間藍天映襯下百餘架五彩熱氣球同時騰空，壯麗景色吸引全日本及海外逾十萬名攝影愛好者與遊客共襄盛舉。",
+        "sourceUrl": "https://www.saga-balloon.com",
+        "id": 1174
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "富士山創下 130 年來最晚初冠雪紀錄，山頂無雪引發氣候變遷與觀光期程討論",
+        "summary": "歷經 10 月底富士山頂依然未見積雪，正式打破 1894 年有紀錄以來最遲積雪紀錄，異常溫暖氣候成為環保團體焦點，也讓期盼白頭富士的溫泉觀光業者憂心忡忡。",
+        "sourceUrl": "https://tenki.jp",
+        "id": 1175
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "超商秋季甜點大戰開打：栗子蒙布朗與紅遙地瓜新品洗版社群評測",
+        "summary": "Lawson 與 7-Eleven 同步推出秋季限定甜點，採用茨城縣產栗子與鹿兒島熟成紅遙番薯製作的泡芙與蛋糕捲引爆社群打卡熱潮，精緻平價小確幸成下班必購慰藉。",
+        "sourceUrl": "https://www.oricon.co.jp",
+        "id": 1176
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "日本",
+        "brandRelevant": true,
+        "title": "日本大賽橫濱 DeNA 迎戰福岡軟銀鷹進入白熱化，強投對決引爆全國球迷熱議",
+        "summary": "日本職棒總冠軍賽進行至關鍵戰役，橫濱 DeNA 海灣星靠頑強防守與牛棚戰力咬住戰局，全日本轉播收視率飆高，橫濱球場周圍街區聚集數萬球迷隔空吶喊應援。",
+        "sourceUrl": "https://npb.jp",
+        "id": 1177
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "韓國 9 月工業生產指數創 15 年半最大增幅，半導體出口獨挑大樑難掩內需疲態",
+        "summary": "韓國統計廳數據顯示 9 月全產業生產指數月增 3.0%，受高階 AI 晶片出貨暴增推動；然而國內建築投資連五季萎縮、零售銷售低迷，呈現外熱內冷的嚴重產業失衡。",
+        "sourceUrl": "https://kostat.go.kr",
+        "id": 1178
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "韓國央行示警家庭負債逼近歷史臨界點，首爾青年購屋焦慮與限貸令陷入膠著",
+        "summary": "韓國央行金融穩定報告指出家庭負債佔 GDP 比例偏高，金融當局收緊首都圈貸款限額後房價漲勢趨緩，但首爾核心地段青年租屋族面臨利率與居住成本雙重擠壓。",
+        "sourceUrl": "https://www.bok.or.kr",
+        "id": 1179
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "韓國晶片雙雄擴大高頻寬記憶體產能，半導體佔全國外銷比重升至 25%",
+        "summary": "SK 海力士與三星電子加速下一代 HBM3E 及 HBM4 產線升級，晶片出口佔韓國外銷總額四分之一，在全球 AI 伺服器供應鏈中具備不可替代的戰略地位。",
+        "sourceUrl": "https://www.hankyung.com",
+        "id": 1180
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "韓國",
+        "brandRelevant": false,
+        "title": "共同民主黨力推國會特檢調查法案，朝野政黨對立加劇陷入長期立法僵局",
+        "summary": "韓國最大在野黨在國會全體會議強力推進針對第一夫人等爭議的特別檢察法案，執政黨國民力量強烈反對並揚言行使總統否決權，政壇對立升高至大選前新高。",
+        "sourceUrl": "https://www.yna.co.kr",
+        "id": 1181
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "韓國公正交易委員會突襲調查外送平台高額手續費，小微餐飲業者集體陳情減負",
+        "summary": "韓國政府反壟斷機構對 Baemin 及 Coupang Eats 等外送平台展開現場調查，小微餐飲店主抗議抽成比例過高侵蝕薄利，官方要求平台業者限期提出調降手續費方案。",
+        "sourceUrl": "https://www.ftc.go.kr",
+        "id": 1182
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "梨泰院慘案兩週年首度萬聖節：首爾動員 3,200 名警力與 AI 人流監控重兵防踩踏",
+        "summary": "首爾市政府在梨泰院、弘大、江南等 14 個熱區部署密集監視鏡頭與人流密集警報系統，梨泰院世界美食街實施單向通行管制，全社會以高度審慎態度悼念與防護。",
+        "sourceUrl": "https://www.seoul.go.kr",
+        "id": 1183
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "年輕世代掀起寺廟寄宿熱潮，曹溪寺無手機冥想與發呆體驗一席難求",
+        "summary": "韓國 20 至 30 歲年輕人紛紛預約週末寺廟寄宿 (Temple Stay)，在遠離電子螢幕的古剎中體驗晨鐘暮鼓與冥想，成為都市青年對抗職場高壓與精神內耗的解方。",
+        "sourceUrl": "https://www.templestay.com",
+        "id": 1184
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "韓國超商秋冬換季：現烤地瓜銷量暴增三倍超越傳統包子成宵夜首選",
+        "summary": "GS25 與 CU 便利商店秋冬烤箱全面開爐，海南郡產蜜地瓜銷量連續兩週超越紅豆豆包，甜度高且健康飽足的特性深受女性與單身族喜愛，成為深夜便利店招牌景致。",
+        "sourceUrl": "https://www.chosun.com",
+        "id": 1185
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "傳統國劇題材熱播劇《正年》引爆文化復興，古典劇團與國樂演出門票秒殺",
+        "summary": "改編自女性國劇的韓劇《正年》掀起收視狂潮，國立唱劇團與首爾南山國樂堂的傳統板索里歌劇門票一票難求，年輕觀眾透過影視作品重新認識傳統聲樂之美。",
+        "sourceUrl": "https://www.donga.com",
+        "id": 1186
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "韓國",
+        "brandRelevant": true,
+        "title": "職棒起亞虎隊奪冠後續慶祝狂歡，光州聯名商品與特釀啤酒瞬間售罄",
+        "summary": "KIA Tigers 奪得 2026 韓國大賽總冠軍後，光州市民展開連日狂歡，便利店與球團發售的限定冠軍啤酒及簽名球衣在全國數千家門市開賣數分鐘內被搶購一空。",
+        "sourceUrl": "https://www.koreabaseball.com",
+        "id": 1187
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "美國大選進入最後倒數倒計時，搖擺州民調緊咬在誤差範圍內、數千萬人提早投票",
+        "summary": "2026 美國大選進入最後黃金週末，賓州、密西根、威斯康辛等關鍵搖擺州選情高度緊繃，兩黨候選人密集造勢，全美提早投票人數突破五千萬人創下期中歷史紀錄。",
+        "sourceUrl": "https://www.reuters.com",
+        "id": 1188
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "美國 9 月核心 PCE 物價指數年增 2.7% 符合預期，強化聯準會 11 月僅降息 1 碼共識",
+        "summary": "商務部公布聯準會最看重的通膨指標核心 PCE 年增 2.7%，個人消費支出依然強韌，市場預期聯準會下週降息步調將趨於溫和審慎，美債殖利率維持高位整理。",
+        "sourceUrl": "https://www.bea.gov",
+        "id": 1189
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "蘋果公司最新季報亮眼但大中華區銷售微降，庫克發表 Apple Intelligence 全球擴展藍圖",
+        "summary": "蘋果第四財季營收超越市場預期，iPhone 16 系列銷量強勁，執行長庫克在電話會上宣布生成式 AI 功能將於明春拓展至更多國際語言與市場，穩住投資人信心。",
+        "sourceUrl": "https://www.apple.com",
+        "id": 1190
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "密爾瓦基釀酒人隊擊敗光芒奪得世界大賽首冠，全城舉行冠軍大遊行振奮中西部",
+        "summary": "釀酒人隊以 4 比 1 奪下隊史 57 年來首座世界大賽冠軍，密爾瓦基全城舉行盛大彩帶遊行，數十萬球迷湧入市中心，為中西部傳統製造業城市注入強大經濟活力。",
+        "sourceUrl": "https://www.mlb.com",
+        "id": 1191
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "美國",
+        "brandRelevant": false,
+        "title": "五角大廈向中東調派驅逐艦與防空部隊，嚴密防範荷姆茲海峽衝突進一步外溢",
+        "summary": "針對波斯灣油輪觸雷事件，美國國防部下令增派神盾驅逐艦與愛國者防空飛彈營前往波灣海域，白宮強調確保國際關鍵能源航道暢通，原油市場緊繃情緒微幅緩解。",
+        "sourceUrl": "https://www.defense.gov",
+        "id": 1192
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "全美萬聖節總消費預估突破 122 億美元，糖果裝飾家庭預算微減、「自製手作」成主流",
+        "summary": "全美零售聯合會 (NRF) 調查顯示萬聖節總支出維持歷史高檔，但在通膨生活成本壓力下，每戶在服飾與糖果的支出轉向精打細算，二手改造與 DIY 手作裝扮在社群蔚為風潮。",
+        "sourceUrl": "https://nrf.com",
+        "id": 1193
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "感恩節全美機票與租車價格創下十年新高，預算型旅客轉向提早訂票與鐵路出行",
+        "summary": "隨著感恩節假期臨近，航空運能吃緊與燃油成本推動主要國內航線機票價格走高，消費者紛紛透過價格追蹤工具提前鎖定折扣，美鐵 (Amtrak) 長途車票預訂量增長近兩成。",
+        "sourceUrl": "https://www.bloomberg.com",
+        "id": 1194
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "紐約格林威治村第 53 屆萬聖節大遊行吸引數萬人著奇裝異服上街，曼哈頓街頭成露天劇場",
+        "summary": "紐約市標誌性的格林威治村萬聖節大遊行熱鬧開場，數以百計的巨大木偶、舞者與市民盛裝穿越第六大道，沿途吸引數十萬國內外觀眾夾道歡呼，曼哈頓街頭化為狂歡嘉年華。",
+        "sourceUrl": "https://halloween-nyc.com",
+        "id": 1195
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "NBA 新賽季開打第二週，湖人與塞爾提克等傳統勁旅戰績亮眼、空接精華霸榜社群",
+        "summary": "NBA 新賽季常規賽激戰正酣，洛杉磯湖人與波士頓塞爾提克打出連勝開局，新生代球星極具觀賞性的隔扣與空中接力片段在 TikTok 與 Instagram 點擊突破億次。",
+        "sourceUrl": "https://www.nba.com",
+        "id": 1196
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "美國",
+        "brandRelevant": true,
+        "title": "降噪耳機與「無手機咖啡館」在西海岸悄然流行，科技業員工自發參與週末數位排毒",
+        "summary": "舊金山與西雅圖多家咖啡館推出「無螢幕專區」，進店需將手機存入儲物袋，這股拒絕資訊過載的「數位排毒 (Digital Detox)」生活方式在疲憊的矽谷工程師中大受歡迎。",
+        "sourceUrl": "https://www.wired.com",
+        "id": 1197
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "歐元區第三季 GDP 季增 0.4% 優於預期，但德國製造業萎縮與福斯關廠陰影未散",
+        "summary": "歐盟統計局概算歐元區第三季經濟成長 0.4%，法國與西班牙表現穩健；然而歐洲經濟火車頭德國工業訂單持續疲軟，福斯汽車計劃關閉本土工廠引發產業工會大規模反彈。",
+        "sourceUrl": "https://ec.europa.eu/eurostat",
+        "id": 1198
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "歐洲央行拉加德重申通膨降溫處於正軌，示警貿易保護主義與地緣裂痕風險",
+        "summary": "歐洲央行總裁拉加德在公開演說中指出歐元區通膨正朝向 2% 目標穩步靠攏，但中東局勢升級可能引發能源價格二次反彈，加上全球貿易關稅風險，貨幣政策仍須保持高度彈性。",
+        "sourceUrl": "https://www.ecb.europa.eu",
+        "id": 1199
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "歐洲",
+        "brandRelevant": false,
+        "title": "西班牙高鐵脫軌事故初步指向軌道維護缺陷，鐵路工會強烈抗議並要求全面安檢",
+        "summary": "西班牙南部高鐵列車脫軌事故調查取得進展，初步報告顯示路軌養護存在瑕疵，西班牙火車司機工會發起跨地區罷工抗議，要求交通部全面檢視高速鐵路基礎設施養護標準。",
+        "sourceUrl": "https://elpais.com",
+        "id": 1200
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "英國工黨政府公布秋季預算案擬增稅填補財政黑洞，商界擔憂抑止投資活力",
+        "summary": "英國財政大臣里夫斯發表工黨執政後首份秋季財政預算案，宣布提高企業雇主國民保險繳費與資本利得稅以填補數百億英鎊財政缺口，金融城擔憂將削弱英國企業競爭力。",
+        "sourceUrl": "https://www.bbc.com",
+        "id": 1201
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "歐洲",
+        "brandRelevant": false,
+        "title": "法國公務員與鐵路工會抗議財政緊縮，政府削減開支引發法債利差持續擴大",
+        "summary": "面對龐大的財政赤字壓力，法國政府計劃在 2026 預算案中凍結部分公共部門職缺並削減開支，巴黎等大城市爆發跨工會聯合抗議，法國十年期國債與德債利差創近年新高。",
+        "sourceUrl": "https://www.lemonde.fr",
+        "id": 1202
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "倫敦希斯洛機場迎來半學期連假與萬聖節人潮，晨間濃霧導致部分短途航班延誤",
+        "summary": "英國秋季半學期學校假期結束撞上萬聖節週末，倫敦各大機場客運量達到單日近二十萬人次高峰，泰晤士河谷晨霧造成多班歐洲境內短途航班延後起飛，旅客查詢量劇增。",
+        "sourceUrl": "https://www.heathrow.com",
+        "id": 1203
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "德國紐倫堡與法國史特拉斯堡啟動聖誕市集前置搭建，節慶溫暖提早對抗陰冷冬季",
+        "summary": "歐洲各大著名聖誕市集提前展開木屋攤位裝潢與巨型聖誕樹點燈測試，在生活物價與地緣陰霾之下，民眾渴望透過傳統香料熱紅酒與手作糕點重拾節慶的撫慰與人情溫度。",
+        "sourceUrl": "https://www.dw.com",
+        "id": 1204
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "義大利皮埃蒙特白松露季盛大開拍，頂級食材競標熱度對比常民橄欖油漲價",
+        "summary": "義大利阿爾巴白松露國際拍賣會吸引全球頂級藏家競標，特大松露拍出天價；然而義大利普通家庭日常採購的初榨橄欖油與麵粉因減產價格翻倍，民生與奢華呈現極端對照。",
+        "sourceUrl": "https://www.ansa.it",
+        "id": 1205
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "巴黎奧運後首個秋冬藝文季登場，羅浮宮與奧賽美術館夜間特展預約全數爆滿",
+        "summary": "後奧運時期的巴黎重回藝文首都定位，羅浮宮與奧賽博物館推出的古典大師跨國特展吸引數十萬歐洲文藝愛好者，夜間專場預約提前數週售罄，帶動周邊左岸餐飲回溫。",
+        "sourceUrl": "https://www.louvre.fr",
+        "id": 1206
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "歐洲",
+        "brandRelevant": true,
+        "title": "歐盟永續紡織新規上路前夕，青年二手古著市集爆紅、快時尚退潮成新風尚",
+        "summary": "因應歐盟禁止銷毀未售出衣物與推動紡織品可回收規範，柏林、阿姆斯特丹與巴黎街頭二手市集人氣暴漲，年輕消費者流行「修補重製、穿舊衣」，極簡永續成為新一代審美。",
+        "sourceUrl": "https://www.theguardian.com",
+        "id": 1207
+      },
+      {
+        "category": "綜合",
+        "rank": 1,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "荷姆茲海峽油輪觸雷事故持續發酵，國際海事組織發布航行警戒、保費飆升 30%",
+        "summary": "荷姆茲海峽四艘商船觸雷事件引發國際航運界震動，國際海事組織 (IMO) 提升該海域安全風險評級，倫敦再保險市場將波斯灣油輪戰爭險費率大幅調高三成以上。",
+        "sourceUrl": "https://www.aljazeera.com",
+        "id": 1208
+      },
+      {
+        "category": "綜合",
+        "rank": 2,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "沙烏地與阿曼代表團在日內瓦重啟斡旋對話，力促區域衝突降級維持航道暢通",
+        "summary": "在聯合國與海灣阿拉伯國家合作委員會協調下，沙烏地與阿曼外交使節於日內瓦會晤關鍵各方，致力推動海峽安全對話機制，強調確保國際能源生命線免受任何軍事破壞。",
+        "sourceUrl": "https://www.arabnews.com",
+        "id": 1209
+      },
+      {
+        "category": "綜合",
+        "rank": 3,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "阿聯酋啟動中東最大主權綠能與 AI 算力中心建設，加速推進非石油經濟轉型",
+        "summary": "阿布達比主權基金與跨國科技巨頭簽署協議，啟動結合吉瓦級太陽能電廠與次世代資料中心的旗艦建設計畫，持續強化阿聯酋在全球清潔能源與人工智慧算力版圖的主導權。",
+        "sourceUrl": "https://www.thenationalnews.com",
+        "id": 1210
+      },
+      {
+        "category": "綜合",
+        "rank": 4,
+        "region": "中東",
+        "brandRelevant": false,
+        "title": "黎以邊境衝突持續擴大，聯合國駐黎巴嫩維和部隊呼籲各方克制避免人道危機",
+        "summary": "黎巴嫩南部邊境軍事交火頻繁，聯合國維和部隊哨所周邊遭波及，聯合國秘書長發表緊急聲明呼籲全面落實安理會第 1701 號決議，避免引發全面區域人道主義災難。",
+        "sourceUrl": "https://news.un.org",
+        "id": 1211
+      },
+      {
+        "category": "綜合",
+        "rank": 5,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "卡達主權基金擴大佈局亞洲與歐洲半導體供應鏈，以多元化資產對沖地緣波動",
+        "summary": "卡達投資局 (QIA) 宣布加碼在歐亞先進晶片設計與半導體封測領域的戰略股權投資，藉由將豐厚天然氣收入轉化為全球硬科技資產，建立抵禦區域地緣風險的抗脆弱防線。",
+        "sourceUrl": "https://www.ft.com",
+        "id": 1212
+      },
+      {
+        "category": "生活",
+        "rank": 1,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "杜拜與阿布達比各大商場迎來萬聖節夜間慶典，奢華飯店家庭討糖早午餐熱銷",
+        "summary": "杜拜購物中心與亞特蘭提斯酒店推出為期三天的家庭萬聖節嘉年華，南瓜雕刻工作坊與精緻變裝早午餐吸引數以萬計外籍家庭響應，都會消費展現濃厚的多元國際氛圍。",
+        "sourceUrl": "https://www.timeoutdubai.com",
+        "id": 1213
+      },
+      {
+        "category": "生活",
+        "rank": 2,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "舒適氣候窗口開啟：沙烏地「利雅德狂歡季」盛大登場，頂級賽事與演藝跨界吸金",
+        "summary": "隨著沙漠炎夏消退進入黃金秋涼季節，沙烏地阿拉伯第五屆利雅德狂歡季 (Riyadh Season) 隆重啟幕，全球重量級拳擊金腰帶爭霸戰與百老匯巡演吸引數十萬國際旅客湧入首都。",
+        "sourceUrl": "https://riyadhseason.sa",
+        "id": 1214
+      },
+      {
+        "category": "生活",
+        "rank": 3,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "阿聯酋航空開出秋冬避冬航線特惠，歐亞家庭度假機票預訂攀上季節新高峰",
+        "summary": "阿聯酋航空與杜拜航空針對往返東南亞島嶼及地中海度假勝地推出秋冬特價聯票，杜拜國際機場第四季度預計迎來逾兩千萬旅客人次，中東樞紐轉機旅遊人氣爆棚。",
+        "sourceUrl": "https://www.emirates.com",
+        "id": 1215
+      },
+      {
+        "category": "生活",
+        "rank": 4,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "阿拉伯傳統沉香精油與現代柑橘香調跨界融合，微創香水在年輕族群中掀起流行",
+        "summary": "海灣阿拉伯國家年輕調香師將珍稀烏德沉香 (Oud) 與地中海佛手柑等清新果香結合，打破沉香濃烈厚重的傳統刻板印象，輕奢中性沙龍香在 Instagram 與小紅書上引發搶購熱潮。",
+        "sourceUrl": "https://gulfnews.com",
+        "id": 1216
+      },
+      {
+        "category": "生活",
+        "rank": 5,
+        "region": "中東",
+        "brandRelevant": true,
+        "title": "杜拜社區舉辦「毛小孩萬聖節派對」，寵物變裝駱駝與超人的短影音洗版社群",
+        "summary": "杜拜碼頭與朱美拉湖塔寵物友善社區舉辦一年一度萬聖萌寵走秀，狗狗穿上訂製阿拉伯長袍與小駱駝裝扮的滑稽逗趣畫面在社群狂攬數百萬點讚，展現中東都市溫暖親切的生活日常。",
+        "sourceUrl": "https://www.khaleejtimes.com",
+        "id": 1217
       }
     ]
   },
