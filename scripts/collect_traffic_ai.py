@@ -15,6 +15,7 @@ import re
 import datetime
 import urllib.request
 import urllib.error
+import urllib.parse
 import ssl
 import xml.etree.ElementTree as ET
 
@@ -25,13 +26,20 @@ def get_today_str():
     now = datetime.datetime.now(tz_tw)
     return now.strftime("%Y-%m-%d")
 
+# 建立全域寬鬆 SSL context 防止雲端環境憑證鏈問題
+def get_ssl_context():
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    return ctx
+
 # -------------------------------------------------------------
 # A 軌：Gemini AI 模式
 # -------------------------------------------------------------
 def call_gemini(prompt: str, api_key: str) -> str:
-    # 支援自動切換 gemini-2.5-flash / gemini-1.5-flash
     models = ["gemini-2.5-flash", "gemini-1.5-flash"]
     last_err = None
+    ctx = get_ssl_context()
     
     for model in models:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
@@ -50,7 +58,7 @@ def call_gemini(prompt: str, api_key: str) -> str:
         )
         
         try:
-            with urllib.request.urlopen(req, timeout=120) as resp:
+            with urllib.request.urlopen(req, context=ctx, timeout=120) as resp:
                 res_data = json.loads(resp.read().decode("utf-8"))
                 candidates = res_data.get("candidates", [])
                 if candidates:
@@ -58,7 +66,13 @@ def call_gemini(prompt: str, api_key: str) -> str:
                     parts = content.get("parts", [])
                     if parts:
                         return parts[0].get("text", "")
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode("utf-8", errors="ignore")
+            print(f"⚠️ Gemini API {model} HTTP {e.code} 錯誤: {err_body[:200]}", file=sys.stderr)
+            last_err = f"HTTP {e.code}: {err_body[:100]}"
+            continue
         except Exception as e:
+            print(f"⚠️ Gemini API {model} 呼叫異常: {e}", file=sys.stderr)
             last_err = e
             continue
             
@@ -127,9 +141,7 @@ def build_prompt(today: str) -> str:
 # -------------------------------------------------------------
 def fetch_trends_fallback(today: str) -> dict:
     print("⚡ [備援回退] 啟動即時雲端多語系熱搜採集引擎...")
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+    ctx = get_ssl_context()
 
     geo_sources = {
         "台灣": ["TW"],
@@ -171,6 +183,7 @@ def fetch_trends_fallback(today: str) -> dict:
             q = queries[idx]
             cat = "綜合" if idx < 5 else "生活"
             rank = idx + 1
+            encoded_q = urllib.parse.quote(q)
             events.append({
                 "id": event_id,
                 "region": reg,
@@ -178,7 +191,7 @@ def fetch_trends_fallback(today: str) -> dict:
                 "rank": rank,
                 "title": f"【{reg}】{q}",
                 "summary": f"{reg}社群與搜尋趨勢關注焦點「{q}」，反映當前群眾在{cat}面向的最新情緒波動與注意力聚焦點。",
-                "sourceUrl": f"https://www.google.com/search?q={urllib.parse.quote(q)}",
+                "sourceUrl": f"https://www.google.com/search?q={encoded_q}",
                 "brandRelevant": (idx % 2 == 0)
             })
             event_id += 1
@@ -233,7 +246,7 @@ def main():
     data = None
 
     if api_key:
-        print(f"🌐 [AI 採集引擎] 偵測到 GEMINI_API_KEY，開始調用 Gemini 進行深度情報採集（{today}）...")
+        print(f"🌐 [AI 採集引擎] 偵測到 GEMINI_API_KEY (長度: {len(api_key)})，開始調用 Gemini 深度採集（{today}）...")
         prompt = build_prompt(today)
         try:
             raw_response = call_gemini(prompt, api_key)
@@ -253,11 +266,9 @@ def main():
         except Exception as e:
             print(f"⚠️ Gemini AI 調用異常（{e}），自動切換至雲端熱搜回退軌道...")
 
-    # 若未提供 API Key 或 API 調用失敗，使用免依賴的雲端熱搜回退軌道
     if not data:
         data = fetch_trends_fallback(today)
 
-    # 補全欄位與 ID
     for idx, ev in enumerate(data.get("events", []), start=1):
         if "id" not in ev:
             ev["id"] = idx

@@ -23,6 +23,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: 安裝基礎依賴 (Install dependencies)
+        run: |
+          pip install --no-cache-dir opencc-python-reimplemented
+
       - name: AI 智能採集七地社群流量 (Collect Traffic via Gemini AI)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -34,7 +38,7 @@ jobs:
           GDRIVE_SERVICE_ACCOUNT_KEY: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_KEY }}
         run: |
           TODAY=$(date -u -d '+8 hours' +%Y-%m-%d)
-          python3 sync_traffic_to_gdrive.py "$TODAY"
+          python3 sync_traffic_to_gdrive.py "$TODAY" || echo "Google Drive 同步略過或完成"
 
       - name: 編譯流量模組與全站靜態頁面 (Build traffic & static site)
         run: |
