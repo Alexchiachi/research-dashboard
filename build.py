@@ -1,3 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+大道至簡 · 研究報告儀表板建置腳本 (build.py)
+參考 happy 倉庫標準：
+1. 讀取 reports/ 目錄下的 Markdown 報告，自動編譯繁體版 index.html。
+2. 透過 OpenCC (tw2sp) 自動產生對應的簡體版 zh-cn/index.html（字型、hreflang、用語在地化轉換）。
+3. 自動產出 sitemap.xml 與 robots.txt。
+"""
+
+import os
+import sys
+import glob
+import re
+from pathlib import Path
+import build_weekly
+import build_traffic
+
+try:
+    import markdown
+    HAS_MARKDOWN = True
+except ImportError:
+    HAS_MARKDOWN = False
+
+try:
+    from opencc import OpenCC
+    CC = OpenCC("tw2sp")
+    HAS_OPENCC = True
+except ImportError:
+    HAS_OPENCC = False
+    print("警告：未安裝 opencc-python-reimplemented，將略過簡體版生成。可執行 pip install opencc-python-reimplemented 安裝。")
 
 def render_weekly_series_card():
     summaries = build_weekly.get_latest_weekly_summary(count=3)
@@ -30,37 +61,6 @@ def render_weekly_series_card():
             <a class="drive-link" href="weekly/" style="background: var(--tint); color: var(--ink); border: 1px solid var(--tea); padding: 6px 16px; font-weight: 500;">前往「每週熱點全歸檔獨立頁」閱讀完整 37 期 ➔</a>
           </p>
         </div>"""
-import build_weekly
-import build_traffic
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-大道至簡 · 研究報告儀表板建置腳本 (build.py)
-參考 happy 倉庫標準：
-1. 讀取 reports/ 目錄下的 Markdown 報告，自動編譯繁體版 index.html。
-2. 透過 OpenCC (tw2sp) 自動產生對應的簡體版 zh-cn/index.html（字型、hreflang、用語在地化轉換）。
-3. 自動產出 sitemap.xml 與 robots.txt。
-"""
-
-import os
-import sys
-import glob
-import re
-from pathlib import Path
-
-try:
-    import markdown
-    HAS_MARKDOWN = True
-except ImportError:
-    HAS_MARKDOWN = False
-
-try:
-    from opencc import OpenCC
-    CC = OpenCC("tw2sp")
-    HAS_OPENCC = True
-except ImportError:
-    HAS_OPENCC = False
-    print("警告：未安裝 opencc-python-reimplemented，將略過簡體版生成。可執行 pip install opencc-python-reimplemented 安裝。")
 
 ROOT_DIR = Path(__file__).resolve().parent
 REPORTS_DIR = ROOT_DIR / "reports"
