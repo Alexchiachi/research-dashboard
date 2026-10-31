@@ -23,9 +23,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 安裝基礎依賴 (Install dependencies)
+      - name: 安裝建置依賴 (Install build dependencies)
         run: |
-          pip install --no-cache-dir opencc-python-reimplemented
+          pip install --no-cache-dir markdown opencc-python-reimplemented
 
       - name: AI 智能採集七地社群流量 (Collect Traffic via Gemini AI)
         env:
