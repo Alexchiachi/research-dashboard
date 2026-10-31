@@ -479,6 +479,11 @@ def build():
 
         cat_body = "\n".join(report_cards)
 
+        if cat.get("is_weekly"):
+            folder_link = '<a class="folder" href="weekly/">全歸檔獨立頁 →</a>'
+        else:
+            folder_link = f'<a class="folder" href="{cat["folder"]}" target="_blank" rel="noopener">開啟資料夾 →</a>'
+
         cat_html = f"""      <!-- {cat["no"]} {cat["name"]} -->
       <section class="cat" id="{cat["id"]}">
         <div class="cat-head">
@@ -490,7 +495,7 @@ def build():
 {cat_dd_html}
             </div>
           </div>
-          {"<a class=\"folder\" href=\"weekly/\">全歸檔獨立頁 →</a>" if cat.get("is_weekly") else f'<a class="folder" href="{cat["folder"]}" target="_blank" rel="noopener">開啟資料夾 →</a>'}
+          {folder_link}
         </div>
 {cat_body}
       </section>"""
