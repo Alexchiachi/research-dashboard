@@ -33,6 +33,11 @@ jobs:
         run: |
           python3 scripts/collect_traffic_ai.py
 
+      - name: 嚴格驗證新聞連結真實性 (Validate Traffic URLs)
+        run: |
+          TODAY=$(date -u -d '+8 hours' +%Y-%m-%d)
+          python3 scripts/validate_traffic_urls.py reports/02_traffic/daily/${TODAY}.json
+
       - name: 同步備份至 Google 雲端硬碟 (Sync to Google Drive)
         env:
           GDRIVE_SERVICE_ACCOUNT_KEY: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_KEY }}
