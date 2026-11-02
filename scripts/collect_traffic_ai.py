@@ -395,6 +395,8 @@ def parse_json_response(raw: str) -> dict:
 # 無 AI 備援：免費翻譯端點（失敗則保留原文並標註）
 # -------------------------------------------------------------
 _translate_cache = {}
+_TRANSLATE_STATE = {"fails": 0, "disabled": False}
+TRANSLATE_MAX_CONSECUTIVE_FAILS = 3   # 連續失敗 3 次就認定此次執行連不上（例如 runner IP 被封鎖），不再嘗試
 
 def translate_to_zh_tw(text: str) -> str:
     if not text:
@@ -403,6 +405,8 @@ def translate_to_zh_tw(text: str) -> str:
         return to_traditional(text)
     if text in _translate_cache:
         return _translate_cache[text]
+    if _TRANSLATE_STATE["disabled"]:
+        return to_traditional(text)
     url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q="
            + urllib.parse.quote(text[:500]))
     result = text
@@ -413,12 +417,17 @@ def translate_to_zh_tw(text: str) -> str:
             with urllib.request.urlopen(req, context=get_ssl_context(), timeout=10) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
             result = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
+            _TRANSLATE_STATE["fails"] = 0
             break
         except Exception as e:
             if attempt < 2 and "429" in str(e):
                 time.sleep(3 * (attempt + 1))
                 continue
             print(f"   ⚠️ 翻譯失敗（保留原文）：{e}")
+            _TRANSLATE_STATE["fails"] += 1
+            if _TRANSLATE_STATE["fails"] >= TRANSLATE_MAX_CONSECUTIVE_FAILS:
+                _TRANSLATE_STATE["disabled"] = True
+                print(f"   🛑 免費翻譯連續失敗 {TRANSLATE_MAX_CONSECUTIVE_FAILS} 次，本次執行停用，其餘標題保留原文")
             break
     result = to_traditional(result)
     _translate_cache[text] = result
