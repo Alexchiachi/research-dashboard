@@ -52,7 +52,9 @@ MEDIA_FEEDS = {
         ("BBC 中文", "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml", "china"),
     ],
     "日本": [
-        ("NHK", "https://www3.nhk.or.jp/rss/news/cat0.xml"),
+        ("朝日新聞", "https://www.asahi.com/rss/asahi/newsheadlines.rdf"),
+        ("毎日新聞", "https://mainichi.jp/rss/etc/mainichi-flash.rss"),
+        ("Kyodo", "https://english.kyodonews.net/rss/news.xml"),
         ("Japan Times", "https://www.japantimes.co.jp/feed/"),
     ],
     "韓國": [
@@ -70,7 +72,7 @@ MEDIA_FEEDS = {
     ],
     "中東": [
         ("BBC Middle East", "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"),
-        ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml"),
+        ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml", "mideast"),  # 全球新聞，只留中東相關
     ],
 }
 
@@ -80,14 +82,22 @@ REGION_CODE = {"台灣": "TW", "中國": "CN", "日本": "JP", "韓國": "KR", "
 REGION_KEYWORDS = {
     "china": re.compile(
         r"中國|中国|大陸|大陆|內地|内地|北京|上海|廣州|广州|深圳|重慶|重庆|成都|武漢|武汉|杭州|天津|南京|西安|"
-        r"香港|澳門|澳门|新疆|西藏|國務院|国务院|中共|習近平|习近平|李強|李强|人民幣|人民币|央行|發改委|发改委|"
+        r"香港|澳門|澳门|港股|恒指|恆指|港府|特首|立法會|立法会|新疆|西藏|國務院|国务院|中共|習近平|习近平|李強|李强|人民幣|人民币|央行|發改委|发改委|"
         r"China|Chinese|Beijing|Shanghai|Hong Kong|Xi Jinping|Shenzhen|Guangdong|yuan",
+        re.I),
+    # 阿拉伯文標題（當地熱搜）一律保留；英文等外文報導需命中中東關鍵字
+    "mideast": re.compile(
+        r"[\u0600-\u06ff]|中東|以色列|加薩|加沙|伊朗|伊拉克|敘利亞|黎巴嫩|沙烏地|沙特|阿聯|杜拜|迪拜|卡達|卡塔爾|埃及|約旦|葉門|也門|胡塞|"
+        r"阿曼|科威特|巴林|巴勒斯坦|約旦河西岸|真主黨|哈瑪斯|土耳其|紅海|蘇丹|利比亞|"
+        r"Middle East|Gulf|Israel|Gaza|West Bank|Palestin|Iran|Tehran|Iraq|Baghdad|Syria|Damascus|Lebanon|Beirut|"
+        r"Saudi|Riyadh|Jeddah|UAE|Emirat|Dubai|Abu Dhabi|Qatar|Doha|Egypt|Cairo|Jordan|Amman|Yemen|Houthi|"
+        r"Oman|Kuwait|Bahrain|Hezbollah|Hamas|Turkey|Türkiye|Ankara|Istanbul|Red Sea|Sudan|Libya",
         re.I),
 }
 
 MAX_AGE_HOURS = 48          # 超過 48 小時的報導視為舊聞，直接剔除
 MAX_TRENDS_PER_REGION = 20
-MAX_MEDIA_PER_REGION = 15
+MAX_MEDIA_PER_REGION = 20
 
 
 def _ssl_ctx():
@@ -157,8 +167,13 @@ def _is_bad_url(url: str) -> bool:
     return False
 
 
+# 熱搜也需過濾的區域（中國區借用香港熱搜，其中多為國際體育娛樂話題）
+TRENDS_FILTER = {"中國": "china", "中東": "mideast"}
+
+
 def collect_trends(region: str, now) -> list:
     out = []
+    kw = REGION_KEYWORDS.get(TRENDS_FILTER.get(region, ""))
     for geo in TRENDS_GEOS.get(region, []):
         try:
             tree = _fetch_xml(f"https://trends.google.com/trending/rss?geo={geo}")
@@ -176,11 +191,14 @@ def collect_trends(region: str, now) -> list:
                 title = _clean_text(ni.findtext(f"{TRENDS_NS}news_item_title", ""), 200)
                 if not url or not title or _is_bad_url(url):
                     continue
+                snippet = _clean_text(ni.findtext(f"{TRENDS_NS}news_item_snippet", ""), 300)
+                if kw and not kw.search(f"{query} {title} {snippet}"):
+                    break
                 out.append({
                     "kind": "trend",
                     "query": query,
                     "title": title,
-                    "snippet": _clean_text(ni.findtext(f"{TRENDS_NS}news_item_snippet", ""), 300),
+                    "snippet": snippet,
                     "source": _clean_text(ni.findtext(f"{TRENDS_NS}news_item_source", ""), 60),
                     "url": url,
                     "traffic": traffic,
@@ -193,7 +211,7 @@ def collect_trends(region: str, now) -> list:
 
 
 def collect_media(region: str, now) -> list:
-    out = []
+    per_feed = []   # [(outlet, [items])]
     for entry in MEDIA_FEEDS.get(region, []):
         source, feed = entry[0], entry[1]
         kw = REGION_KEYWORDS.get(entry[2]) if len(entry) > 2 else None
@@ -206,6 +224,7 @@ def collect_media(region: str, now) -> list:
         if not items:  # RDF (DW)
             items = tree.findall(".//{http://purl.org/rss/1.0/}item")
         count = 0
+        out = []
         for it in items:
             def t(tag):
                 for cand in (tag, f"{{http://purl.org/rss/1.0/}}{tag}", f"{{http://www.w3.org/2005/Atom}}{tag}"):
@@ -239,7 +258,24 @@ def collect_media(region: str, now) -> list:
             if count >= 8:  # 每個媒體最多 8 則，維持來源多樣性
                 break
         print(f"      · {source}：{count} 則")
-    return out[:MAX_MEDIA_PER_REGION]
+        per_feed.append((source.split(" ")[0], out))
+
+    # 依「媒體」輪流取稿（同一媒體的多個頻道合併計算），避免排在前面的來源佔滿名額
+    outlets = {}
+    for outlet, lst in per_feed:
+        outlets.setdefault(outlet, []).append(lst)
+    queues = []
+    for feeds in outlets.values():
+        merged = []
+        for i in range(max((len(f) for f in feeds), default=0)):
+            merged.extend(f[i] for f in feeds if i < len(f))
+        queues.append(merged)
+    result = []
+    i = 0
+    while len(result) < MAX_MEDIA_PER_REGION and any(i < len(q) for q in queues):
+        result.extend(q[i] for q in queues if i < len(q))
+        i += 1
+    return result[:MAX_MEDIA_PER_REGION]
 
 
 def verify_candidates(cands: list, max_workers: int = 16) -> None:
