@@ -101,7 +101,7 @@ FALLBACK_NEWS_POOL = {
 # -------------------------------------------------------------
 # A 軌：Gemini AI 調用
 # -------------------------------------------------------------
-GEMINI_STATIC_FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-2.5-flash"]
+GEMINI_STATIC_FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash"]
 
 def _model_version_key(name: str):
     """將 gemini-3.8-flash 之類的名稱轉為可排序的版本 tuple（新版本優先）"""
@@ -157,7 +157,15 @@ def call_gemini(prompt: str, api_key: str) -> str:
     last_err = None
     ctx = get_ssl_context()
     
-    for model in models:
+    attempts = [(m, n) for m in models for n in range(3)]
+    for model, attempt in attempts:
+        if attempt > 0:
+            # 503 高負載 / 429 限流 / 逾時屬暫時性錯誤：退避後重試同一模型
+            if not isinstance(last_err, str) or not re.search(r"HTTP (503|429|500)|timed out", last_err):
+                continue
+            wait = 15 * attempt
+            print(f"⏳ {model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...", file=sys.stderr)
+            time.sleep(wait)
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
@@ -184,10 +192,12 @@ def call_gemini(prompt: str, api_key: str) -> str:
             err_body = e.read().decode("utf-8", errors="ignore")
             print(f"⚠️ Gemini API {model} HTTP {e.code}: {err_body[:160]}", file=sys.stderr)
             last_err = f"HTTP {e.code}: {err_body[:100]}"
+            if e.code == 404:
+                last_err = f"model gone {e.code}: {err_body[:100]}"
             continue
         except Exception as e:
             print(f"⚠️ Gemini API {model} 呼叫異常: {e}", file=sys.stderr)
-            last_err = e
+            last_err = f"{type(e).__name__}: {e}"
             continue
             
     raise RuntimeError(f"Gemini API 請求失敗: {last_err}")
