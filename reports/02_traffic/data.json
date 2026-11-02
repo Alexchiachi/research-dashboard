@@ -1,742 +1,744 @@
 [
   {
     "date": "2026-11-02",
-    "globalTheme": "地緣科技戰略重組與AI技術深度融入全球日常生活的雙軌轉型",
-    "globalSummary": "台灣：半導體供應鏈全球擴展與高科技供應鏈安全成為焦點；中國：擴大內需政策與本土科技突破雙管齊下；日本：央行升息政策衝擊與高齡化照護科技需求攀升；韓國：半導體出口回暖與娛樂文化產業創新推升經濟；美國：科技巨頭AI資本支出激增與大選後政經政策盤整；歐洲：能源轉型戰略調整與區域防衛產業加速一體化；中東：主權財富基金擴大非油產業投資與區域局勢緩和談判。",
+    "sourceModifiedAt": "2026-11-02T21:30:00+08:00",
+    "followupNote": null,
+    "globalTheme": "全球在地化分流與跨區共振：演算法時代下的集體注意力焦點與日常韌性",
+    "globalSummary": "台灣：科技產業動能支撐經濟信心，常民生活在季節轉換中追尋平價幸福；中國：刺激政策落地帶動產業回暖，大眾轉向剛需減法消費；日本：特別國會與物價對策成焦點，民眾在秋陽中尋求片刻舒緩；韓國：高階出口與內需緊縮並存，青年世代轉向心靈寄託與自我修復；美國：大選終局決戰牽動全球神經，常民家庭消費更趨理性節約；歐洲：溫和復甦與基建挑戰交織，節慶預備為寒冬注入人情溫度；中東：地緣安全警報與多方斡旋並行，都會社群在舒適氣候中展現生活韌性。",
     "events": [
       {
+        "id": 1000,
         "region": "台灣",
         "category": "綜合",
         "rank": 1,
-        "title": "台積電亞利桑那州晶圓廠推進量產帶動供應鏈擴建",
-        "summary": "台積電美國亞利桑那州首座先進晶圓廠正式邁入高良率量產階段，帶動國內數十家半導體設備與化學材料供應鏈業者加大赴美投資力道，強化台美高科技產業供應鏈安全與戰略合作。",
-        "sourceUrl": "https://www.cna.com.tw/news/afe/202410200015.aspx",
-        "brandRelevant": true,
-        "id": 1000
+        "title": "【盤前】AI神話破滅英特爾暴跌！台指期夜盤跌867點 開盤恐迎空頭殺盤",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://tw.news.yahoo.com/%E7%9B%A4%E5%89%8D-ai%E7%A5%9E%E8%A9%B1%E7%A0%B4%E6%BB%85%E8%8B%B1%E7%89%B9%E7%88%BE%E6%9A%B4%E8%B7%8C-%E5%8F%B0%E6%8C%87%E6%9C%9F%E5%A4%9C%E7%9B%A4%E8%B7%8C867%E9%BB%9E-%E9%96%8B%E7%9B%A4%E6%81%90%E8%BF%8E%E7%A9%BA%E9%A0%AD%E6%AE%BA%E7%9B%A4-221700524.html",
+        "brandRelevant": true
       },
       {
+        "id": 1001,
         "region": "台灣",
         "category": "綜合",
         "rank": 2,
-        "title": "行政院通過總預算案聚焦國防防衛與淨零轉型投資",
-        "summary": "行政院正式編列中央政府總預算案，重點加碼國防自主、不對稱作戰裝備及淨零排放轉型基金，預估將帶動國內綠能基礎建設與國防供應鏈相關產業的新一波成長動能。",
-        "sourceUrl": "https://www.cna.com.tw/news/aipl/202410180120.aspx",
-        "brandRelevant": true,
-        "id": 1001
+        "title": "一名检察官试图因动员及取消延期服役而向国家索赔15 万格里夫纳",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://ua.news/cn/ukraine/prokuror-namagavsia-stiagnuli-z-derzhavi-150-tis-grn-kompensatsiyi-cherez-mobilizatsiiu-i-skasuvannia-vidstrochki",
+        "brandRelevant": false
       },
       {
+        "id": 1002,
         "region": "台灣",
         "category": "綜合",
         "rank": 3,
-        "title": "國發會公布最新經濟氣候燈號維持景氣擴張綠燈",
-        "summary": "國发會公布最新景氣對策信號，受益於全球AI算力需求持續旺盛與出口回溫，燈號穩居代表景氣穩健擴張的綠燈，反映台灣出口製造業在高科技領域表現極具韌性。",
-        "sourceUrl": "https://www.cna.com.tw/news/afe/202410270050.aspx",
-        "brandRelevant": true,
-        "id": 1002
+        "title": "先進 封裝",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.cna.com.tw/news/afe/202410170119.aspx",
+        "brandRelevant": true
       },
       {
+        "id": 1003,
         "region": "台灣",
         "category": "綜合",
         "rank": 4,
-        "title": "台灣推動第三階段離岸風電區塊開發招標與綠電交易",
-        "summary": "經濟部能源署啟動離岸風電第三階段區塊開發簽約，吸引跨國能源巨頭參與，並放寬企業購電協議（CPPA）門檻，加速企業達成ESG與供應鏈 RE100 淨零目標。",
-        "sourceUrl": "https://www.cna.com.tw/news/afe/202410220110.aspx",
-        "brandRelevant": false,
-        "id": 1003
+        "title": "台灣重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.cna.com.tw/news/aspt/202410310245.aspx",
+        "brandRelevant": false
       },
       {
+        "id": 1004,
         "region": "台灣",
         "category": "綜合",
         "rank": 5,
-        "title": "數位發展部推動全民AI素養與個人資料保護新法草案",
-        "summary": "數發部宣布推出全民AI工具應用輔導機制，並預備實施強化版個人資料保護法，加重企業資料外洩罰則，旨在建立安全且具競爭力之數位經濟發展環境。",
-        "sourceUrl": "https://www.cna.com.tw/news/ahel/202410150088.aspx",
-        "brandRelevant": true,
-        "id": 1004
+        "title": "NBA》勇士明主場戰快艇挑戰突破5成勝率 看看Lendeborg被上課後能否反彈",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://tw.sports.yahoo.com/news/nba-%E5%8B%87%E5%A3%AB%E6%98%8E%E4%B8%BB%E5%A0%B4%E6%88%B0%E5%BF%AB%E8%89%87%E6%8C%91%E6%88%B0%E7%AA%81%E7%A0%B45%E6%88%90%E5%8B%9D%E7%8E%87-%E7%9C%8B%E7%9C%8Blendeborg%E8%A2%AB%E4%B8%8A%E8%AA%B2%E5%BE%8C%E8%83%BD%E5%90%A6%E5%8F%8D%E5%BD%88-064259708.html",
+        "brandRelevant": true
       },
       {
+        "id": 1005,
         "region": "台灣",
         "category": "生活",
         "rank": 1,
-        "title": "台北米其林指南公布帶動國旅高端餐飲觀光熱潮",
-        "summary": "最新年度米其林指南榜單揭曉，多家融合台灣在地食材的創新料理餐廳首度上榜，帶動國際美食饕客訂位潮，並帶動全台精緻餐飲與高端國旅市場強勁成長。",
-        "sourceUrl": "https://www.cna.com.tw/news/ahel/202408270150.aspx",
-        "brandRelevant": false,
-        "id": 1005
+        "title": "中職》季中一度傳出他隊招手 林岳平最終留在統一獅",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.cna.com.tw/news/asoc/202410310052.aspx",
+        "brandRelevant": false
       },
       {
+        "id": 1006,
         "region": "台灣",
         "category": "生活",
         "rank": 2,
-        "title": "氣象署發布秋季氣溫驟降特報帶動露營與溫泉旅宿訂房",
-        "summary": "隨著強烈東北季風南下，全台氣溫顯著下降，帶動北部與中部溫泉區旅宿訂房率飆升，同時山區露營與戶外機能服飾銷售量大幅增加，掀起秋季戶外休閒熱潮。",
-        "sourceUrl": "https://www.cna.com.tw/news/ahel/202410250077.aspx",
-        "brandRelevant": false,
-        "id": 1006
+        "title": "'Like a missile coming down'",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.bbc.com/news/articles/cm369yy7lw73o",
+        "brandRelevant": true
       },
       {
+        "id": 1007,
         "region": "台灣",
         "category": "生活",
         "rank": 3,
-        "title": "連鎖超市擴大推出友善環境與即期品減廢減碳專區",
-        "summary": "國內大型連鎖超市擴增「惜食折扣」與永續碳足跡標籤專區，透過智慧動態定價減少食物浪費，成功吸引年輕小資族群與注重永續價值的消費者關注。",
-        "sourceUrl": "https://www.cna.com.tw/news/ahel/202410120045.aspx",
-        "brandRelevant": false,
-        "id": 1007
+        "title": "SanDisk財報超預期股價仍重挫13%！鎧俠示警NAND漲價降溫、記憶體股反轉警報響起",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://news.cnyes.com/news/id/6642962",
+        "brandRelevant": false
       },
       {
+        "id": 1008,
         "region": "台灣",
         "category": "生活",
         "rank": 4,
-        "title": "高雄與台北大巨蛋國際巨星演唱會帶動高鐵與飯店經濟",
-        "summary": "多場國際級知名歌手演唱會相繼於台北大巨蛋與高雄世運主場館登場，帶動高鐵連假加開班次與周邊飯店住宿率突破九成，創造數億元演唱會周邊經濟效益。",
-        "sourceUrl": "https://www.cna.com.tw/news/ahel/202410190130.aspx",
-        "brandRelevant": false,
-        "id": 1008
+        "title": "New England Revolution host Inter Miami in heavyweight clash",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.mlssoccer.com/news/new-england-revolution-host-inter-miami-in-heavyweight-clash",
+        "brandRelevant": true
       },
       {
+        "id": 1009,
         "region": "台灣",
         "category": "生活",
         "rank": 5,
-        "title": "國人職場壓力關注度上升帶動心靈療癒與冥想APP熱潮",
-        "summary": "健康管理報告顯示國人職場精神壓力攀升，促使融合語音引導的正念冥想應用程式與芳香療法商品成為職場白領熱門首選，顯示大眾對身心健康管理的需求大增。",
-        "sourceUrl": "https://www.cna.com.tw/news/afe/202410310245.aspx",
-        "brandRelevant": false,
-        "id": 1009
+        "title": "2名醫才判緩刑！中榮再爆疑「部長級」找廠商代刀 院方回應了",
+        "summary": "據主流媒體報導，台灣各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://tw.news.yahoo.com/2%E5%90%8D%E9%86%AB%E6%89%8D%E5%88%A4%E7%B7%A9%E5%88%91-%E4%B8%AD%E6%A6%AE%E5%86%8D%E7%88%86%E7%96%91-%E9%83%A8%E9%95%B7%E7%B4%9A-%E6%89%BE%E5%BB%A0%E5%95%86%E4%BB%A3%E5%88%80-%E9%99%A2%E6%96%B9%E5%9B%9E%E6%87%89%E4%BA%86-082153815.html",
+        "brandRelevant": false
       },
       {
+        "id": 1010,
         "region": "中國",
         "category": "綜合",
         "rank": 1,
-        "title": "中國人民銀行實施降低存款準備金率與調降房貸利率",
-        "summary": "中國人民銀行正式下調金融機構存款準備金率及存量房貸利率，向市場注入強大流動性，旨在振興房地產市場信心並刺激資本市場與消費回溫。",
-        "sourceUrl": "https://finance.caixin.com",
-        "brandRelevant": true,
-        "id": 1010
-      },
-      {
-        "region": "中國",
-        "category": "綜合",
-        "rank": 2,
-        "title": "華為發表自主先進晶片架構與新一代伺服器生態",
-        "summary": "華為正式發布完全自主研發的新架構晶片與雲端AI計算平台，擺脫對外國技術依賴，標誌著中國本土高科技半導體供應鏈正快速轉型並深化產業應用。",
-        "sourceUrl": "https://finance.caixin.com",
-        "brandRelevant": true,
-        "id": 1011
-      },
-      {
-        "region": "中國",
-        "category": "綜合",
-        "rank": 3,
-        "title": "工信部推動高端製造業大規模設備更新與智慧轉型",
-        "summary": "中國工信部印發新一輪工業領域設備更新實施方案，全力扶持製造業智慧化升級與數位化轉型，預期將帶動自動化機械與工業物聯網巨大採購需求。",
-        "sourceUrl": "https://www.scmp.com",
-        "brandRelevant": true,
-        "id": 1012
-      },
-      {
-        "region": "中國",
-        "category": "綜合",
-        "rank": 4,
-        "title": "新能源汽車市場滲透率創新高突破五成大關",
-        "summary": "中國汽車工業協會數據顯示，中國新能源汽車單月新車滲透率首度突破50%，傳統燃油車市場持續縮減，本土電動車品牌迅速擴大國內與出口市占率。",
-        "sourceUrl": "https://cn.nikkei.com",
-        "brandRelevant": false,
-        "id": 1013
-      },
-      {
-        "region": "中國",
-        "category": "綜合",
-        "rank": 5,
-        "title": "商務部宣布推動以舊換新補貼全面升級刺激家電消費",
-        "summary": "商務部等部門聯合實施家電與汽車「以舊換新」高額專項補貼，有效刺激城鄉居民購買綠色智慧家電，成為支撐內需消費市場的重要政策引擎。",
+        "title": "中國重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.caixin.com",
-        "brandRelevant": false,
-        "id": 1014
+        "brandRelevant": true
       },
       {
+        "id": 1011,
         "region": "中國",
-        "category": "生活",
-        "rank": 1,
-        "title": "國潮文化持續升溫帶動非遺手作與漢服體驗旅遊風潮",
-        "summary": "年輕世代對本土傳統文化的認同度持續攀升，融合非物質文化遺產的工藝體驗與傳統漢服街拍成為各大歷史文化景區的熱門消費項目，推動文旅經濟轉型。",
-        "sourceUrl": "https://www.scmp.com",
-        "brandRelevant": false,
-        "id": 1015
-      },
-      {
-        "region": "中國",
-        "category": "生活",
+        "category": "綜合",
         "rank": 2,
-        "title": "戶外徒步與輕越野成為都市青年連假休閒熱門選擇",
-        "summary": "社交平台上「輕戶外」話題爆紅，遠離城市喧囂的近郊徒步與野營成為年輕打工族紓解壓力的主要方式，帶動專業戶外裝備銷售額倍數成長。",
+        "title": "中國重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://finance.caixin.com",
-        "brandRelevant": false,
-        "id": 1016
+        "brandRelevant": false
       },
       {
+        "id": 1012,
         "region": "中國",
-        "category": "生活",
+        "category": "綜合",
         "rank": 3,
-        "title": "低糖零卡與中藥養生茶飲引領新式茶飲市場新風尚",
-        "summary": "健康飲食概念風靡社交平台，各大連鎖茶飲品牌紛紛推出結合枸杞、人蔘與低聚糖的中藥養生茶飲，成功擄獲注重健康管理的新一代年輕消費者。",
-        "sourceUrl": "https://www.scmp.com",
-        "brandRelevant": false,
-        "id": 1017
+        "title": "Kimi Antonelli becomes F1 world champion as Max Verstappen wins Mexico City Grand Prix",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.bbc.com/sport/formula1/articles/cv62y1e6wly6o",
+        "brandRelevant": true
       },
       {
+        "id": 1013,
         "region": "中國",
-        "category": "生活",
+        "category": "綜合",
         "rank": 4,
-        "title": "寵物經濟持續蓬勃發展智慧養寵設備銷量創新高",
-        "summary": "單身經濟與高齡化趨勢加速寵物陪伴需求，具備自動餵食、遙控監控與AI健康檢測功能的智慧寵物用品成為熱銷商品，推動精緻養寵產業規模化發展。",
+        "title": "傳卡域克國際賽期將被炒",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://hk.sports.yahoo.com/news/%E5%82%B3%E5%8D%A1%E5%9F%9F%E5%85%8B%E5%9C%8B%E9%9A%9B%E8%B3%BD%E6%9C%9F%E5%B0%87%E8%A2%AB%E7%82%92-131741172.html",
+        "brandRelevant": false
+      },
+      {
+        "id": 1014,
+        "region": "中國",
+        "category": "綜合",
+        "rank": 5,
+        "title": "中國重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://cn.nikkei.com",
-        "brandRelevant": false,
-        "id": 1018
+        "brandRelevant": true
       },
       {
+        "id": 1015,
+        "region": "中國",
+        "category": "生活",
+        "rank": 1,
+        "title": "台风“烟花”今天原地回旋 明起向偏西转偏北方向移动",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://finance.sina.cn/2026-11-01/detail-inixepty4347321.d.html?vt=4",
+        "brandRelevant": false
+      },
+      {
+        "id": 1016,
+        "region": "中國",
+        "category": "生活",
+        "rank": 2,
+        "title": "kolumbarium i kremacja",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://subiektywnieofinansach.pl/to-coraz-czestszy-sposob-pochowku-ile-dzis-kosztuje-kremacja-i-urna/kolumbarium-i-kremacja/",
+        "brandRelevant": true
+      },
+      {
+        "id": 1017,
+        "region": "中國",
+        "category": "生活",
+        "rank": 3,
+        "title": "英超｜阿仙奴14年来作客利物浦首胜 力压曼城升榜首",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.stheadline.com/zh-hans/football-news/3632455/%E8%8B%B1%E8%B6%85%E9%98%BF%E4%BB%99%E5%A5%B414%E5%B9%B4%E6%9D%A5%E4%BD%9C%E5%AE%A2%E5%88%A9%E7%89%A9%E6%B5%A6%E9%A6%96%E8%83%9C-%E5%8A%9B%E5%8E%8B%E6%9B%BC%E5%9F%8E%E5%8D%87%E6%A6%9C%E9%A6%96",
+        "brandRelevant": false
+      },
+      {
+        "id": 1018,
+        "region": "中國",
+        "category": "生活",
+        "rank": 4,
+        "title": "Arsenal back in top spot after beating Liverpool 1",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://gbcode.rthk.hk/TuniS/news.rthk.hk/rthk/en/component/k2/1876170-20261102.htm?spTabChangeable=0",
+        "brandRelevant": true
+      },
+      {
+        "id": 1019,
         "region": "中國",
         "category": "生活",
         "rank": 5,
-        "title": "社區食堂與銀髮族助餐點成為都市居住區標配設施",
-        "summary": "因應高齡化社會需求，各地城市社區積極推廣兼顧平價與營養平衡的社區食堂，不僅服務高齡人口，也吸引眾多鄰近區域的青年上班族前往就餐。",
-        "sourceUrl": "https://www.caixin.com",
-        "brandRelevant": false,
-        "id": 1019
+        "title": "夺冠后三次劝阻无效，张雪称已将母亲拉黑！",
+        "summary": "據主流媒體報導，中國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://cj.sina.cn/articles/view/5953466437/162dab0450670bgi4s?froms=ggmp&vt=4",
+        "brandRelevant": false
       },
       {
+        "id": 1020,
         "region": "日本",
         "category": "綜合",
         "rank": 1,
-        "title": "日本銀行評估進一步升息政策以緩和日圓貶值壓力",
-        "summary": "日本央行審議委員暗示若通膨與薪資增長持續維持預期，將可能再次調升基準利率，藉此穩定日圓匯率並減輕進口能源與食品價格高企對家庭的負擔。",
-        "sourceUrl": "https://www.japantimes.co.jp/business/",
-        "brandRelevant": true,
-        "id": 1020
-      },
-      {
-        "region": "日本",
-        "category": "綜合",
-        "rank": 2,
-        "title": "豐田汽車加速全固態電池量產布局計畫於2027年商用",
-        "summary": "豐田汽車正式獲得日本經濟產業省認證補助，加快全固態電池技術的試產與量產線建設，預計大幅提升下一代電動汽車之續航里程與充電效率。",
-        "sourceUrl": "https://www.japantimes.co.jp/culture/",
-        "brandRelevant": true,
-        "id": 1021
-      },
-      {
-        "region": "日本",
-        "category": "綜合",
-        "rank": 3,
-        "title": "日本政府擴大引進外籍技術人才以紓解勞動力短缺 crisis",
-        "summary": "日本內閣通過新修訂的特定技能外國人制度，擴大物流、農業與照護領域的引進名額與簽證期限，全力應對人口減少造成的嚴峻勞動力短缺問題。",
-        "sourceUrl": "https://www3.nhk.or.jp/nhkworld/",
-        "brandRelevant": false,
-        "id": 1022
-      },
-      {
-        "region": "日本",
-        "category": "綜合",
-        "rank": 4,
-        "title": "Rapidus 北海道熊本先進半導體工廠進入設備安裝階段",
-        "summary": "日本國家隊半導體企業 Rapidus 位於千歲市的2奈米晶圓廠建置順利，正式開始引進極紫外光（EUV）曝光機，朝向振興日本本土半導體產業邁出關鍵一步。",
-        "sourceUrl": "https://japan.cna.com.tw",
-        "brandRelevant": true,
-        "id": 1023
-      },
-      {
-        "region": "日本",
-        "category": "綜合",
-        "rank": 5,
-        "title": "日本觀光廳推動課徵高額過度旅遊稅與分流措施",
-        "summary": "由於訪日外國旅客大幅飆升衝擊在地居民生活，日本觀光廳積極引導觀光客前往東北與四國等地方縣市，並鼓勵熱門景點實施尖峰時段差別定價與環境稅收取。",
+        "title": "日本重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.japantimes.co.jp",
-        "brandRelevant": false,
-        "id": 1024
+        "brandRelevant": true
       },
       {
+        "id": 1021,
         "region": "日本",
-        "category": "生活",
-        "rank": 1,
-        "title": "昭和復古風潮持續席捲日本年輕族群黑膠與底片相機熱銷",
-        "summary": "Z世代年輕族群對昭和時代的復古音樂、黑膠唱片及底片相機展現濃厚興趣，各大都市出現眾多復古喫茶店與二手音樂復刻店，掀起強烈的懷舊消費文化。",
+        "category": "綜合",
+        "rank": 2,
+        "title": "日本重要公共與產業動態：官方發布最新說明與後續應對方案",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.japantimes.co.jp/business/",
-        "brandRelevant": false,
-        "id": 1025
+        "brandRelevant": false
       },
       {
+        "id": 1022,
+        "region": "日本",
+        "category": "綜合",
+        "rank": 3,
+        "title": "How to watch Clippers vs Warriors: Live stream NBA, TV channel",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://sports.yahoo.com/articles/watch-clippers-vs-warriors-live-003000348.html",
+        "brandRelevant": true
+      },
+      {
+        "id": 1023,
+        "region": "日本",
+        "category": "綜合",
+        "rank": 4,
+        "title": "インテル急落でAI・半導体に連鎖安【今日の市場はどう動いた？】",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://finance.yahoo.co.jp/news/ai-market/detail/3757",
+        "brandRelevant": false
+      },
+      {
+        "id": 1024,
+        "region": "日本",
+        "category": "綜合",
+        "rank": 5,
+        "title": "【卓球】男子は韓国・張禹珍がチャンピオンズ初優勝、女子は孫穎莎が復活V！「WTTチャンピオンズ モンペリエ」最終日",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://news.yahoo.co.jp/articles/bf74c0cd06615c293bd5357cbef04eae03f07a54",
+        "brandRelevant": true
+      },
+      {
+        "id": 1025,
+        "region": "日本",
+        "category": "生活",
+        "rank": 1,
+        "title": "東エレク--",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://finance.yahoo.co.jp/news/detail/2ea693d3d92a92b032d114fc216963dbb0fb5a12",
+        "brandRelevant": false
+      },
+      {
+        "id": 1026,
         "region": "日本",
         "category": "生活",
         "rank": 2,
-        "title": "東京與大阪微型住宅興起極簡空間設計引領房產新趨勢",
-        "summary": "因應都市高房價與單身戶數攀升，建商推出強調高空間效益與智慧家電配置的超微型公寓，獲得許多單身職場新鮮人與年輕租屋族的青睞。",
-        "sourceUrl": "https://www.japantimes.co.jp/culture/",
-        "brandRelevant": false,
-        "id": 1026
+        "title": "住友ファーマ－急騰 通期営業益を上方修正 上期は56％減 復配も発表〔DZH 個別株情報〕(時事通信)",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://finance.yahoo.co.jp/news/detail/359098856a03a21e707fcc99d739a59d1b716efe",
+        "brandRelevant": true
       },
       {
+        "id": 1027,
         "region": "日本",
         "category": "生活",
         "rank": 3,
-        "title": "發酵食品與植物奶市場快速成長反映養生健康意識升級",
-        "summary": "日本消費者對腸道健康與植物性飲食關注度顯著提升，傳統鹽麴、納豆等發酵食品與各類燕麥奶、豆乳產品銷售量穩健增長，成為超市熱銷重點類別。",
+        "title": "Seoul stocks open lower as disappointing tech earnings trigger AI spending woes",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www3.nhk.or.jp/nhkworld/",
-        "brandRelevant": false,
-        "id": 1027
+        "brandRelevant": false
       },
       {
+        "id": 1028,
         "region": "日本",
         "category": "生活",
         "rank": 4,
-        "title": "日本秋季賞楓熱潮掀起鐵道慢旅行與溫泉鄉旅宿預約潮",
-        "summary": "紅葉前線陸續由北海道向南推進，JR集團推出的觀光列車與秘境溫泉旅館迎來訂房高峰，國人與國際自由行旅客紛紛安排深度鐵道賞楓行程。",
-        "sourceUrl": "https://japan.cna.com.tw",
-        "brandRelevant": false,
-        "id": 1028
+        "title": "松本幸四郎が大星由良之助を演じる「仮名手本忠臣蔵」歌舞伎座で初日　涙する観客の姿も",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.nikkansports.com/entertainment/news/202611010002196.html",
+        "brandRelevant": true
       },
       {
+        "id": 1029,
         "region": "日本",
         "category": "生活",
         "rank": 5,
-        "title": "高齡照護機器人與智慧監測系統加速普及至一般家庭",
-        "summary": "為緩解家庭照護壓力，日本醫療科技公司推出的遠端生命徵象監測設備與輔助行走機械外骨骼普及率持續上升，成為銀髮族獨立生活的重要支撐。",
-        "sourceUrl": "https://www.japantimes.co.jp",
-        "brandRelevant": false,
-        "id": 1029
+        "title": "決算:キオクシア株が大幅続落 10〜12月期の業績予想に失望売り",
+        "summary": "據主流媒體報導，日本各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.nikkei.com/article/DGXZQOUB012I30R01C26A1000000/",
+        "brandRelevant": false
       },
       {
+        "id": 1030,
         "region": "韓國",
         "category": "綜合",
         "rank": 1,
-        "title": "三星電子與SK海力士擴大HBM3e高頻寬記憶體產能出口",
-        "summary": "受益於全球AI晶片大廠強勁採購訂單，韓國半導體巨頭加速產能擴充並推動下一代 HBM 技術開發，帶動韓國單月出口金額創下近年新高紀錄。",
-        "sourceUrl": "https://www.koreatimes.co.kr/southkorea",
-        "brandRelevant": true,
-        "id": 1030
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://view.asiae.co.kr/article/2026110209482863028",
+        "brandRelevant": true
       },
       {
+        "id": 1031,
         "region": "韓國",
         "category": "綜合",
         "rank": 2,
-        "title": "韓國央行調降基準利率以刺激消費與減輕家庭債務負擔",
-        "summary": "韓國銀行（央行）在通膨率回落至目標區間後正式宣布降息一碼，以減輕高房貸家庭的利息開支負擔，並為放緩的國內零售市場注入復甦動能。",
-        "sourceUrl": "https://www.koreatimes.co.kr/business",
-        "brandRelevant": true,
-        "id": 1031
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.donga.com/news/Society/article/all/20261102/134946979/2",
+        "brandRelevant": false
       },
       {
+        "id": 1032,
         "region": "韓國",
         "category": "綜合",
         "rank": 3,
-        "title": "現代汽車集團加速於北美與歐洲推動軟體定義汽車轉型",
-        "summary": "現代汽車發布全新 SDV（軟體定義汽車）開發架構，計畫全面整合車載資訊娛樂系統與自動駕駛演算法，進一步提升全球電動車市場份額與軟體訂閱收益。",
+        "title": "New England Revolution host Inter Miami in heavyweight clash",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.mlssoccer.com/news/new-england-revolution-host-inter-miami-in-heavyweight-clash",
+        "brandRelevant": true
+      },
+      {
+        "id": 1033,
+        "region": "韓國",
+        "category": "綜合",
+        "rank": 4,
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.newsis.com/view/NISI20261101_0021513735",
+        "brandRelevant": false
+      },
+      {
+        "id": 1034,
+        "region": "韓國",
+        "category": "綜合",
+        "rank": 5,
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.edaily.co.kr/News/Read?newsId=01859766645641456&mediaCodeNo=257",
+        "brandRelevant": true
+      },
+      {
+        "id": 1035,
+        "region": "韓國",
+        "category": "生活",
+        "rank": 1,
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.chosun.com/international/international_general/2026/11/02/VJQY3ANA6JDUZO7PXL7454SDOY/",
+        "brandRelevant": false
+      },
+      {
+        "id": 1036,
+        "region": "韓國",
+        "category": "生活",
+        "rank": 2,
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.koreadaily.com/article/20261101163401368",
+        "brandRelevant": true
+      },
+      {
+        "id": 1037,
+        "region": "韓國",
+        "category": "生活",
+        "rank": 3,
+        "title": "Apple Diverges From Magnificent 7 as Options Point to Jump to $355 After Earnings",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.koreaherald.com",
-        "brandRelevant": true,
-        "id": 1032
+        "brandRelevant": false
       },
       {
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 4,
-        "title": "韓國政府加碼投資人工智慧與次世代核能技術開發",
-        "summary": "韓國科學技術情報通信部宣布將挹注數兆韓元於國家級AI算力中心建置與小型模組化反應爐（SMR）開發，致力打造極具國際競爭力的未來產業基地。",
-        "sourceUrl": "https://www.koreatimes.co.kr",
-        "brandRelevant": true,
-        "id": 1033
-      },
-      {
-        "region": "韓國",
-        "category": "綜合",
-        "rank": 5,
-        "title": "韓國金融監管機構強化虛擬資產保護法與交易所監管",
-        "summary": "韓國金融服務委員會（FSC）實施新版虛擬資產用戶保護法，加強對加密貨幣交易所交易行為的稽查，保障投資人資產安全並防止洗錢活動。",
-        "sourceUrl": "https://www.koreatimes.co.kr/southkorea",
-        "brandRelevant": false,
-        "id": 1034
-      },
-      {
-        "region": "韓國",
-        "category": "生活",
-        "rank": 1,
-        "title": "K-Pop 與韓國影視內容熱潮持續帶動美妝與韓式飲食全球出口",
-        "summary": "隨著最新韓劇與偶像團體在全球串流平台大放異彩，韓國美妝護膚品與韓式即食拉麵出口額創新高，成功將韓國流行文化轉化為巨大商業消費動能。",
-        "sourceUrl": "https://www.koreatimes.co.kr/business",
-        "brandRelevant": false,
-        "id": 1035
-      },
-      {
-        "region": "韓國",
-        "category": "生活",
-        "rank": 2,
-        "title": "首爾推出夜間無人駕駛巴士服務提升都市夜間交通便利性",
-        "summary": "首爾市政府正式擴大深夜智慧無人駕駛公車營運路線，串聯主要商業區與住宅區，便利夜班通勤族的同時，也標誌著智慧城市交通應用的新里程碑。",
-        "sourceUrl": "https://www.koreaherald.com",
-        "brandRelevant": false,
-        "id": 1036
-      },
-      {
-        "region": "韓國",
-        "category": "生活",
-        "rank": 3,
-        "title": "自助式無人便利商店與AI結帳系統在韓國住宅區快速普及",
-        "summary": "為應對人工成本上升，韓國連鎖便利商店加速擴建24小時無人化智慧門市，透過影像識別與生物特徵支付完成快速結帳，改變民眾日常消費習慣。",
-        "sourceUrl": "https://www.koreatimes.co.kr",
-        "brandRelevant": false,
-        "id": 1037
-      },
-      {
+        "id": 1038,
         "region": "韓國",
         "category": "生活",
         "rank": 4,
-        "title": "年輕世代瘋跑馬拉松與路跑團體帶動運動裝備與社交新潮流",
-        "summary": "韓國20至30歲年輕族群間興起「路跑俱樂部」熱潮，結合社交、運動與拍照打卡，促使專業跑鞋、機能運動服飾與健康補給品銷量呈爆發性成長。",
-        "sourceUrl": "https://www.koreatimes.co.kr/southkorea",
-        "brandRelevant": false,
-        "id": 1038
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.koreatimes.co.kr",
+        "brandRelevant": true
       },
       {
+        "id": 1039,
         "region": "韓國",
         "category": "生活",
         "rank": 5,
-        "title": "高房價壓力下韓國青年間流行小巧精緻的微型休閒與獨旅",
-        "summary": "受到居住壓力與生活成本影響，韓國年輕人轉向成本較低但具質感的小旅行與個人專屬體驗，一人露營與單人精緻手作體驗成為主流紓壓管道。",
-        "sourceUrl": "https://www.koreatimes.co.kr/business",
-        "brandRelevant": false,
-        "id": 1039
+        "title": "韓國重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，韓國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.koreatimes.co.kr/southkorea",
+        "brandRelevant": false
       },
       {
+        "id": 1040,
         "region": "美國",
         "category": "綜合",
         "rank": 1,
-        "title": "美國聯準會進一步降息以確保就業市場軟著陸與經濟成長",
-        "summary": "美國聯邦準備理事會（Fed）宣布降息，以維持勞動力市場穩定並防止經濟放緩，市場普遍預期資金成本下降將利好科技股與房地產交易活絡。",
-        "sourceUrl": "https://www.cnn.com/us",
-        "brandRelevant": true,
-        "id": 1040
+        "title": "Why Taylor Swift Hasn’t Been Seen at Travis Kelce’s Chiefs",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.elle.com/culture/celebrities/a74241747/taylor-swift-travis-kelce-chiefs-seahawks-game-attendance-explained-october-2026/",
+        "brandRelevant": true
       },
       {
+        "id": 1041,
         "region": "美國",
         "category": "綜合",
         "rank": 2,
-        "title": "微軟與OpenAI擴大建置超大型AI資料中心與核能電力供應",
-        "summary": "為滿足大規模人工智慧模型訓練所需之巨量電力與算力，科技巨頭簽署長期核能購電協議，推進次世代AI資料中心建設，催生新能源與科技跨界合作。",
-        "sourceUrl": "https://www.cnn.com/world",
-        "brandRelevant": true,
-        "id": 1041
+        "title": "4 Biggest Storylines: Raptors vs. Lakers",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://sports.yahoo.com/articles/4-biggest-storylines-raptors-vs-110006613.html",
+        "brandRelevant": false
       },
       {
+        "id": 1042,
         "region": "美國",
         "category": "綜合",
         "rank": 3,
-        "title": "美國商務部撥付晶片法案專款補貼本土晶圓製造巨頭",
-        "summary": "美國商務部正式完成撥款程序，向晶片製造商提供數十億美元直接補助與貸款擔保，旨在推動先端半導體製造重返美國本土，強化國家安全與供應鏈。",
-        "sourceUrl": "https://www.cnn.com/politics",
-        "brandRelevant": true,
-        "id": 1042
+        "title": "Judi Dench Says Robin Williams Was ‘Gently Supportive’ During Her Late Husband’s Cancer Battle: ‘I’ve Often Thought About’ His ‘Sensitivity and Understanding’",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://variety.com/2026/film/news/judi-dench-robin-williams-husband-cancer-battle-1236936832/",
+        "brandRelevant": true
       },
       {
+        "id": 1043,
         "region": "美國",
         "category": "綜合",
         "rank": 4,
-        "title": "美股四大指數因科技股財報優異與經濟軟著陸預期再創新高",
-        "summary": "受益於大型科技公司（Big Tech）強勁的季度財報與穩健的消費數據，標準普爾500指數與道瓊工業指數相繼突破歷史新高，展現投資人對經濟韌性的信心。",
-        "sourceUrl": "https://www.cnn.com/business",
-        "brandRelevant": true,
-        "id": 1043
+        "title": "Eagles elevate Elijah Mitchell, Mason Reiger for Commanders game",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.philadelphiaeagles.com/news/eagles-elevate-elijah-mitchell-mason-reiger-for-commanders-game",
+        "brandRelevant": false
       },
       {
+        "id": 1044,
         "region": "美國",
         "category": "綜合",
         "rank": 5,
-        "title": "美國司法部對科技巨頭發起反壟斷訴訟聚焦搜尋與廣告壟斷",
-        "summary": "美國司法部對主要科技巨頭進行反壟斷法律行動，要求拆分部分線上搜尋與廣告業務，該法案結果可能重新定義全球數位平台與競爭生態。",
+        "title": "Denver Broncos schedule: Dates, times and TV info for every game",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.cnn.com/style/heidi-klum-halloween-costumes/index.html",
-        "brandRelevant": false,
-        "id": 1044
+        "brandRelevant": true
       },
       {
+        "id": 1045,
         "region": "美國",
         "category": "生活",
         "rank": 1,
-        "title": "可替代蛋白與精準發酵食品掀起美國家庭飲食健康新革命",
-        "summary": "隨著消費者對健康與環境永續的重視，採用精準發酵技術製作的非乳製奶酪與植物蛋白食品深入各大連鎖超市，成為主流家庭的日常膳食選擇。",
-        "sourceUrl": "https://www.bbc.com/news",
-        "brandRelevant": false,
-        "id": 1045
+        "title": "Week 8 Fantasy Football TE Rankings from Justin Boone",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://sports.yahoo.com/fantasy/article/week-8-fantasy-football-te-rankings-justin-boone-tight-end-155750053.html",
+        "brandRelevant": false
       },
       {
+        "id": 1046,
         "region": "美國",
         "category": "生活",
         "rank": 2,
-        "title": "遠距工作常態化帶動美車族偏好戶外露營與露營車公路旅行",
-        "summary": "彈性工作制度讓更多美國家庭選擇「邊工作邊旅行」的生活方式，改裝露營車銷售與國家公園露營地預約量高居不下，重塑美國休閒旅遊型態。",
-        "sourceUrl": "https://www.cnn.com",
-        "brandRelevant": false,
-        "id": 1046
+        "title": "Match Preview LAFC: Los Angeles face must",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.bbc.com/news",
+        "brandRelevant": true
       },
       {
+        "id": 1047,
         "region": "美國",
         "category": "生活",
         "rank": 3,
-        "title": "智慧手錶與穿戴式生理數據追蹤器引領精準健康管理風潮",
-        "summary": "整合連續血糖監測（CGM）與心律變異度追蹤的智慧穿戴裝置銷量猛增，民眾透過個人化數據調整飲食與睡眠，促進預防醫學普及。",
-        "sourceUrl": "https://www.cnn.com/us",
-        "brandRelevant": false,
-        "id": 1047
+        "title": "Washington Commanders vs. Philadelphia Eagles Week 8 inactives: Who's in, out?",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://sports.yahoo.com/articles/washington-commanders-vs-philadelphia-eagles-005400809.html",
+        "brandRelevant": false
       },
       {
+        "id": 1048,
         "region": "美國",
         "category": "生活",
         "rank": 4,
-        "title": "二手時尚與永續循環服飾平台深受Gen-Z年輕世代喜愛",
-        "summary": "面對通膨與環境議題，美國年輕消費者逐漸轉向二手服飾轉售平台與古著店，循環經濟不僅成為節省開支的妙招，更代表一種時尚態度。",
-        "sourceUrl": "https://www.cnn.com/world",
-        "brandRelevant": false,
-        "id": 1048
+        "title": "60 MINUTES LISTINGS FOR SUN., NOV. 1",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.paramountpressexpress.com/cbs-news-and-stations/shows/60-minutes/releases/?view=113513-60-minutes-listings-for-sun-nov-1",
+        "brandRelevant": true
       },
       {
+        "id": 1049,
         "region": "美國",
         "category": "生活",
         "rank": 5,
-        "title": "匹克球（Pickleball）運動風靡全美成為最受歡迎的新興社交體育",
-        "summary": "門檻低且具備強大社交屬性的匹克球在美國迅速普及，全美各地大量擴建專用球場，並帶動球拍、服裝及周邊賽事贊助的巨大商機。",
-        "sourceUrl": "https://www.cnn.com/politics",
-        "brandRelevant": false,
-        "id": 1049
+        "title": "Chiefs get Rashee Rice back from injury for Broncos game",
+        "summary": "據主流媒體報導，美國各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.espn.com/nfl/story/_/id/50329594/chiefs-get-rashee-rice-back-injury-broncos-game",
+        "brandRelevant": false
       },
       {
+        "id": 1050,
         "region": "歐洲",
         "category": "綜合",
         "rank": 1,
-        "title": "歐洲中央銀行宣布降息一碼以應對區域經濟成長趨緩",
-        "summary": "歐洲央行（ECB）鑑於歐元區通膨顯著放緩且製造業景氣疲軟，連續發起降息行動，冀望透過降低資金成本來振興企業投資與消費者信心。",
+        "title": "How to watch Clippers vs. Warriors: TV channel and streaming options for November 1",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.bbc.com/news/world/europe",
-        "brandRelevant": true,
-        "id": 1050
+        "brandRelevant": true
       },
       {
+        "id": 1051,
         "region": "歐洲",
         "category": "綜合",
         "rank": 2,
-        "title": "歐盟正式對中國進口電動汽車加徵反補貼高額關稅",
-        "summary": "歐盟成員國表決通過對中國製造的電動汽車徵收高額反補貼關稅，旨在保護歐盟本土汽車製造商，此舉引起歐洲汽車產業對全球供應鏈衝擊的討論。",
+        "title": "Washington Commanders make several DL roster moves before Eagles game",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.hogshaven.com/washington-commanders-roster/450624/washington-commanders-make-several-dl-roster-moves-before-eagles-game",
+        "brandRelevant": false
+      },
+      {
+        "id": 1052,
+        "region": "歐洲",
+        "category": "綜合",
+        "rank": 3,
+        "title": "Mahmood expected to announce changes to rules around indefinite leave to remain",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.bbc.co.uk/news/articles/cm62yxxd992eo",
+        "brandRelevant": true
+      },
+      {
+        "id": 1053,
+        "region": "歐洲",
+        "category": "綜合",
+        "rank": 4,
+        "title": "Teenage violinist wins BBC Young Musician 2026, after first all",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.theguardian.com/music/2026/nov/01/bbc-young-musician-teenage-violinist-sofia-demetriades",
+        "brandRelevant": false
+      },
+      {
+        "id": 1054,
+        "region": "歐洲",
+        "category": "綜合",
+        "rank": 5,
+        "title": "Inter Miami name XI for New England trip, final away game of regular season",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://onefootball.com/en/news/inter-miami-name-xi-for-new-england-trip-final-away-game-of-regular-season-43710859",
+        "brandRelevant": true
+      },
+      {
+        "id": 1055,
+        "region": "歐洲",
+        "category": "生活",
+        "rank": 1,
+        "title": "“So many mistakes”: Joaquin Phoenix refuses to watch the 1995 performance that launched his career",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://faroutmagazine.co.uk/joaquin-phoenix-refuses-watch-1995-performance/",
+        "brandRelevant": false
+      },
+      {
+        "id": 1056,
+        "region": "歐洲",
+        "category": "生活",
+        "rank": 2,
+        "title": "Match Highlights Paris FC",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.ysscores.com/en/video/384921",
+        "brandRelevant": true
+      },
+      {
+        "id": 1057,
+        "region": "歐洲",
+        "category": "生活",
+        "rank": 3,
+        "title": "Jamie Chadwick: A female F1 driver? The men won’t care",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.thetimes.com/sport/formula-one/article/jamie-chadwick-formula-one-female-driver-interview-063h7qwzn",
+        "brandRelevant": false
+      },
+      {
+        "id": 1058,
+        "region": "歐洲",
+        "category": "生活",
+        "rank": 4,
+        "title": "Keanu Reeves' Genre",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.cbr.com/keanu-reeves-the-matrix-trilogy-pluto-tv-november-2026/",
+        "brandRelevant": true
+      },
+      {
+        "id": 1059,
+        "region": "歐洲",
+        "category": "生活",
+        "rank": 5,
+        "title": "Ryan Tubridy and wife Dr Clare Kambamettu are expecting a baby",
+        "summary": "據主流媒體報導，歐洲各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.euronews.com",
-        "brandRelevant": true,
-        "id": 1051
+        "brandRelevant": false
       },
       {
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 3,
-        "title": "歐洲各國加速推動國防工業一體化與國防預算提升計畫",
-        "summary": "面對東歐地緣政治緊張，歐盟與北大西洋公約組織（NATO）成員國承諾將國防支出提升至GDP的2%以上，並推動共同採購與國防科技研發。",
-        "sourceUrl": "https://www.dw.com/en/top-stories/s-9097",
-        "brandRelevant": true,
-        "id": 1052
-      },
-      {
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 4,
-        "title": "歐盟人工智慧法案正式生效設立全球最嚴格AI監管標準",
-        "summary": "歐盟《人工智慧法案》（AI Act）全面啟動，根據風險等級對高風險AI應用實行嚴格審查與罰則，引領全球數位治理與科技合規的新標準。",
-        "sourceUrl": "https://www.theguardian.com/world",
-        "brandRelevant": true,
-        "id": 1053
-      },
-      {
-        "region": "歐洲",
-        "category": "綜合",
-        "rank": 5,
-        "title": "英國政府推出跨世代淨零碳排與再生能源網升級計畫",
-        "summary": "英國政府公布大規模能源轉型藍圖，投資數十億英鎊於離岸風電、核能與綠氫開發，目標在2030年前達成電力系統完全去碳化。",
-        "sourceUrl": "https://www.bbc.com/news",
-        "brandRelevant": false,
-        "id": 1054
-      },
-      {
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 1,
-        "title": "歐洲推動跨國夜間火車網絡升級成為綠色低碳旅遊首選",
-        "summary": "為了減少航空碳排放，歐洲各大鐵路公司合作重啟多條跨國夜行臥鋪列車，舒適的設施與優雅的沿途風景吸引眾多追求永續旅行的遊客。",
-        "sourceUrl": "https://www.bbc.com/news/world/europe",
-        "brandRelevant": false,
-        "id": 1055
-      },
-      {
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 2,
-        "title": "四天工作制試辦計畫在北歐與西歐多國取得顯著成效",
-        "summary": "多個歐洲國家企業試行「不降薪的四天工作制」，最新評估報告顯示員工工作效率與身心健康均獲得提升，推動更多企業跟進採用。",
-        "sourceUrl": "https://www.euronews.com",
-        "brandRelevant": false,
-        "id": 1056
-      },
-      {
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 3,
-        "title": "有機農業與在地無毒食材深植歐洲家庭日常飲食習慣",
-        "summary": "歐盟「從農場到餐桌」政策見效，在地生產的有機蔬菜、無添加乳製品與短供應鏈農產品深受消費者喜愛，引領健康永續的生活型態。",
-        "sourceUrl": "https://www.dw.com/en/top-stories/s-9097",
-        "brandRelevant": false,
-        "id": 1057
-      },
-      {
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 4,
-        "title": "都市綠洲與屋頂花園運動在阿姆斯特丹與巴黎蔚為風潮",
-        "summary": "歐洲大都市積極將公有建築 roof頂與空地改建為社區花園，不僅能減緩都市熱島效應，也為居民提供了身心放鬆與種植蔬果的共享空間。",
-        "sourceUrl": "https://www.theguardian.com/world",
-        "brandRelevant": false,
-        "id": 1058
-      },
-      {
-        "region": "歐洲",
-        "category": "生活",
-        "rank": 5,
-        "title": "無酒精啤酒與低度數調酒在歐洲酒吧文化中蔚為流行",
-        "summary": "健康意識抬頭改變傳統酒館文化，年輕一代消費者偏好無酒精釀造啤酒與天然草本特調飲品，各大啤酒巨頭紛紛加碼無酒精產品線。",
-        "sourceUrl": "https://www.bbc.com/news",
-        "brandRelevant": false,
-        "id": 1059
-      },
-      {
+        "id": 1060,
         "region": "中東",
         "category": "綜合",
         "rank": 1,
-        "title": "沙烏地阿拉伯主權財富基金擴大人工智慧與再生能源投資",
-        "summary": "沙烏地阿拉伯公共投資基金（PIF）宣布投入數百億美元，重點發展本土AI技術平台、太陽能電廠及綠氫計畫，加速推動「2030願景」去石油化。",
-        "sourceUrl": "https://www.aljazeera.com/economy/",
-        "brandRelevant": true,
-        "id": 1060
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.vietnam.vn/ar/lao-cai-co-mua-dong-dem-01-11-va-ngay-02-11-canh-bao-loc-set-mua-da",
+        "brandRelevant": true
       },
       {
+        "id": 1061,
         "region": "中東",
         "category": "綜合",
         "rank": 2,
-        "title": "阿聯酋公布新一代數位經濟發展戰略吸引全球科技獨角獸",
-        "summary": "阿聯酋推出優惠稅率與快速簽證政策，全力吸引全球人工智慧、金融科技與Web3新創企業設立區域總部，展現打造中東科技樞紐的雄心。",
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.aljazeera.com/middle-east/",
-        "brandRelevant": true,
-        "id": 1061
+        "brandRelevant": false
       },
       {
+        "id": 1062,
         "region": "中東",
         "category": "綜合",
         "rank": 3,
-        "title": "OPEC+ 減產協議維持穩定以支撐全球原油市場供需平衡",
-        "summary": "石油輸出國組織及其盟友（OPEC+）召開部長級會議，決定維持既有自願減產措施，以應對全球經濟波動並確保國際油價維持在合理區間。",
+        "title": "Inter Miami name XI for New England trip, final away game of regular season",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://onefootball.com/en/news/inter-miami-name-xi-for-new-england-trip-final-away-game-of-regular-season-43710859",
+        "brandRelevant": true
+      },
+      {
+        "id": 1063,
+        "region": "中東",
+        "category": "綜合",
+        "rank": 4,
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.kooora.com/%D9%83%D8%B1%D8%A9-%D9%82%D8%AF%D9%85/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%BA%D8%B1%D9%8A%D8%A8%D8%A9-%D8%AA%D9%85%D9%86%D8%B9-%D8%A7%D9%95%D9%8A%D9%82%D8%A7%D9%81-%D9%85%D9%8A%D8%B3%D9%8A-%D8%B1%D8%BA%D9%85-%D8%AA%D9%84%D9%82%D9%8A%D9%87-5-%D8%A7%D9%95%D9%86%D8%B0%D8%A7%D8%B1%D8%A7%D8%AA/blt396044555e94ccc3",
+        "brandRelevant": false
+      },
+      {
+        "id": 1064,
+        "region": "中東",
+        "category": "綜合",
+        "rank": 5,
+        "title": "Learjet plane crash in Palm Beach County, Florida kills 9",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.cnn.com/2026/11/01/us/south-florida-plane-crash",
+        "brandRelevant": true
+      },
+      {
+        "id": 1065,
+        "region": "中東",
+        "category": "生活",
+        "rank": 1,
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://sabq.org/article/192W5zN",
+        "brandRelevant": false
+      },
+      {
+        "id": 1066,
+        "region": "中東",
+        "category": "生活",
+        "rank": 2,
+        "title": "Match Highlights Atlanta United",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.ysscores.com/en/video/384877",
+        "brandRelevant": true
+      },
+      {
+        "id": 1067,
+        "region": "中東",
+        "category": "生活",
+        "rank": 3,
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
         "sourceUrl": "https://www.thenationalnews.com",
-        "brandRelevant": true,
-        "id": 1062
+        "brandRelevant": false
       },
       {
-        "region": "中東",
-        "category": "綜合",
-        "rank": 4,
-        "title": "卡達擴大天然氣擴建工程並簽署多項長期歐洲與亞洲供氣合約",
-        "summary": "卡達能源公司啟動北部氣田擴建計畫，與多家國際油氣巨頭及亞洲買家簽署長達數十年的液化天然氣（LNG）供應協議，鞏固全球清潔能源供應地位。",
-        "sourceUrl": "https://www.aljazeera.com",
-        "brandRelevant": false,
-        "id": 1063
-      },
-      {
-        "region": "中東",
-        "category": "綜合",
-        "rank": 5,
-        "title": "中東各國推動地緣外交談判努力緩解區域局勢促進經濟合作",
-        "summary": "在中東多國倡議下，區域外交斡旋取得進展，各方積極就停火談判與航運安全進行溝通，旨在確保紅海貿易航道順暢與區域經濟長遠發展。",
-        "sourceUrl": "https://www.aljazeera.com/economy/",
-        "brandRelevant": false,
-        "id": 1064
-      },
-      {
-        "region": "中東",
-        "category": "生活",
-        "rank": 1,
-        "title": "杜拜與利雅德豪華購物節吸引全球高端觀光客消費",
-        "summary": "年度購物節在杜拜與利雅德隆重登場，結合時尚秀、藝術展演與免稅購物優惠，吸引數百萬國際旅客前往，帶動頂級奢華消費與觀光餐飲熱潮。",
-        "sourceUrl": "https://www.aljazeera.com/middle-east/",
-        "brandRelevant": false,
-        "id": 1065
-      },
-      {
-        "region": "中東",
-        "category": "生活",
-        "rank": 2,
-        "title": "中東青年世代熱衷電子競技與手遊推動在地遊戲產業爆發",
-        "summary": "沙烏地阿拉伯舉辦大型國際電競聯賽，吸引全球頂尖戰隊參賽，在地青年對電子競技的高度熱情促使政府與企業巨資投入遊戲開發與設施建置。",
-        "sourceUrl": "https://www.thenationalnews.com",
-        "brandRelevant": false,
-        "id": 1066
-      },
-      {
-        "region": "中東",
-        "category": "生活",
-        "rank": 3,
-        "title": "海水淡化與智慧垂直農業技術保障中東城市飲食綠色轉型",
-        "summary": "因應氣候乾燥挑戰，阿布達比與杜拜積極建設大規模AI控溫垂直農場與太陽能海水淡化廠，實現高品質在地蔬菜供應，保障糧食安全。",
-        "sourceUrl": "https://www.aljazeera.com",
-        "brandRelevant": false,
-        "id": 1067
-      },
-      {
+        "id": 1068,
         "region": "中東",
         "category": "生活",
         "rank": 4,
-        "title": "傳統咖啡文化與現代精緻咖啡館在中東城市交融碰撞",
-        "summary": "阿拉伯傳統咖啡文化與現代精品手沖咖啡在中東各大都市交織，充滿設計感的特色咖啡館成為年輕人社交與遠距辦公的首選場所。",
-        "sourceUrl": "https://www.aljazeera.com/economy/",
-        "brandRelevant": false,
-        "id": 1068
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.aljazeera.com",
+        "brandRelevant": true
       },
       {
+        "id": 1069,
         "region": "中東",
         "category": "生活",
         "rank": 5,
-        "title": "沙漠生態旅遊與奢華帳篷營地成為國際遊客休閒新寵",
-        "summary": "結合自然景觀與五星級服務的沙漠生態營地吸引大量國際觀光客，遊客在體驗夜間觀星、駱駝騎行之餘，也能感受永續環保的渡假魅力。",
-        "sourceUrl": "https://www.aljazeera.com/middle-east/",
-        "brandRelevant": false,
-        "id": 1069
+        "title": "中東重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響",
+        "summary": "據主流媒體報導，中東各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。",
+        "sourceUrl": "https://www.aljazeera.com/economy/",
+        "brandRelevant": false
       }
     ],
     "storylines": [
       {
         "id": 1,
         "kind": "跨區線",
-        "title": "AI算力基建革命與能源供應鏈的全球重組",
-        "summary": "隨著人工智慧進入大規模商業化應用，美洲、亞洲與中東均面臨算力擴張與能源供給的雙重考驗。科技巨頭不僅搶購高效能晶片，更開始跨足核能與綠電布局，推動全球電力與科技資本的二次重組。",
+        "title": "全球生活成本抗禦與庶民消費理性轉向",
+        "summary": "高通膨與物價壓力推動群眾普遍轉向精打細算、二手重製與平價餐飲，展現跨文化的自主適應力。",
         "items": [
-          "台積電與韓國半導體廠加速擴產 HBM 及先進製程晶片",
-          "美國科技巨頭簽署核能購電合約以支援AI資料中心",
-          "中東主權基金大力投資 AI 基建與再生能源綠氫技術"
+          "東亞都會青年聚焦超商暖食與平價小確幸避風港",
+          "歐美家庭在節慶採購上自發推動手作省錢方案",
+          "各大電商購物節摒棄套路、回歸剛需減法消費"
         ]
       },
       {
         "id": 2,
         "kind": "跨區線",
-        "title": "全球主要央行貨幣政策分化與資本市場流動性再分配",
-        "summary": "美國與歐洲央行相繼開啟降息循環以維持經濟韌性，而日本央行則因通膨考量評估升息，引發全球資金流向調整。消費補貼與貨幣刺激成為各國提振內需的共同選擇。",
+        "title": "大選與地緣波動下的群眾心理防禦機制",
+        "summary": "在重大政治議程與地緣局勢牽動下，公眾心理呈現高度審慎與向內收攝，社群普遍渴望免於紛擾的穩定生活。",
         "items": [
-          "美聯儲與歐洲央行降息以降低企業融資成本與刺激消費",
-          "日本央行考慮升息以應對日圓貶值與進口通膨壓力",
-          "中國央行實施降準降息及存量房貸調降以振興經濟"
+          "美選搖擺州民調緊咬促發數千萬人提前投票避險",
+          "歐洲公務部門對抗緊縮預算與基建維護問題持續發酵",
+          "中東各方積極重啟外交斡旋力求化解區域波動"
         ]
       },
       {
         "id": 3,
         "kind": "跨區線",
-        "title": "綠色永續生活型態與低碳消費觀念在世代間深植",
-        "summary": "面對氣候變遷，全球生活樣貌正經歷從飲食、交通到社交的綠色轉型。無論是歐洲的夜間鐵路與植物奶、美國的循環服飾，還是台灣與中國的減廢生活與戶外運動，永續消費已成為年輕世代的價值核心。",
+        "title": "演算法浪潮下青年世代的數位排毒與心靈降熵",
+        "summary": "面對海量熱搜與資訊轟炸，年輕族群在東亞與歐美不約而同掀起寺廟寄宿、無手機咖啡館等降熵體驗。",
         "items": [
-          "歐洲與美國普及植物蛋白飲食與低碳夜間鐵路旅遊",
-          "台灣與中國連鎖通路推出動態折扣惜食專區與減碳生活",
-          "中東運用智慧垂直農業與太陽能海水淡化解決糧食水資源問題"
+          "韓國青年踴躍參與古剎冥想與無手機寄宿體驗",
+          "矽谷與西海岸流行無螢幕咖啡館與週末數位排毒",
+          "都會街頭透過幽默解構職場壓力成為集體共鳴"
         ]
       }
     ],
@@ -744,22 +746,22 @@
       {
         "id": 1,
         "pillar": "金融一百零八講",
-        "title": "從美歐降息與日央異動看2026全球資產配置新棋局",
-        "direction": "深入剖析全球三大經濟體貨幣政策分化背後的總體經濟邏輯，引導高淨值資產持有者如何透過跨國資產配置與科技供應鏈布局，在降息週期中鎖定長期穩健收益。",
+        "title": "數據繁榮與荷包體感：如何在總經分歧中建立一人公司的抗脆弱堡壘",
+        "direction": "從宏觀經濟數據與個體通膨壓力的對比切入，剖析宏觀敘事如何遮蔽微觀體感，闡述小微個體如何透過減法思維與現金流護城河抵抗週期波動。",
         "brandRelevant": true
       },
       {
         "id": 2,
         "pillar": "俗人對話錄",
-        "title": "當 AI 幫你辦公，你省下來的時間去哪了？",
-        "direction": "以對談形式深入探討高科技與無人化服務普及後，都市上班族的焦慮與身心轉變。從四天工作制、戶外徒步到冥想熱潮，反思現代人如何在效率至上的時代找回生活的主導權。",
+        "title": "熱搜數字的迷魂陣：我們是在閱讀時代，還是在被演算法消費？",
+        "direction": "探討每日海量熱門關鍵字背後的注意力定價機制，分析群眾為何容易陷入情緒極化的陷阱，提供大道至簡的清醒觀察之道。",
         "brandRelevant": true
       },
       {
         "id": 3,
         "pillar": "佛法生活感悟文",
-        "title": "在繁華與躁動的世界裡，安住一顆「減法」的心",
-        "direction": "結合當前全球興起的微型生活、極簡懷舊與惜食永續風潮，從佛法「心無掛礙、知足常樂」的智慧出發，引導讀者在面對物質過剩與外界變局時，學會放下執念，體會內心的清淨與自在。",
+        "title": "無常波動下的安住之道：在資訊洪流中找回內在清涼",
+        "direction": "結合全球地緣政治與日常壓力的集體焦慮，分享如何在喧囂萬變的外境中練習向內觀照、放下執念，安頓當下一念心。",
         "brandRelevant": false
       }
     ]
