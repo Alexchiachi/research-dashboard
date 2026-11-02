@@ -43,9 +43,13 @@ MEDIA_FEEDS = {
         ("ETtoday", "https://feeds.feedburner.com/ettoday/realtime"),
     ],
     "中國": [
-        ("中新網", "https://www.chinanews.com.cn/rss/scroll-news.xml"),
-        ("BBC 中文", "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml"),
+        ("中新網 國內", "https://www.chinanews.com.cn/rss/china.xml"),
+        ("中新網 社會", "https://www.chinanews.com.cn/rss/society.xml"),
+        ("中新網 財經", "https://www.chinanews.com.cn/rss/finance.xml"),
         ("SCMP China", "https://www.scmp.com/rss/4/feed"),
+        # 綜合型來源：只保留與中國相關的報導
+        ("中新網", "https://www.chinanews.com.cn/rss/scroll-news.xml", "china"),
+        ("BBC 中文", "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml", "china"),
     ],
     "日本": [
         ("NHK", "https://www3.nhk.or.jp/rss/news/cat0.xml"),
@@ -71,6 +75,15 @@ MEDIA_FEEDS = {
 }
 
 REGION_CODE = {"台灣": "TW", "中國": "CN", "日本": "JP", "韓國": "KR", "美國": "US", "歐洲": "EU", "中東": "ME"}
+
+# 綜合型來源的區域關鍵字過濾（標題或摘要須命中其一）
+REGION_KEYWORDS = {
+    "china": re.compile(
+        r"中國|中国|大陸|大陆|內地|内地|北京|上海|廣州|广州|深圳|重慶|重庆|成都|武漢|武汉|杭州|天津|南京|西安|"
+        r"香港|澳門|澳门|新疆|西藏|國務院|国务院|中共|習近平|习近平|李強|李强|人民幣|人民币|央行|發改委|发改委|"
+        r"China|Chinese|Beijing|Shanghai|Hong Kong|Xi Jinping|Shenzhen|Guangdong|yuan",
+        re.I),
+}
 
 MAX_AGE_HOURS = 48          # 超過 48 小時的報導視為舊聞，直接剔除
 MAX_TRENDS_PER_REGION = 20
@@ -150,7 +163,7 @@ def collect_trends(region: str, now) -> list:
         try:
             tree = _fetch_xml(f"https://trends.google.com/trending/rss?geo={geo}")
         except Exception as e:
-            print(f"   ⚠️ Trends {geo} 讀取失敗：{e}", file=sys.stderr)
+            print(f"   ⚠️ Trends {geo} 讀取失敗：{e}")
             continue
         for it in tree.findall(".//item"):
             query = _clean_text(it.findtext("title", ""), 80)
@@ -181,11 +194,13 @@ def collect_trends(region: str, now) -> list:
 
 def collect_media(region: str, now) -> list:
     out = []
-    for source, feed in MEDIA_FEEDS.get(region, []):
+    for entry in MEDIA_FEEDS.get(region, []):
+        source, feed = entry[0], entry[1]
+        kw = REGION_KEYWORDS.get(entry[2]) if len(entry) > 2 else None
         try:
             tree = _fetch_xml(feed)
         except Exception as e:
-            print(f"   ⚠️ {source} RSS 讀取失敗：{e}", file=sys.stderr)
+            print(f"   ⚠️ {source} RSS 讀取失敗：{e}")
             continue
         items = tree.findall(".//item") or tree.findall(".//{http://www.w3.org/2005/Atom}entry")
         if not items:  # RDF (DW)
@@ -206,11 +221,14 @@ def collect_media(region: str, now) -> list:
             pub = _parse_date(t("pubDate") or it.findtext("{http://purl.org/dc/elements/1.1/}date", "") or t("updated"))
             if not url or not title or _is_bad_url(url) or not _is_fresh(pub, now):
                 continue
+            snippet = _clean_text(t("description") or t("summary"), 300)
+            if kw and not kw.search(title + " " + snippet):
+                continue
             out.append({
                 "kind": "media",
                 "query": "",
                 "title": title,
-                "snippet": _clean_text(t("description") or t("summary"), 300),
+                "snippet": snippet,
                 "source": source,
                 "url": url,
                 "traffic": 0,
@@ -220,6 +238,7 @@ def collect_media(region: str, now) -> list:
             count += 1
             if count >= 8:  # 每個媒體最多 8 則，維持來源多樣性
                 break
+        print(f"      · {source}：{count} 則")
     return out[:MAX_MEDIA_PER_REGION]
 
 
