@@ -94,10 +94,19 @@ def check_single_url(url, timeout=10, max_attempts=3):
     return status == "ok", msg
 
 def is_homepage_url(url):
-    """只有網域、沒有文章路徑的連結（如 https://www.cnn.com/）不是新聞報導本身"""
+    """只有網域或單層分類頁的連結（如 https://www.cnn.com/、/news、/economy/）不是新聞報導本身"""
     m = re.match(r"https?://[^/]+(/[^?#]*)?", url or "")
-    path = (m.group(1) or "/") if m else "/"
-    return len(path.strip("/")) < 8
+    path = ((m.group(1) or "/") if m else "/").strip("/")
+    if not path:
+        return True
+    segments = [p for p in path.split("/") if p]
+    return len(segments) == 1 and not re.search(r"\d", path) and len(path) < 15
+
+def is_untranslated(text):
+    """拉丁字母遠多於中文字 → 視為外文未翻譯（英文、法文、波蘭文等）"""
+    letters = len(re.findall(r"[A-Za-zÀ-ÿĀ-ž]", text or ""))
+    cjk = len(re.findall(r"[\u4e00-\u9fff]", text or ""))
+    return letters > 10 and letters > cjk * 2
 
 def audit_standards(data):
     """全維度審查（不含網路）：回傳 (fatal_errors, quality_warnings)
@@ -162,6 +171,9 @@ def audit_standards(data):
                 if re.search(script_re, title):
                     quality.append(f"{prefix} 標題包含{script_name}，未完成繁體中文在地化：'{title[:30]}'")
                     break
+            else:
+                if is_untranslated(title):
+                    quality.append(f"{prefix} 標題為外文未翻譯：'{title[:30]}'")
 
         if not summ or len(summ) < 20:
             quality.append(f"{prefix} 摘要為空或字數不足 20 字")

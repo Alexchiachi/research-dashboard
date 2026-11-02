@@ -132,7 +132,7 @@ def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) ->
             # 503 高負載 / 429 限流 / 逾時屬暫時性錯誤：退避後重試同一模型
             if not isinstance(last_err, str) or not re.search(r"HTTP (503|429|500)|timed out", last_err):
                 continue
-            wait = 15 * attempt
+            wait = (30 if "429" in last_err else 15) * attempt
             print(f"   ⏳ {label}{model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...")
             time.sleep(wait)
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
@@ -204,8 +204,10 @@ def build_region_prompt(today: str, reg: str, cands: list) -> str:
    - title：精準的繁體中文新聞標題（主語＋動作＋事件），外語必須完整翻譯，不可保留外文字。
    - summary：60~110 字繁體中文摘要。只能根據「原文標題」與「摘要片段」提供的事實撰寫，
      不得自行補充候選中沒有的數字、人名或細節；可加一句社會心理或生活面的觀察。
-5. observation：用 40~70 字繁體中文寫出今天{reg}社群與大眾心理的整體觀察。
-6. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
+5. 另外依序挑出最多 6 則【backups】備選（格式同 events，category 依內容填寫，rank 可省略），
+   供系統在主稿因來源上限被剔除時遞補；備選同樣須與{reg}直接相關、已翻譯成繁中。
+6. observation：用 40~70 字繁體中文寫出今天{reg}社群與大眾心理的整體觀察。
+7. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
 
 候選清單（JSON）：
 {json.dumps(compact, ensure_ascii=False)}
@@ -215,6 +217,9 @@ def build_region_prompt(today: str, reg: str, cands: list) -> str:
   "observation": "今天{reg}的整體觀察",
   "events": [
     {{"cid": "{cands[0]['cid'] if cands else 'XX-01'}", "category": "綜合", "rank": 1, "title": "繁中標題", "summary": "繁中摘要", "brandRelevant": true}}
+  ],
+  "backups": [
+    {{"cid": "…", "category": "生活", "title": "繁中標題", "summary": "繁中摘要", "brandRelevant": false}}
   ]
 }}
 """
@@ -270,7 +275,8 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
 
     if "models" not in _MODELS_CACHE:
         _MODELS_CACHE["models"] = resolve_gemini_models(api_key)
-    with ThreadPoolExecutor(max_workers=7) as ex:
+    # 同時最多 3 區：7 區全開會觸發 Gemini 每分鐘配額限制（HTTP 429）
+    with ThreadPoolExecutor(max_workers=3) as ex:
         region_results = dict(ex.map(_one, REGIONS))
 
     ok_regions = [r for r in REGIONS if region_results.get(r)]
@@ -283,6 +289,8 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
         res = region_results.get(reg)
         if res:
             ai["events"].extend(res.get("events", []))
+            for b in res.get("backups", []) or []:
+                ai.setdefault("backups", []).append(dict(b, _backup=True))
             if res.get("observation"):
                 obs.append(f"{reg}：{to_traditional(res['observation']).rstrip('。；;')}")
     ai["regionObservations"] = obs
@@ -319,13 +327,19 @@ def translate_to_zh_tw(text: str) -> str:
     url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q="
            + urllib.parse.quote(text[:500]))
     result = text
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, context=get_ssl_context(), timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-        result = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
-    except Exception as e:
-        print(f"   ⚠️ 翻譯失敗（保留原文）：{e}", file=sys.stderr)
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, context=get_ssl_context(), timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            result = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
+            break
+        except Exception as e:
+            if attempt < 2 and "429" in str(e):
+                time.sleep(3 * (attempt + 1))
+                continue
+            print(f"   ⚠️ 翻譯失敗（保留原文）：{e}")
+            break
     result = to_traditional(result)
     _translate_cache[text] = result
     return result
@@ -471,35 +485,56 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
     slots = {(reg, cat): [] for reg in REGIONS for cat in ("綜合", "生活")}
     outlet_count = {reg: {} for reg in REGIONS}
 
-    if ai:
-        for ev in ai.get("events", []):
-            cid = str(ev.get("cid", "")).strip()
-            c = by_cid.get(cid)
-            cat = ev.get("category")
-            if not c:
+    def add_ai(ev, enforce_cap: bool, flexible_cat: bool) -> bool:
+        cid = str(ev.get("cid", "")).strip()
+        c = by_cid.get(cid)
+        if not c:
+            if not ev.get("_noted"):
                 notes.append(f"AI 給了不存在的 cid：{cid}，已忽略")
-                continue
-            if cid in used or cat not in ("綜合", "生活"):
-                continue
-            reg = c["region"]  # 以候選本身的區域為準，AI 不能跨區
-            if len(slots[(reg, cat)]) >= 5:
-                continue
-            if outlet_count[reg].get(outlet_of(c), 0) >= MAX_PER_OUTLET:
-                notes.append(f"{reg}：{outlet_of(c)} 已達 {MAX_PER_OUTLET} 則上限，略過 {cid}")
-                continue
-            outlet_count[reg][outlet_of(c)] = outlet_count[reg].get(outlet_of(c), 0) + 1
-            title = (ev.get("title") or "").strip()
-            summary = (ev.get("summary") or "").strip()
-            if not title or has_foreign_script(title):
-                title = translate_to_zh_tw(clean_title(c["title"]))
-            slots[(reg, cat)].append({
-                "region": reg, "category": cat, "rank": 0,
-                "title": to_traditional(title), "summary": to_traditional(summary),
-                "sourceUrl": c["url"], "source": c.get("source", ""), "originalTitle": c["title"],
-                "brandRelevant": bool(ev.get("brandRelevant", False)),
-                "_rank": ev.get("rank", 99), "_cid": cid,
-            })
-            used.add(cid)
+                ev["_noted"] = True
+            return False
+        if cid in used:
+            return False
+        reg = c["region"]  # 以候選本身的區域為準，AI 不能跨區
+        cat = ev.get("category")
+        cats = [cat] if cat in ("綜合", "生活") else []
+        if flexible_cat:
+            cats += [x for x in ("綜合", "生活") if x not in cats]
+        cat = next((x for x in cats if len(slots[(reg, x)]) < 5), None)
+        if not cat:
+            return False
+        outlet = outlet_of(c)
+        if enforce_cap and outlet_count[reg].get(outlet, 0) >= MAX_PER_OUTLET:
+            if not ev.get("_noted"):
+                notes.append(f"{reg}：{outlet} 已達 {MAX_PER_OUTLET} 則上限，暫緩 {cid}")
+                ev["_noted"] = True
+            return False
+        outlet_count[reg][outlet] = outlet_count[reg].get(outlet, 0) + 1
+        title = (ev.get("title") or "").strip()
+        summary = (ev.get("summary") or "").strip()
+        if not title or has_foreign_script(title) or is_mostly_latin(title):
+            title = translate_to_zh_tw(clean_title(c["title"]))
+        base_rank = ev.get("rank", 9) if not ev.get("_backup") else 20
+        slots[(reg, cat)].append({
+            "region": reg, "category": cat, "rank": 0,
+            "title": to_traditional(title), "summary": to_traditional(summary),
+            "sourceUrl": c["url"], "source": c.get("source", ""), "originalTitle": c["title"],
+            "brandRelevant": bool(ev.get("brandRelevant", False)),
+            "_rank": base_rank if enforce_cap else base_rank + 10, "_cid": cid,
+        })
+        used.add(cid)
+        return True
+
+    if ai:
+        mains = ai.get("events", [])
+        backups = ai.get("backups", [])
+        # 遞補順序：AI 主稿 → AI 備選 → 超過來源上限的 AI 稿（寧可同媒體多一則，也不放未翻譯的不相關稿）
+        for ev in mains:
+            add_ai(ev, enforce_cap=True, flexible_cat=False)
+        for ev in backups:
+            add_ai(ev, enforce_cap=True, flexible_cat=True)
+        for ev in mains + backups:
+            add_ai(ev, enforce_cap=False, flexible_cat=True)
 
     # 補齊缺額（AI 不足或沒有 AI）
     for reg in REGIONS:
