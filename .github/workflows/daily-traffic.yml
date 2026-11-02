@@ -77,6 +77,8 @@ jobs:
             echo "今日資料無變更，無需 Commit。"
           else
             git commit -m "feat(traffic): 自動更新每日七地流量情報 ($TODAY) [skip ci]"
+            # 執行期間若有人推了新 commit，先同步再推送，避免 non-fast-forward 失敗
+            git pull --rebase origin "${{ github.ref_name }}"
             git push origin HEAD
           fi
 
