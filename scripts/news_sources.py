@@ -89,7 +89,7 @@ REGION_KEYWORDS = {
 
 MAX_AGE_HOURS = 48          # 超過 48 小時的報導視為舊聞，直接剔除
 MAX_TRENDS_PER_REGION = 20
-MAX_MEDIA_PER_REGION = 15
+MAX_MEDIA_PER_REGION = 20
 
 
 def _ssl_ctx():
@@ -203,7 +203,7 @@ def collect_trends(region: str, now) -> list:
 
 
 def collect_media(region: str, now) -> list:
-    out = []
+    per_feed = []   # [(outlet, [items])]
     for entry in MEDIA_FEEDS.get(region, []):
         source, feed = entry[0], entry[1]
         kw = REGION_KEYWORDS.get(entry[2]) if len(entry) > 2 else None
@@ -216,6 +216,7 @@ def collect_media(region: str, now) -> list:
         if not items:  # RDF (DW)
             items = tree.findall(".//{http://purl.org/rss/1.0/}item")
         count = 0
+        out = []
         for it in items:
             def t(tag):
                 for cand in (tag, f"{{http://purl.org/rss/1.0/}}{tag}", f"{{http://www.w3.org/2005/Atom}}{tag}"):
@@ -249,7 +250,24 @@ def collect_media(region: str, now) -> list:
             if count >= 8:  # 每個媒體最多 8 則，維持來源多樣性
                 break
         print(f"      · {source}：{count} 則")
-    return out[:MAX_MEDIA_PER_REGION]
+        per_feed.append((source.split(" ")[0], out))
+
+    # 依「媒體」輪流取稿（同一媒體的多個頻道合併計算），避免排在前面的來源佔滿名額
+    outlets = {}
+    for outlet, lst in per_feed:
+        outlets.setdefault(outlet, []).append(lst)
+    queues = []
+    for feeds in outlets.values():
+        merged = []
+        for i in range(max((len(f) for f in feeds), default=0)):
+            merged.extend(f[i] for f in feeds if i < len(f))
+        queues.append(merged)
+    result = []
+    i = 0
+    while len(result) < MAX_MEDIA_PER_REGION and any(i < len(q) for q in queues):
+        result.extend(q[i] for q in queues if i < len(q))
+        i += 1
+    return result[:MAX_MEDIA_PER_REGION]
 
 
 def verify_candidates(cands: list, max_workers: int = 16) -> None:
