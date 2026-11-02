@@ -52,7 +52,9 @@ MEDIA_FEEDS = {
         ("BBC 中文", "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml", "china"),
     ],
     "日本": [
-        ("NHK", "https://www3.nhk.or.jp/rss/news/cat0.xml"),
+        ("朝日新聞", "https://www.asahi.com/rss/asahi/newsheadlines.rdf"),
+        ("毎日新聞", "https://mainichi.jp/rss/etc/mainichi-flash.rss"),
+        ("Kyodo", "https://english.kyodonews.net/rss/news.xml"),
         ("Japan Times", "https://www.japantimes.co.jp/feed/"),
     ],
     "韓國": [

@@ -42,6 +42,7 @@ jobs:
       - name: AI 智能採集七地社群流量 (Collect Traffic via Gemini AI)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUNBUFFERED: "1"   # log 即時輸出，方便看每一步花多久
         run: |
           python3 scripts/collect_traffic_ai.py
 

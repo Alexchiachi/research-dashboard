@@ -116,8 +116,13 @@ def resolve_gemini_models(api_key: str) -> list:
     print(f"🤖 Gemini 候選模型順序：{deduped}")
     return deduped
 
-def call_gemini(prompt: str, api_key: str) -> str:
-    models = resolve_gemini_models(api_key)
+_MODELS_CACHE = {}
+
+def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) -> str:
+    if "models" not in _MODELS_CACHE:
+        _MODELS_CACHE["models"] = resolve_gemini_models(api_key)
+    models = _MODELS_CACHE["models"]
+    label = f"[{tag}] " if tag else ""
     last_err = None
     ctx = get_ssl_context()
     
@@ -128,7 +133,7 @@ def call_gemini(prompt: str, api_key: str) -> str:
             if not isinstance(last_err, str) or not re.search(r"HTTP (503|429|500)|timed out", last_err):
                 continue
             wait = 15 * attempt
-            print(f"⏳ {model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...", file=sys.stderr)
+            print(f"   ⏳ {label}{model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...")
             time.sleep(wait)
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
         payload = {
@@ -144,7 +149,7 @@ def call_gemini(prompt: str, api_key: str) -> str:
             headers={"Content-Type": "application/json"}
         )
         try:
-            with urllib.request.urlopen(req, context=ctx, timeout=180) as resp:
+            with urllib.request.urlopen(req, context=ctx, timeout=timeout) as resp:
                 res_data = json.loads(resp.read().decode("utf-8"))
                 candidates = res_data.get("candidates", [])
                 if candidates:
@@ -154,13 +159,13 @@ def call_gemini(prompt: str, api_key: str) -> str:
                         return parts[0].get("text", "")
         except urllib.error.HTTPError as e:
             err_body = e.read().decode("utf-8", errors="ignore")
-            print(f"⚠️ Gemini API {model} HTTP {e.code}: {err_body[:160]}", file=sys.stderr)
+            print(f"   ⚠️ {label}Gemini {model} HTTP {e.code}: {err_body[:120]}")
             last_err = f"HTTP {e.code}: {err_body[:100]}"
             if e.code == 404:
                 last_err = f"model gone {e.code}: {err_body[:100]}"
             continue
         except Exception as e:
-            print(f"⚠️ Gemini API {model} 呼叫異常: {e}", file=sys.stderr)
+            print(f"   ⚠️ {label}Gemini {model} 呼叫異常: {e}")
             last_err = f"{type(e).__name__}: {e}"
             continue
             
@@ -168,50 +173,75 @@ def call_gemini(prompt: str, api_key: str) -> str:
 
 
 
-def build_prompt(today: str, pools: dict) -> str:
-    compact = {}
-    for reg in REGIONS:
-        compact[reg] = [{
-            "cid": c["cid"],
-            "type": "熱搜" if c["kind"] == "trend" else "媒體",
-            "熱搜詞": c.get("query", ""),
-            "熱度": c.get("traffic", 0),
-            "來源": c.get("source", ""),
-            "原文標題": c["title"],
-            "摘要片段": c.get("snippet", "")[:200],
-        } for c in pools[reg]]
+MAX_PER_OUTLET = 3   # 同一媒體在同一區最多選 3 則，維持觀點多元
 
+
+def outlet_of(c: dict) -> str:
+    """「中新網 國內」「中新網 社會」視為同一家媒體"""
+    return (c.get("source") or "").split(" ")[0].strip() or c.get("url", "")
+
+
+def build_region_prompt(today: str, reg: str, cands: list) -> str:
+    compact = [{
+        "cid": c["cid"],
+        "type": "熱搜" if c["kind"] == "trend" else "媒體",
+        "熱搜詞": c.get("query", ""),
+        "熱度": c.get("traffic", 0),
+        "來源": c.get("source", ""),
+        "原文標題": c["title"],
+        "摘要片段": c.get("snippet", "")[:200],
+    } for c in cands]
     return f"""
-你是「全球社群情報」的總編輯。今天的日期是 {today}。
-下面是程式從 Google Trends 熱搜與各地主流媒體 RSS 抓到的【今天真實報導候選清單】，每則都有唯一代號 cid。
+你是「全球社群情報」的【{reg}】區編輯。今天的日期是 {today}。
+下面是程式從 Google Trends 熱搜與{reg}主流媒體 RSS 抓到的【今天真實報導候選清單】，每則都有唯一代號 cid。
 
-你的任務：
-1. 從每個區域的候選中，挑出 5 則【綜合】（政經、國際、社會重大新聞）與 5 則【生活】（消費、娛樂、體育、文化、健康），
-   依社群熱度與重要性排序（rank 1 最重要）。只能使用該區域自己的 cid，不得跨區、不得重複。
-   每則新聞必須與該區域本身直接相關（例如【中國】區只能選中國大陸、港澳本地發生或直接涉及中國的事件，
-   不可選只是用中文報導的其他國家新聞）；若某區相關候選不足，寧可選熱度較低但相關的候選。
-2. 每則撰寫：
-   - title：精準的繁體中文新聞標題（主語＋動作＋事件），日韓英阿等外語必須完整翻譯，不可保留外文字。
+任務：
+1. 挑出 5 則【綜合】（政經、國際、社會重大新聞）與 5 則【生活】（消費、娛樂、體育、文化、健康），
+   依社群熱度與重要性排序（rank 1 最重要），cid 不得重複。
+2. 每則新聞必須與{reg}本身直接相關（在{reg}發生、或直接牽涉{reg}），不可選只是用當地語言報導的其他地區新聞。
+3. 來源要多元：同一家媒體（「來源」欄位第一個詞相同即視為同一家）最多選 {MAX_PER_OUTLET} 則。
+4. 每則撰寫：
+   - title：精準的繁體中文新聞標題（主語＋動作＋事件），外語必須完整翻譯，不可保留外文字。
    - summary：60~110 字繁體中文摘要。只能根據「原文標題」與「摘要片段」提供的事實撰寫，
      不得自行補充候選中沒有的數字、人名或細節；可加一句社會心理或生活面的觀察。
-3. 全域分析：globalTheme、globalSummary（以「台灣：…；中國：…；日本：…；韓國：…；美國：…；歐洲：…；中東：…」七區分號格式）、
-   3~5 條跨區 storylines（每條 items 至少 2 條，皆須對應今天的候選內容），
-   以及 3 則 suggestions，pillar 分別為「金融一百零八講」「俗人對話錄」「佛法生活感悟文」。
-4. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
+5. observation：用 40~70 字繁體中文寫出今天{reg}社群與大眾心理的整體觀察。
+6. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
 
 候選清單（JSON）：
 {json.dumps(compact, ensure_ascii=False)}
 
-只輸出合法 JSON，格式如下：
+只輸出合法 JSON：
 {{
-  "globalTheme": "一句話總結今日全球流量的共同核心主線",
-  "globalSummary": "台灣：…；中國：…；日本：…；韓國：…；美國：…；歐洲：…；中東：…",
+  "observation": "今天{reg}的整體觀察",
   "events": [
-    {{"cid": "TW-03", "region": "台灣", "category": "綜合", "rank": 1, "title": "繁中標題", "summary": "繁中摘要", "brandRelevant": true}}
-  ],
-  "storylines": [
-    {{"id": 1, "kind": "跨區線", "title": "主線標題", "summary": "深層分析", "items": ["細節 1", "細節 2"]}}
-  ],
+    {{"cid": "{cands[0]['cid'] if cands else 'XX-01'}", "category": "綜合", "rank": 1, "title": "繁中標題", "summary": "繁中摘要", "brandRelevant": true}}
+  ]
+}}
+"""
+
+
+def build_global_prompt(today: str, region_results: dict, by_cid: dict) -> str:
+    brief = {}
+    for reg in REGIONS:
+        res = region_results.get(reg) or {}
+        brief[reg] = {
+            "觀察": res.get("observation", ""),
+            "頭條": [ev.get("title") or by_cid.get(ev.get("cid"), {}).get("title", "")
+                   for ev in (res.get("events") or [])][:10],
+        }
+    return f"""
+你是「全球社群情報」的總編輯。今天的日期是 {today}。以下是七區編輯已完成的今日選稿（標題與區域觀察）：
+{json.dumps(brief, ensure_ascii=False)}
+
+請根據以上內容（不可加入清單以外的事件）撰寫：
+1. globalTheme：一句話總結今日全球流量的共同核心主線（20~40 字）。
+2. storylines：3~5 條跨區深度主線，每條 items 至少 2 條，皆須對應上面的頭條。
+3. suggestions：3 則選題，pillar 分別為「金融一百零八講」「俗人對話錄」「佛法生活感悟文」。
+
+只輸出合法 JSON：
+{{
+  "globalTheme": "…",
+  "storylines": [{{"id": 1, "kind": "跨區線", "title": "主線標題", "summary": "深層分析", "items": ["細節 1", "細節 2"]}}],
   "suggestions": [
     {{"id": 1, "pillar": "金融一百零八講", "title": "選題", "direction": "核心立意", "brandRelevant": true}},
     {{"id": 2, "pillar": "俗人對話錄", "title": "選題", "direction": "核心立意", "brandRelevant": true}},
@@ -219,6 +249,52 @@ def build_prompt(today: str, pools: dict) -> str:
   ]
 }}
 """
+
+
+def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
+    """七區同時送出（每區一個小請求），任一區失敗只影響該區；最後再做一次全域分析"""
+    from concurrent.futures import ThreadPoolExecutor
+    by_cid = {c["cid"]: c for reg in REGIONS for c in pools[reg]}
+
+    def _one(reg):
+        if not pools[reg]:
+            return reg, None
+        t0 = time.time()
+        try:
+            res = parse_json_response(call_gemini(build_region_prompt(today, reg, pools[reg]), api_key, tag=reg, timeout=120))
+            print(f"   ✓ [{reg}] 選稿 {len(res.get('events', []))} 則（{time.time() - t0:.0f} 秒）")
+            return reg, res
+        except Exception as e:
+            print(f"   ⚠️ [{reg}] AI 編輯失敗（{str(e)[:120]}），該區改用程式挑選＋自動翻譯")
+            return reg, None
+
+    if "models" not in _MODELS_CACHE:
+        _MODELS_CACHE["models"] = resolve_gemini_models(api_key)
+    with ThreadPoolExecutor(max_workers=7) as ex:
+        region_results = dict(ex.map(_one, REGIONS))
+
+    ok_regions = [r for r in REGIONS if region_results.get(r)]
+    if not ok_regions:
+        return None
+
+    ai = {"events": [], "regionsByAI": ok_regions}
+    obs = []
+    for reg in REGIONS:
+        res = region_results.get(reg)
+        if res:
+            ai["events"].extend(res.get("events", []))
+            if res.get("observation"):
+                obs.append(f"{reg}：{to_traditional(res['observation']).rstrip('。；;')}")
+    ai["regionObservations"] = obs
+
+    try:
+        t0 = time.time()
+        g = parse_json_response(call_gemini(build_global_prompt(today, region_results, by_cid), api_key, tag="全域", timeout=120))
+        ai.update({k: g.get(k) for k in ("globalTheme", "storylines", "suggestions") if g.get(k)})
+        print(f"   ✓ [全域] 主線與選題完成（{time.time() - t0:.0f} 秒）")
+    except Exception as e:
+        print(f"   ⚠️ [全域] 分析失敗（{str(e)[:120]}），主線與選題改用預設內容")
+    return ai
 
 
 def parse_json_response(raw: str) -> dict:
@@ -368,6 +444,14 @@ def static_analysis() -> dict:
     }
 
 
+def global_summary_from(ai: dict, events: list) -> str:
+    """AI 有寫的區域用 AI 觀察，沒寫的區域用該區頭條組成，確保七區都有"""
+    obs = {o.split("：", 1)[0]: o for o in (ai or {}).get("regionObservations", [])}
+    fb = fallback_global_summary(events).rstrip("。").split("；")
+    fb_map = {p.split("：", 1)[0]: p for p in fb}
+    return "；".join(obs.get(reg) or fb_map.get(reg, f"{reg}：今日資料不足") for reg in REGIONS) + "。"
+
+
 def fallback_global_summary(events: list) -> str:
     parts = []
     for reg in REGIONS:
@@ -385,6 +469,7 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
     events = []
     used = set()
     slots = {(reg, cat): [] for reg in REGIONS for cat in ("綜合", "生活")}
+    outlet_count = {reg: {} for reg in REGIONS}
 
     if ai:
         for ev in ai.get("events", []):
@@ -399,6 +484,10 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
             reg = c["region"]  # 以候選本身的區域為準，AI 不能跨區
             if len(slots[(reg, cat)]) >= 5:
                 continue
+            if outlet_count[reg].get(outlet_of(c), 0) >= MAX_PER_OUTLET:
+                notes.append(f"{reg}：{outlet_of(c)} 已達 {MAX_PER_OUTLET} 則上限，略過 {cid}")
+                continue
+            outlet_count[reg][outlet_of(c)] = outlet_count[reg].get(outlet_of(c), 0) + 1
             title = (ev.get("title") or "").strip()
             summary = (ev.get("summary") or "").strip()
             if not title or has_foreign_script(title):
@@ -420,9 +509,13 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
             for cat in ("綜合", "生活"):
                 pool = fb[cat] + fb["綜合" if cat == "生活" else "生活"] + pools[reg]
                 while need[cat] > 0:
-                    c = next((x for x in pool if x["cid"] not in used), None)
+                    # 先挑還沒達上限的媒體；真的不夠才放寬
+                    c = next((x for x in pool if x["cid"] not in used
+                              and outlet_count[reg].get(outlet_of(x), 0) < MAX_PER_OUTLET), None) \
+                        or next((x for x in pool if x["cid"] not in used), None)
                     if not c:
                         break
+                    outlet_count[reg][outlet_of(c)] = outlet_count[reg].get(outlet_of(c), 0) + 1
                     ev = fallback_event(c, cat, 0)
                     ev["_rank"], ev["_cid"] = 50 + len(slots[(reg, cat)]), c["cid"]
                     slots[(reg, cat)].append(ev)
@@ -456,11 +549,12 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
         "sourceModifiedAt": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(timespec="seconds"),
         "followupNote": None,
         "globalTheme": (ai or {}).get("globalTheme") or "今日全球真實熱搜與主流報導速覽",
-        "globalSummary": (ai or {}).get("globalSummary") or fallback_global_summary(events),
+        "globalSummary": (ai or {}).get("globalSummary") or global_summary_from(ai, events),
         "events": events,
         "storylines": (ai or {}).get("storylines") or static["storylines"],
         "suggestions": (ai or {}).get("suggestions") or static["suggestions"],
         "generator": "gemini+sources" if ai else "sources-only",
+        "aiRegions": (ai or {}).get("regionsByAI", []),
     }
     for idx, st in enumerate(data["storylines"], start=1):
         st.setdefault("id", idx)
@@ -499,13 +593,13 @@ def main():
     ai = None
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if api_key:
-        print(f"\n🤖 [2/3 AI 編輯] 交由 Gemini 從 {total} 則候選中挑選、翻譯與撰寫分析...")
-        try:
-            ai = parse_json_response(call_gemini(build_prompt(today, pools), api_key))
-            print(f"   ✓ Gemini 回傳 {len(ai.get('events', []))} 則選稿")
-        except Exception as e:
-            print(f"   ⚠️ Gemini 編輯失敗（{str(e)[:160]}），改用程式挑選＋自動翻譯")
-            ai = None
+        print(f"\n🤖 [2/3 AI 編輯] 七區同時交由 Gemini 從 {total} 則候選中挑選、翻譯與撰寫分析...")
+        t0 = time.time()
+        ai = run_ai_editors(today, pools, api_key)
+        if ai:
+            print(f"   ✓ AI 完成 {len(ai['regionsByAI'])}/7 區（共 {time.time() - t0:.0f} 秒）")
+        else:
+            print("   ⚠️ 七區 AI 編輯全部失敗，改用程式挑選＋自動翻譯")
     else:
         print("\nℹ️ 未設定 GEMINI_API_KEY，使用程式挑選＋自動翻譯")
 
