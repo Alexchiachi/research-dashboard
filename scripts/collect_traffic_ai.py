@@ -117,6 +117,22 @@ def resolve_gemini_models(api_key: str) -> list:
     return deduped
 
 _MODELS_CACHE = {}
+_EXHAUSTED_MODELS = set()      # 今日每日額度已用完的模型，本次執行不再嘗試
+AI_TIME_BUDGET = 20 * 60        # AI 編輯總時間上限（秒），超過就停止、其餘區域改用程式挑選
+_AI_DEADLINE = [None]
+
+
+class GeminiUnavailable(RuntimeError):
+    """所有模型今日額度用完，或已超過 AI 時間上限"""
+
+
+def _quota_kind(err_body: str) -> str:
+    """429 回應分辨每日額度（PerDay）與每分鐘限流"""
+    return "daily" if re.search(r"PerDay|per day|daily", err_body, re.I) else "minute"
+
+
+def _time_left() -> float:
+    return float("inf") if _AI_DEADLINE[0] is None else _AI_DEADLINE[0] - time.time()
 
 def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) -> str:
     if "models" not in _MODELS_CACHE:
@@ -128,11 +144,17 @@ def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) ->
     
     attempts = [(m, n) for m in models for n in range(3)]
     for model, attempt in attempts:
+        if model in _EXHAUSTED_MODELS:
+            continue
+        if _time_left() <= 0:
+            raise GeminiUnavailable("已超過 AI 編輯時間上限")
         if attempt > 0:
             # 503 高負載 / 429 限流 / 逾時屬暫時性錯誤：退避後重試同一模型
             if not isinstance(last_err, str) or not re.search(r"HTTP (503|429|500)|timed out", last_err):
                 continue
             wait = 60 if "429" in last_err else 15 * attempt
+            if wait >= _time_left():
+                raise GeminiUnavailable("剩餘時間不足以再重試")
             print(f"   ⏳ {label}{model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...")
             time.sleep(wait)
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
@@ -161,6 +183,10 @@ def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) ->
             err_body = e.read().decode("utf-8", errors="ignore")
             print(f"   ⚠️ {label}Gemini {model} HTTP {e.code}: {err_body[:120]}")
             last_err = f"HTTP {e.code}: {err_body[:100]}"
+            if e.code == 429 and _quota_kind(err_body) == "daily":
+                _EXHAUSTED_MODELS.add(model)
+                print(f"   🚫 {model} 今日額度已用完，本次執行不再使用")
+                last_err = f"daily quota exhausted: {model}"
             if e.code == 404:
                 last_err = f"model gone {e.code}: {err_body[:100]}"
             continue
@@ -169,6 +195,8 @@ def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) ->
             last_err = f"{type(e).__name__}: {e}"
             continue
             
+    if all(m in _EXHAUSTED_MODELS for m in models):
+        raise GeminiUnavailable("所有 Gemini 模型今日額度都已用完")
     raise RuntimeError(f"Gemini API 請求失敗: {last_err}")
 
 
@@ -284,17 +312,21 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
     """七區依序送出（每區一個小請求、間隔約 1 分鐘），失敗的區域最後再補跑一次；最後做一次全域分析"""
     by_cid = {c["cid"]: c for reg in REGIONS for c in pools[reg]}
     last_start = [0.0]
+    _AI_DEADLINE[0] = time.time() + AI_TIME_BUDGET
+    stop = [False]
 
     def paced_call(prompt, tag):
         wait = PACE_SECONDS - (time.time() - last_start[0])
         if last_start[0] and wait > 0:
+            if wait >= _time_left():
+                raise GeminiUnavailable("已接近 AI 編輯時間上限")
             time.sleep(wait)
         last_start[0] = time.time()
         return call_gemini(prompt, api_key, tag=tag, timeout=120)
 
     def _one(reg, attempt_label=""):
         cands = select_prompt_candidates(pools[reg])
-        if not cands:
+        if not cands or stop[0]:
             return None
         t0 = time.time()
         try:
@@ -303,6 +335,10 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
                 raise ValueError("回傳內容沒有 events")
             print(f"   ✓ [{reg}]{attempt_label} 選稿 {len(res.get('events', []))} 則（{time.time() - t0:.0f} 秒）")
             return res
+        except GeminiUnavailable as e:
+            print(f"   🛑 [{reg}]{attempt_label} 停止 AI 編輯：{e}；其餘區域改用程式挑選＋自動翻譯")
+            stop[0] = True
+            return None
         except Exception as e:
             print(f"   ⚠️ [{reg}]{attempt_label} AI 編輯失敗（{str(e)[:120]}）")
             return None
@@ -312,7 +348,7 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
     region_results = {reg: _one(reg) for reg in REGIONS}
 
     failed = [r for r in REGIONS if not region_results.get(r)]
-    if failed:
+    if failed and not stop[0]:
         print(f"   🔁 補跑失敗區域：{'、'.join(failed)}")
         for reg in failed:
             region_results[reg] = _one(reg, "（補跑）")
@@ -337,6 +373,8 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
     ai["regionObservations"] = obs
 
     try:
+        if stop[0]:
+            raise GeminiUnavailable("AI 已停止")
         t0 = time.time()
         g = parse_json_response(paced_call(build_global_prompt(today, region_results, by_cid), "全域"))
         ai.update({k: g.get(k) for k in ("globalTheme", "storylines", "suggestions") if g.get(k)})
