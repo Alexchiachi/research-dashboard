@@ -34,6 +34,8 @@ jobs:
           python3 scripts/collect_traffic_ai.py
 
       - name: 嚴格驗證新聞連結真實性 (Validate Traffic URLs)
+        # 每天一定有發佈：採集步驟已擋下致命錯誤，此處只做複查並以警告呈現，不阻斷發佈
+        continue-on-error: true
         run: |
           TODAY=$(date -u -d '+8 hours' +%Y-%m-%d)
           python3 scripts/validate_traffic_urls.py reports/02_traffic/daily/${TODAY}.json
@@ -62,5 +64,5 @@ jobs:
             echo "今日資料無變更，無需 Commit。"
           else
             git commit -m "feat(traffic): 自動更新每日七地流量情報 ($TODAY) [skip ci]"
-            git push origin main
+            git push origin HEAD
           fi

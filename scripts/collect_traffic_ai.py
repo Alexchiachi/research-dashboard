@@ -25,6 +25,7 @@ import xml.etree.ElementTree as ET
 # 引入驗證與連線檢測模組
 from validate_traffic_urls import (
     audit_full_standards,
+    audit_structural_and_content_standards,
     check_single_url,
     REGIONS,
     FORBIDDEN_TITLE_PATTERNS,
@@ -51,8 +52,7 @@ FALLBACK_NEWS_POOL = {
         "https://www.cna.com.tw/news/asoc/202410310052.aspx",
         "https://www.cna.com.tw/news/afe/202410170119.aspx",
         "https://www.cna.com.tw/news/aspt/202410310245.aspx",
-        "https://www.cna.com.tw",
-        "https://tw.news.yahoo.com"
+        "https://www.cna.com.tw"
     ],
     "中國": [
         "https://www.caixin.com",
@@ -72,7 +72,6 @@ FALLBACK_NEWS_POOL = {
         "https://www.koreatimes.co.kr",
         "https://www.koreatimes.co.kr/southkorea",
         "https://www.koreatimes.co.kr/business",
-        "https://www.koreatimes.co.kr/tech",
         "https://www.koreaherald.com"
     ],
     "美國": [
@@ -95,16 +94,66 @@ FALLBACK_NEWS_POOL = {
         "https://www.aljazeera.com",
         "https://www.aljazeera.com/economy/",
         "https://www.aljazeera.com/middle-east/",
-        "https://www.thenationalnews.com",
-        "https://www.arabnews.com"
+        "https://www.thenationalnews.com"
     ]
 }
 
 # -------------------------------------------------------------
 # A 軌：Gemini AI 調用
 # -------------------------------------------------------------
+GEMINI_STATIC_FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-2.5-flash"]
+
+def _model_version_key(name: str):
+    """將 gemini-3.8-flash 之類的名稱轉為可排序的版本 tuple（新版本優先）"""
+    m = re.search(r"gemini-(\d+(?:\.\d+)?)", name)
+    ver = float(m.group(1)) if m else 0.0
+    # 正式版優先於 preview / exp，完整 flash 優先於 lite
+    unstable = 1 if re.search(r"preview|exp", name) else 0
+    lite = 1 if "lite" in name else 0
+    return (-ver, unstable, lite, name)
+
+def list_available_flash_models(api_key: str) -> list:
+    """透過 ListModels 查詢目前帳號實際可用、支援 generateContent 的 flash 模型"""
+    ctx = get_ssl_context()
+    found = []
+    page_token = ""
+    try:
+        for _ in range(5):
+            url = f"https://generativelanguage.googleapis.com/v1beta/models?pageSize=100&key={api_key}"
+            if page_token:
+                url += f"&pageToken={urllib.parse.quote(page_token)}"
+            with urllib.request.urlopen(url, context=ctx, timeout=20) as resp:
+                res = json.loads(resp.read().decode("utf-8"))
+            for m in res.get("models", []):
+                name = m.get("name", "").replace("models/", "")
+                methods = m.get("supportedGenerationMethods", [])
+                if "generateContent" in methods and "flash" in name and "gemini" in name \
+                        and not re.search(r"image|tts|audio|live|embedding|thinking", name):
+                    found.append(name)
+            page_token = res.get("nextPageToken", "")
+            if not page_token:
+                break
+    except Exception as e:
+        print(f"⚠️ Gemini ListModels 查詢失敗（{e}），改用靜態模型清單", file=sys.stderr)
+    return sorted(set(found), key=_model_version_key)
+
+def resolve_gemini_models(api_key: str) -> list:
+    """模型優先序：環境變數 GEMINI_MODEL（可逗號分隔）> ListModels 自動探測 > 靜態備援清單"""
+    models = []
+    env_models = os.environ.get("GEMINI_MODEL", "").strip()
+    if env_models:
+        models.extend([m.strip() for m in env_models.split(",") if m.strip()])
+    models.extend(list_available_flash_models(api_key)[:3])
+    models.extend(GEMINI_STATIC_FALLBACK_MODELS)
+    deduped = []
+    for m in models:
+        if m not in deduped:
+            deduped.append(m)
+    print(f"🤖 Gemini 候選模型順序：{deduped}")
+    return deduped
+
 def call_gemini(prompt: str, api_key: str) -> str:
-    models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+    models = resolve_gemini_models(api_key)
     last_err = None
     ctx = get_ssl_context()
     
@@ -379,8 +428,30 @@ def fetch_trends_fallback(today: str) -> dict:
 # -------------------------------------------------------------
 # C 軌：閉環自癒修復器 (Self-Healer)
 # -------------------------------------------------------------
-def self_heal_traffic(data: dict, errors: list, failed_urls: list, api_key: str) -> dict:
+def pick_replacement_url(reg: str, rank: int, dead_urls: set, used_offset: dict) -> str:
+    """從備援池輪替挑選尚未失敗過的網址；每次呼叫都往下一個位置前進，避免換回同一個死連結"""
+    pool = FALLBACK_NEWS_POOL.get(reg, ["https://www.cna.com.tw"])
+    start = used_offset.get(reg, rank)
+    for step in range(len(pool)):
+        candidate = pool[(start + step) % len(pool)]
+        if candidate not in dead_urls:
+            used_offset[reg] = start + step + 1
+            return candidate
+    # 整個池子都失敗過：仍輪替到下一個，讓下一輪有機會重測（可能只是暫時性失敗）
+    used_offset[reg] = start + 1
+    return pool[start % len(pool)]
+
+def self_heal_traffic(data: dict, errors: list, failed_urls: list, api_key: str,
+                      dead_urls: set = None, used_offset: dict = None) -> dict:
     """自動定位未達標問題並針對性修復"""
+    if dead_urls is None:
+        dead_urls = set()
+    if used_offset is None:
+        used_offset = {}
+    # 記錄所有曾經失敗的網址，跨輪次不再選用
+    for f in failed_urls:
+        if f[5]:
+            dead_urls.add(f[5])
     print(f"🔧 [自動修復引擎] 開始逐項修復未達標項目...")
 
     # 1. 修復失效、404、超時或搜尋引擎 URL
@@ -399,8 +470,7 @@ def self_heal_traffic(data: dict, errors: list, failed_urls: list, api_key: str)
             need_url_fix = True
 
         if need_url_fix:
-            fallback_list = FALLBACK_NEWS_POOL.get(reg, ["https://www.cna.com.tw"])
-            replacement = fallback_list[rank % len(fallback_list)]
+            replacement = pick_replacement_url(reg, rank, dead_urls, used_offset)
             print(f"   🔄 替換無效連結 [{reg} {cat} #{rank}]: {url[:40]} -> {replacement}")
             ev["sourceUrl"] = replacement
 
@@ -539,6 +609,8 @@ def main():
     # =========================================================
     MAX_HEAL_ROUNDS = 8
     success = False
+    dead_urls = set()
+    used_offset = {}
 
     for heal_round in range(1, MAX_HEAL_ROUNDS + 1):
         print(f"\n" + "-"*60)
@@ -557,22 +629,35 @@ def main():
         if len(errors) > 5:
             print(f"   ... (其餘 {len(errors)-5} 個項目)")
 
-        data = self_heal_traffic(data, errors, failed_urls, api_key)
+        data = self_heal_traffic(data, errors, failed_urls, api_key, dead_urls, used_offset)
         time.sleep(1)
 
     if not success:
-        # 最終審查
+        # 最終審查：「每天一定有發佈」原則
+        # - 結構／內容致命錯誤（數量、區域、翻譯、樣板）→ 拒絕寫入並終止
+        # - 僅剩連結無法驗證（外站擋機房 IP、暫時性 404/403）→ 標註警告後照常發佈
         is_valid, errors, failed_urls = audit_full_standards(data, check_network=True)
         if not is_valid:
-            print(f"🚨 經過 {MAX_HEAL_ROUNDS} 輪修復仍有未達標項目，拒絕寫入磁碟並終止：", file=sys.stderr)
+            struct_ok, struct_errors = audit_structural_and_content_standards(data)
+            if not struct_ok:
+                print(f"🚨 經過 {MAX_HEAL_ROUNDS} 輪修復仍有結構性錯誤，拒絕寫入磁碟並終止：", file=sys.stderr)
+                for err in struct_errors:
+                    print(f"   ❌ {err}", file=sys.stderr)
+                sys.exit(1)
+
+            failed_url_set = {f[5] for f in failed_urls}
+            for ev in data.get("events", []):
+                if ev.get("sourceUrl") in failed_url_set:
+                    ev["linkUnverified"] = True
+            data["qualityWarnings"] = errors
+            print(f"::warning::今日情報有 {len(errors)} 則連結無法在 runner 上驗證，已標註 linkUnverified 並照常發佈")
             for err in errors:
-                print(f"   ❌ {err}", file=sys.stderr)
-            sys.exit(1)
+                print(f"   ⚠️ {err}")
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ 成功生成並儲存每日資料：{output_file}（共 {len(data['events'])} 則情報，100% 達標！）")
+    print(f"\n✅ 成功生成並儲存每日資料：{output_file}（共 {len(data['events'])} 則情報，{'100% 達標！' if success else '含連結警告，已照常發佈'}）")
 
 if __name__ == "__main__":
     main()
