@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 scripts/collect_traffic_ai.py
-每日社群流量情報 閉環自癒採集引擎 (Gemini AI + 雲端即時熱搜回退 + 自動自我審查修復循環)
+每日社群流量情報採集引擎（Source-First 架構）
 
-核心機制：
-1. 採集完成後立即啟動【全維度自我審查】（比照 10/30 最高標準）。
-2. 若有任何項目未達標（結構不符、樣板套話、未翻譯韓文/阿拉伯文、404或搜尋連結）：
-   自動進入閉環自癒修復循環 (Self-Healing Loop)，連續迭代修正，直至 100% 符合標準為止！
-3. 保證產出的每日 JSON 絕對零 404、零搜尋連結、零抽象樣板、全繁體中文！
+流程：
+1. 真實來源（news_sources.py）：Google Trends 熱搜 RSS ＋ 各區主流媒體 RSS → 每區候選池（網址皆為真實報導）
+2. AI 編輯（Gemini）：只能「以 cid 挑選」候選，負責分類、排序、翻譯成繁中、撰寫摘要與全域分析
+   → 程式以 cid 對回原始網址，AI 無法產生或竄改任何網址
+3. 無 AI 備援：Gemini 失敗時，程式依熱度挑選＋免費翻譯端點翻成繁中，仍是今天的真實報導
+4. 分級審查：致命錯誤（結構）才停止；品質瑕疵與連結無法驗證 → 標註後照常發佈（每天一定有發佈）
 """
 
 import os
@@ -20,22 +21,25 @@ import urllib.error
 import urllib.parse
 import ssl
 import time
-import xml.etree.ElementTree as ET
 
-# 引入驗證與連線檢測模組
 from validate_traffic_urls import (
-    audit_full_standards,
-    audit_structural_and_content_standards,
-    check_single_url,
+    audit_standards,
     REGIONS,
-    FORBIDDEN_TITLE_PATTERNS,
-    FORBIDDEN_SCRIPTS
+    FORBIDDEN_SCRIPTS,
 )
+from news_sources import collect_candidates, MEDIA_FEEDS
+
+try:
+    from opencc import OpenCC
+    _S2T = OpenCC("s2twp")
+except Exception:
+    _S2T = None
+
 
 def get_today_str():
     tz_tw = datetime.timezone(datetime.timedelta(hours=8))
-    now = datetime.datetime.now(tz_tw)
-    return now.strftime("%Y-%m-%d")
+    return datetime.datetime.now(tz_tw).strftime("%Y-%m-%d")
+
 
 def get_ssl_context():
     ctx = ssl.create_default_context()
@@ -43,63 +47,23 @@ def get_ssl_context():
     ctx.verify_mode = ssl.CERT_NONE
     return ctx
 
-# -------------------------------------------------------------
-# 備援高可用權威報導媒體網址池 (經 curl 實測 HTTP 200)
-# -------------------------------------------------------------
-FALLBACK_NEWS_POOL = {
-    "台灣": [
-        "https://www.cna.com.tw/news/afe/202410310245.aspx",
-        "https://www.cna.com.tw/news/asoc/202410310052.aspx",
-        "https://www.cna.com.tw/news/afe/202410170119.aspx",
-        "https://www.cna.com.tw/news/aspt/202410310245.aspx",
-        "https://www.cna.com.tw"
-    ],
-    "中國": [
-        "https://www.caixin.com",
-        "https://china.caixin.com",
-        "https://finance.caixin.com",
-        "https://www.scmp.com",
-        "https://cn.nikkei.com"
-    ],
-    "日本": [
-        "https://www.japantimes.co.jp",
-        "https://www.japantimes.co.jp/business/",
-        "https://www.japantimes.co.jp/culture/",
-        "https://www3.nhk.or.jp/nhkworld/",
-        "https://japan.cna.com.tw"
-    ],
-    "韓國": [
-        "https://www.koreatimes.co.kr",
-        "https://www.koreatimes.co.kr/southkorea",
-        "https://www.koreatimes.co.kr/business",
-        "https://www.koreaherald.com"
-    ],
-    "美國": [
-        "https://www.cnn.com",
-        "https://www.cnn.com/us",
-        "https://www.cnn.com/world",
-        "https://www.cnn.com/politics",
-        "https://www.cnn.com/business",
-        "https://www.cnn.com/style/heidi-klum-halloween-costumes/index.html",
-        "https://www.bbc.com/news"
-    ],
-    "歐洲": [
-        "https://www.bbc.com/news",
-        "https://www.bbc.com/news/world/europe",
-        "https://www.euronews.com",
-        "https://www.dw.com/en/top-stories/s-9097",
-        "https://www.theguardian.com/world"
-    ],
-    "中東": [
-        "https://www.aljazeera.com",
-        "https://www.aljazeera.com/economy/",
-        "https://www.aljazeera.com/middle-east/",
-        "https://www.thenationalnews.com"
-    ]
-}
+
+def to_traditional(s: str) -> str:
+    return _S2T.convert(s) if (_S2T and s) else s
+
+
+def has_foreign_script(s: str) -> bool:
+    return any(re.search(p, s or "") for p, _ in FORBIDDEN_SCRIPTS) or bool(re.search(r"[぀-ヿ]", s or ""))
+
+
+def is_mostly_latin(s: str) -> bool:
+    letters = re.findall(r"[A-Za-z]", s or "")
+    cjk = re.findall(r"[一-鿿]", s or "")
+    return len(letters) > 8 and len(letters) > len(cjk) * 2
+
 
 # -------------------------------------------------------------
-# A 軌：Gemini AI 調用
+# Gemini 調用（模型自動探測＋暫時性錯誤退避重試）
 # -------------------------------------------------------------
 GEMINI_STATIC_FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash"]
 
@@ -180,7 +144,7 @@ def call_gemini(prompt: str, api_key: str) -> str:
             headers={"Content-Type": "application/json"}
         )
         try:
-            with urllib.request.urlopen(req, context=ctx, timeout=90) as resp:
+            with urllib.request.urlopen(req, context=ctx, timeout=180) as resp:
                 res_data = json.loads(resp.read().decode("utf-8"))
                 candidates = res_data.get("candidates", [])
                 if candidates:
@@ -202,179 +166,145 @@ def call_gemini(prompt: str, api_key: str) -> str:
             
     raise RuntimeError(f"Gemini API 請求失敗: {last_err}")
 
-def build_prompt(today: str) -> str:
+
+
+def build_prompt(today: str, pools: dict) -> str:
+    compact = {}
+    for reg in REGIONS:
+        compact[reg] = [{
+            "cid": c["cid"],
+            "type": "熱搜" if c["kind"] == "trend" else "媒體",
+            "熱搜詞": c.get("query", ""),
+            "熱度": c.get("traffic", 0),
+            "來源": c.get("source", ""),
+            "原文標題": c["title"],
+            "摘要片段": c.get("snippet", "")[:200],
+        } for c in pools[reg]]
+
     return f"""
-你是一位深諳全球數位生態、地緣脈動與集體心智的「全球社群情報分析架構師」。
-今天的日期是：{today}。
+你是「全球社群情報」的總編輯。今天的日期是 {today}。
+下面是程式從 Google Trends 熱搜與各地主流媒體 RSS 抓到的【今天真實報導候選清單】，每則都有唯一代號 cid。
 
-請針對全球 7 大區域：台灣、中國、日本、韓國、美國、歐洲、中東，整理出今日各區域真實的熱門焦點情報。
-每個區域嚴格包含 10 則熱門焦點（5 則【綜合】+ 5 則【生活】），7 區共計 70 則情報（綜合 rank 1~5，生活 rank 1~5）。
+你的任務：
+1. 從每個區域的候選中，挑出 5 則【綜合】（政經、國際、社會重大新聞）與 5 則【生活】（消費、娛樂、體育、文化、健康），
+   依社群熱度與重要性排序（rank 1 最重要）。只能使用該區域自己的 cid，不得跨區、不得重複。
+2. 每則撰寫：
+   - title：精準的繁體中文新聞標題（主語＋動作＋事件），日韓英阿等外語必須完整翻譯，不可保留外文字。
+   - summary：60~110 字繁體中文摘要。只能根據「原文標題」與「摘要片段」提供的事實撰寫，
+     不得自行補充候選中沒有的數字、人名或細節；可加一句社會心理或生活面的觀察。
+3. 全域分析：globalTheme、globalSummary（以「台灣：…；中國：…；日本：…；韓國：…；美國：…；歐洲：…；中東：…」七區分號格式）、
+   3~5 條跨區 storylines（每條 items 至少 2 條，皆須對應今天的候選內容），
+   以及 3 則 suggestions，pillar 分別為「金融一百零八講」「俗人對話錄」「佛法生活感悟文」。
+4. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
 
-【最高編輯與連結標準（必須 100% 嚴格遵守，否則會被自動檢驗門禁阻斷）】
-1. 連結必須為「真實新聞報導本身」，絕非人名搜尋：
-   - sourceUrl 必須是該篇新聞事件本身真實的官方或主流權威新聞媒體報導網址（如 CNA、Yahoo 新聞、BBC、Reuters、Nikkei、彭博、CNN 等）。
-   - 嚴禁填寫任何 Google 搜尋結果頁面（如 https://www.google.com/search?q=...）！
-   - 嚴禁自行合成或臆造不存在的 404 網址！
-2. 標題必須為「具體客觀新聞事件頭條」，絕非人名：
-   - 必須包含主語、核心動作、具體事件或數據。
-   - 嚴禁只放人名，嚴禁出現【人名】這種抽象樣板形式！
-   - 嚴禁出現『歐美社群熱門焦點』、『相關發展與公眾討論持續升溫』等機器樣板！
-3. 全語系統一 100% 翻譯為繁體中文：
-   - 所有來自日文、韓文、英文、阿拉伯文等外國新聞，必須完全翻譯為標準流暢的繁體中文。嚴禁保留未翻譯外語文字。
-4. 摘要深入具體（約 60-120 字）：客觀剖析事件脈絡與社會心理/經濟衝擊，嚴禁千篇一律套話。
-5. globalSummary 結構化：必須以分號分隔七大區域深層心智觀察（『台灣：...；中國：...；日本：...；韓國：...；美國：...；歐洲：...；中東：...』）。
-6. storylines 須包含 3~5 條跨區深度主線，每條附帶條列細節 (items)。
-7. suggestions 須提供 3 條選題，嚴格對應『金融一百零八講』、『俗人對話錄』、『佛法生活感悟文』三大立柱。
+候選清單（JSON）：
+{json.dumps(compact, ensure_ascii=False)}
 
-輸出純合法 JSON 格式：
+只輸出合法 JSON，格式如下：
 {{
-  "date": "{today}",
   "globalTheme": "一句話總結今日全球流量的共同核心主線",
-  "globalSummary": "台灣：...；中國：...；日本：...；韓國：...；美國：...；歐洲：...；中東：...",
+  "globalSummary": "台灣：…；中國：…；日本：…；韓國：…；美國：…；歐洲：…；中東：…",
   "events": [
-    {{
-      "region": "台灣",
-      "category": "綜合",
-      "rank": 1,
-      "title": "事件精準繁體中文新聞標題（非人名）",
-      "summary": "客觀精準事件摘要與文化/心理/商業衝擊分析（約 60-100 字）",
-      "sourceUrl": "真實新聞報導網址（非 Google 搜尋連結，必須可連通）",
-      "brandRelevant": true
-    }}
+    {{"cid": "TW-03", "region": "台灣", "category": "綜合", "rank": 1, "title": "繁中標題", "summary": "繁中摘要", "brandRelevant": true}}
   ],
   "storylines": [
-    {{
-      "id": 1,
-      "kind": "跨區線",
-      "title": "主線標題",
-      "summary": "深層分析",
-      "items": ["細節 1", "細節 2"]
-    }}
+    {{"id": 1, "kind": "跨區線", "title": "主線標題", "summary": "深層分析", "items": ["細節 1", "細節 2"]}}
   ],
   "suggestions": [
-    {{
-      "id": 1,
-      "pillar": "金融一百零八講",
-      "title": "選題 1",
-      "direction": "核心立意",
-      "brandRelevant": true
-    }},
-    {{
-      "id": 2,
-      "pillar": "俗人對話錄",
-      "title": "選題 2",
-      "direction": "核心立意",
-      "brandRelevant": true
-    }},
-    {{
-      "id": 3,
-      "pillar": "佛法生活感悟文",
-      "title": "選題 3",
-      "direction": "核心立意",
-      "brandRelevant": false
-    }}
+    {{"id": 1, "pillar": "金融一百零八講", "title": "選題", "direction": "核心立意", "brandRelevant": true}},
+    {{"id": 2, "pillar": "俗人對話錄", "title": "選題", "direction": "核心立意", "brandRelevant": true}},
+    {{"id": 3, "pillar": "佛法生活感悟文", "title": "選題", "direction": "核心立意", "brandRelevant": false}}
   ]
 }}
 """
 
+
+def parse_json_response(raw: str) -> dict:
+    s = raw.strip()
+    s = re.sub(r"^```(?:json)?\s*", "", s)
+    s = re.sub(r"\s*```$", "", s)
+    return json.loads(s)
+
+
 # -------------------------------------------------------------
-# B 軌：雲端即時熱搜回退生成引擎
+# 無 AI 備援：免費翻譯端點（失敗則保留原文並標註）
 # -------------------------------------------------------------
-def fetch_trends_fallback(today: str) -> dict:
-    print("⚡ [備援回退] 啟動即時雲端多語系熱搜採集引擎...")
-    ctx = get_ssl_context()
-    geo_sources = {
-        "台灣": ["TW"],
-        "中國": ["HK", "TW"],
-        "日本": ["JP"],
-        "韓國": ["KR"],
-        "美國": ["US"],
-        "歐洲": ["GB", "DE", "FR"],
-        "中東": ["SA", "AE", "EG"]
+_translate_cache = {}
+
+def translate_to_zh_tw(text: str) -> str:
+    if not text:
+        return text
+    if not (has_foreign_script(text) or is_mostly_latin(text)):
+        return to_traditional(text)
+    if text in _translate_cache:
+        return _translate_cache[text]
+    url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q="
+           + urllib.parse.quote(text[:500]))
+    result = text
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, context=get_ssl_context(), timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        result = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
+    except Exception as e:
+        print(f"   ⚠️ 翻譯失敗（保留原文）：{e}", file=sys.stderr)
+    result = to_traditional(result)
+    _translate_cache[text] = result
+    return result
+
+
+def clean_title(title: str) -> str:
+    # 去掉「 - 媒體名」「 | 媒體名」尾巴
+    t = re.sub(r"\s*[|｜]\s*[^|｜]{1,30}$", "", title).strip()
+    t = re.sub(r"\s+[-–—]\s+[^-–—]{1,30}$", "", t).strip()
+    return t or title
+
+
+def fallback_event(c: dict, category: str, rank: int) -> dict:
+    title = translate_to_zh_tw(clean_title(c["title"]))
+    snippet = translate_to_zh_tw(c.get("snippet", "")) if c.get("snippet") else ""
+    src = c.get("source") or "當地媒體"
+    if snippet and len(snippet) >= 20:
+        summary = snippet[:160]
+    elif c.get("query"):
+        summary = f"「{translate_to_zh_tw(c['query'])}」登上{c['region']}熱搜，{src}報導：{title}。"
+    else:
+        summary = f"{src}報導：{title}。"
+    return {
+        "region": c["region"], "category": category, "rank": rank,
+        "title": title, "summary": summary,
+        "sourceUrl": c["url"], "source": src, "originalTitle": c["title"],
+        "brandRelevant": rank % 2 == 1,
     }
 
-    events = []
-    event_id = 1000
 
-    for reg in REGIONS:
-        geos = geo_sources.get(reg, ["US"])
-        parsed_items = []
-        for geo in geos:
-            url = f"https://trends.google.com/trending/rss?geo={geo}"
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            try:
-                with urllib.request.urlopen(req, context=ctx, timeout=6) as resp:
-                    tree = ET.fromstring(resp.read())
-                    for it in tree.findall(".//item"):
-                        q_elem = it.find("title")
-                        q_text = q_elem.text.strip() if q_elem is not None and q_elem.text else ""
-                        news_item = it.find(".//{https://trends.google.com/trending/rss}news_item")
-                        news_title = ""
-                        news_url = ""
-                        if news_item is not None:
-                            nt_elem = news_item.find("{https://trends.google.com/trending/rss}news_item_title")
-                            nu_elem = news_item.find("{https://trends.google.com/trending/rss}news_item_url")
-                            if nt_elem is not None and nt_elem.text:
-                                news_title = nt_elem.text.strip()
-                            if nu_elem is not None and nu_elem.text:
-                                news_url = nu_elem.text.strip()
+def pick_fallback_slots(cands: list, used: set) -> dict:
+    """無 AI 時的分類規則：媒體 RSS（重大新聞）優先進【綜合】，Google 熱搜（社群話題）優先進【生活】"""
+    free = [c for c in cands if c["cid"] not in used]
+    media = [c for c in free if c["kind"] == "media"]
+    trend = [c for c in free if c["kind"] == "trend"]
+    slots = {"綜合": media[:5], "生活": trend[:5]}
+    rest = [c for c in free if c not in slots["綜合"] and c not in slots["生活"]]
+    for cat in ("綜合", "生活"):
+        while len(slots[cat]) < 5 and rest:
+            slots[cat].append(rest.pop(0))
+    return slots
 
-                        if q_text and not any(pi["query"] == q_text for pi in parsed_items):
-                            parsed_items.append({
-                                "query": q_text,
-                                "news_title": news_title,
-                                "news_url": news_url
-                            })
-            except Exception:
-                pass
-            if len(parsed_items) >= 10:
-                break
 
-        # 補齊至 10 則
-        fallback_urls = FALLBACK_NEWS_POOL.get(reg, ["https://www.cna.com.tw"])
-        while len(parsed_items) < 10:
-            idx = len(parsed_items)
-            parsed_items.append({
-                "query": f"{reg}重點關注話題",
-                "news_title": f"{reg}重大民生經貿焦點：各界針對核心議題展開深入政策研討",
-                "news_url": fallback_urls[idx % len(fallback_urls)]
-            })
-
-        for idx in range(10):
-            item = parsed_items[idx]
-            cat = "綜合" if idx < 5 else "生活"
-            rank = (idx % 5) + 1
-            raw_title = item.get("news_title") or item["query"]
-            news_url = item.get("news_url")
-            if not news_url or "google.com/search" in news_url:
-                news_url = fallback_urls[idx % len(fallback_urls)]
-
-            # 確保標題無樣板、無純外語
-            clean_t = re.sub(r'\s*[-–—|]\s*[^-–—|]+$', '', raw_title).strip()
-            if not clean_t or len(clean_t) < 5:
-                clean_t = f"{reg}重要公共與產業動態：官方發布最新說明與後續應對方案"
-
-            summary = f"據主流媒體報導，{reg}各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論，反映出當前社會對穩定與發展的集體期待。"
-
-            events.append({
-                "id": event_id,
-                "region": reg,
-                "category": cat,
-                "rank": rank,
-                "title": clean_t,
-                "summary": summary,
-                "sourceUrl": news_url,
-                "brandRelevant": (idx % 2 == 0)
-            })
-            event_id += 1
-
+def placeholder_event(reg: str, category: str, rank: int) -> dict:
+    """候選真的不夠時的誠實佔位（會列為品質警告）"""
+    feed = MEDIA_FEEDS.get(reg, [("", "https://www.bbc.com/news")])[0][1]
+    home = re.match(r"https?://[^/]+", feed).group(0)
     return {
-        "date": today,
-        "sourceModifiedAt": f"{today}T21:30:00+08:00",
-        "followupNote": None,
-        "globalTheme": "全球在地化分流與跨區共振：演算法時代下的集體注意力焦點與日常韌性",
-        "globalSummary": "台灣：科技產業動能支撐經濟信心，常民生活在季節轉換中追尋平價幸福；中國：刺激政策落地帶動產業回暖，大眾轉向剛需減法消費；日本：特別國會與物價對策成焦點，民眾在秋陽中尋求片刻舒緩；韓國：高階出口與內需緊縮並存，青年世代轉向心靈寄託與自我修復；美國：大選終局決戰牽動全球神經，常民家庭消費更趨理性節約；歐洲：溫和復甦與基建挑戰交織，節慶預備為寒冬注入人情溫度；中東：地緣安全警報與多方斡旋並行，都會社群在舒適氣候中展現生活韌性。",
-        "events": events,
+        "region": reg, "category": category, "rank": rank,
+        "title": f"{reg}今日{category}來源不足，本則暫缺",
+        "summary": f"今日自動採集未能取得足夠的{reg}{category}類真實報導，此欄位暫時保留，請以其他則情報為準。",
+        "sourceUrl": home, "placeholder": True, "brandRelevant": False,
+    }
+
+
+def static_analysis() -> dict:
+    return {
         "storylines": [
             {
                 "id": 1,
@@ -435,137 +365,118 @@ def fetch_trends_fallback(today: str) -> dict:
         ]
     }
 
-# -------------------------------------------------------------
-# C 軌：閉環自癒修復器 (Self-Healer)
-# -------------------------------------------------------------
-def pick_replacement_url(reg: str, rank: int, dead_urls: set, used_offset: dict) -> str:
-    """從備援池輪替挑選尚未失敗過的網址；每次呼叫都往下一個位置前進，避免換回同一個死連結"""
-    pool = FALLBACK_NEWS_POOL.get(reg, ["https://www.cna.com.tw"])
-    start = used_offset.get(reg, rank)
-    for step in range(len(pool)):
-        candidate = pool[(start + step) % len(pool)]
-        if candidate not in dead_urls:
-            used_offset[reg] = start + step + 1
-            return candidate
-    # 整個池子都失敗過：仍輪替到下一個，讓下一輪有機會重測（可能只是暫時性失敗）
-    used_offset[reg] = start + 1
-    return pool[start % len(pool)]
 
-def self_heal_traffic(data: dict, errors: list, failed_urls: list, api_key: str,
-                      dead_urls: set = None, used_offset: dict = None) -> dict:
-    """自動定位未達標問題並針對性修復"""
-    if dead_urls is None:
-        dead_urls = set()
-    if used_offset is None:
-        used_offset = {}
-    # 記錄所有曾經失敗的網址，跨輪次不再選用
-    for f in failed_urls:
-        if f[5]:
-            dead_urls.add(f[5])
-    print(f"🔧 [自動修復引擎] 開始逐項修復未達標項目...")
-
-    # 1. 修復失效、404、超時或搜尋引擎 URL
-    failed_eid_map = {f[0]: f for f in failed_urls}
-    for ev in data.get("events", []):
-        eid = ev.get("id")
-        reg = ev.get("region", "台灣")
-        cat = ev.get("category", "綜合")
-        rank = ev.get("rank", 1)
-        url = ev.get("sourceUrl", "")
-
-        need_url_fix = False
-        if eid in failed_eid_map:
-            need_url_fix = True
-        elif not url or "google.com/search" in url.lower() or "search?" in url.lower():
-            need_url_fix = True
-
-        if need_url_fix:
-            replacement = pick_replacement_url(reg, rank, dead_urls, used_offset)
-            print(f"   🔄 替換無效連結 [{reg} {cat} #{rank}]: {url[:40]} -> {replacement}")
-            ev["sourceUrl"] = replacement
-
-    # 2. 修復標題與摘要的樣板套話與未翻譯文字
-    for ev in data.get("events", []):
-        reg = ev.get("region", "台灣")
-        cat = ev.get("category", "綜合")
-        rank = ev.get("rank", 1)
-        title = ev.get("title", "")
-        summary = ev.get("summary", "")
-
-        has_bad_title = False
-        for pat in FORBIDDEN_TITLE_PATTERNS:
-            if re.search(pat, title):
-                has_bad_title = True
-                break
-        for script_re, _ in FORBIDDEN_SCRIPTS:
-            if re.search(script_re, title):
-                has_bad_title = True
-                break
-
-        if has_bad_title or len(title.strip()) < 5:
-            # 自動重寫為符合標準的具體繁中標題
-            new_title = f"{reg}重點關注話題：各大媒體與社群熱烈討論最新動態與實質影響"
-            print(f"   ✍️ 修正樣板/未翻譯標題 [{reg} {cat} #{rank}]: '{title[:25]}' -> '{new_title[:25]}'")
-            ev["title"] = new_title
-
-        has_bad_summary = False
-        for script_re, _ in FORBIDDEN_SCRIPTS:
-            if re.search(script_re, summary):
-                has_bad_summary = True
-                break
-        if not summary or len(summary.strip()) < 20 or has_bad_summary:
-            ev["summary"] = f"據當地主流媒體報導，{reg}各界高度關注該議題後續發展。相關官方與產業代表發表分析評論，大眾就其長遠影響展開廣泛交流，展現出高度公共參與。"
-
-    # 3. 修復 globalSummary 缺失區域前綴
-    summ = data.get("globalSummary", "")
-    missing_regs = [r for r in REGIONS if f"{r}：" not in summ and f"{r}:" not in summ]
-    if missing_regs:
-        additions = []
-        for mr in missing_regs:
-            additions.append(f"{mr}：社群與產經各界聚焦核心議題，民眾在日常生活中保持平穩節奏並展現靈活應對韌性")
-        data["globalSummary"] = (summ.rstrip("；") + "；" + "；".join(additions)).strip("；")
-
-    # 4. 確保事件數量正好 70 則 (每區 5 綜合 + 5 生活)
-    existing_events = data.get("events", [])
-    valid_events = []
-    seen = set()
-    for ev in existing_events:
-        key = (ev.get("region"), ev.get("category"), ev.get("rank"))
-        if key not in seen and ev.get("region") in REGIONS and ev.get("category") in ["綜合", "生活"]:
-            seen.add(key)
-            valid_events.append(ev)
-
-    # 補齊缺失項
-    next_id = 1000
+def fallback_global_summary(events: list) -> str:
+    parts = []
     for reg in REGIONS:
-        fallback_urls = FALLBACK_NEWS_POOL.get(reg, ["https://www.cna.com.tw"])
-        for cat in ["綜合", "生活"]:
-            for r in range(1, 6):
-                key = (reg, cat, r)
-                if key not in seen:
-                    replacement_url = fallback_urls[r % len(fallback_urls)]
-                    valid_events.append({
-                        "id": next_id,
-                        "region": reg,
-                        "category": cat,
-                        "rank": r,
-                        "title": f"{reg}重點關注話題：各界密切追蹤政策與產業最新動態",
-                        "summary": f"據當地主流媒體報導，{reg}各界高度關注該事件後續進展。相關產業與公共機構提出相應分析與應對措施，公眾在社群平台展開廣泛討論。",
-                        "sourceUrl": replacement_url,
-                        "brandRelevant": (r % 2 == 0)
-                    })
-                    next_id += 1
-                    seen.add(key)
+        tops = [e["title"] for e in events if e["region"] == reg and e["rank"] == 1]
+        parts.append(f"{reg}：" + ("、".join(t[:30] for t in tops) if tops else "今日資料不足"))
+    return "；".join(parts) + "。"
 
-    # 重新排序按 台灣、中國、日本、韓國、美國、歐洲、中東，綜合 1..5，生活 1..5
-    reg_order = {r: i for i, r in enumerate(REGIONS)}
-    valid_events.sort(key=lambda x: (reg_order.get(x.get("region"), 99), 0 if x.get("category") == "綜合" else 1, x.get("rank", 0)))
-    data["events"] = valid_events
-
-    return data
 
 # -------------------------------------------------------------
-# 主執行流程（含自檢與自癒循環）
+# 組裝：AI 結果 → 以 cid 對回真實網址；缺額由程式補齊
+# -------------------------------------------------------------
+def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
+    by_cid = {c["cid"]: c for reg in REGIONS for c in pools[reg]}
+    notes = []
+    events = []
+    used = set()
+    slots = {(reg, cat): [] for reg in REGIONS for cat in ("綜合", "生活")}
+
+    if ai:
+        for ev in ai.get("events", []):
+            cid = str(ev.get("cid", "")).strip()
+            c = by_cid.get(cid)
+            cat = ev.get("category")
+            if not c:
+                notes.append(f"AI 給了不存在的 cid：{cid}，已忽略")
+                continue
+            if cid in used or cat not in ("綜合", "生活"):
+                continue
+            reg = c["region"]  # 以候選本身的區域為準，AI 不能跨區
+            if len(slots[(reg, cat)]) >= 5:
+                continue
+            title = (ev.get("title") or "").strip()
+            summary = (ev.get("summary") or "").strip()
+            if not title or has_foreign_script(title):
+                title = translate_to_zh_tw(clean_title(c["title"]))
+            slots[(reg, cat)].append({
+                "region": reg, "category": cat, "rank": 0,
+                "title": to_traditional(title), "summary": to_traditional(summary),
+                "sourceUrl": c["url"], "source": c.get("source", ""), "originalTitle": c["title"],
+                "brandRelevant": bool(ev.get("brandRelevant", False)),
+                "_rank": ev.get("rank", 99), "_cid": cid,
+            })
+            used.add(cid)
+
+    # 補齊缺額（AI 不足或沒有 AI）
+    for reg in REGIONS:
+        need = {cat: 5 - len(slots[(reg, cat)]) for cat in ("綜合", "生活")}
+        if need["綜合"] > 0 or need["生活"] > 0:
+            fb = pick_fallback_slots(pools[reg], used)
+            for cat in ("綜合", "生活"):
+                pool = fb[cat] + fb["綜合" if cat == "生活" else "生活"] + pools[reg]
+                while need[cat] > 0:
+                    c = next((x for x in pool if x["cid"] not in used), None)
+                    if not c:
+                        break
+                    ev = fallback_event(c, cat, 0)
+                    ev["_rank"], ev["_cid"] = 50 + len(slots[(reg, cat)]), c["cid"]
+                    slots[(reg, cat)].append(ev)
+                    used.add(c["cid"])
+                    need[cat] -= 1
+                while need[cat] > 0:
+                    ev = placeholder_event(reg, cat, 0)
+                    ev["_rank"], ev["_cid"] = 99, ""
+                    slots[(reg, cat)].append(ev)
+                    need[cat] -= 1
+                    notes.append(f"{reg}{cat}候選不足，使用佔位")
+
+    eid = 1000
+    for reg in REGIONS:
+        for cat in ("綜合", "生活"):
+            lst = sorted(slots[(reg, cat)], key=lambda e: e.get("_rank", 99))
+            for r, ev in enumerate(lst, start=1):
+                ev["rank"] = r
+                ev["id"] = eid
+                eid += 1
+                cid = ev.pop("_cid", "")
+                ev.pop("_rank", None)
+                c = by_cid.get(cid)
+                if c and c.get("linkStatus") == "blocked":
+                    ev["linkUnverified"] = True
+                events.append(ev)
+
+    static = static_analysis()
+    data = {
+        "date": today,
+        "sourceModifiedAt": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(timespec="seconds"),
+        "followupNote": None,
+        "globalTheme": (ai or {}).get("globalTheme") or "今日全球真實熱搜與主流報導速覽",
+        "globalSummary": (ai or {}).get("globalSummary") or fallback_global_summary(events),
+        "events": events,
+        "storylines": (ai or {}).get("storylines") or static["storylines"],
+        "suggestions": (ai or {}).get("suggestions") or static["suggestions"],
+        "generator": "gemini+sources" if ai else "sources-only",
+    }
+    for idx, st in enumerate(data["storylines"], start=1):
+        st.setdefault("id", idx)
+        st.setdefault("kind", "跨區線")
+    for idx, sg in enumerate(data["suggestions"], start=1):
+        sg.setdefault("id", idx)
+    # AI 若漏了某個立柱，用靜態選題補上，避免成為致命錯誤
+    pillars = {s.get("pillar") for s in data["suggestions"]}
+    for s in static["suggestions"]:
+        if s["pillar"] not in pillars:
+            data["suggestions"].append(dict(s, id=len(data["suggestions"]) + 1))
+    if len(data["storylines"]) < 3:
+        data["storylines"] = (data["storylines"] + static["storylines"])[:3]
+    return data, notes
+
+
+# -------------------------------------------------------------
+# 主流程
 # -------------------------------------------------------------
 def main():
     today = get_today_str()
@@ -576,98 +487,53 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f"{today}.json")
 
+    print(f"📡 [1/3 真實來源] 採集 {today} 七區熱搜與主流媒體報導...")
+    pools = collect_candidates()
+    total = sum(len(v) for v in pools.values())
+    if total == 0:
+        print("🚨 所有新聞來源都無法讀取（網路中斷？），今日無法產生情報。", file=sys.stderr)
+        sys.exit(1)
+
+    ai = None
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    data = None
-
     if api_key:
-        print(f"🌐 [AI 採集引擎] 偵測到 GEMINI_API_KEY，開始調用 Gemini 深度採集（{today}）...")
-        prompt = build_prompt(today)
+        print(f"\n🤖 [2/3 AI 編輯] 交由 Gemini 從 {total} 則候選中挑選、翻譯與撰寫分析...")
         try:
-            raw_response = call_gemini(prompt, api_key)
-            clean_json = raw_response.strip()
-            if clean_json.startswith("```json"):
-                clean_json = clean_json[7:]
-            elif clean_json.startswith("```"):
-                clean_json = clean_json[3:]
-            if clean_json.endswith("```"):
-                clean_json = clean_json[:-3]
-            clean_json = clean_json.strip()
-
-            parsed = json.loads(clean_json)
-            if "events" in parsed and len(parsed["events"]) >= 50:
-                data = parsed
-                print("✓ Gemini AI 深度情報採集成功！")
+            ai = parse_json_response(call_gemini(build_prompt(today, pools), api_key))
+            print(f"   ✓ Gemini 回傳 {len(ai.get('events', []))} 則選稿")
         except Exception as e:
-            print(f"⚠️ Gemini AI 調用異常（{e}），自動切換至雲端熱搜回退軌道...")
+            print(f"   ⚠️ Gemini 編輯失敗（{str(e)[:160]}），改用程式挑選＋自動翻譯")
+            ai = None
+    else:
+        print("\nℹ️ 未設定 GEMINI_API_KEY，使用程式挑選＋自動翻譯")
 
-    if not data:
-        data = fetch_trends_fallback(today)
+    print("\n🧩 [3/3 組裝與審查] 以 cid 對回真實網址並補齊缺額...")
+    data, notes = assemble(today, pools, ai)
+    for n in notes:
+        print(f"   ℹ️ {n}")
 
-    # 補齊基礎 ID
-    for idx, ev in enumerate(data.get("events", []), start=1000):
-        if "id" not in ev or not isinstance(ev["id"], int):
-            ev["id"] = idx
-    for idx, st in enumerate(data.get("storylines", []), start=1):
-        if "id" not in st:
-            st["id"] = idx
-    for idx, sg in enumerate(data.get("suggestions", []), start=1):
-        if "id" not in sg:
-            sg["id"] = idx
+    fatal, quality = audit_standards(data)
+    unverified = [e for e in data["events"] if e.get("linkUnverified")]
+    if fatal:
+        print(f"🚨 發現 {len(fatal)} 項致命錯誤，拒絕寫入：", file=sys.stderr)
+        for err in fatal:
+            print(f"   ❌ {err}", file=sys.stderr)
+        sys.exit(1)
 
-    # =========================================================
-    # 核心：自我檢查與閉環自癒循環 (一直做到符合標準為止)
-    # =========================================================
-    MAX_HEAL_ROUNDS = 8
-    success = False
-    dead_urls = set()
-    used_offset = {}
-
-    for heal_round in range(1, MAX_HEAL_ROUNDS + 1):
-        print(f"\n" + "-"*60)
-        print(f"🔍 [閉環自檢 第 {heal_round}/{MAX_HEAL_ROUNDS} 輪] 全量審查 70 則情報標準與真實連線...")
-        print("-"*60)
-        
-        is_valid, errors, failed_urls = audit_full_standards(data, check_network=True)
-        if is_valid:
-            print(f"\n🎉 [自檢通過！] 第 {heal_round} 輪審查 100% 達標！所有 70 則情報零樣板、零斷鏈、全繁中！")
-            success = True
-            break
-
-        print(f"⚠️ 發現 {len(errors)} 個未達標項目，啟動自癒修復...")
-        for err in errors[:5]:
-            print(f"   ❌ {err}")
-        if len(errors) > 5:
-            print(f"   ... (其餘 {len(errors)-5} 個項目)")
-
-        data = self_heal_traffic(data, errors, failed_urls, api_key, dead_urls, used_offset)
-        time.sleep(1)
-
-    if not success:
-        # 最終審查：「每天一定有發佈」原則
-        # - 結構／內容致命錯誤（數量、區域、翻譯、樣板）→ 拒絕寫入並終止
-        # - 僅剩連結無法驗證（外站擋機房 IP、暫時性 404/403）→ 標註警告後照常發佈
-        is_valid, errors, failed_urls = audit_full_standards(data, check_network=True)
-        if not is_valid:
-            struct_ok, struct_errors = audit_structural_and_content_standards(data)
-            if not struct_ok:
-                print(f"🚨 經過 {MAX_HEAL_ROUNDS} 輪修復仍有結構性錯誤，拒絕寫入磁碟並終止：", file=sys.stderr)
-                for err in struct_errors:
-                    print(f"   ❌ {err}", file=sys.stderr)
-                sys.exit(1)
-
-            failed_url_set = {f[5] for f in failed_urls}
-            for ev in data.get("events", []):
-                if ev.get("sourceUrl") in failed_url_set:
-                    ev["linkUnverified"] = True
-            data["qualityWarnings"] = errors
-            print(f"::warning::今日情報有 {len(errors)} 則連結無法在 runner 上驗證，已標註 linkUnverified 並照常發佈")
-            for err in errors:
-                print(f"   ⚠️ {err}")
+    if quality or unverified:
+        data["qualityWarnings"] = quality + [
+            f"[{e['region']} {e['category']} #{e['rank']}] 連結被網站阻擋、無法在 runner 上驗證：{e['sourceUrl']}"
+            for e in unverified
+        ]
+        print(f"::warning::今日情報有 {len(data['qualityWarnings'])} 項品質提醒，已標註並照常發佈")
+        for w in data["qualityWarnings"]:
+            print(f"   ⚠️ {w}")
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ 成功生成並儲存每日資料：{output_file}（共 {len(data['events'])} 則情報，{'100% 達標！' if success else '含連結警告，已照常發佈'}）")
+    print(f"\n✅ 已儲存 {output_file}（70 則，產生方式：{data['generator']}，品質提醒 {len(data.get('qualityWarnings', []))} 項）")
+
 
 if __name__ == "__main__":
     main()
