@@ -72,7 +72,7 @@ MEDIA_FEEDS = {
     ],
     "中東": [
         ("BBC Middle East", "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"),
-        ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml"),
+        ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml", "mideast"),  # 全球新聞，只留中東相關
     ],
 }
 
@@ -84,6 +84,14 @@ REGION_KEYWORDS = {
         r"中國|中国|大陸|大陆|內地|内地|北京|上海|廣州|广州|深圳|重慶|重庆|成都|武漢|武汉|杭州|天津|南京|西安|"
         r"香港|澳門|澳门|港股|恒指|恆指|港府|特首|立法會|立法会|新疆|西藏|國務院|国务院|中共|習近平|习近平|李強|李强|人民幣|人民币|央行|發改委|发改委|"
         r"China|Chinese|Beijing|Shanghai|Hong Kong|Xi Jinping|Shenzhen|Guangdong|yuan",
+        re.I),
+    # 阿拉伯文標題（當地熱搜）一律保留；英文等外文報導需命中中東關鍵字
+    "mideast": re.compile(
+        r"[\u0600-\u06ff]|中東|以色列|加薩|加沙|伊朗|伊拉克|敘利亞|黎巴嫩|沙烏地|沙特|阿聯|杜拜|迪拜|卡達|卡塔爾|埃及|約旦|葉門|也門|胡塞|"
+        r"阿曼|科威特|巴林|巴勒斯坦|約旦河西岸|真主黨|哈瑪斯|土耳其|紅海|蘇丹|利比亞|"
+        r"Middle East|Gulf|Israel|Gaza|West Bank|Palestin|Iran|Tehran|Iraq|Baghdad|Syria|Damascus|Lebanon|Beirut|"
+        r"Saudi|Riyadh|Jeddah|UAE|Emirat|Dubai|Abu Dhabi|Qatar|Doha|Egypt|Cairo|Jordan|Amman|Yemen|Houthi|"
+        r"Oman|Kuwait|Bahrain|Hezbollah|Hamas|Turkey|Türkiye|Ankara|Istanbul|Red Sea|Sudan|Libya",
         re.I),
 }
 
@@ -160,7 +168,7 @@ def _is_bad_url(url: str) -> bool:
 
 
 # 熱搜也需過濾的區域（中國區借用香港熱搜，其中多為國際體育娛樂話題）
-TRENDS_FILTER = {"中國": "china"}
+TRENDS_FILTER = {"中國": "china", "中東": "mideast"}
 
 
 def collect_trends(region: str, now) -> list:

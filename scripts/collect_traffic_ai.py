@@ -132,7 +132,7 @@ def call_gemini(prompt: str, api_key: str, tag: str = "", timeout: int = 150) ->
             # 503 高負載 / 429 限流 / 逾時屬暫時性錯誤：退避後重試同一模型
             if not isinstance(last_err, str) or not re.search(r"HTTP (503|429|500)|timed out", last_err):
                 continue
-            wait = (30 if "429" in last_err else 15) * attempt
+            wait = 60 if "429" in last_err else 15 * attempt
             print(f"   ⏳ {label}{model} 暫時性錯誤，{wait} 秒後重試（第 {attempt + 1}/3 次）...")
             time.sleep(wait)
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
@@ -181,16 +181,37 @@ def outlet_of(c: dict) -> str:
     return (c.get("source") or "").split(" ")[0].strip() or c.get("url", "")
 
 
+PROMPT_CANDIDATES = 16   # 每區送給 AI 的候選數（精簡 token，避免免費方案每分鐘配額不足）
+PROMPT_SNIPPET = 100
+
+
+def compact_candidate(c: dict) -> dict:
+    d = {"cid": c["cid"], "type": "熱搜" if c["kind"] == "trend" else "媒體", "來源": c.get("source", ""), "原文標題": c["title"]}
+    if c.get("query") and c["query"] not in c["title"]:
+        d["熱搜詞"] = c["query"]
+    if c.get("traffic"):
+        d["熱度"] = c["traffic"]
+    snip = (c.get("snippet") or "")[:PROMPT_SNIPPET]
+    if snip and snip not in c["title"]:
+        d["摘要片段"] = snip
+    return d
+
+
+def select_prompt_candidates(cands: list) -> list:
+    """熱搜與媒體交錯、各媒體輪流，取前 PROMPT_CANDIDATES 則送給 AI"""
+    by_outlet = {}
+    for c in cands:
+        by_outlet.setdefault(outlet_of(c), []).append(c)
+    queues = list(by_outlet.values())
+    out, i = [], 0
+    while len(out) < PROMPT_CANDIDATES and any(i < len(q) for q in queues):
+        out.extend(q[i] for q in queues if i < len(q))
+        i += 1
+    return out[:PROMPT_CANDIDATES]
+
+
 def build_region_prompt(today: str, reg: str, cands: list) -> str:
-    compact = [{
-        "cid": c["cid"],
-        "type": "熱搜" if c["kind"] == "trend" else "媒體",
-        "熱搜詞": c.get("query", ""),
-        "熱度": c.get("traffic", 0),
-        "來源": c.get("source", ""),
-        "原文標題": c["title"],
-        "摘要片段": c.get("snippet", "")[:200],
-    } for c in cands]
+    compact = [compact_candidate(c) for c in cands]
     return f"""
 你是「全球社群情報」的【{reg}】區編輯。今天的日期是 {today}。
 下面是程式從 Google Trends 熱搜與{reg}主流媒體 RSS 抓到的【今天真實報導候選清單】，每則都有唯一代號 cid。
@@ -210,7 +231,7 @@ def build_region_prompt(today: str, reg: str, cands: list) -> str:
 7. 絕對禁止：輸出任何網址；使用「相關發展與公眾討論持續升溫」「引發今日社群高度關注」之類的空泛套話。
 
 候選清單（JSON）：
-{json.dumps(compact, ensure_ascii=False)}
+{json.dumps(compact, ensure_ascii=False, separators=(",", ":"))}
 
 只輸出合法 JSON：
 {{
@@ -256,28 +277,48 @@ def build_global_prompt(today: str, region_results: dict, by_cid: dict) -> str:
 """
 
 
-def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
-    """七區同時送出（每區一個小請求），任一區失敗只影響該區；最後再做一次全域分析"""
-    from concurrent.futures import ThreadPoolExecutor
-    by_cid = {c["cid"]: c for reg in REGIONS for c in pools[reg]}
+PACE_SECONDS = 62   # 依序送出、每個請求間隔約 1 分鐘，避開免費方案每分鐘配額
 
-    def _one(reg):
-        if not pools[reg]:
-            return reg, None
+
+def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
+    """七區依序送出（每區一個小請求、間隔約 1 分鐘），失敗的區域最後再補跑一次；最後做一次全域分析"""
+    by_cid = {c["cid"]: c for reg in REGIONS for c in pools[reg]}
+    last_start = [0.0]
+
+    def paced_call(prompt, tag):
+        wait = PACE_SECONDS - (time.time() - last_start[0])
+        if last_start[0] and wait > 0:
+            time.sleep(wait)
+        last_start[0] = time.time()
+        return call_gemini(prompt, api_key, tag=tag, timeout=120)
+
+    def _one(reg, attempt_label=""):
+        cands = select_prompt_candidates(pools[reg])
+        if not cands:
+            return None
         t0 = time.time()
         try:
-            res = parse_json_response(call_gemini(build_region_prompt(today, reg, pools[reg]), api_key, tag=reg, timeout=120))
-            print(f"   ✓ [{reg}] 選稿 {len(res.get('events', []))} 則（{time.time() - t0:.0f} 秒）")
-            return reg, res
+            res = parse_json_response(paced_call(build_region_prompt(today, reg, cands), reg))
+            if not res.get("events"):
+                raise ValueError("回傳內容沒有 events")
+            print(f"   ✓ [{reg}]{attempt_label} 選稿 {len(res.get('events', []))} 則（{time.time() - t0:.0f} 秒）")
+            return res
         except Exception as e:
-            print(f"   ⚠️ [{reg}] AI 編輯失敗（{str(e)[:120]}），該區改用程式挑選＋自動翻譯")
-            return reg, None
+            print(f"   ⚠️ [{reg}]{attempt_label} AI 編輯失敗（{str(e)[:120]}）")
+            return None
 
     if "models" not in _MODELS_CACHE:
         _MODELS_CACHE["models"] = resolve_gemini_models(api_key)
-    # 同時最多 3 區：7 區全開會觸發 Gemini 每分鐘配額限制（HTTP 429）
-    with ThreadPoolExecutor(max_workers=3) as ex:
-        region_results = dict(ex.map(_one, REGIONS))
+    region_results = {reg: _one(reg) for reg in REGIONS}
+
+    failed = [r for r in REGIONS if not region_results.get(r)]
+    if failed:
+        print(f"   🔁 補跑失敗區域：{'、'.join(failed)}")
+        for reg in failed:
+            region_results[reg] = _one(reg, "（補跑）")
+        still = [r for r in REGIONS if not region_results.get(r)]
+        if still:
+            print(f"   ⚠️ 仍失敗、改用程式挑選＋自動翻譯：{'、'.join(still)}")
 
     ok_regions = [r for r in REGIONS if region_results.get(r)]
     if not ok_regions:
@@ -297,7 +338,7 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
 
     try:
         t0 = time.time()
-        g = parse_json_response(call_gemini(build_global_prompt(today, region_results, by_cid), api_key, tag="全域", timeout=120))
+        g = parse_json_response(paced_call(build_global_prompt(today, region_results, by_cid), "全域"))
         ai.update({k: g.get(k) for k in ("globalTheme", "storylines", "suggestions") if g.get(k)})
         print(f"   ✓ [全域] 主線與選題完成（{time.time() - t0:.0f} 秒）")
     except Exception as e:
@@ -327,6 +368,7 @@ def translate_to_zh_tw(text: str) -> str:
     url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q="
            + urllib.parse.quote(text[:500]))
     result = text
+    time.sleep(0.6)  # 免費翻譯端點也有頻率限制
     for attempt in range(3):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -628,7 +670,7 @@ def main():
     ai = None
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if api_key:
-        print(f"\n🤖 [2/3 AI 編輯] 七區同時交由 Gemini 從 {total} 則候選中挑選、翻譯與撰寫分析...")
+        print(f"\n🤖 [2/3 AI 編輯] 七區依序交由 Gemini 從 {total} 則候選中挑選、翻譯與撰寫分析...")
         t0 = time.time()
         ai = run_ai_editors(today, pools, api_key)
         if ai:
