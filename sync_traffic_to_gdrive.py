@@ -1,3 +1,4 @@
+import re
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -62,7 +63,22 @@ def json_to_markdown(entry):
     lines.append("---\n")
 
     lines.append("## 🧭 今日人心觀察\n")
-    lines.append(f"{summary}\n")
+    reg_regex = re.compile(r'(?:^|[\s；;\n。]+)(台灣|中國|日本|韓國|美國|歐洲|中東)[：:]\s*')
+    matches = list(reg_regex.finditer(summary))
+    if len(matches) >= 2:
+        if matches[0].start() > 0:
+            intro = summary[:matches[0].start()].strip().rstrip('；;。')
+            if intro:
+                lines.append(f"> **核心概況**：{intro}\n")
+        for i, m in enumerate(matches):
+            reg = m.group(1)
+            start = m.end()
+            end = matches[i+1].start() if i+1 < len(matches) else len(summary)
+            text = summary[start:end].strip().rstrip('；;。')
+            lines.append(f"- **【{reg}】**：{text}")
+        lines.append("")
+    else:
+        lines.append(f"{summary}\n")
 
     if storylines:
         lines.append("## ⚡ 跨區主線與故事線\n")

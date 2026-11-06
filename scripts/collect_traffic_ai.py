@@ -539,11 +539,11 @@ def static_analysis() -> dict:
 
 
 def global_summary_from(ai: dict, events: list) -> str:
-    """AI 有寫的區域用 AI 觀察，沒寫的區域用該區頭條組成，確保七區都有"""
+    """AI 有寫的區域用 AI 觀察，沒寫的區域用該區頭條組成，確保七區都有，以分號加換行清楚斷行排版"""
     obs = {o.split("：", 1)[0]: o for o in (ai or {}).get("regionObservations", [])}
-    fb = fallback_global_summary(events).rstrip("。").split("；")
+    fb = fallback_global_summary(events).rstrip("。").split("；\n")
     fb_map = {p.split("：", 1)[0]: p for p in fb}
-    return "；".join(obs.get(reg) or fb_map.get(reg, f"{reg}：今日資料不足") for reg in REGIONS) + "。"
+    return "；\n".join(obs.get(reg) or fb_map.get(reg, f"{reg}：今日資料不足") for reg in REGIONS) + "。"
 
 
 def fallback_global_summary(events: list) -> str:
@@ -551,7 +551,7 @@ def fallback_global_summary(events: list) -> str:
     for reg in REGIONS:
         tops = [e["title"] for e in events if e["region"] == reg and e["rank"] == 1]
         parts.append(f"{reg}：" + ("、".join(t[:30] for t in tops) if tops else "今日資料不足"))
-    return "；".join(parts) + "。"
+    return "；\n".join(parts) + "。"
 
 
 # -------------------------------------------------------------
