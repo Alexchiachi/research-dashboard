@@ -172,8 +172,7 @@ def get_service_account_token(sa_info: dict) -> str:
         return res["access_token"]
 
 
-def upload_via_service_account(file_path: Path, parent_id: str, sa_info: dict, mime_type: str = "text/plain"):
-    token = get_service_account_token(sa_info)
+def upload_file_multipart(file_path: Path, parent_id: str, token: str, mime_type: str = "text/plain"):
     metadata = {
         "name": file_path.name,
         "parents": [parent_id]
@@ -205,6 +204,51 @@ def upload_via_service_account(file_path: Path, parent_id: str, sa_info: dict, m
         return res.get("id")
 
 
+def upload_via_service_account(file_path: Path, parent_id: str, sa_info: dict, mime_type: str = "text/plain"):
+    token = get_service_account_token(sa_info)
+    return upload_file_multipart(file_path, parent_id, token, mime_type)
+
+
+def get_oauth_token():
+    """從雲端主機憑證路徑或環境變數取得 Google OAuth Access Token"""
+    cand_pairs = [
+        (
+            Path("/opt/morning-brief/credentials/gcp-oauth.keys.json"),
+            Path("/opt/morning-brief/credentials/.gdrive-server-credentials.json"),
+        ),
+        (
+            Path.home() / ".config/morning-brief/gcp-oauth.keys.json",
+            Path.home() / ".config/morning-brief/.gdrive-server-credentials.json",
+        )
+    ]
+    for key_file, token_file in cand_pairs:
+        if key_file.exists() and token_file.exists():
+            try:
+                keys_data = json.loads(key_file.read_text("utf-8"))
+                keys = keys_data.get("installed") or keys_data.get("web") or {}
+                token_data = json.loads(token_file.read_text("utf-8"))
+                client_id = keys.get("client_id")
+                client_secret = keys.get("client_secret")
+                refresh_token = token_data.get("refresh_token")
+                if client_id and client_secret and refresh_token:
+                    req = urllib.request.Request(
+                        "https://oauth2.googleapis.com/token",
+                        data=urllib.parse.urlencode({
+                            "client_id": client_id,
+                            "client_secret": client_secret,
+                            "refresh_token": refresh_token,
+                            "grant_type": "refresh_token"
+                        }).encode("utf-8"),
+                        headers={"Content-Type": "application/x-www-form-urlencoded"}
+                    )
+                    with urllib.request.urlopen(req) as resp:
+                        res = json.loads(resp.read().decode("utf-8"))
+                        return res.get("access_token")
+            except Exception as e:
+                print(f"  ⚠️ 讀取 OAuth 憑證失敗 ({key_file}): {e}")
+    return None
+
+
 def sync_date_to_gdrive(date_str):
     json_path = DAILY_DIR / f"{date_str}.json"
     if not json_path.exists():
@@ -220,7 +264,7 @@ def sync_date_to_gdrive(date_str):
 
     sa_key_env = os.environ.get("GDRIVE_SERVICE_ACCOUNT_KEY")
     if sa_key_env:
-        # 雲端 Actions 模式
+        # 雲端 Actions Service Account 模式
         print("  🌐 偵測到 GDRIVE_SERVICE_ACCOUNT_KEY，使用 Google Drive REST API 上傳...")
         try:
             sa_info = json.loads(sa_key_env)
@@ -233,10 +277,23 @@ def sync_date_to_gdrive(date_str):
             print(f"  ⚠️ 雲端 REST API 上傳失敗: {e}")
             return False
 
+    # 雲端主機 OAuth 憑證模式 (antigravity-cloud-worker)
+    oauth_token = get_oauth_token()
+    if oauth_token:
+        print("  🌐 偵測到雲端主機 Google OAuth 憑證，自動換發 Token 上傳...")
+        try:
+            md_file_id = upload_file_multipart(md_path, GDRIVE_TRAFFIC_FOLDER_ID, oauth_token, "text/markdown")
+            print(f"  ✓ Markdown 上傳成功 (ID: {md_file_id})")
+            json_file_id = upload_file_multipart(json_path, GDRIVE_TRAFFIC_FOLDER_ID, oauth_token, "application/json")
+            print(f"  ✓ JSON 上傳成功 (ID: {json_file_id})")
+            return True
+        except Exception as e:
+            print(f"  ⚠️ OAuth 上傳失敗: {e}")
+
     # 本機模式：尋找 gdrive CLI
     gd = find_gdrive()
     if not gd:
-        print("  ℹ️ 未配置 GDRIVE_SERVICE_ACCOUNT_KEY 且找不到 gdrive CLI，跳過 Google Drive 上傳。")
+        print("  ℹ️ 未配置 GDRIVE 憑證且找不到 gdrive CLI，跳過 Google Drive 上傳。")
         return True
 
     print(f"  ⬆ 正在透過本機 gdrive CLI 上傳 {md_path.name} 至「02_流量情報」資料夾...")
