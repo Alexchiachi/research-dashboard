@@ -95,7 +95,7 @@ CATEGORIES = [
         "dir": "03_people",
         "no": "03",
         "name": "人物研究",
-        "folder": "https://drive.google.com/drive/folders/10YmyOky6zqTUcPCdSyPw5r9zqFLtCuQ",
+        "folder": "https://drive.google.com/drive/folders/10YmyOky6zqTUcPCdSyPw5r9zq9FLtCuQ",
         "empty_msg": "人物研究分類已建置完成，待新報告產出後直接歸檔於此處與 Google Drive 專屬資料夾。",
         "has_series": False
     },
