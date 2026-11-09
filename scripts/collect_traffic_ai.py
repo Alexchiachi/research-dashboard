@@ -65,7 +65,7 @@ def is_mostly_latin(s: str) -> bool:
 # -------------------------------------------------------------
 # Gemini 調用（模型自動探測＋暫時性錯誤退避重試）
 # -------------------------------------------------------------
-GEMINI_STATIC_FALLBACK_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash"]
+GEMINI_STATIC_FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-flash-8b"]
 
 def _model_version_key(name: str):
     """將 gemini-3.8-flash 之類的名稱轉為可排序的版本 tuple（新版本優先）"""
@@ -336,8 +336,9 @@ def run_ai_editors(today: str, pools: dict, api_key: str) -> dict:
             print(f"   ✓ [{reg}]{attempt_label} 選稿 {len(res.get('events', []))} 則（{time.time() - t0:.0f} 秒）")
             return res
         except GeminiUnavailable as e:
-            print(f"   🛑 [{reg}]{attempt_label} 停止 AI 編輯：{e}；其餘區域改用程式挑選＋自動翻譯")
-            stop[0] = True
+            print(f"   ⚠️ [{reg}]{attempt_label} AI 暫時不可用：{e}，本區改用程式挑選＋自動翻譯")
+            if "所有 Gemini 模型今日額度都已用完" in str(e):
+                stop[0] = True
             return None
         except Exception as e:
             print(f"   ⚠️ [{reg}]{attempt_label} AI 編輯失敗（{str(e)[:120]}）")
@@ -403,23 +404,41 @@ def translate_to_zh_tw(text: str) -> str:
         return to_traditional(text)
     if text in _translate_cache:
         return _translate_cache[text]
-    url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q="
-           + urllib.parse.quote(text[:500]))
+
     result = text
-    time.sleep(0.6)  # 免費翻譯端點也有頻率限制
-    for attempt in range(3):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, context=get_ssl_context(), timeout=10) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-            result = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip() or text
+    encoded_q = urllib.parse.quote(text[:500])
+    endpoints = [
+        # 端點 1: Chrome 擴充專用端點（高可用、低限流）
+        (
+            "https://translate.googleapis.com/translate_a/single?client=dict-chrome-ex&sl=auto&tl=zh-TW&dt=t&q=" + encoded_q,
+            {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+        ),
+        # 端點 2: GTX 端點備援
+        (
+            "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q=" + encoded_q,
+            {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        )
+    ]
+
+    ctx = get_ssl_context()
+    for url, headers in endpoints:
+        success = False
+        for attempt in range(3):
+            try:
+                time.sleep(0.3)
+                req = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                trans = "".join(seg[0] for seg in data[0] if seg and seg[0]).strip()
+                if trans:
+                    result = trans
+                    success = True
+                    break
+            except Exception as e:
+                time.sleep(0.6 * (attempt + 1))
+        if success:
             break
-        except Exception as e:
-            if attempt < 2 and "429" in str(e):
-                time.sleep(3 * (attempt + 1))
-                continue
-            print(f"   ⚠️ 翻譯失敗（保留原文）：{e}")
-            break
+
     result = to_traditional(result)
     _translate_cache[text] = result
     return result
@@ -656,6 +675,17 @@ def assemble(today: str, pools: dict, ai: dict = None) -> tuple:
                 c = by_cid.get(cid)
                 if c and c.get("linkStatus") == "blocked":
                     ev["linkUnverified"] = True
+
+                # 最終防禦：確保所有標題與摘要 100% 翻譯為繁體中文
+                if has_foreign_script(ev["title"]) or is_mostly_latin(ev["title"]):
+                    ev["title"] = translate_to_zh_tw(clean_title(ev["title"]))
+                if has_foreign_script(ev.get("summary", "")) or is_mostly_latin(ev.get("summary", "")):
+                    ev["summary"] = translate_to_zh_tw(ev.get("summary", ""))
+                # 避免圖片檔名作為標題
+                if re.search(r"\.(?:jpg|png|jpeg|webp)$", ev["title"], re.I):
+                    src = ev.get("source") or "外媒"
+                    ev["title"] = f"{src}今日特選圖片新聞"
+
                 events.append(ev)
 
     static = static_analysis()
