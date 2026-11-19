@@ -59,7 +59,8 @@ def has_foreign_script(s: str) -> bool:
 def is_mostly_latin(s: str) -> bool:
     letters = re.findall(r"[A-Za-z]", s or "")
     cjk = re.findall(r"[一-鿿]", s or "")
-    return len(letters) > 8 and len(letters) > len(cjk) * 2
+    # 門檻放寬：3 個以上拉丁字母且遠多於中文字即視為外文（舊門檻 >8 會漏掉短外文標題）
+    return len(letters) > 2 and len(letters) > len(cjk) * 2
 
 
 # -------------------------------------------------------------
@@ -421,8 +422,8 @@ def translate_to_zh_tw(text: str) -> str:
     ]
 
     ctx = get_ssl_context()
+    success = False
     for url, headers in endpoints:
-        success = False
         for attempt in range(3):
             try:
                 time.sleep(0.3)
@@ -440,7 +441,10 @@ def translate_to_zh_tw(text: str) -> str:
             break
 
     result = to_traditional(result)
-    _translate_cache[text] = result
+    # 只在成功時寫快取：失敗（result 仍為原文）不寫入，否則同一執行內
+    # 相同原文永遠取到未翻譯的快取、再也不重試（快取污染，#56 高②根因）
+    if success:
+        _translate_cache[text] = result
     return result
 
 
