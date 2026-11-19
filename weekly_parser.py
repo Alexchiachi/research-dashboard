@@ -61,12 +61,32 @@ def plain(line):
     return s
 
 
+def _trim_bare_url(url):
+    """修掉裸網址尾端吃進來的句尾標點與多餘右括號。
+
+    正則允許網址內含 ) ] *（如 Wikipedia 條目），此處只修尾端：
+    先去掉句尾標點／星號，再按開合平衡去掉多餘的 ) ]（如句尾括號）。
+    """
+    while url and url[-1] in "。，、；：）」』】》,.!?;:*|｜）":
+        url = url[:-1]
+    for op, cl in (("(", ")"), ("[", "]")):
+        while url.endswith(cl) and url.count(cl) > url.count(op):
+            url = url[:-1]
+    return url
+
+
+def _autolink_bare_url(m):
+    return "<" + _trim_bare_url(m.group(1)) + ">"
+
+
 def clean_md(text):
     """修正 Google Docs 匯出的跳脫字元與裸網址"""
     text = text.replace("\r\n", "\n")
     text = re.sub(r"\\([:=&~@/%?!|+\-])", r"\1", text)
     # 裸網址 → 自動連結（避開已在 ( [ < " 之後者）
-    text = re.sub(r'(?<![\(\[<"=/])(https?://[^\s<>\)\]\*，。）」]+)', r"<\1>", text)
+    # 字元集排除空白與句中分隔符（｜|、；：（）「」等），避免吃進下一段文字；
+    # ) ] * 允許在網址內，由 _trim_bare_url 再按平衡修掉尾端多餘者。
+    text = re.sub(r'(?<![\(\[<"=/])(https?://[^\s<>｜|、；：（）「」『』【】《》，。]+)', _autolink_bare_url, text)
     return text
 
 
