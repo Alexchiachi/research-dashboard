@@ -54,7 +54,6 @@ MEDIA_FEEDS = {
     "日本": [
         ("朝日新聞", "https://www.asahi.com/rss/asahi/newsheadlines.rdf"),
         ("毎日新聞", "https://mainichi.jp/rss/etc/mainichi-flash.rss"),
-        ("Kyodo", "https://english.kyodonews.net/rss/news.xml"),
         ("Japan Times", "https://www.japantimes.co.jp/feed/"),
     ],
     "韓國": [
