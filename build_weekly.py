@@ -64,9 +64,18 @@ def render_issue_doc_html(segs, issue_id):
         elif k == "en":
             en_txt = txt
             zh_txt = ""
-            if i + 1 < len(segs) and segs[i + 1][0] == "zh":
-                zh_txt = segs[i + 1][1]
-                i += 2
+            # 向前看：跳過中間的 neutral 段（多為英文 Sources 區塊），找下一段 zh 配對。
+            # 若無 zh，neutral 段留給主迴圈照常渲染，不吞掉。
+            j = i + 1
+            pending_neutrals = []
+            while j < len(segs) and segs[j][0] == "neutral":
+                pending_neutrals.append(segs[j][1])
+                j += 1
+            paired = False
+            if j < len(segs) and segs[j][0] == "zh":
+                zh_txt = segs[j][1]
+                i = j + 1
+                paired = True
             else:
                 i += 1
             pair_idx += 1
@@ -85,6 +94,11 @@ def render_issue_doc_html(segs, issue_id):
   <div class="wk-body wk-en-body" style="display:none;">{en_html}</div>
 </div>"""
             html_parts.append(block)
+            if paired:
+                # 中間的 neutral 段（英文 Sources）接在配對後方渲染
+                for nt in pending_neutrals:
+                    rendered = markdown.markdown(nt, extensions=["tables", "fenced_code"])
+                    html_parts.append(f'<div class="wk-neutral">{rendered}</div>')
         elif k == "zh":
             pair_idx += 1
             zh_html = markdown.markdown(txt, extensions=["tables", "fenced_code"])

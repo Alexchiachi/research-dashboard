@@ -59,7 +59,8 @@ def has_foreign_script(s: str) -> bool:
 def is_mostly_latin(s: str) -> bool:
     letters = re.findall(r"[A-Za-z]", s or "")
     cjk = re.findall(r"[一-鿿]", s or "")
-    return len(letters) > 8 and len(letters) > len(cjk) * 2
+    # 門檻放寬（#56）：3 個以上拉丁字母且遠多於中文字即視為外文（舊門檻 >8 會漏掉短外文標題）
+    return len(letters) > 2 and len(letters) > len(cjk) * 2
 
 
 # -------------------------------------------------------------
@@ -485,7 +486,9 @@ def translate_to_zh_tw(text: str) -> str:
             _TRANSLATE_STATE["disabled"] = True
             print(f"   🛑 免費翻譯連續失敗 {TRANSLATE_MAX_CONSECUTIVE_FAILS} 次，本次執行停用，其餘標題保留原文")
     result = to_traditional(result)
-    _translate_cache[text] = result
+    # 只在成功時寫快取（#56）：失敗時 result 仍為原文，寫入會讓同一執行內相同原文永遠取到未翻譯的快取
+    if success:
+        _translate_cache[text] = result
     return result
 
 
